@@ -1,0 +1,27 @@
+{
+  "status": "PASSED_MIGRATION_SMOKE_CHECK",
+  "checked_on": "2026-10-14",
+  "url": "https://tranphu1508.github.io/DE-CaseCompanyE/#dashboard",
+  "workflow_run": "https://github.com/tranphu1508/DE-CaseCompanyE/actions/runs/38572403541",
+  "workflow_conclusion": "success",
+  "browser": "Codex in-app browser",
+  "checks": {
+    "overview_and_dashboard_load": true,
+    "repository_link_visible_and_correct": true,
+    "eight_business_groups_available": true,
+    "baseline_room_nights": "73.275",
+    "baseline_available_room_nights": "174.478",
+    "baseline_occupancy": "42,00%",
+    "sapa_iceberg_room_nights": "18.313",
+    "sapa_iceberg_occupancy": "41,98%",
+    "unsupported_monthly_slice_message_visible": true,
+    "external_reconciliation_warning_visible": true,
+    "reset_restores_B01_oracle_baseline": true,
+    "baseline_chart_svg_present": true,
+    "html_noindex": true,
+    "application_error_hidden": true
+  },
+  "screenshot": "github-pages-dashboard.png",
+  "scope": "Hosting migration smoke check; not a new full regression of all 104 UI contexts. Export verification separately passed 3139 checks, including 2965 metric component comparisons.",
+  "previous_host": "ChatGPT Sites deployment remains available; it was not unpublished or deleted. README and GitHub repository homepage now point to GitHub Pages."
+}

@@ -1,0 +1,49 @@
+{
+  "status": "PASSED_HTTP_ASSET_VERIFICATION",
+  "checked_at": "2026-10-14T13:32:18.275517+00:00",
+  "url": "https://tranphu1508.github.io/DE-CaseCompanyE/",
+  "source_commit": "e29720446bc1e9c68f39c93cf326444b86243ddf",
+  "workflow_run": "https://github.com/tranphu1508/DE-CaseCompanyE/actions/runs/38572403541",
+  "assets": [
+    {
+      "name": "index.html",
+      "http_status": 200,
+      "sha256": "02beeef3b5587251a6e9b7fea38cc53ca6a01be70fc4aab1f63a8cdbadcc71e8",
+      "matches_local": true
+    },
+    {
+      "name": "app.js",
+      "http_status": 200,
+      "sha256": "40157a784594f89d8bfe45bfbb3843ac25780141d393390cf3ad1141dc19d3f4",
+      "matches_local": true
+    },
+    {
+      "name": "style.css",
+      "http_status": 200,
+      "sha256": "d59c1a6c2ff2a12d965c1620805d77b459122ab7faf1fdb42549cc70eb514403",
+      "matches_local": true
+    },
+    {
+      "name": "data.json",
+      "http_status": 200,
+      "sha256": "4f9d8ca11a0b75596516821a580193e9b1d1f916861a6d657a646bdd72ec7a6a",
+      "matches_local": true
+    },
+    {
+      "name": "config.json",
+      "http_status": 200,
+      "sha256": "92c3dd4d03ad223bd7256723d91a590e84e0ae34acf6b643c8e7b11c512a79c1",
+      "matches_local": true
+    },
+    {
+      "name": "robots.txt",
+      "http_status": 200,
+      "sha256": "bdc5989f447bc2eb1170267b7da0066af89b626be50e427a67ea49a710b0fdce",
+      "matches_local": true
+    }
+  ],
+  "html_noindex": true,
+  "kpi_payload_unchanged": true,
+  "scope": "Live HTTPS responses match committed static export byte-for-byte. UI checks recorded separately.",
+  "previous_site": "Earlier ChatGPT Sites deployment retained; GitHub Pages is the canonical demo."
+}
