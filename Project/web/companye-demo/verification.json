@@ -1,6 +1,6 @@
 {
   "status": "PASSED_STATIC_EXPORT",
-  "checks": 3138,
+  "checks": 3139,
   "metric_component_comparisons": 2965,
   "monthly_rows": 48,
   "publication": "pub_3f41f8fafa4c913187af2cc3",
@@ -10,7 +10,7 @@
   ],
   "files": {
     "app.js": "40157a784594f89d8bfe45bfbb3843ac25780141d393390cf3ad1141dc19d3f4",
-    "config.json": "998535b21d12b9df26afb8cd79364fa8fc12e4121766729366d6d67e4669a4b8",
+    "config.json": "92c3dd4d03ad223bd7256723d91a590e84e0ae34acf6b643c8e7b11c512a79c1",
     "data.json": "4f9d8ca11a0b75596516821a580193e9b1d1f916861a6d657a646bdd72ec7a6a",
     "index.html": "02beeef3b5587251a6e9b7fea38cc53ca6a01be70fc4aab1f63a8cdbadcc71e8",
     "robots.txt": "bdc5989f447bc2eb1170267b7da0066af89b626be50e427a67ea49a710b0fdce",

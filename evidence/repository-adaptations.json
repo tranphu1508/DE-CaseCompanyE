@@ -1,1 +1,22 @@
-{}
+{
+  "Project/web/companye-demo/site-config.json": {
+    "sha256": "3caeaf81cfff56f5a313bb510f631899d06015d01bffa2dc58ceb65cac640968",
+    "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
+  },
+  "Project/web/companye-demo/dist/config.json": {
+    "sha256": "92c3dd4d03ad223bd7256723d91a590e84e0ae34acf6b643c8e7b11c512a79c1",
+    "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
+  },
+  "Project/web/companye-demo/verify.py": {
+    "sha256": "79997dbf6749491e0f8af2a97deff364520dc0a33103a3efa911dec24d52552b",
+    "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
+  },
+  "Project/web/companye-demo/verification.json": {
+    "sha256": "ba0a32ca06cd41980c3ef88811553329cf6541553a4e4f8f10c01406c5ebef92",
+    "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
+  },
+  "Project/web/companye-demo/README.md": {
+    "sha256": "4a35e9afeb7c3dccb687fa86de5ff496294d5f71d1d755ae00f9898eff4d63df",
+    "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
+  }
+}
