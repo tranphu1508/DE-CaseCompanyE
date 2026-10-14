@@ -1,0 +1,32 @@
+{
+  "status": "PASSED",
+  "phase": "verify",
+  "run_id": "runtime_20261013_165245",
+  "checked_at": "2026-10-13T16:53:47.226991+00:00",
+  "spark_version": "3.5.7",
+  "oracle_version": "Oracle AI Database 26ai Free Release 23.26.3.0.0 - Develop, Learn, and Run for Free\nVersion 23.26.3.0.0",
+  "iceberg_version": "Apache Iceberg 1.10.2 (commit 57396d628cb9f92e121f9c2919398475393f0a3a)",
+  "oracle_rows": 3,
+  "iceberg_rows": 3,
+  "snapshots": [
+    {
+      "snapshot_id": 1002682587901131407,
+      "operation": "append"
+    }
+  ],
+  "checks": [
+    "Oracle TCP/JDBC connection",
+    "Iceberg PostgreSQL JDBC catalog",
+    "Parquet write/read",
+    "Unicode Vietnamese",
+    "DECIMAL(19,0) max positive value",
+    "DECIMAL(18,3) negative boundary",
+    "NULL versus numeric zero",
+    "Timestamp microseconds across Vietnam midnight in UTC",
+    "Both engines exactly match independent literal fixture",
+    "Data and Iceberg snapshot IDs preserved across container restart"
+  ],
+  "oracle_schema": "StructType([StructField('RUN_ID', StringType(), True), StructField('ID', DecimalType(19,0), True), StructField('LABEL', StringType(), True), StructField('AMOUNT', DecimalType(19,0), True), StructField('QTY', DecimalType(18,3), True), StructField('EVENT_UTC', TimestampNTZType(), True), StructField('OPTIONAL_AMOUNT', DecimalType(19,0), True)])",
+  "iceberg_schema": "StructType([StructField('run_id', StringType(), False), StructField('id', LongType(), False), StructField('label', StringType(), True), StructField('amount', DecimalType(19,0), True), StructField('qty', DecimalType(18,3), True), StructField('event_utc', TimestampNTZType(), True), StructField('optional_amount', DecimalType(19,0), True)])",
+  "limitation": "Service integration only; no business DDL, SCD2 pipeline, KPI or performance validation."
+}

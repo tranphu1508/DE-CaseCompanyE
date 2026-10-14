@@ -1,0 +1,80 @@
+{
+  "status": "PASSED",
+  "visual_review": "PASSED",
+  "pages": 19,
+  "processes": 12,
+  "concepts": 17,
+  "dimensions": 16,
+  "hierarchies": 9,
+  "requirements": 8,
+  "kpis": 47,
+  "input_sha256": {
+    "config/dimensional_model_v1.json": "7f9af7435bfe8ccffad979c540bdff0c04386a51a1a889e4d3ce7519f0793fcf",
+    "config/warehouse_design_v1.json": "7b6d76ca44a9039e61b9b29c3a175770642651171dbb9d91dd7299c7eed36def",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332",
+    "config/warehouse_design_decisions_v1.json": "d5e47b4c94976fa877de37045b9873536420f8e5b6b2246d0f6a605ddfaa23ea"
+  },
+  "page_index": [
+    "00-pham-vi",
+    "01-cap-thoi-gian-dia-diem",
+    "02-cap-dich-vu",
+    "03-phan-loai",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "C01",
+    "coverage",
+    "rules"
+  ],
+  "limitations": [
+    "Native draw.io XML generated and endpoints checked; not tested in draw.io UI.",
+    "Conceptual design only; no changes to logical diagrams or physical schema."
+  ],
+  "output_sha256": {
+    "docs/CompanyE_Conceptual_Warehouse_Model.pdf": "7acf709b8ca90f1d392e0658aff94053e387d0cf841e5ea7fee9c04e46971d87",
+    "docs/CompanyE_Conceptual_Warehouse_Model.drawio": "52ac0aa7a123825a922103b7244dcd8a63516e5a89422bd1017ed88573e25fe9",
+    "config/conceptual_warehouse_model_v1.json": "a6085340a50c9802cbe6e3770178efc1000f577b8e8a73f2053b16fc04e8c9e5"
+  },
+  "visual_review_details": {
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "method": "Rendered PNG inspection; updated pages 5 and 15 reviewed again after wording edits.",
+    "review_date": "2026-10-13",
+    "result": "No clipped text, missing glyphs or obscured diagram content observed."
+  },
+  "drawio_readback": {
+    "pages": 19,
+    "edges": 112,
+    "unique_ids_and_valid_endpoints": true,
+    "ui_tested": false
+  }
+}

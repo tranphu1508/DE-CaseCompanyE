@@ -1,0 +1,629 @@
+{
+  "status": "PASSED",
+  "pages": 20,
+  "facts": 17,
+  "dimensions": 16,
+  "fact_dimension_pairs": 89,
+  "role_specific_foreign_keys": 102,
+  "editable_edge_endpoints_valid": true,
+  "model_unchanged": true,
+  "model_sha256": "7f9af7435bfe8ccffad979c540bdff0c04386a51a1a889e4d3ce7519f0793fcf",
+  "scope": "Logical diagrams only; technical fact_key is proposed, not implemented DDL.",
+  "visual_review": "PASSED - all 20 pages rendered with Poppler and reviewed; revised cardinalities, nullable roles and captions checked",
+  "foreign_key_roles": [
+    {
+      "fact": "F01",
+      "dimension": "D01",
+      "fk": "booked_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D01",
+      "fk": "arrival_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D01",
+      "fk": "departure_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D05",
+      "fk": "channel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D06",
+      "fk": "promotion_key",
+      "conditional": true
+    },
+    {
+      "fact": "F01",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F02",
+      "dimension": "D01",
+      "fk": "date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F02",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F02",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F02",
+      "dimension": "D04",
+      "fk": "room_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D01",
+      "fk": "service_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D04",
+      "fk": "room_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D05",
+      "fk": "channel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D08",
+      "fk": "rate_plan_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D01",
+      "fk": "ordered_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D01",
+      "fk": "cohort_departure_date_key",
+      "conditional": true
+    },
+    {
+      "fact": "F04",
+      "dimension": "D02",
+      "fk": "service_site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D02",
+      "fk": "booking_site_key",
+      "conditional": true
+    },
+    {
+      "fact": "F04",
+      "dimension": "D03",
+      "fk": "referral_hotel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F04",
+      "dimension": "D05",
+      "fk": "ticket_channel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D05",
+      "fk": "booking_channel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F04",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D01",
+      "fk": "pickup_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D01",
+      "fk": "return_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D01",
+      "fk": "cohort_departure_date_key",
+      "conditional": true
+    },
+    {
+      "fact": "F05",
+      "dimension": "D02",
+      "fk": "service_site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D02",
+      "fk": "booking_site_key",
+      "conditional": true
+    },
+    {
+      "fact": "F05",
+      "dimension": "D03",
+      "fk": "referral_hotel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F05",
+      "dimension": "D05",
+      "fk": "booking_channel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F05",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D13",
+      "fk": "vehicle_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D01",
+      "fk": "service_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D04",
+      "fk": "room_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D08",
+      "fk": "rate_plan_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D09",
+      "fk": "outlet_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D10",
+      "fk": "meal_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D01",
+      "fk": "service_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D03",
+      "fk": "service_hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D03",
+      "fk": "booking_hotel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F07",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": true
+    },
+    {
+      "fact": "F07",
+      "dimension": "D09",
+      "fk": "outlet_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D10",
+      "fk": "meal_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D01",
+      "fk": "service_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D09",
+      "fk": "outlet_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D10",
+      "fk": "meal_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D01",
+      "fk": "admission_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D12",
+      "fk": "activity_key",
+      "conditional": false
+    },
+    {
+      "fact": "F10",
+      "dimension": "D01",
+      "fk": "date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F10",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F10",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F10",
+      "dimension": "D12",
+      "fk": "activity_key",
+      "conditional": false
+    },
+    {
+      "fact": "F11",
+      "dimension": "D01",
+      "fk": "date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F11",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F11",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F11",
+      "dimension": "D13",
+      "fk": "vehicle_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D01",
+      "fk": "ordered_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D01",
+      "fk": "expected_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D14",
+      "fk": "supplier_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D15",
+      "fk": "item_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D01",
+      "fk": "received_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D01",
+      "fk": "expected_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D01",
+      "fk": "expires_date_key",
+      "conditional": true
+    },
+    {
+      "fact": "F13",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D14",
+      "fk": "supplier_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D15",
+      "fk": "item_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D01",
+      "fk": "movement_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D14",
+      "fk": "supplier_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D15",
+      "fk": "item_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D01",
+      "fk": "snapshot_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D14",
+      "fk": "supplier_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D15",
+      "fk": "item_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D01",
+      "fk": "start_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D01",
+      "fk": "end_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D04",
+      "fk": "room_key",
+      "conditional": true
+    },
+    {
+      "fact": "F16",
+      "dimension": "D16",
+      "fk": "asset_key",
+      "conditional": false
+    },
+    {
+      "fact": "F17",
+      "dimension": "D01",
+      "fk": "weather_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F17",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    }
+  ],
+  "pdf_sha256": "03A9BA648A3A2F5F1CC04985E8666318D396647EAB2C6D1E592EC379D3515B8D",
+  "drawio_sha256": "6B22631ADC451FA4A122EA8386151D8A4622A62F0E97054181DF91F37F150B0D"
+}

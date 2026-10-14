@@ -1,0 +1,1826 @@
+{
+  "status": "PASSED",
+  "verified_at": "2026-10-11T19:15:24.183085+00:00",
+  "seed": 20261012,
+  "generator_sha256": {
+    "generate.py": "3d747b15fd5702bdedf5e77a72135b75e24b7d9824e54d0736821dac82a5381d",
+    "model.py": "c4f6bdcab5f1fbccd56872e827ac8e9d4c2f92eeac784d83a821b85b3d76d03c"
+  },
+  "same_seed_same_code_byte_identical_tables": [
+    {
+      "table": "hotel_ops.sites",
+      "rows": 4,
+      "sha256": "5b0e8efe6bf4b7a1d917989a5a4e88a39827a78d6cce69a1a55ec5d9c2a47c2f",
+      "regenerated_sha256": "5b0e8efe6bf4b7a1d917989a5a4e88a39827a78d6cce69a1a55ec5d9c2a47c2f",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.hotels",
+      "rows": 8,
+      "sha256": "d9604745005b2c5cae73a3ace82019b31e4c88b9379157879404b9ac40f46ceb",
+      "regenerated_sha256": "d9604745005b2c5cae73a3ace82019b31e4c88b9379157879404b9ac40f46ceb",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.rooms",
+      "rows": 240,
+      "sha256": "160dd8f9949d48674c811464e59fa4d895ab70369844f653750e2dc623867aca",
+      "regenerated_sha256": "160dd8f9949d48674c811464e59fa4d895ab70369844f653750e2dc623867aca",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.channels",
+      "rows": 13,
+      "sha256": "c2f19f54d88c869e52042b5579a63557b82bb366e9706db91d96673313e09232",
+      "regenerated_sha256": "c2f19f54d88c869e52042b5579a63557b82bb366e9706db91d96673313e09232",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.guests",
+      "rows": 12000,
+      "sha256": "ac458db440a23d0e6251c6880957a62aa507ddfcbc21d15ba97269e0090ac7b4",
+      "regenerated_sha256": "ac458db440a23d0e6251c6880957a62aa507ddfcbc21d15ba97269e0090ac7b4",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.membership_plans",
+      "rows": 3,
+      "sha256": "d0bc255d1fe3ae7e8cf7df0914aa48837c59d155babac2984a7ed93338c74cce",
+      "regenerated_sha256": "d0bc255d1fe3ae7e8cf7df0914aa48837c59d155babac2984a7ed93338c74cce",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.memberships",
+      "rows": 4099,
+      "sha256": "d41b84552447922563c06ed9896cf78eaa69ed858593e3719fea7e928b1e14b5",
+      "regenerated_sha256": "d41b84552447922563c06ed9896cf78eaa69ed858593e3719fea7e928b1e14b5",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.member_cards",
+      "rows": 4099,
+      "sha256": "bd03412b86551008a71e3fa48444a870050a950bd787c7f994356c8d17b88625",
+      "regenerated_sha256": "bd03412b86551008a71e3fa48444a870050a950bd787c7f994356c8d17b88625",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.promotions",
+      "rows": 40,
+      "sha256": "82244ef3dad0e11c137273a4b77f96f15b14762394918e635aaa0626bb9e3d45",
+      "regenerated_sha256": "82244ef3dad0e11c137273a4b77f96f15b14762394918e635aaa0626bb9e3d45",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.rate_plans",
+      "rows": 72,
+      "sha256": "80181eee4d1d32c161589eb6e26a336443dea5ffc26d599c774220ab1a28d5c0",
+      "regenerated_sha256": "80181eee4d1d32c161589eb6e26a336443dea5ffc26d599c774220ab1a28d5c0",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.bookings",
+      "rows": 32000,
+      "sha256": "b27f24f2d7668b1dbb67d3b14fd904046980a05d9e1968adce19a49f52e7583a",
+      "regenerated_sha256": "b27f24f2d7668b1dbb67d3b14fd904046980a05d9e1968adce19a49f52e7583a",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.booking_rooms",
+      "rows": 36711,
+      "sha256": "f85500b3c721fc0597885610436400d62c0730a403aa86c64682bb9738dc5885",
+      "regenerated_sha256": "f85500b3c721fc0597885610436400d62c0730a403aa86c64682bb9738dc5885",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.stays",
+      "rows": 30736,
+      "sha256": "e8984dde30cd4fb5311ea48cf681a0b5574fcb8e67b6aa1a807488c5ed176dfb",
+      "regenerated_sha256": "e8984dde30cd4fb5311ea48cf681a0b5574fcb8e67b6aa1a807488c5ed176dfb",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.breakfast_entitlements",
+      "rows": 52979,
+      "sha256": "124905c7138ee8195aca9683de7477830daf603bc28f963c052e80aa7c54a349",
+      "regenerated_sha256": "124905c7138ee8195aca9683de7477830daf603bc28f963c052e80aa7c54a349",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.outlets",
+      "rows": 16,
+      "sha256": "3930447038a4b4b03f392792fdbfb52777f1f451793e811e35eeda7db09fe4e1",
+      "regenerated_sha256": "3930447038a4b4b03f392792fdbfb52777f1f451793e811e35eeda7db09fe4e1",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.dining_orders",
+      "rows": 31357,
+      "sha256": "e8ca61f5d2354bc6cc477377466aa41521a204e31e0f3debc692478ec5f24049",
+      "regenerated_sha256": "e8ca61f5d2354bc6cc477377466aa41521a204e31e0f3debc692478ec5f24049",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.meal_sessions",
+      "rows": 11696,
+      "sha256": "e555331ef94ac963ef2d3a2fd4b2b7d993dad1ccebb6cfa20aec1f63c858fdfa",
+      "regenerated_sha256": "e555331ef94ac963ef2d3a2fd4b2b7d993dad1ccebb6cfa20aec1f63c858fdfa",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.payments",
+      "rows": 36239,
+      "sha256": "60d40ea0ff59b79aaeb3d5b823434cf407010fd37e3d8a0a560cef843076c2d2",
+      "regenerated_sha256": "60d40ea0ff59b79aaeb3d5b823434cf407010fd37e3d8a0a560cef843076c2d2",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.settlements",
+      "rows": 19223,
+      "sha256": "d337d66b258cda32a1282693d3dd68675a648c810287cf3c80189e7dd538361e",
+      "regenerated_sha256": "d337d66b258cda32a1282693d3dd68675a648c810287cf3c80189e7dd538361e",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.suppliers",
+      "rows": 16,
+      "sha256": "303ef884e84fcf7120b147a3912c1f2fe63887d2bc2e268c50056e22019b1834",
+      "regenerated_sha256": "303ef884e84fcf7120b147a3912c1f2fe63887d2bc2e268c50056e22019b1834",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.items",
+      "rows": 6,
+      "sha256": "0a6a0552d9b133c42f2c1de2f09e3fed10f9c88b25d2414c1b8f03f01458f47e",
+      "regenerated_sha256": "0a6a0552d9b133c42f2c1de2f09e3fed10f9c88b25d2414c1b8f03f01458f47e",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.purchase_orders",
+      "rows": 23680,
+      "sha256": "af17cbea0d890b6d7820437e5e2d4e4761cc8bfd7d59b7dc63164a582a3c69d7",
+      "regenerated_sha256": "af17cbea0d890b6d7820437e5e2d4e4761cc8bfd7d59b7dc63164a582a3c69d7",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.purchase_lines",
+      "rows": 23680,
+      "sha256": "641df81a48ab6c7de45a49fc8ba03dd246f636bc92a66f495c4bbb974bd5b601",
+      "regenerated_sha256": "641df81a48ab6c7de45a49fc8ba03dd246f636bc92a66f495c4bbb974bd5b601",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.receipts",
+      "rows": 23680,
+      "sha256": "961a895ca3b50381bbf9cb2393537dda0a58bcd2818f0fbc724fd9273fe12eed",
+      "regenerated_sha256": "961a895ca3b50381bbf9cb2393537dda0a58bcd2818f0fbc724fd9273fe12eed",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.stock_movements",
+      "rows": 76474,
+      "sha256": "390066fac9703d1ccc85a5ec49a58ce7887ec7cf78b3f82c4531257632cef139",
+      "regenerated_sha256": "390066fac9703d1ccc85a5ec49a58ce7887ec7cf78b3f82c4531257632cef139",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.assets",
+      "rows": 256,
+      "sha256": "cbcb2b06c1c0095fb7f366b4292f1ada8ad864dd9dc37266b558963f99bedf99",
+      "regenerated_sha256": "cbcb2b06c1c0095fb7f366b4292f1ada8ad864dd9dc37266b558963f99bedf99",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.maintenance",
+      "rows": 512,
+      "sha256": "3405a8b111c4c3ac8179b5bd427d9a973e34b86b417e58a14f357ba280f963b6",
+      "regenerated_sha256": "3405a8b111c4c3ac8179b5bd427d9a973e34b86b417e58a14f357ba280f963b6",
+      "identical": true
+    },
+    {
+      "table": "hotel_ops.weather_daily",
+      "rows": 2924,
+      "sha256": "6933bee8f7531d78f624beb162d971d695c9fc9991472f07354410153450cd3b",
+      "regenerated_sha256": "6933bee8f7531d78f624beb162d971d695c9fc9991472f07354410153450cd3b",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.centres",
+      "rows": 4,
+      "sha256": "021bbef78ed31b0973c44b354e8ec29ce0db3a9c737ebf320b9912db1cd9d486",
+      "regenerated_sha256": "021bbef78ed31b0973c44b354e8ec29ce0db3a9c737ebf320b9912db1cd9d486",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.customers",
+      "rows": 12000,
+      "sha256": "1d8b40c277d585369bc859adb4289da6612d136f5b16c0a89734d0b7c8105e4e",
+      "regenerated_sha256": "1d8b40c277d585369bc859adb4289da6612d136f5b16c0a89734d0b7c8105e4e",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.activities",
+      "rows": 12,
+      "sha256": "d4c563d3503100a5b211b9ba3e9b9f9a8482f2d95e12e3a7eab48e7507a2f19a",
+      "regenerated_sha256": "d4c563d3503100a5b211b9ba3e9b9f9a8482f2d95e12e3a7eab48e7507a2f19a",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.closures",
+      "rows": 272,
+      "sha256": "792d0e33c1afdea39203df68cb27d31a381856477353775df6084e35ab4efa31",
+      "regenerated_sha256": "792d0e33c1afdea39203df68cb27d31a381856477353775df6084e35ab4efa31",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.ticket_orders",
+      "rows": 20690,
+      "sha256": "5496be06b70f8578308ed7ad8fb4cc5502059d84e2077c402a46021ff4432f6a",
+      "regenerated_sha256": "5496be06b70f8578308ed7ad8fb4cc5502059d84e2077c402a46021ff4432f6a",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.tickets",
+      "rows": 44478,
+      "sha256": "a5d9f59b2c359d1321586bd9db607e49e5f26e647855babcde8f9a0a6ece2152",
+      "regenerated_sha256": "a5d9f59b2c359d1321586bd9db607e49e5f26e647855babcde8f9a0a6ece2152",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.admissions",
+      "rows": 39827,
+      "sha256": "b56ccbd078e60df3592cff58c618c759b87e1ea7157799bc83e894bdff5a867b",
+      "regenerated_sha256": "b56ccbd078e60df3592cff58c618c759b87e1ea7157799bc83e894bdff5a867b",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.vehicles",
+      "rows": 120,
+      "sha256": "85c604aac54083740af5fafd36ad2384310d31e675f714b1ee7953991310abc3",
+      "regenerated_sha256": "85c604aac54083740af5fafd36ad2384310d31e675f714b1ee7953991310abc3",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.vehicle_maintenance",
+      "rows": 240,
+      "sha256": "24973541ae6864eafb6b2b9f1c74b5172e0d2879aab67c993d4f58a9ad3eff9c",
+      "regenerated_sha256": "24973541ae6864eafb6b2b9f1c74b5172e0d2879aab67c993d4f58a9ad3eff9c",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.rentals",
+      "rows": 7723,
+      "sha256": "7f7c8e87d37356b336f42470b92ac71b43e594442545528716d7ac170112322c",
+      "regenerated_sha256": "7f7c8e87d37356b336f42470b92ac71b43e594442545528716d7ac170112322c",
+      "identical": true
+    },
+    {
+      "table": "entertainment_ops.cash_events",
+      "rows": 29271,
+      "sha256": "e47c131e00368758c4f3ea8948096b2af8c6d3c2101a797bdd880597542744df",
+      "regenerated_sha256": "e47c131e00368758c4f3ea8948096b2af8c6d3c2101a797bdd880597542744df",
+      "identical": true
+    }
+  ],
+  "different_seed_changes_bookings": true,
+  "observed_external_quality": {
+    "rows": 121,
+    "invalid_dates": 18,
+    "unknown_unit_rows": 30,
+    "duplicate_document_rows": 1
+  },
+  "segments_by_hotel_month": {
+    "DL-5|2025-08": {
+      "bookings": 268,
+      "COMPLETED": 227,
+      "gross_vnd": 1550019000,
+      "company_discount_vnd": 36493840,
+      "CANCELLED": 35,
+      "NO_SHOW": 6
+    },
+    "DN-3|2025-06": {
+      "bookings": 249,
+      "COMPLETED": 198,
+      "gross_vnd": 680889000,
+      "company_discount_vnd": 18473020,
+      "CANCELLED": 40,
+      "NO_SHOW": 11
+    },
+    "DN-3|2024-05": {
+      "bookings": 243,
+      "COMPLETED": 203,
+      "gross_vnd": 527548000,
+      "company_discount_vnd": 15976600,
+      "CANCELLED": 35,
+      "NO_SHOW": 5
+    },
+    "SP-5|2025-06": {
+      "bookings": 124,
+      "CANCELLED": 18,
+      "gross_vnd": 897933000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 105,
+      "NO_SHOW": 1
+    },
+    "SP-3|2024-05": {
+      "bookings": 103,
+      "COMPLETED": 89,
+      "gross_vnd": 267167000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 4,
+      "CANCELLED": 10
+    },
+    "DN-5|2025-07": {
+      "bookings": 243,
+      "COMPLETED": 207,
+      "gross_vnd": 1588590000,
+      "company_discount_vnd": 39937520,
+      "NO_SHOW": 7,
+      "CANCELLED": 29
+    },
+    "DL-3|2025-08": {
+      "bookings": 258,
+      "CANCELLED": 43,
+      "gross_vnd": 626025000,
+      "company_discount_vnd": 18201440,
+      "COMPLETED": 204,
+      "NO_SHOW": 11
+    },
+    "DL-5|2024-07": {
+      "bookings": 265,
+      "COMPLETED": 233,
+      "gross_vnd": 1735086000,
+      "company_discount_vnd": 42766240,
+      "CANCELLED": 29,
+      "NO_SHOW": 3
+    },
+    "DN-3|2024-04": {
+      "bookings": 114,
+      "COMPLETED": 88,
+      "gross_vnd": 279029000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 19,
+      "NO_SHOW": 7
+    },
+    "DN-5|2025-10": {
+      "bookings": 152,
+      "COMPLETED": 124,
+      "gross_vnd": 830530000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 6,
+      "CANCELLED": 22
+    },
+    "DL-5|2024-08": {
+      "bookings": 255,
+      "COMPLETED": 208,
+      "gross_vnd": 1422357000,
+      "company_discount_vnd": 32012680,
+      "CANCELLED": 39,
+      "NO_SHOW": 8
+    },
+    "PQ-5|2024-12": {
+      "bookings": 248,
+      "COMPLETED": 212,
+      "gross_vnd": 1727841000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 27,
+      "NO_SHOW": 9
+    },
+    "PQ-5|2025-04": {
+      "bookings": 216,
+      "COMPLETED": 179,
+      "gross_vnd": 1152712000,
+      "company_discount_vnd": 27091420,
+      "CANCELLED": 27,
+      "NO_SHOW": 10
+    },
+    "PQ-3|2024-10": {
+      "bookings": 109,
+      "COMPLETED": 90,
+      "gross_vnd": 295495000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 16,
+      "NO_SHOW": 3
+    },
+    "SP-3|2024-11": {
+      "bookings": 196,
+      "COMPLETED": 166,
+      "gross_vnd": 473774000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 26,
+      "NO_SHOW": 4
+    },
+    "SP-5|2024-09": {
+      "bookings": 220,
+      "COMPLETED": 177,
+      "gross_vnd": 1248469000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 36,
+      "NO_SHOW": 7
+    },
+    "PQ-5|2024-04": {
+      "bookings": 220,
+      "CANCELLED": 33,
+      "gross_vnd": 1199587000,
+      "company_discount_vnd": 27579600,
+      "COMPLETED": 184,
+      "NO_SHOW": 3
+    },
+    "SP-3|2024-04": {
+      "bookings": 230,
+      "COMPLETED": 197,
+      "gross_vnd": 559539000,
+      "company_discount_vnd": 16923260,
+      "CANCELLED": 25,
+      "NO_SHOW": 8
+    },
+    "DL-3|2025-05": {
+      "bookings": 224,
+      "COMPLETED": 187,
+      "gross_vnd": 510001000,
+      "company_discount_vnd": 17838720,
+      "CANCELLED": 33,
+      "NO_SHOW": 4
+    },
+    "SP-5|2024-07": {
+      "bookings": 118,
+      "CANCELLED": 16,
+      "gross_vnd": 797313000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 97,
+      "NO_SHOW": 5
+    },
+    "DL-5|2024-06": {
+      "bookings": 239,
+      "COMPLETED": 202,
+      "gross_vnd": 1653393000,
+      "company_discount_vnd": 37586520,
+      "CANCELLED": 32,
+      "NO_SHOW": 5
+    },
+    "PQ-3|2024-01": {
+      "bookings": 207,
+      "COMPLETED": 177,
+      "gross_vnd": 489868000,
+      "company_discount_vnd": 19993520,
+      "CANCELLED": 24,
+      "NO_SHOW": 6
+    },
+    "DL-3|2025-03": {
+      "bookings": 134,
+      "COMPLETED": 115,
+      "gross_vnd": 320651000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 13,
+      "NO_SHOW": 6
+    },
+    "SP-3|2025-09": {
+      "bookings": 213,
+      "COMPLETED": 177,
+      "gross_vnd": 539382000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 6,
+      "CANCELLED": 30
+    },
+    "PQ-3|2025-07": {
+      "bookings": 105,
+      "COMPLETED": 92,
+      "gross_vnd": 268321000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 13
+    },
+    "DN-5|2024-02": {
+      "bookings": 126,
+      "COMPLETED": 106,
+      "gross_vnd": 738449000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 13,
+      "NO_SHOW": 7
+    },
+    "SP-5|2024-08": {
+      "bookings": 120,
+      "COMPLETED": 102,
+      "gross_vnd": 734782000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 16,
+      "NO_SHOW": 2
+    },
+    "SP-3|2024-03": {
+      "bookings": 222,
+      "COMPLETED": 190,
+      "gross_vnd": 494056000,
+      "company_discount_vnd": 12982360,
+      "CANCELLED": 27,
+      "NO_SHOW": 5
+    },
+    "DL-3|2024-05": {
+      "bookings": 242,
+      "COMPLETED": 208,
+      "gross_vnd": 535322000,
+      "company_discount_vnd": 17247540,
+      "CANCELLED": 24,
+      "NO_SHOW": 10
+    },
+    "DN-3|2025-05": {
+      "bookings": 254,
+      "COMPLETED": 217,
+      "gross_vnd": 579493000,
+      "company_discount_vnd": 16071500,
+      "CANCELLED": 30,
+      "NO_SHOW": 7
+    },
+    "DL-3|2024-09": {
+      "bookings": 136,
+      "COMPLETED": 119,
+      "gross_vnd": 318857000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 15,
+      "NO_SHOW": 2
+    },
+    "SP-5|2024-05": {
+      "bookings": 98,
+      "COMPLETED": 75,
+      "gross_vnd": 640024000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 18,
+      "NO_SHOW": 5
+    },
+    "DL-5|2024-10": {
+      "bookings": 134,
+      "COMPLETED": 112,
+      "gross_vnd": 794638000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 18,
+      "NO_SHOW": 4
+    },
+    "PQ-3|2025-02": {
+      "bookings": 203,
+      "COMPLETED": 172,
+      "gross_vnd": 449681000,
+      "company_discount_vnd": 14451400,
+      "CANCELLED": 25,
+      "NO_SHOW": 6
+    },
+    "DL-3|2024-08": {
+      "bookings": 240,
+      "COMPLETED": 207,
+      "gross_vnd": 569196000,
+      "company_discount_vnd": 18115720,
+      "CANCELLED": 29,
+      "NO_SHOW": 4
+    },
+    "DN-5|2025-05": {
+      "bookings": 276,
+      "COMPLETED": 233,
+      "gross_vnd": 1548697000,
+      "company_discount_vnd": 43824180,
+      "CANCELLED": 34,
+      "NO_SHOW": 9
+    },
+    "DN-5|2024-04": {
+      "bookings": 118,
+      "COMPLETED": 94,
+      "gross_vnd": 716495000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 6,
+      "CANCELLED": 18
+    },
+    "DL-5|2025-02": {
+      "bookings": 116,
+      "COMPLETED": 97,
+      "gross_vnd": 658643000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 16,
+      "NO_SHOW": 3
+    },
+    "SP-3|2025-10": {
+      "bookings": 203,
+      "COMPLETED": 170,
+      "gross_vnd": 465056000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 24,
+      "NO_SHOW": 9
+    },
+    "DL-3|2024-11": {
+      "bookings": 124,
+      "COMPLETED": 99,
+      "gross_vnd": 313382000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 18,
+      "NO_SHOW": 7
+    },
+    "DN-5|2024-06": {
+      "bookings": 231,
+      "COMPLETED": 190,
+      "gross_vnd": 1649361000,
+      "company_discount_vnd": 34928740,
+      "CANCELLED": 35,
+      "NO_SHOW": 6
+    },
+    "DL-5|2024-05": {
+      "bookings": 255,
+      "COMPLETED": 214,
+      "gross_vnd": 1413375000,
+      "company_discount_vnd": 36166480,
+      "CANCELLED": 34,
+      "NO_SHOW": 7
+    },
+    "PQ-3|2025-09": {
+      "bookings": 134,
+      "COMPLETED": 112,
+      "gross_vnd": 352743000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 17,
+      "NO_SHOW": 5
+    },
+    "DN-5|2024-08": {
+      "bookings": 249,
+      "NO_SHOW": 10,
+      "gross_vnd": 1532393000,
+      "company_discount_vnd": 34504180,
+      "COMPLETED": 208,
+      "CANCELLED": 31
+    },
+    "SP-3|2024-06": {
+      "bookings": 121,
+      "COMPLETED": 101,
+      "gross_vnd": 329171000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 18,
+      "NO_SHOW": 2
+    },
+    "PQ-3|2025-10": {
+      "bookings": 116,
+      "COMPLETED": 102,
+      "gross_vnd": 280837000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 11,
+      "NO_SHOW": 3
+    },
+    "PQ-3|2024-03": {
+      "bookings": 224,
+      "COMPLETED": 182,
+      "gross_vnd": 494657000,
+      "company_discount_vnd": 17412820,
+      "CANCELLED": 37,
+      "NO_SHOW": 5
+    },
+    "DL-3|2024-03": {
+      "bookings": 138,
+      "COMPLETED": 116,
+      "gross_vnd": 357969000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 20,
+      "NO_SHOW": 2
+    },
+    "PQ-5|2024-02": {
+      "bookings": 218,
+      "COMPLETED": 190,
+      "gross_vnd": 1152374000,
+      "company_discount_vnd": 29386480,
+      "CANCELLED": 24,
+      "NO_SHOW": 4
+    },
+    "DN-5|2024-01": {
+      "bookings": 140,
+      "COMPLETED": 127,
+      "gross_vnd": 789314000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 10,
+      "NO_SHOW": 3
+    },
+    "DL-3|2024-12": {
+      "bookings": 139,
+      "CANCELLED": 21,
+      "gross_vnd": 407923000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 3,
+      "COMPLETED": 115
+    },
+    "PQ-3|2024-11": {
+      "bookings": 201,
+      "CANCELLED": 31,
+      "gross_vnd": 483714000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 166,
+      "NO_SHOW": 4
+    },
+    "DL-3|2025-10": {
+      "bookings": 136,
+      "NO_SHOW": 3,
+      "gross_vnd": 373381000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 23,
+      "COMPLETED": 110
+    },
+    "DN-3|2025-03": {
+      "bookings": 141,
+      "COMPLETED": 111,
+      "gross_vnd": 356373000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 7,
+      "CANCELLED": 23
+    },
+    "DL-3|2025-09": {
+      "bookings": 129,
+      "COMPLETED": 109,
+      "gross_vnd": 304640000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 3,
+      "CANCELLED": 17
+    },
+    "DN-5|2025-08": {
+      "bookings": 250,
+      "COMPLETED": 208,
+      "gross_vnd": 1547375000,
+      "company_discount_vnd": 31384960,
+      "CANCELLED": 35,
+      "NO_SHOW": 7
+    },
+    "DL-5|2024-03": {
+      "bookings": 151,
+      "COMPLETED": 130,
+      "gross_vnd": 845162000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 16,
+      "NO_SHOW": 5
+    },
+    "DN-3|2025-07": {
+      "bookings": 240,
+      "COMPLETED": 203,
+      "gross_vnd": 656640000,
+      "company_discount_vnd": 22840500,
+      "CANCELLED": 26,
+      "NO_SHOW": 11
+    },
+    "SP-5|2024-03": {
+      "bookings": 228,
+      "COMPLETED": 186,
+      "gross_vnd": 1222205000,
+      "company_discount_vnd": 31019300,
+      "CANCELLED": 34,
+      "NO_SHOW": 8
+    },
+    "SP-3|2024-10": {
+      "bookings": 236,
+      "COMPLETED": 195,
+      "gross_vnd": 543149000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 7,
+      "CANCELLED": 34
+    },
+    "SP-5|2025-08": {
+      "bookings": 118,
+      "NO_SHOW": 4,
+      "gross_vnd": 724475000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 100,
+      "CANCELLED": 14
+    },
+    "DN-3|2025-11": {
+      "bookings": 125,
+      "COMPLETED": 107,
+      "gross_vnd": 317375000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 16,
+      "NO_SHOW": 2
+    },
+    "SP-3|2025-02": {
+      "bookings": 124,
+      "COMPLETED": 102,
+      "gross_vnd": 291747000,
+      "company_discount_vnd": 9249420,
+      "CANCELLED": 20,
+      "NO_SHOW": 2
+    },
+    "PQ-3|2024-12": {
+      "bookings": 242,
+      "COMPLETED": 197,
+      "gross_vnd": 684390000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 34,
+      "NO_SHOW": 11
+    },
+    "SP-3|2025-08": {
+      "bookings": 133,
+      "COMPLETED": 112,
+      "gross_vnd": 300929000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 6,
+      "CANCELLED": 15
+    },
+    "DL-3|2025-12": {
+      "bookings": 101,
+      "CANCELLED": 19,
+      "gross_vnd": 272307000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 80,
+      "NO_SHOW": 2
+    },
+    "SP-3|2025-05": {
+      "bookings": 111,
+      "COMPLETED": 90,
+      "gross_vnd": 280278000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 18,
+      "NO_SHOW": 3
+    },
+    "DN-5|2024-03": {
+      "bookings": 148,
+      "COMPLETED": 126,
+      "gross_vnd": 867765000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 19,
+      "NO_SHOW": 3
+    },
+    "DL-3|2025-04": {
+      "bookings": 112,
+      "COMPLETED": 94,
+      "gross_vnd": 272274000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 4,
+      "CANCELLED": 14
+    },
+    "DN-5|2025-03": {
+      "bookings": 126,
+      "COMPLETED": 108,
+      "gross_vnd": 649332000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 15,
+      "NO_SHOW": 3
+    },
+    "DN-5|2024-11": {
+      "bookings": 137,
+      "CANCELLED": 20,
+      "gross_vnd": 762042000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 114,
+      "NO_SHOW": 3
+    },
+    "DN-3|2024-10": {
+      "bookings": 131,
+      "COMPLETED": 108,
+      "gross_vnd": 310361000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 19,
+      "NO_SHOW": 4
+    },
+    "DN-3|2024-02": {
+      "bookings": 105,
+      "COMPLETED": 91,
+      "gross_vnd": 262267000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 12,
+      "NO_SHOW": 2
+    },
+    "DL-5|2025-01": {
+      "bookings": 145,
+      "COMPLETED": 125,
+      "gross_vnd": 730122000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 17,
+      "NO_SHOW": 3
+    },
+    "SP-5|2024-12": {
+      "bookings": 220,
+      "COMPLETED": 192,
+      "gross_vnd": 1603479000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 18,
+      "NO_SHOW": 10
+    },
+    "SP-3|2024-08": {
+      "bookings": 127,
+      "COMPLETED": 116,
+      "gross_vnd": 307941000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 10,
+      "NO_SHOW": 1
+    },
+    "DL-3|2025-07": {
+      "bookings": 241,
+      "COMPLETED": 200,
+      "gross_vnd": 682210000,
+      "company_discount_vnd": 24560640,
+      "CANCELLED": 33,
+      "NO_SHOW": 8
+    },
+    "SP-5|2025-12": {
+      "bookings": 172,
+      "COMPLETED": 138,
+      "gross_vnd": 1196169000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 30,
+      "NO_SHOW": 4
+    },
+    "PQ-5|2024-09": {
+      "bookings": 135,
+      "COMPLETED": 115,
+      "gross_vnd": 796292000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 18,
+      "NO_SHOW": 2
+    },
+    "DL-5|2024-04": {
+      "bookings": 135,
+      "COMPLETED": 115,
+      "gross_vnd": 773677000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 15,
+      "NO_SHOW": 5
+    },
+    "PQ-3|2024-09": {
+      "bookings": 102,
+      "COMPLETED": 82,
+      "gross_vnd": 237261000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 15,
+      "NO_SHOW": 5
+    },
+    "DN-5|2025-12": {
+      "bookings": 102,
+      "COMPLETED": 81,
+      "gross_vnd": 626262000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 21
+    },
+    "PQ-5|2025-10": {
+      "bookings": 129,
+      "COMPLETED": 108,
+      "gross_vnd": 679254000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 16,
+      "NO_SHOW": 5
+    },
+    "PQ-3|2025-03": {
+      "bookings": 229,
+      "COMPLETED": 188,
+      "gross_vnd": 558285000,
+      "company_discount_vnd": 18493520,
+      "CANCELLED": 35,
+      "NO_SHOW": 6
+    },
+    "DN-5|2025-09": {
+      "bookings": 118,
+      "COMPLETED": 95,
+      "gross_vnd": 697544000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 22,
+      "NO_SHOW": 1
+    },
+    "PQ-5|2025-05": {
+      "bookings": 119,
+      "COMPLETED": 97,
+      "gross_vnd": 668956000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 19,
+      "NO_SHOW": 3
+    },
+    "PQ-3|2024-02": {
+      "bookings": 208,
+      "COMPLETED": 177,
+      "gross_vnd": 500631000,
+      "company_discount_vnd": 15273360,
+      "CANCELLED": 23,
+      "NO_SHOW": 8
+    },
+    "DL-5|2025-10": {
+      "bookings": 128,
+      "COMPLETED": 112,
+      "gross_vnd": 708847000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 12,
+      "NO_SHOW": 4
+    },
+    "SP-5|2025-10": {
+      "bookings": 266,
+      "COMPLETED": 225,
+      "gross_vnd": 1479865000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 31,
+      "NO_SHOW": 10
+    },
+    "DL-3|2025-01": {
+      "bookings": 136,
+      "NO_SHOW": 4,
+      "gross_vnd": 363497000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 20,
+      "COMPLETED": 112
+    },
+    "SP-5|2025-07": {
+      "bookings": 100,
+      "COMPLETED": 75,
+      "gross_vnd": 679392000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 21,
+      "NO_SHOW": 4
+    },
+    "SP-3|2024-07": {
+      "bookings": 116,
+      "COMPLETED": 97,
+      "gross_vnd": 354965000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 15,
+      "NO_SHOW": 4
+    },
+    "PQ-3|2025-04": {
+      "bookings": 223,
+      "COMPLETED": 190,
+      "gross_vnd": 501493000,
+      "company_discount_vnd": 14531800,
+      "CANCELLED": 27,
+      "NO_SHOW": 6
+    },
+    "DN-5|2024-05": {
+      "bookings": 241,
+      "COMPLETED": 202,
+      "gross_vnd": 1402066000,
+      "company_discount_vnd": 34083520,
+      "CANCELLED": 33,
+      "NO_SHOW": 6
+    },
+    "PQ-5|2025-12": {
+      "bookings": 178,
+      "COMPLETED": 151,
+      "gross_vnd": 1187721000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 21,
+      "NO_SHOW": 6
+    },
+    "DN-5|2024-07": {
+      "bookings": 265,
+      "COMPLETED": 231,
+      "gross_vnd": 1758030000,
+      "company_discount_vnd": 41254680,
+      "CANCELLED": 26,
+      "NO_SHOW": 8
+    },
+    "DL-3|2024-06": {
+      "bookings": 232,
+      "COMPLETED": 192,
+      "gross_vnd": 673154000,
+      "company_discount_vnd": 23828760,
+      "CANCELLED": 34,
+      "NO_SHOW": 6
+    },
+    "SP-5|2024-06": {
+      "bookings": 115,
+      "CANCELLED": 17,
+      "gross_vnd": 884640000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 96,
+      "NO_SHOW": 2
+    },
+    "DN-5|2025-02": {
+      "bookings": 115,
+      "CANCELLED": 19,
+      "gross_vnd": 667963000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 92,
+      "NO_SHOW": 4
+    },
+    "DL-5|2024-02": {
+      "bookings": 124,
+      "COMPLETED": 100,
+      "gross_vnd": 726123000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 21,
+      "NO_SHOW": 3
+    },
+    "PQ-3|2025-11": {
+      "bookings": 202,
+      "COMPLETED": 169,
+      "gross_vnd": 536074000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 27,
+      "NO_SHOW": 6
+    },
+    "PQ-5|2025-03": {
+      "bookings": 219,
+      "COMPLETED": 176,
+      "gross_vnd": 1263092000,
+      "company_discount_vnd": 33675920,
+      "CANCELLED": 37,
+      "NO_SHOW": 6
+    },
+    "DN-5|2024-09": {
+      "bookings": 127,
+      "COMPLETED": 112,
+      "gross_vnd": 707851000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 2,
+      "CANCELLED": 13
+    },
+    "DN-3|2024-07": {
+      "bookings": 245,
+      "COMPLETED": 213,
+      "gross_vnd": 659043000,
+      "company_discount_vnd": 19045000,
+      "NO_SHOW": 6,
+      "CANCELLED": 26
+    },
+    "PQ-5|2025-09": {
+      "bookings": 107,
+      "COMPLETED": 94,
+      "gross_vnd": 615755000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 9,
+      "NO_SHOW": 4
+    },
+    "SP-3|2024-02": {
+      "bookings": 102,
+      "CANCELLED": 9,
+      "gross_vnd": 239109000,
+      "company_discount_vnd": 6503160,
+      "NO_SHOW": 4,
+      "COMPLETED": 89
+    },
+    "PQ-5|2025-01": {
+      "bookings": 218,
+      "COMPLETED": 183,
+      "gross_vnd": 1224182000,
+      "company_discount_vnd": 33944860,
+      "CANCELLED": 27,
+      "NO_SHOW": 8
+    },
+    "PQ-3|2025-06": {
+      "bookings": 110,
+      "COMPLETED": 100,
+      "gross_vnd": 330207000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 1,
+      "CANCELLED": 9
+    },
+    "SP-5|2024-11": {
+      "bookings": 249,
+      "COMPLETED": 208,
+      "gross_vnd": 1379125000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 32,
+      "NO_SHOW": 9
+    },
+    "PQ-3|2024-08": {
+      "bookings": 114,
+      "COMPLETED": 94,
+      "gross_vnd": 282460000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 18,
+      "NO_SHOW": 2
+    },
+    "PQ-5|2025-02": {
+      "bookings": 235,
+      "COMPLETED": 200,
+      "gross_vnd": 1303330000,
+      "company_discount_vnd": 38068140,
+      "CANCELLED": 31,
+      "NO_SHOW": 4
+    },
+    "SP-3|2024-12": {
+      "bookings": 228,
+      "COMPLETED": 185,
+      "gross_vnd": 678579000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 31,
+      "NO_SHOW": 12
+    },
+    "DL-5|2025-04": {
+      "bookings": 121,
+      "COMPLETED": 99,
+      "gross_vnd": 730122000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 19,
+      "NO_SHOW": 3
+    },
+    "PQ-3|2024-06": {
+      "bookings": 99,
+      "CANCELLED": 17,
+      "gross_vnd": 273263000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 78,
+      "NO_SHOW": 4
+    },
+    "PQ-5|2024-07": {
+      "bookings": 125,
+      "COMPLETED": 108,
+      "gross_vnd": 881829000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 4,
+      "CANCELLED": 13
+    },
+    "DN-3|2024-11": {
+      "bookings": 125,
+      "COMPLETED": 109,
+      "gross_vnd": 296855000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 3,
+      "CANCELLED": 13
+    },
+    "SP-3|2025-03": {
+      "bookings": 195,
+      "COMPLETED": 160,
+      "gross_vnd": 479318000,
+      "company_discount_vnd": 17150900,
+      "CANCELLED": 24,
+      "NO_SHOW": 11
+    },
+    "DN-5|2025-01": {
+      "bookings": 139,
+      "COMPLETED": 119,
+      "gross_vnd": 815904000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 5,
+      "CANCELLED": 15
+    },
+    "SP-5|2025-02": {
+      "bookings": 102,
+      "COMPLETED": 90,
+      "gross_vnd": 549253000,
+      "company_discount_vnd": 14361940,
+      "CANCELLED": 12
+    },
+    "DL-5|2025-11": {
+      "bookings": 104,
+      "COMPLETED": 91,
+      "gross_vnd": 587493000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 10,
+      "NO_SHOW": 3
+    },
+    "DL-3|2024-02": {
+      "bookings": 123,
+      "COMPLETED": 100,
+      "gross_vnd": 281134000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 6,
+      "CANCELLED": 17
+    },
+    "SP-5|2025-05": {
+      "bookings": 95,
+      "COMPLETED": 78,
+      "gross_vnd": 548933000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 12,
+      "NO_SHOW": 5
+    },
+    "SP-5|2024-10": {
+      "bookings": 235,
+      "CANCELLED": 24,
+      "gross_vnd": 1294022000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 203,
+      "NO_SHOW": 8
+    },
+    "DL-5|2024-12": {
+      "bookings": 127,
+      "COMPLETED": 98,
+      "gross_vnd": 883449000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 22,
+      "NO_SHOW": 7
+    },
+    "DL-5|2024-11": {
+      "bookings": 121,
+      "COMPLETED": 98,
+      "gross_vnd": 714829000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 22,
+      "NO_SHOW": 1
+    },
+    "PQ-5|2024-03": {
+      "bookings": 245,
+      "CANCELLED": 35,
+      "gross_vnd": 1360165000,
+      "company_discount_vnd": 33864200,
+      "COMPLETED": 202,
+      "NO_SHOW": 8
+    },
+    "DN-5|2025-11": {
+      "bookings": 137,
+      "CANCELLED": 18,
+      "gross_vnd": 798278000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 118,
+      "NO_SHOW": 1
+    },
+    "PQ-3|2024-04": {
+      "bookings": 226,
+      "CANCELLED": 28,
+      "gross_vnd": 544107000,
+      "company_discount_vnd": 14573740,
+      "COMPLETED": 188,
+      "NO_SHOW": 10
+    },
+    "DN-5|2024-12": {
+      "bookings": 144,
+      "COMPLETED": 115,
+      "gross_vnd": 1044837000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 4,
+      "CANCELLED": 25
+    },
+    "SP-5|2025-11": {
+      "bookings": 217,
+      "COMPLETED": 192,
+      "gross_vnd": 1210570000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 23,
+      "NO_SHOW": 2
+    },
+    "DN-3|2025-01": {
+      "bookings": 128,
+      "CANCELLED": 17,
+      "gross_vnd": 302374000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 105,
+      "NO_SHOW": 6
+    },
+    "DN-3|2025-08": {
+      "bookings": 215,
+      "COMPLETED": 194,
+      "gross_vnd": 505801000,
+      "company_discount_vnd": 15679500,
+      "CANCELLED": 20,
+      "NO_SHOW": 1
+    },
+    "SP-3|2025-07": {
+      "bookings": 102,
+      "CANCELLED": 15,
+      "gross_vnd": 295307000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 85,
+      "NO_SHOW": 2
+    },
+    "PQ-5|2024-01": {
+      "bookings": 231,
+      "CANCELLED": 30,
+      "gross_vnd": 1400738000,
+      "company_discount_vnd": 34578100,
+      "COMPLETED": 198,
+      "NO_SHOW": 3
+    },
+    "SP-5|2025-09": {
+      "bookings": 232,
+      "COMPLETED": 193,
+      "gross_vnd": 1349535000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 32,
+      "NO_SHOW": 7
+    },
+    "SP-5|2024-04": {
+      "bookings": 217,
+      "COMPLETED": 189,
+      "gross_vnd": 1309638000,
+      "company_discount_vnd": 31261380,
+      "CANCELLED": 19,
+      "NO_SHOW": 9
+    },
+    "DL-5|2025-06": {
+      "bookings": 245,
+      "COMPLETED": 200,
+      "gross_vnd": 1620786000,
+      "company_discount_vnd": 37674660,
+      "CANCELLED": 41,
+      "NO_SHOW": 4
+    },
+    "DN-3|2024-08": {
+      "bookings": 215,
+      "COMPLETED": 183,
+      "gross_vnd": 517097000,
+      "company_discount_vnd": 13539220,
+      "CANCELLED": 27,
+      "NO_SHOW": 5
+    },
+    "PQ-3|2024-07": {
+      "bookings": 118,
+      "COMPLETED": 99,
+      "gross_vnd": 357725000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 17,
+      "NO_SHOW": 2
+    },
+    "SP-5|2025-04": {
+      "bookings": 212,
+      "COMPLETED": 175,
+      "gross_vnd": 1135747000,
+      "company_discount_vnd": 30221840,
+      "CANCELLED": 30,
+      "NO_SHOW": 7
+    },
+    "SP-3|2024-01": {
+      "bookings": 105,
+      "COMPLETED": 93,
+      "gross_vnd": 233061000,
+      "company_discount_vnd": 8488780,
+      "CANCELLED": 8,
+      "NO_SHOW": 4
+    },
+    "DL-3|2025-06": {
+      "bookings": 235,
+      "COMPLETED": 203,
+      "gross_vnd": 669405000,
+      "company_discount_vnd": 22485620,
+      "CANCELLED": 24,
+      "NO_SHOW": 8
+    },
+    "DN-5|2025-06": {
+      "bookings": 253,
+      "CANCELLED": 38,
+      "gross_vnd": 1690410000,
+      "company_discount_vnd": 41000720,
+      "NO_SHOW": 9,
+      "COMPLETED": 206
+    },
+    "DN-3|2024-03": {
+      "bookings": 125,
+      "COMPLETED": 100,
+      "gross_vnd": 301589000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 21,
+      "NO_SHOW": 4
+    },
+    "PQ-5|2025-07": {
+      "bookings": 124,
+      "CANCELLED": 17,
+      "gross_vnd": 841578000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 106,
+      "NO_SHOW": 1
+    },
+    "SP-3|2025-11": {
+      "bookings": 212,
+      "COMPLETED": 184,
+      "gross_vnd": 476728000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 23,
+      "NO_SHOW": 5
+    },
+    "DL-3|2024-10": {
+      "bookings": 144,
+      "COMPLETED": 119,
+      "gross_vnd": 357105000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 20,
+      "NO_SHOW": 5
+    },
+    "DN-3|2025-04": {
+      "bookings": 136,
+      "COMPLETED": 111,
+      "gross_vnd": 321507000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 6,
+      "CANCELLED": 19
+    },
+    "DL-3|2024-07": {
+      "bookings": 248,
+      "COMPLETED": 211,
+      "gross_vnd": 693429000,
+      "company_discount_vnd": 23043620,
+      "CANCELLED": 30,
+      "NO_SHOW": 7
+    },
+    "DL-5|2025-05": {
+      "bookings": 263,
+      "COMPLETED": 221,
+      "gross_vnd": 1515446000,
+      "company_discount_vnd": 42311820,
+      "CANCELLED": 36,
+      "NO_SHOW": 6
+    },
+    "DN-3|2025-10": {
+      "bookings": 127,
+      "COMPLETED": 113,
+      "gross_vnd": 299478000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 13,
+      "NO_SHOW": 1
+    },
+    "DL-5|2025-09": {
+      "bookings": 127,
+      "COMPLETED": 98,
+      "gross_vnd": 747745000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 20,
+      "NO_SHOW": 9
+    },
+    "DN-3|2024-06": {
+      "bookings": 270,
+      "COMPLETED": 210,
+      "gross_vnd": 708505000,
+      "company_discount_vnd": 22196140,
+      "CANCELLED": 51,
+      "NO_SHOW": 9
+    },
+    "DN-3|2025-02": {
+      "bookings": 115,
+      "COMPLETED": 95,
+      "gross_vnd": 295560000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 7,
+      "CANCELLED": 13
+    },
+    "DN-3|2025-09": {
+      "bookings": 131,
+      "COMPLETED": 105,
+      "gross_vnd": 303804000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 22,
+      "NO_SHOW": 4
+    },
+    "DN-3|2024-12": {
+      "bookings": 130,
+      "CANCELLED": 15,
+      "gross_vnd": 390414000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 4,
+      "COMPLETED": 111
+    },
+    "DN-5|2025-04": {
+      "bookings": 130,
+      "COMPLETED": 100,
+      "gross_vnd": 727472000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 24,
+      "NO_SHOW": 6
+    },
+    "DL-3|2024-04": {
+      "bookings": 117,
+      "COMPLETED": 97,
+      "gross_vnd": 289675000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 15,
+      "NO_SHOW": 5
+    },
+    "SP-5|2024-01": {
+      "bookings": 114,
+      "CANCELLED": 15,
+      "gross_vnd": 587825000,
+      "company_discount_vnd": 16287340,
+      "COMPLETED": 95,
+      "NO_SHOW": 4
+    },
+    "SP-3|2025-06": {
+      "bookings": 134,
+      "CANCELLED": 17,
+      "gross_vnd": 353999000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 112,
+      "NO_SHOW": 5
+    },
+    "PQ-5|2024-11": {
+      "bookings": 218,
+      "COMPLETED": 182,
+      "gross_vnd": 1333240000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 24,
+      "NO_SHOW": 12
+    },
+    "PQ-3|2025-08": {
+      "bookings": 125,
+      "COMPLETED": 104,
+      "gross_vnd": 302029000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 17,
+      "NO_SHOW": 4
+    },
+    "PQ-3|2025-05": {
+      "bookings": 107,
+      "COMPLETED": 94,
+      "gross_vnd": 239544000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 3,
+      "CANCELLED": 10
+    },
+    "DL-5|2025-12": {
+      "bookings": 101,
+      "COMPLETED": 80,
+      "gross_vnd": 822660000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 18,
+      "NO_SHOW": 3
+    },
+    "DN-3|2024-09": {
+      "bookings": 128,
+      "COMPLETED": 112,
+      "gross_vnd": 298344000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 13,
+      "NO_SHOW": 3
+    },
+    "PQ-5|2024-08": {
+      "bookings": 105,
+      "COMPLETED": 94,
+      "gross_vnd": 600456000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 9,
+      "NO_SHOW": 2
+    },
+    "PQ-5|2025-08": {
+      "bookings": 116,
+      "CANCELLED": 16,
+      "gross_vnd": 630052000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 96,
+      "NO_SHOW": 4
+    },
+    "PQ-5|2025-06": {
+      "bookings": 110,
+      "COMPLETED": 88,
+      "gross_vnd": 754251000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 19,
+      "NO_SHOW": 3
+    },
+    "SP-5|2025-03": {
+      "bookings": 222,
+      "NO_SHOW": 5,
+      "gross_vnd": 1302989000,
+      "company_discount_vnd": 35312500,
+      "COMPLETED": 194,
+      "CANCELLED": 23
+    },
+    "DL-5|2025-07": {
+      "bookings": 249,
+      "COMPLETED": 201,
+      "gross_vnd": 1749567000,
+      "company_discount_vnd": 38735040,
+      "CANCELLED": 44,
+      "NO_SHOW": 4
+    },
+    "DL-5|2025-03": {
+      "bookings": 130,
+      "COMPLETED": 112,
+      "gross_vnd": 720144000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 3,
+      "CANCELLED": 15
+    },
+    "SP-3|2025-01": {
+      "bookings": 111,
+      "COMPLETED": 87,
+      "gross_vnd": 262709000,
+      "company_discount_vnd": 9033540,
+      "CANCELLED": 21,
+      "NO_SHOW": 3
+    },
+    "SP-3|2025-04": {
+      "bookings": 203,
+      "COMPLETED": 173,
+      "gross_vnd": 483822000,
+      "company_discount_vnd": 11955760,
+      "CANCELLED": 24,
+      "NO_SHOW": 6
+    },
+    "DN-5|2024-10": {
+      "bookings": 124,
+      "CANCELLED": 22,
+      "gross_vnd": 711174000,
+      "company_discount_vnd": 0,
+      "COMPLETED": 95,
+      "NO_SHOW": 7
+    },
+    "PQ-3|2024-05": {
+      "bookings": 115,
+      "COMPLETED": 95,
+      "gross_vnd": 259967000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 19,
+      "NO_SHOW": 1
+    },
+    "PQ-5|2024-06": {
+      "bookings": 125,
+      "COMPLETED": 105,
+      "gross_vnd": 866142000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 14,
+      "NO_SHOW": 6
+    },
+    "PQ-5|2025-11": {
+      "bookings": 241,
+      "COMPLETED": 201,
+      "gross_vnd": 1322272000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 34,
+      "NO_SHOW": 6
+    },
+    "DN-3|2024-01": {
+      "bookings": 122,
+      "COMPLETED": 100,
+      "gross_vnd": 305233000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 17,
+      "NO_SHOW": 5
+    },
+    "SP-5|2025-01": {
+      "bookings": 134,
+      "COMPLETED": 113,
+      "gross_vnd": 780003000,
+      "company_discount_vnd": 18588900,
+      "CANCELLED": 21
+    },
+    "DL-3|2025-02": {
+      "bookings": 108,
+      "COMPLETED": 97,
+      "gross_vnd": 252689000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 4,
+      "CANCELLED": 7
+    },
+    "PQ-5|2024-05": {
+      "bookings": 139,
+      "COMPLETED": 115,
+      "gross_vnd": 876418000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 21,
+      "NO_SHOW": 3
+    },
+    "SP-3|2025-12": {
+      "bookings": 193,
+      "COMPLETED": 160,
+      "gross_vnd": 528542000,
+      "company_discount_vnd": 0,
+      "NO_SHOW": 5,
+      "CANCELLED": 28
+    },
+    "PQ-3|2025-01": {
+      "bookings": 215,
+      "COMPLETED": 187,
+      "gross_vnd": 517872000,
+      "company_discount_vnd": 18082880,
+      "CANCELLED": 23,
+      "NO_SHOW": 5
+    },
+    "DL-3|2025-11": {
+      "bookings": 124,
+      "COMPLETED": 101,
+      "gross_vnd": 288187000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 21,
+      "NO_SHOW": 2
+    },
+    "PQ-5|2024-10": {
+      "bookings": 111,
+      "COMPLETED": 98,
+      "gross_vnd": 649329000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 11,
+      "NO_SHOW": 2
+    },
+    "PQ-3|2025-12": {
+      "bookings": 180,
+      "COMPLETED": 147,
+      "gross_vnd": 504512000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 29,
+      "NO_SHOW": 4
+    },
+    "SP-5|2024-02": {
+      "bookings": 97,
+      "COMPLETED": 85,
+      "gross_vnd": 564549000,
+      "company_discount_vnd": 12975380,
+      "CANCELLED": 10,
+      "NO_SHOW": 2
+    },
+    "SP-3|2024-09": {
+      "bookings": 202,
+      "COMPLETED": 170,
+      "gross_vnd": 461138000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 28,
+      "NO_SHOW": 4
+    },
+    "DL-5|2024-01": {
+      "bookings": 109,
+      "COMPLETED": 96,
+      "gross_vnd": 618082000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 12,
+      "NO_SHOW": 1
+    },
+    "DL-3|2024-01": {
+      "bookings": 129,
+      "COMPLETED": 112,
+      "gross_vnd": 305259000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 11,
+      "NO_SHOW": 6
+    },
+    "DL-5|2024-09": {
+      "bookings": 141,
+      "COMPLETED": 117,
+      "gross_vnd": 841842000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 19,
+      "NO_SHOW": 5
+    },
+    "DN-3|2025-12": {
+      "bookings": 99,
+      "COMPLETED": 82,
+      "gross_vnd": 270107000,
+      "company_discount_vnd": 0,
+      "CANCELLED": 16,
+      "NO_SHOW": 1
+    }
+  },
+  "warning": "Distribution checks describe generator assumptions; they are not evidence of real tourism demand or causality."
+}

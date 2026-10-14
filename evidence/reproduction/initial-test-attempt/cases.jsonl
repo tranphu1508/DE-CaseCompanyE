@@ -1,0 +1,106 @@
+{"test": "tests/test_baseline.py::test_frozen_seed_files_and_code", "stage": "call", "outcome": "passed", "seconds": 0.2027321799978381}
+{"test": "tests/test_baseline.py::test_full_regeneration_without_overwriting_baseline", "stage": "call", "outcome": "passed", "seconds": 5.639292348001618}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-sites]", "stage": "call", "outcome": "passed", "seconds": 0.0022937860048841685}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-hotels]", "stage": "call", "outcome": "passed", "seconds": 0.0021651019997079857}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-rooms]", "stage": "call", "outcome": "passed", "seconds": 0.002198308997321874}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-channels]", "stage": "call", "outcome": "passed", "seconds": 0.00197527799900854}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-guests]", "stage": "call", "outcome": "passed", "seconds": 0.017118205003498588}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-membership_plans]", "stage": "call", "outcome": "passed", "seconds": 0.002950711001176387}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-memberships]", "stage": "call", "outcome": "passed", "seconds": 0.0061557340013678186}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-member_cards]", "stage": "call", "outcome": "passed", "seconds": 0.00593271000252571}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-promotions]", "stage": "call", "outcome": "passed", "seconds": 0.0022770270006731153}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-rate_plans]", "stage": "call", "outcome": "passed", "seconds": 0.002587389994005207}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-bookings]", "stage": "call", "outcome": "passed", "seconds": 0.08386150499427458}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-booking_rooms]", "stage": "call", "outcome": "passed", "seconds": 0.052193757001077756}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-stays]", "stage": "call", "outcome": "passed", "seconds": 0.031705803994555026}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-breakfast_entitlements]", "stage": "call", "outcome": "passed", "seconds": 0.060758163999707904}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-outlets]", "stage": "call", "outcome": "passed", "seconds": 0.0021604659996228293}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-dining_orders]", "stage": "call", "outcome": "passed", "seconds": 0.05706090400053654}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-meal_sessions]", "stage": "call", "outcome": "passed", "seconds": 0.015758224995806813}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-payments]", "stage": "call", "outcome": "passed", "seconds": 0.04684925999754341}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-settlements]", "stage": "call", "outcome": "passed", "seconds": 0.022985365001659375}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-suppliers]", "stage": "call", "outcome": "passed", "seconds": 0.002190766994317528}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-items]", "stage": "call", "outcome": "passed", "seconds": 0.002607777998491656}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-purchase_orders]", "stage": "call", "outcome": "passed", "seconds": 0.025914147998264525}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-purchase_lines]", "stage": "call", "outcome": "passed", "seconds": 0.02833248499518959}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-receipts]", "stage": "call", "outcome": "passed", "seconds": 0.02862928600370651}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-stock_movements]", "stage": "call", "outcome": "passed", "seconds": 0.11990229799994268}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-assets]", "stage": "call", "outcome": "passed", "seconds": 0.002806807002343703}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-maintenance]", "stage": "call", "outcome": "passed", "seconds": 0.0029553040003520437}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[hotel_ops-weather_daily]", "stage": "call", "outcome": "passed", "seconds": 0.006100739999965299}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-centres]", "stage": "call", "outcome": "passed", "seconds": 0.0019772750019910745}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-customers]", "stage": "call", "outcome": "passed", "seconds": 0.016739063001296017}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-activities]", "stage": "call", "outcome": "passed", "seconds": 0.002344795000681188}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-closures]", "stage": "call", "outcome": "passed", "seconds": 0.0024774310004431754}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-ticket_orders]", "stage": "call", "outcome": "passed", "seconds": 0.030747895005333703}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-tickets]", "stage": "call", "outcome": "passed", "seconds": 0.0697082330007106}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-admissions]", "stage": "call", "outcome": "passed", "seconds": 0.042608556999766733}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-vehicles]", "stage": "call", "outcome": "passed", "seconds": 0.002176000998588279}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-vehicle_maintenance]", "stage": "call", "outcome": "passed", "seconds": 0.002393992996076122}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-rentals]", "stage": "call", "outcome": "passed", "seconds": 0.014675294994958676}
+{"test": "tests/test_baseline.py::test_frozen_csv_row_counts[entertainment_ops-cash_events]", "stage": "call", "outcome": "passed", "seconds": 0.04320188899873756}
+{"test": "tests/test_sources.py::test_source_invariants[five_star_breakfast_missing]", "stage": "call", "outcome": "passed", "seconds": 0.0162937260029139}
+{"test": "tests/test_sources.py::test_source_invariants[booking_room_hotel_mismatch]", "stage": "call", "outcome": "passed", "seconds": 0.024754912999924272}
+{"test": "tests/test_sources.py::test_source_invariants[booking_price_mismatch]", "stage": "call", "outcome": "passed", "seconds": 0.03383843800111208}
+{"test": "tests/test_sources.py::test_source_invariants[room_overlaps]", "stage": "call", "outcome": "passed", "seconds": 0.49761927100189496}
+{"test": "tests/test_sources.py::test_source_invariants[stay_during_maintenance]", "stage": "call", "outcome": "passed", "seconds": 0.01681300100608496}
+{"test": "tests/test_sources.py::test_source_invariants[invalid_stay_status]", "stage": "call", "outcome": "passed", "seconds": 0.011720297996362206}
+{"test": "tests/test_sources.py::test_source_invariants[invalid_breakfast_day]", "stage": "call", "outcome": "passed", "seconds": 0.025949434006179217}
+{"test": "tests/test_sources.py::test_source_invariants[negative_lot_balance]", "stage": "call", "outcome": "passed", "seconds": 0.03372175600088667}
+{"test": "tests/test_sources.py::test_source_invariants[meal_cost_mismatch]", "stage": "call", "outcome": "passed", "seconds": 0.033990561998507474}
+{"test": "tests/test_sources.py::test_source_invariants[promotion_outside_conditions]", "stage": "call", "outcome": "passed", "seconds": 0.01236776499717962}
+{"test": "tests/test_sources.py::test_source_invariants[breakfast_cover_mismatch]", "stage": "call", "outcome": "passed", "seconds": 0.03534349399706116}
+{"test": "tests/test_sources.py::test_source_invariants[admission_when_closed]", "stage": "call", "outcome": "passed", "seconds": 0.02778344000398647}
+{"test": "tests/test_sources.py::test_source_invariants[admission_wrong_status]", "stage": "call", "outcome": "passed", "seconds": 0.009554149000905454}
+{"test": "tests/test_sources.py::test_source_invariants[ticket_total_mismatch]", "stage": "call", "outcome": "passed", "seconds": 0.023563239999930374}
+{"test": "tests/test_sources.py::test_source_invariants[vehicle_overlaps]", "stage": "call", "outcome": "passed", "seconds": 0.06829500899766572}
+{"test": "tests/test_sources.py::test_source_invariants[rental_during_maintenance]", "stage": "call", "outcome": "passed", "seconds": 0.007062673001200892}
+{"test": "tests/test_sources.py::test_existing_validation_command", "stage": "call", "outcome": "passed", "seconds": 0.9213371779987938}
+{"test": "tests/test_sources.py::test_database_rejects_invalid_mutations[INSERT INTO sites VALUES ('SP','duplicate','test')-UniqueViolation]", "stage": "call", "outcome": "passed", "seconds": 0.0045866679938626476}
+{"test": "tests/test_sources.py::test_database_rejects_invalid_mutations[UPDATE rooms SET hotel_id='missing' WHERE room_id=(SELECT room_id FROM rooms LIMIT 1)-ForeignKeyViolation]", "stage": "call", "outcome": "passed", "seconds": 0.004806333003216423}
+{"test": "tests/test_sources.py::test_database_rejects_invalid_mutations[UPDATE hotels SET hotel_name=NULL WHERE hotel_id='SP-5'-NotNullViolation]", "stage": "call", "outcome": "passed", "seconds": 0.004278798995073885}
+{"test": "tests/test_sources.py::test_database_rejects_invalid_mutations[UPDATE bookings SET departure=arrival WHERE booking_id=(SELECT booking_id FROM bookings LIMIT 1)-CheckViolation]", "stage": "call", "outcome": "passed", "seconds": 0.005354688000807073}
+{"test": "tests/test_sources.py::test_database_rejects_invalid_mutations[UPDATE bookings SET company_share_vnd=company_share_vnd+1 WHERE booking_id=(SELECT booking_id FROM bookings LIMIT 1)-CheckViolation]", "stage": "call", "outcome": "passed", "seconds": 0.004418787000759039}
+{"test": "tests/test_sources.py::test_temporal_overlap_checker_detects_deliberate_error", "stage": "call", "outcome": "passed", "seconds": 0.49025597099534934}
+{"test": "tests/test_sources.py::test_source_outage_is_an_error", "stage": "call", "outcome": "passed", "seconds": 0.0004095129988854751}
+{"test": "tests/test_sources.py::test_ingestion_source_failure_does_not_publish_batch", "stage": "call", "outcome": "passed", "seconds": 0.0032603289946564473}
+{"test": "tests/test_coverage.py::test_required_scenarios_and_report_gaps", "stage": "call", "outcome": "passed", "seconds": 0.1368108230017242}
+{"test": "tests/test_properties.py::test_generated_business_conservation_across_seeds", "stage": "call", "outcome": "passed", "seconds": 0.42468032900069375}
+{"test": "tests/test_properties.py::test_small_generator_is_deterministic", "stage": "call", "outcome": "passed", "seconds": 0.5886873170020408}
+{"test": "tests/test_properties.py::test_half_open_date_intervals", "stage": "call", "outcome": "passed", "seconds": 0.008808402002614457}
+{"test": "tests/test_spark.py::test_supplier_independent_examples", "stage": "call", "outcome": "passed", "seconds": 3.2057596720042056}
+{"test": "tests/test_spark.py::test_duplicate_supplier_document_is_counted_once", "stage": "call", "outcome": "passed", "seconds": 0.1979343980056001}
+{"test": "tests/test_spark.py::test_supplier_missing_column_fails", "stage": "call", "outcome": "passed", "seconds": 0.010595697996905074}
+{"test": "tests/test_spark.py::test_source_missing_or_reordered_columns_rejected[site_id,site_name]", "stage": "call", "outcome": "passed", "seconds": 0.0009771780023584142}
+{"test": "tests/test_spark.py::test_source_missing_or_reordered_columns_rejected[site_name,site_id,climate_region]", "stage": "call", "outcome": "passed", "seconds": 0.00017807100084610283}
+{"test": "tests/test_spark.py::test_lineage_and_timezone", "stage": "call", "outcome": "passed", "seconds": 0.3231610430011642}
+{"test": "tests/test_spark.py::test_register_retry_idempotence_and_corruption", "stage": "call", "outcome": "passed", "seconds": 5.112141093995888}
+{"test": "tests/test_spark.py::test_failed_parquet_write_not_published_and_can_retry", "stage": "call", "outcome": "passed", "seconds": 0.3512898020053399}
+{"test": "tests/test_spark.py::test_incomplete_existing_output_is_rejected", "stage": "call", "outcome": "passed", "seconds": 0.018747813999652863}
+{"test": "tests/test_spark.py::test_failed_batch_has_failure_report", "stage": "call", "outcome": "passed", "seconds": 0.0004969290021108463}
+{"test": "tests/test_lake.py::test_full_source_to_lake_values_and_metadata", "stage": "setup", "outcome": "failed", "seconds": 1.8541512189985951, "detail": "tests/test_lake.py:49: in isolated_batch\n    shutil.copyfile(root/'reports/reproducibility/v1/golden_aggregates.json',golden)\n/usr/local/lib/python3.11/shutil.py:256: in copyfile\n    with open(src, 'rb') as fsrc:\n         ^^^^^^^^^^^^^^^\nE   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/reports/reproducibility/v1/golden_aggregates.json'"}
+{"test": "tests/test_lake.py::test_same_batch_retry_and_raw_immutability", "stage": "setup", "outcome": "failed", "seconds": 0.00024120399757521227, "detail": "tests/test_lake.py:49: in isolated_batch\n    shutil.copyfile(root/'reports/reproducibility/v1/golden_aggregates.json',golden)\n/usr/local/lib/python3.11/shutil.py:256: in copyfile\n    with open(src, 'rb') as fsrc:\n         ^^^^^^^^^^^^^^^\nE   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/reports/reproducibility/v1/golden_aggregates.json'"}
+{"test": "tests/test_lake.py::test_raw_corruption_rejected_and_reported", "stage": "setup", "outcome": "failed", "seconds": 0.00020887900609523058, "detail": "tests/test_lake.py:49: in isolated_batch\n    shutil.copyfile(root/'reports/reproducibility/v1/golden_aggregates.json',golden)\n/usr/local/lib/python3.11/shutil.py:256: in copyfile\n    with open(src, 'rb') as fsrc:\n         ^^^^^^^^^^^^^^^\nE   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/reports/reproducibility/v1/golden_aggregates.json'"}
+{"test": "tests/test_lake.py::test_zz_catalog_survives_new_jvm", "stage": "setup", "outcome": "failed", "seconds": 0.0002020860047196038, "detail": "tests/test_lake.py:49: in isolated_batch\n    shutil.copyfile(root/'reports/reproducibility/v1/golden_aggregates.json',golden)\n/usr/local/lib/python3.11/shutil.py:256: in copyfile\n    with open(src, 'rb') as fsrc:\n         ^^^^^^^^^^^^^^^\nE   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/reports/reproducibility/v1/golden_aggregates.json'"}
+{"test": "tests/test_gx.py::test_gx_postgres_spark_and_negative_control", "stage": "call", "outcome": "failed", "seconds": 0.9080044940055814, "detail": "tests/test_gx.py:34: in test_gx_postgres_spark_and_negative_control\n    latest=json.loads((root/'lake/catalog/latest_ingestion.json').read_text())['batch_id']\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.11/pathlib.py:1058: in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/usr/local/lib/python3.11/pathlib.py:1044: in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   FileNotFoundError: [Errno 2] No such file or directory: '/workspace/lake/catalog/latest_ingestion.json'"}
+{"test": "tests/test_acceptance.py::test_reference_business_answers[B01]", "stage": "call", "outcome": "passed", "seconds": 2.5570357859978685}
+{"test": "tests/test_acceptance.py::test_reference_business_answers[B02]", "stage": "call", "outcome": "passed", "seconds": 0.18786109799839323}
+{"test": "tests/test_acceptance.py::test_reference_business_answers[B03]", "stage": "call", "outcome": "passed", "seconds": 0.5533777189993998}
+{"test": "tests/test_acceptance.py::test_reference_business_answers[B04]", "stage": "call", "outcome": "passed", "seconds": 0.3546978229933302}
+{"test": "tests/test_acceptance.py::test_reference_business_answers[B05]", "stage": "call", "outcome": "passed", "seconds": 0.38061760400159983}
+{"test": "tests/test_acceptance.py::test_reference_business_answers[B06]", "stage": "call", "outcome": "passed", "seconds": 0.3682009210024262}
+{"test": "tests/test_acceptance.py::test_reference_business_answers[B07]", "stage": "call", "outcome": "passed", "seconds": 0.22633119400416035}
+{"test": "tests/test_acceptance.py::test_reference_business_answers[B08]", "stage": "call", "outcome": "passed", "seconds": 0.38501248700049473}
+{"test": "tests/test_acceptance.py::test_cross_sell_fixture_detects_fanout_bug", "stage": "call", "outcome": "passed", "seconds": 0.2796321369969519}
+{"test": "tests/test_v2.py::test_v2_frozen_full_regeneration_and_external_bytes", "stage": "call", "outcome": "passed", "seconds": 6.516464758999064}
+{"test": "tests/test_v2.py::test_v2_new_invariants[received_quantity_balance]", "stage": "call", "outcome": "passed", "seconds": 0.027934998004639056}
+{"test": "tests/test_v2.py::test_v2_new_invariants[lot_receipt_quantity]", "stage": "call", "outcome": "passed", "seconds": 0.03449575900594937}
+{"test": "tests/test_v2.py::test_v2_new_invariants[stock_before_receipt]", "stage": "call", "outcome": "passed", "seconds": 0.01832335299695842}
+{"test": "tests/test_v2.py::test_v2_new_invariants[daily_negative_stock]", "stage": "call", "outcome": "passed", "seconds": 0.17120671200245852}
+{"test": "tests/test_v2.py::test_v2_new_invariants[final_revision_money]", "stage": "call", "outcome": "passed", "seconds": 0.006310463999398053}
+{"test": "tests/test_v2.py::test_v2_new_invariants[revision_room_total]", "stage": "call", "outcome": "passed", "seconds": 0.005866125000466127}
+{"test": "tests/test_v2.py::test_v2_new_invariants[final_revision_room_rate]", "stage": "call", "outcome": "passed", "seconds": 0.006278458997257985}
+{"test": "tests/test_v2.py::test_v2_new_invariants[completed_payment_balance]", "stage": "call", "outcome": "passed", "seconds": 0.027751339999667834}
+{"test": "tests/test_v2.py::test_v2_inherits_old_invariants_and_has_required_coverage", "stage": "call", "outcome": "passed", "seconds": 0.8319392059929669}
+{"test": "tests/test_v2.py::test_v2_out_of_order_and_replay_independent_fixture", "stage": "call", "outcome": "passed", "seconds": 4.213601365998329}
+{"test": "tests/test_v2.py::test_v2_conflicting_replay_is_rejected", "stage": "call", "outcome": "passed", "seconds": 0.19580741899699206}

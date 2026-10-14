@@ -1,0 +1,21 @@
+{
+  "id": "B08",
+  "name": "Bảo trì và số ngày phòng ngừng bán",
+  "scope": "REFERENCE_ONLY_NOT_WAREHOUSE",
+  "definition": "Khoảng bảo trì [start,end); cùng một phòng/ngày bị nhiều công việc ảnh hưởng chỉ bị loại một lần.",
+  "expected": [
+    {
+      "blocked_room_days": 3,
+      "available_room_days": 3,
+      "maintenance_cost": 300000
+    }
+  ],
+  "actual": [
+    {
+      "blocked_room_days": 3,
+      "available_room_days": 3,
+      "maintenance_cost": 300000
+    }
+  ],
+  "passed": true
+}

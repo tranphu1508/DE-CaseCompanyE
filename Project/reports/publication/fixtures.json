@@ -1,0 +1,120 @@
+{
+  "status": "PASSED",
+  "count": 28,
+  "checks": [
+    "no_publication_is_error_not_empty_report",
+    "oracle_done_iceberg_incomplete_keeps_pointer",
+    "oracle_seal_waits_for_inflight_writer_transaction",
+    "stale_generation_is_fenced",
+    "mismatched_targets_block_publication",
+    "missing_quality_blocks_publication",
+    "prepared_is_not_visible",
+    "missing_snapshot_has_no_latest_fallback",
+    "missing_helper_has_no_empty_fallback",
+    "prepared_manifest_is_immutable",
+    "abort_before_commit_exposes_no_new_batch",
+    "partial_quality_can_publish_without_old_batch_fallback",
+    "lost_acknowledgement_reconciles_without_duplicate",
+    "sealed_oracle_slot_blocks_stale_writer",
+    "pinned_reader_avoids_actual_mixed_latest_tables",
+    "second_branch_incomplete_keeps_old_publication",
+    "compare_and_set_rejects_wrong_previous",
+    "concurrent_publishers_commit_once",
+    "existing_reader_stays_on_old_publication",
+    "new_reader_sees_complete_new_pair_and_quality",
+    "expired_long_query_result_is_discarded",
+    "live_reader_prevents_slot_reservation",
+    "retained_publication_is_not_recycled_after_release",
+    "late_retry_never_rewinds_active_pointer",
+    "expired_lease_cannot_renew",
+    "expired_lease_cannot_release_results",
+    "reader_cannot_change_active_pointer",
+    "publisher_cannot_bypass_atomic_api"
+  ],
+  "scope": "ce_pub_test + CE_STAGE.PUB_PROBE_* + ce.publication_test",
+  "fixture_publications": [
+    {
+      "version": "fixture-only",
+      "publication_id": "pub_fixture_a_c8be62a95dc9",
+      "run_id": "fixture_a",
+      "oracle_slot": "CE_DWH_A",
+      "generation": 1,
+      "expected_active": null,
+      "tables": {
+        "D01": {
+          "name": "pub_probe_dim",
+          "mode": "TABLE",
+          "oracle_object": "CE_STAGE.PUB_PROBE_A_DIM",
+          "iceberg_table": "ce.publication_test.pub_probe_dim",
+          "rows": 1,
+          "content_sha256": "5cc6a8a697bb6f2fcb468ef02cf2a76e9ad3f5da223682f1ca29288836ee66b3",
+          "snapshot_id": 5236594494723249182
+        },
+        "F01": {
+          "name": "pub_probe_fact",
+          "mode": "TABLE",
+          "oracle_object": "CE_STAGE.PUB_PROBE_A_FACT",
+          "iceberg_table": "ce.publication_test.pub_probe_fact",
+          "rows": 1,
+          "content_sha256": "1425c5e9b346891218e3ef82838e0cf29163135538ccbce00dc9a19bea047e36",
+          "snapshot_id": 5155094440050099976
+        }
+      },
+      "helpers": {},
+      "quality_metrics": {
+        "B01.01": {
+          "status": "PARTIAL",
+          "reason": "Intentional fixture missingness; do not replace with previous batch"
+        }
+      },
+      "validation": {
+        "all_columns_equal": true,
+        "oracle_sealed": true,
+        "tags_pinned": true
+      }
+    },
+    {
+      "version": "fixture-only",
+      "publication_id": "pub_fixture_b_c8be62a95dc9",
+      "run_id": "fixture_b",
+      "oracle_slot": "CE_DWH_B",
+      "generation": 1,
+      "expected_active": "pub_fixture_a_c8be62a95dc9",
+      "tables": {
+        "D01": {
+          "name": "pub_probe_dim",
+          "mode": "TABLE",
+          "oracle_object": "CE_STAGE.PUB_PROBE_B_DIM",
+          "iceberg_table": "ce.publication_test.pub_probe_dim",
+          "rows": 1,
+          "content_sha256": "12849a365ef01811c2acec26370164969d77976ec5f6ece5096f4d70ff167427",
+          "snapshot_id": 7291103737235141902
+        },
+        "F01": {
+          "name": "pub_probe_fact",
+          "mode": "TABLE",
+          "oracle_object": "CE_STAGE.PUB_PROBE_B_FACT",
+          "iceberg_table": "ce.publication_test.pub_probe_fact",
+          "rows": 1,
+          "content_sha256": "e6097453a83ddda489e07d1c842d34df392972256a4d984610722e6e8d7f0ba6",
+          "snapshot_id": 6365270672185737552
+        }
+      },
+      "helpers": {},
+      "quality_metrics": {
+        "B01.01": {
+          "status": "PARTIAL",
+          "reason": "Intentional fixture missingness; do not replace with previous batch"
+        }
+      },
+      "validation": {
+        "all_columns_equal": true,
+        "oracle_sealed": true,
+        "tags_pinned": true
+      }
+    }
+  ],
+  "production_publication_unchanged": true,
+  "live_readers": 0,
+  "limits": "Controlled rollback/disconnection boundaries, not a host power-loss durability test."
+}

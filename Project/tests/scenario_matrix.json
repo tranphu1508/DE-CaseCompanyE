@@ -1,0 +1,34 @@
+{
+  "version": "companye-v1-coverage-1",
+  "required_now": [
+    {"id":"S01","description":"Tám khách sạn, bốn cơ sở mỗi hạng sao","db":"hotel_ops","sql":"SELECT count(*) FROM (SELECT stars FROM hotels GROUP BY stars HAVING count(*)=4) x","minimum":2},
+    {"id":"S02","description":"Gói 3 sao có buffet sáng","db":"hotel_ops","sql":"SELECT count(*) FROM rate_plans p JOIN hotels h USING(hotel_id) WHERE h.stars=3 AND p.breakfast_included=1","minimum":1},
+    {"id":"S03","description":"Gói 3 sao không gồm buffet sáng","db":"hotel_ops","sql":"SELECT count(*) FROM rate_plans p JOIN hotels h USING(hotel_id) WHERE h.stars=3 AND p.breakfast_included=0","minimum":1},
+    {"id":"S04","description":"Quyền ăn sáng không dùng hết","db":"hotel_ops","sql":"SELECT count(*) FROM breakfast_entitlements WHERE redeemed_covers<eligible_covers","minimum":1},
+    {"id":"S05","description":"Mua thêm buffet sáng","db":"hotel_ops","sql":"SELECT count(*) FROM dining_orders WHERE meal='BREAKFAST'","minimum":1},
+    {"id":"S06","description":"Khách ngoài dùng nhà hàng/bar","db":"hotel_ops","sql":"SELECT count(*) FROM dining_orders WHERE booking_id IS NULL","minimum":1},
+    {"id":"S07","description":"Khách dùng dịch vụ tại khách sạn khác","db":"hotel_ops","sql":"SELECT count(*) FROM dining_orders d JOIN bookings b USING(booking_id) JOIN outlets o USING(outlet_id) WHERE b.hotel_id<>o.hotel_id","minimum":1},
+    {"id":"S08","description":"Khuyến mãi đồng tài trợ","db":"hotel_ops","sql":"SELECT count(*) FROM bookings WHERE company_share_vnd>0 AND partner_share_vnd>0","minimum":1},
+    {"id":"S09","description":"Khuyến mãi đối tác tài trợ toàn bộ","db":"hotel_ops","sql":"SELECT count(*) FROM bookings WHERE company_share_vnd=0 AND partner_share_vnd>0","minimum":1},
+    {"id":"S10","description":"CompanyE tài trợ toàn bộ","db":"hotel_ops","sql":"SELECT count(*) FROM bookings WHERE company_share_vnd>0 AND partner_share_vnd=0","minimum":1},
+    {"id":"S11","description":"Booking hủy và hoàn tiền","db":"hotel_ops","sql":"SELECT count(*) FROM bookings b JOIN payments p USING(booking_id) WHERE b.status='CANCELLED' AND p.event_type='REFUND'","minimum":1},
+    {"id":"S12","description":"Booking no-show","db":"hotel_ops","sql":"SELECT count(*) FROM bookings WHERE status='NO_SHOW'","minimum":1},
+    {"id":"S13","description":"Booking nhiều phòng","db":"hotel_ops","sql":"SELECT count(*) FROM (SELECT booking_id FROM booking_rooms GROUP BY booking_id HAVING count(*)>1) x","minimum":1},
+    {"id":"S14","description":"Bán vé liên kết với khách sạn","db":"entertainment_ops","sql":"SELECT count(*) FROM ticket_orders WHERE hotel_booking_ref IS NOT NULL","minimum":1},
+    {"id":"S15","description":"Đóng hoạt động vì thời tiết","db":"entertainment_ops","sql":"SELECT count(*) FROM closures WHERE reason='WEATHER'","minimum":1},
+    {"id":"S16","description":"Vé hoàn tiền","db":"entertainment_ops","sql":"SELECT count(*) FROM tickets WHERE status='REFUNDED'","minimum":1},
+    {"id":"S17","description":"Xe phải bảo trì","db":"entertainment_ops","sql":"SELECT count(*) FROM vehicle_maintenance","minimum":1},
+    {"id":"S18","description":"Giao hàng trễ","db":"hotel_ops","sql":"SELECT count(*) FROM receipts r JOIN purchase_lines l USING(purchase_line_id) JOIN purchase_orders o USING(purchase_order_id) WHERE r.received_on>o.expected_on","minimum":1},
+    {"id":"S19","description":"Hàng bị từ chối","db":"hotel_ops","sql":"SELECT count(*) FROM receipts WHERE rejected_qty>0","minimum":1},
+    {"id":"S20","description":"Hủy nguyên liệu","db":"hotel_ops","sql":"SELECT count(*) FROM stock_movements WHERE movement_type='WASTE'","minimum":1}
+  ],
+  "deferred": [
+    {"id":"V2-01","scenario":"Một đơn nhiều mặt hàng và nhiều lần giao","reason":"Schema có thể biểu diễn nhưng bộ sinh v1 chưa tạo đủ tình huống."},
+    {"id":"V2-02","scenario":"Hủy một phần booking/hoàn một phần","reason":"Thiếu lịch sử trạng thái và quy tắc phân bổ v2."},
+    {"id":"V2-03","scenario":"Phân bổ giá combo phòng/ăn/vé/xe","reason":"Chưa có mô hình allocation; không coi bán chéo là combo."},
+    {"id":"V2-04","scenario":"Gia đình, điểm và voucher hội viên","reason":"V1 chỉ mô phỏng chủ gói."},
+    {"id":"V2-05","scenario":"CDC, dữ liệu đến muộn và SCD2","reason":"Pipeline hiện dùng full snapshot."},
+    {"id":"V2-06","scenario":"Chuẩn nối danh tính khó và độc lập","reason":"ID/tên v1 làm lộ quy luật tổng hợp, chưa dùng đánh giá entity resolution."},
+    {"id":"WH-01","scenario":"Nghiệm thu tám chỉ tiêu trên warehouse triển khai thật","reason":"Chưa có dimensional model và warehouse adapter được nghiệm thu."}
+  ]
+}

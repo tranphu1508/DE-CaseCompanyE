@@ -1,0 +1,16 @@
+{
+  "registry_keys": 711182,
+  "active_publications": 0,
+  "publications": 0,
+  "metrics": 47,
+  "metric_status": {
+    "COMPLETE": 47
+  },
+  "schema_versions": [
+    1,
+    2
+  ],
+  "writer_superuser": false,
+  "registry_update": false,
+  "active_update": false
+}

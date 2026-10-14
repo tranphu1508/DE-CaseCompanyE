@@ -1,0 +1,158 @@
+[
+  {
+    "table": "companye_hotel.sites",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.hotels",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.rooms",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.channels",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.guests",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.membership_plans",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.memberships",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.member_cards",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.promotions",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.rate_plans",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.bookings",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.booking_rooms",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.stays",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.breakfast_entitlements",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.outlets",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.dining_orders",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.meal_sessions",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.payments",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.settlements",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.suppliers",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.items",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.purchase_orders",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.purchase_lines",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.receipts",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.stock_movements",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.assets",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.maintenance",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_hotel.weather_daily",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.centres",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.customers",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.activities",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.closures",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.ticket_orders",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.tickets",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.admissions",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.vehicles",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.vehicle_maintenance",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.rentals",
+    "all_source_columns_reconciled": true
+  },
+  {
+    "table": "companye_entertainment.cash_events",
+    "all_source_columns_reconciled": true
+  }
+]

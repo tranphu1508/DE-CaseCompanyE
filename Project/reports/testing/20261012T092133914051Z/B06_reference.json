@@ -1,0 +1,23 @@
+{
+  "id": "B06",
+  "name": "Nhà cung cấp giao nhiều đợt",
+  "scope": "REFERENCE_ONLY_NOT_WAREHOUSE",
+  "definition": "Số lượng đặt tính một lần mỗi dòng mua; nhận/chối/nhận trễ tổng hợp theo từng lần giao.",
+  "expected": [
+    {
+      "ordered_qty": 10,
+      "accepted_qty": 9,
+      "rejected_qty": 1,
+      "late_accepted_qty": 3
+    }
+  ],
+  "actual": [
+    {
+      "ordered_qty": 10,
+      "accepted_qty": 9,
+      "rejected_qty": 1,
+      "late_accepted_qty": 3
+    }
+  ],
+  "passed": true
+}

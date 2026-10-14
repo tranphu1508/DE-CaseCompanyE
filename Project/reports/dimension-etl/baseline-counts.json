@@ -1,0 +1,28 @@
+{
+  "source_batch_id": "v2_20261012T092023738754Z",
+  "normal_members": {
+    "D01": 1461,
+    "D02": 4,
+    "D03": 8,
+    "D04": 240,
+    "D05": 15,
+    "D06": 40,
+    "D07": 24120,
+    "D08": 72,
+    "D09": 16,
+    "D10": 4,
+    "D11": 4,
+    "D12": 12,
+    "D13": 120,
+    "D14": 16,
+    "D15": 6,
+    "D16": 256
+  },
+  "date_years": [
+    2023,
+    2026
+  ],
+  "customer_profile_rule": "12120 hotel + 12000 entertainment, no entity merge",
+  "channel_rule": "13 hotel + 2 entertainment",
+  "special_members_per_dimension": 2
+}

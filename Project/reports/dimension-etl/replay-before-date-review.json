@@ -1,0 +1,412 @@
+{
+  "status": "PASSED",
+  "phase": "run",
+  "run_id": "dim_v2_20261012T092023738754Z_43f097c2b062",
+  "checked_at": "2026-10-13T17:44:45.671442+00:00",
+  "tables": [
+    {
+      "entity": "D01",
+      "table": "dim_date",
+      "rows": 1463,
+      "normal": 1461,
+      "specials": 2,
+      "content_sha256": "187bdff6d1fff9ad6b5c1801a1ada7be65007632b76f77842585e929f625fa9e",
+      "oracle_rows": 1463,
+      "iceberg_rows": 1463,
+      "iceberg_snapshot_id": 2652956355243845150,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D02",
+      "table": "dim_site",
+      "rows": 6,
+      "normal": 4,
+      "specials": 2,
+      "content_sha256": "637889a1e203ab561829ee4cb6ae226711bb13f0ecd8998f3f443e96db633fca",
+      "oracle_rows": 6,
+      "iceberg_rows": 6,
+      "iceberg_snapshot_id": 1668090417455306394,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D03",
+      "table": "dim_hotel",
+      "rows": 10,
+      "normal": 8,
+      "specials": 2,
+      "content_sha256": "b979d2c8c27d01ecb88ca0cf928659c90f03dbbb137ea04e2cf9787d511969a2",
+      "oracle_rows": 10,
+      "iceberg_rows": 10,
+      "iceberg_snapshot_id": 2018270986699516642,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D04",
+      "table": "dim_room",
+      "rows": 242,
+      "normal": 240,
+      "specials": 2,
+      "content_sha256": "f843755d3f2be63c031bbbccf0bc075b1e0afbf9f52e55250ea8b38ee2117dae",
+      "oracle_rows": 242,
+      "iceberg_rows": 242,
+      "iceberg_snapshot_id": 766208586265563327,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D05",
+      "table": "dim_channel",
+      "rows": 17,
+      "normal": 15,
+      "specials": 2,
+      "content_sha256": "01643bc149852a013a26cba782aa27917f0eb0bb71db6ed282f994461455fa9d",
+      "oracle_rows": 17,
+      "iceberg_rows": 17,
+      "iceberg_snapshot_id": 283618311351975291,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D06",
+      "table": "dim_promotion",
+      "rows": 42,
+      "normal": 40,
+      "specials": 2,
+      "content_sha256": "c6e551f91eefea1f0f2500a548544165d2b884451b596397ffcaea5cc8f57c77",
+      "oracle_rows": 42,
+      "iceberg_rows": 42,
+      "iceberg_snapshot_id": 115752973003662423,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D07",
+      "table": "dim_customer_profile",
+      "rows": 24122,
+      "normal": 24120,
+      "specials": 2,
+      "content_sha256": "fb2ff4fa784015a2177cb61b95886fd2a69b9f0579c063fded01e56a5a45c740",
+      "oracle_rows": 24122,
+      "iceberg_rows": 24122,
+      "iceberg_snapshot_id": 6670194918957772769,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D08",
+      "table": "dim_rate_plan",
+      "rows": 74,
+      "normal": 72,
+      "specials": 2,
+      "content_sha256": "c2f6fdc872a41810b4e00727ed660df39941d6c43eca04c70cec1f88656945f0",
+      "oracle_rows": 74,
+      "iceberg_rows": 74,
+      "iceberg_snapshot_id": 7556075986062832371,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D09",
+      "table": "dim_outlet",
+      "rows": 18,
+      "normal": 16,
+      "specials": 2,
+      "content_sha256": "935da08c41f29c297ba16369b91e6977376006dd0c32e58ba3b73f9d7692791a",
+      "oracle_rows": 18,
+      "iceberg_rows": 18,
+      "iceberg_snapshot_id": 7625212643016971667,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D10",
+      "table": "dim_meal",
+      "rows": 6,
+      "normal": 4,
+      "specials": 2,
+      "content_sha256": "fdf31ac35500a563ab4a327c97ef43e8f0b76079b9c9791d8443bb82fd0f6620",
+      "oracle_rows": 6,
+      "iceberg_rows": 6,
+      "iceberg_snapshot_id": 6345128997426089408,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D11",
+      "table": "dim_centre",
+      "rows": 6,
+      "normal": 4,
+      "specials": 2,
+      "content_sha256": "6f4e513eb2370f1beb663f56ab82e76894c1bfad42e57d3c405240afc9073574",
+      "oracle_rows": 6,
+      "iceberg_rows": 6,
+      "iceberg_snapshot_id": 8576264377716222795,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D12",
+      "table": "dim_activity",
+      "rows": 14,
+      "normal": 12,
+      "specials": 2,
+      "content_sha256": "3012b33d4c3578fe613d82638d3ee648d737c4d2dc8ec195d5c00e21ac213dd2",
+      "oracle_rows": 14,
+      "iceberg_rows": 14,
+      "iceberg_snapshot_id": 6049433213804883252,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D13",
+      "table": "dim_vehicle",
+      "rows": 122,
+      "normal": 120,
+      "specials": 2,
+      "content_sha256": "4e01439c6205111eef719fdaec07189ae6ee3423b66a3007dc8ca0f3cb086f31",
+      "oracle_rows": 122,
+      "iceberg_rows": 122,
+      "iceberg_snapshot_id": 6982889157295976974,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D14",
+      "table": "dim_supplier",
+      "rows": 18,
+      "normal": 16,
+      "specials": 2,
+      "content_sha256": "c76bfbdcb55574e036cfd3623dd93cf74bcf7c62267244b7bc70e6aff428aa12",
+      "oracle_rows": 18,
+      "iceberg_rows": 18,
+      "iceberg_snapshot_id": 2224418885666873148,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D15",
+      "table": "dim_item",
+      "rows": 8,
+      "normal": 6,
+      "specials": 2,
+      "content_sha256": "7d71b33f27da274f46ba7872759cc63783e386423fad72877c53d9e660213e43",
+      "oracle_rows": 8,
+      "iceberg_rows": 8,
+      "iceberg_snapshot_id": 3703582320251981450,
+      "iceberg_snapshot_count": 1
+    },
+    {
+      "entity": "D16",
+      "table": "dim_asset",
+      "rows": 258,
+      "normal": 256,
+      "specials": 2,
+      "content_sha256": "b5d7038aa0d383ece6bcf352bc3cec15c69725052387e5006ce20a5d945400a4",
+      "oracle_rows": 258,
+      "iceberg_rows": 258,
+      "iceberg_snapshot_id": 2528914434378115834,
+      "iceberg_snapshot_count": 1
+    }
+  ],
+  "rows": 26426,
+  "registry_keys": 24929,
+  "quality": {
+    "D01": {
+      "status": "PARTIAL",
+      "accepted": 1461,
+      "rejected": 0,
+      "coverage": null,
+      "source_tables": [],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D02": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.sites"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D03": {
+      "status": "COMPLETE",
+      "accepted": 8,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.hotels"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D04": {
+      "status": "COMPLETE",
+      "accepted": 240,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.rooms"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D05": {
+      "status": "COMPLETE",
+      "accepted": 15,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.channels",
+        "entertainment_ops.ticket_orders"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D06": {
+      "status": "COMPLETE",
+      "accepted": 40,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.promotions"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D07": {
+      "status": "COMPLETE",
+      "accepted": 24120,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.guests",
+        "entertainment_ops.customers"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D08": {
+      "status": "COMPLETE",
+      "accepted": 72,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.rate_plans"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D09": {
+      "status": "COMPLETE",
+      "accepted": 16,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.outlets"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D10": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D11": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "entertainment_ops.centres"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D12": {
+      "status": "COMPLETE",
+      "accepted": 12,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "entertainment_ops.activities"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D13": {
+      "status": "COMPLETE",
+      "accepted": 120,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "entertainment_ops.vehicles"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D14": {
+      "status": "COMPLETE",
+      "accepted": 16,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.suppliers"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D15": {
+      "status": "COMPLETE",
+      "accepted": 6,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.items"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D16": {
+      "status": "COMPLETE",
+      "accepted": 256,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.assets"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    }
+  },
+  "input_sha256": {
+    "config/warehouse_design_v1.json": "7b6d76ca44a9039e61b9b29c3a175770642651171dbb9d91dd7299c7eed36def",
+    "config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332",
+    "config/analytics/ddl/manifest.json": "871b11d92f16e1915c487f679b25cf8f114408e7b701c3330fa9b61e0f9d4e71",
+    "config/physical_design_v1.json": "7b03a9e56386105935747236c0dd662b738a75e58f5e59700271fe01ed1b2c74",
+    "config/logical_model_v1_1.json": "c53a238e363d391fb0f27fc88ca582deb873e3da8d91d5eb928aaacef4e987a5",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "lake/v2/catalog/catalog.json": "301f47ffd0714c26bf62cf957a09c1ca231afdb927d6ecad807030717034c9e7"
+  },
+  "code_sha256": {
+    "__init__.py": "916eac3c089b1c75c32ab87e25c6f059d1cb7392f5364b0c495c21494f5b8ded",
+    "deploy_schema.py": "d90218b7befeee4cf86e4fc4ed3352c762cf2a073b8d68b34c546e9df014a5c1",
+    "dimension_fixtures.py": "8aa433aa5bc4822e1813c9b170940ff46f47864037d3fa0622c2cf4653a38ca3",
+    "dimension_transform.py": "243e47c825393235e2195b5b9aaadfc8225b39350b3b35805f67883980558076",
+    "dimensions.py": "8c6d9424e8126d8fee28f3beaba1fe23b3fca4a2b9eab9fb2b0c1da8b1b14a1d",
+    "etl_io.py": "e901c06545f981fb9f5656385491036029ab7826c58ad82cb24517df6787e250",
+    "install_jars.py": "22a7d2aba30117163b7fc67ce62f026bee093f2bcfd3226a680321c81e6e332c",
+    "probe.py": "176e6e953c394a9513be5e75b9d9c2cd959376127ab155cec72dd78d156fbe24",
+    "scd2.py": "e866ab80efb619adf742ff3e2f5a842a6429b64a520c37db05931d2e97f91167",
+    "session.py": "99f246a2b25598b055661d13fa398a43305e54be7307953d364fe988e3e93ccb",
+    "validation_views.py": "743d1f12291a53b2a84aef808ee0393045b0db83b8e7459e17bfa13d27ac5a53"
+  },
+  "execution_code_sha256": {
+    "__init__.py": "916eac3c089b1c75c32ab87e25c6f059d1cb7392f5364b0c495c21494f5b8ded",
+    "deploy_schema.py": "d90218b7befeee4cf86e4fc4ed3352c762cf2a073b8d68b34c546e9df014a5c1",
+    "dimension_fixtures.py": "8aa433aa5bc4822e1813c9b170940ff46f47864037d3fa0622c2cf4653a38ca3",
+    "dimension_transform.py": "243e47c825393235e2195b5b9aaadfc8225b39350b3b35805f67883980558076",
+    "dimensions.py": "a28a5483220734f01c9dd6312f7e1e66b7c8c29b00bcd9825315468046285d73",
+    "etl_io.py": "e901c06545f981fb9f5656385491036029ab7826c58ad82cb24517df6787e250",
+    "install_jars.py": "22a7d2aba30117163b7fc67ce62f026bee093f2bcfd3226a680321c81e6e332c",
+    "probe.py": "176e6e953c394a9513be5e75b9d9c2cd959376127ab155cec72dd78d156fbe24",
+    "scd2.py": "e866ab80efb619adf742ff3e2f5a842a6429b64a520c37db05931d2e97f91167",
+    "session.py": "99f246a2b25598b055661d13fa398a43305e54be7307953d364fe988e3e93ccb",
+    "validation_views.py": "743d1f12291a53b2a84aef808ee0393045b0db83b8e7459e17bfa13d27ac5a53"
+  },
+  "coordinator_compatibility": {
+    "path": "/workspace/config/analytics/dimension_replay_compatibility_v1.json",
+    "sha256": "605df6d0dfb10482206ba1c31f676c0cff46772ecbff5a2390b45c9931f2ea17",
+    "reason": "Coordinator-only repair: PostgreSQL UTC started_at is formatted explicitly for Python 3.8 fromisoformat. Existing canonical business rows, audit timestamps, SCD helper, input mapping and keys are reused without recomputation."
+  },
+  "canonical_path": "/analytics/canonical/dim_v2_20261012T092023738754Z_43f097c2b062",
+  "canonical_manifest_sha256": "b0c06e8c38e60becc581b4b8175ebd314c0c045c9fef8fd696d4a29441150a95",
+  "facts_loaded": false,
+  "published": false,
+  "oracle_slot": "CE_DWH_A",
+  "scd_initial_basis": "BOOTSTRAP_ASSUMPTION",
+  "limits": [
+    "Initial snapshot/replay only; later production SCD events require fact rekey and publication coordinator.",
+    "Dimension adapter bounded to 100000 rows per source on driver; not a distributed scaling benchmark."
+  ]
+}

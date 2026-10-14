@@ -1,0 +1,7 @@
+{
+  "status": "PASSED",
+  "clean_host_secrets_prepared": true,
+  "rerun_preserves_credentials": true,
+  "new_secrets_redacted": true,
+  "real_credentials_changed": false
+}

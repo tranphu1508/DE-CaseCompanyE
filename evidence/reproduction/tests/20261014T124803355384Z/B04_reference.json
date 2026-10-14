@@ -1,0 +1,21 @@
+{
+  "id": "B04",
+  "name": "Buffet và doanh số nhà hàng bán riêng",
+  "scope": "REFERENCE_ONLY_NOT_WAREHOUSE",
+  "definition": "Suất đi kèm phòng tính vào lượt dùng nhưng không tự tạo thêm doanh thu bán riêng; chưa phân bổ giá phòng sang buffet.",
+  "expected": [
+    {
+      "separately_sold_amount": 1050000,
+      "served_covers": 5,
+      "ingredient_cost": 300000
+    }
+  ],
+  "actual": [
+    {
+      "separately_sold_amount": 1050000,
+      "served_covers": 5,
+      "ingredient_cost": 300000
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,16 @@
+{
+  "source": {
+    "multi_item_orders": 4007,
+    "split_receipt_lines": 5941,
+    "revised_bookings": 160,
+    "shared_phones": 706
+  },
+  "identity": {
+    "SHARED_HOUSEHOLD_PHONE": 1200,
+    "MISSING_CONTACTS": 1200,
+    "CHANGED_PHONE": 1200,
+    "NAME_TYPO": 1200,
+    "EMAIL_FORMAT": 1200,
+    "DUPLICATE_LOCAL_PROFILE": 120
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "B07",
+  "name": "Tồn kho và hao hụt",
+  "scope": "REFERENCE_ONLY_NOT_WAREHOUSE",
+  "definition": "Tồn cuối = nhập - sử dụng - hủy; giá trị hao hụt theo đơn giá lô, không lấy toàn giá trị mua.",
+  "expected": [
+    {
+      "closing_qty": 2,
+      "waste_cost": 20000
+    }
+  ],
+  "actual": [
+    {
+      "closing_qty": 2,
+      "waste_cost": 20000
+    }
+  ],
+  "passed": true
+}

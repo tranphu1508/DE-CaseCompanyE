@@ -1,0 +1,586 @@
+{
+  "inputs": [
+    {
+      "dataset": "hotel_ops.sites",
+      "status": "VERIFIED",
+      "sha256": "ef2c1e9496717328914b6e2f085024d5856615c6d4874789757869a6fe4fbc89",
+      "rows": 4
+    },
+    {
+      "dataset": "hotel_ops.hotels",
+      "status": "VERIFIED",
+      "sha256": "0cbfa7ccf1083d590fcebb4c0025dd9a2342705957ef272d391e9d70c9c6487e",
+      "rows": 8
+    },
+    {
+      "dataset": "hotel_ops.rooms",
+      "status": "VERIFIED",
+      "sha256": "0a681e038746fe3399762ef258db2ce33da402f7fa03d641d304df37cf56c12d",
+      "rows": 240
+    },
+    {
+      "dataset": "hotel_ops.channels",
+      "status": "VERIFIED",
+      "sha256": "d9c131e18092509a877db2041ea87511825911d40b3ebeeeb25c2202b2544628",
+      "rows": 13
+    },
+    {
+      "dataset": "hotel_ops.guests",
+      "status": "VERIFIED",
+      "sha256": "f004ee5ef79d2ab647154838052cc47a588d17eec97b4f153668d0185d04b843",
+      "rows": 12120
+    },
+    {
+      "dataset": "hotel_ops.membership_plans",
+      "status": "VERIFIED",
+      "sha256": "5b430449495140cc36189183990a7a7fcd7793af8c1f75a0417896c989376179",
+      "rows": 3
+    },
+    {
+      "dataset": "hotel_ops.memberships",
+      "status": "VERIFIED",
+      "sha256": "4ad1c015608a54be64e317207cb270ed7ee1387a974b05f550aca53bef6e4cc5",
+      "rows": 4099
+    },
+    {
+      "dataset": "hotel_ops.member_cards",
+      "status": "VERIFIED",
+      "sha256": "7f820483d69eeb1057035cc66028adb13289d6070dc764f6a9871ce34ec1468c",
+      "rows": 4099
+    },
+    {
+      "dataset": "hotel_ops.promotions",
+      "status": "VERIFIED",
+      "sha256": "1cac54e28f4e9c94bd4e785615444f0f0bf8b5fc0ee1236eb1d83b94f269cb76",
+      "rows": 40
+    },
+    {
+      "dataset": "hotel_ops.rate_plans",
+      "status": "VERIFIED",
+      "sha256": "50fee8b1886de26b5e3dcb2707d57cfc951d3454c08c7e8a92b661b5e51b6029",
+      "rows": 72
+    },
+    {
+      "dataset": "hotel_ops.bookings",
+      "status": "VERIFIED",
+      "sha256": "a2fa45168ca32c347af019cfe706c1ee1a5497309be93768da5881e1033dcd3d",
+      "rows": 32000
+    },
+    {
+      "dataset": "hotel_ops.booking_rooms",
+      "status": "VERIFIED",
+      "sha256": "cc5136e17e80ad200ac514fb6abb031a158e2f4a4f28c1e92ae74652ff365d44",
+      "rows": 36711
+    },
+    {
+      "dataset": "hotel_ops.stays",
+      "status": "VERIFIED",
+      "sha256": "8f04b36f1842d500eb9c0380826ddcf9198bc9f6174d20970a6dbad29fc09c95",
+      "rows": 30736
+    },
+    {
+      "dataset": "hotel_ops.breakfast_entitlements",
+      "status": "VERIFIED",
+      "sha256": "708499d93d0bc1fe9fa3cbb84e165ec602f933dece1a98078e4051fdbf93aa60",
+      "rows": 52979
+    },
+    {
+      "dataset": "hotel_ops.outlets",
+      "status": "VERIFIED",
+      "sha256": "94bb170072acc302cd9becfb72c247040763101f38e2911aa62e937248bb496c",
+      "rows": 16
+    },
+    {
+      "dataset": "hotel_ops.dining_orders",
+      "status": "VERIFIED",
+      "sha256": "e347a865405507e18d681b652c1000a272a0b8bc0deb0917eab0337299eef2c9",
+      "rows": 31357
+    },
+    {
+      "dataset": "hotel_ops.meal_sessions",
+      "status": "VERIFIED",
+      "sha256": "4389e4afa6a334c50b215fa48704ffabf45d591e0510b891672def8df0e5da9c",
+      "rows": 11696
+    },
+    {
+      "dataset": "hotel_ops.payments",
+      "status": "VERIFIED",
+      "sha256": "a8ec24a1db3b27ba43f5ca4431a033ccfdc8855276d48bd8724f372c73ca3c44",
+      "rows": 36399
+    },
+    {
+      "dataset": "hotel_ops.settlements",
+      "status": "VERIFIED",
+      "sha256": "6dccae6caccaabd154d3b3d470e4c3de1c9154a81928bd621135d14f922c19ba",
+      "rows": 19223
+    },
+    {
+      "dataset": "hotel_ops.suppliers",
+      "status": "VERIFIED",
+      "sha256": "f3ceb5cadd85801c9c4a50a41c9425c32098a762331ebede563bb2f5d19d5463",
+      "rows": 16
+    },
+    {
+      "dataset": "hotel_ops.items",
+      "status": "VERIFIED",
+      "sha256": "714595069a3aee2add8f510f19e525c088b04fd528d9394cf045a0507674e02b",
+      "rows": 6
+    },
+    {
+      "dataset": "hotel_ops.purchase_orders",
+      "status": "VERIFIED",
+      "sha256": "0658351d1924e1e807709b72e62cde7095f86b65e993852672849fb5b9edd7d3",
+      "rows": 19055
+    },
+    {
+      "dataset": "hotel_ops.purchase_lines",
+      "status": "VERIFIED",
+      "sha256": "192d3686f46af622898dc844916000e741b8ad32dc5fc1d0ebff56b8b3ba848b",
+      "rows": 23680
+    },
+    {
+      "dataset": "hotel_ops.receipts",
+      "status": "VERIFIED",
+      "sha256": "e674fd6d332292e1f95dba710eb79734d5f6e0ea0251f9904c6ad62b5e125b8e",
+      "rows": 29621
+    },
+    {
+      "dataset": "hotel_ops.stock_movements",
+      "status": "VERIFIED",
+      "sha256": "c58893afb86a6021c5cbcb12d42d7d87272bdd17b76ab10c1ab3a7c34aabe253",
+      "rows": 88032
+    },
+    {
+      "dataset": "hotel_ops.assets",
+      "status": "VERIFIED",
+      "sha256": "d2213d0a9bb45f4df6a50a0de877e614e5b2f09ed3f0ea00a235a7d595891eff",
+      "rows": 256
+    },
+    {
+      "dataset": "hotel_ops.maintenance",
+      "status": "VERIFIED",
+      "sha256": "bc6a34c888d423469805af39647edd5c8393085acb078d41d2aab3be85d8dda5",
+      "rows": 512
+    },
+    {
+      "dataset": "hotel_ops.weather_daily",
+      "status": "VERIFIED",
+      "sha256": "7ad326f784407bb7be55121d26dd8636885d2b587be4978fef62d1418acb8696",
+      "rows": 2924
+    },
+    {
+      "dataset": "hotel_ops.booking_revisions",
+      "status": "VERIFIED",
+      "sha256": "8039f15e9434660478fbf0fcc0d7af1f0461a68221c2cfd4f48986505d06e3bf",
+      "rows": 320
+    },
+    {
+      "dataset": "hotel_ops.booking_room_revisions",
+      "status": "VERIFIED",
+      "sha256": "acd538f9f477a368f194910842dec806d69e86e9f440e17e3cbf70b9cb184be1",
+      "rows": 368
+    },
+    {
+      "dataset": "entertainment_ops.centres",
+      "status": "VERIFIED",
+      "sha256": "af682bb667035144d9ff31acb356487e249dc5f8a5b88202cd7f2c13e0210842",
+      "rows": 4
+    },
+    {
+      "dataset": "entertainment_ops.customers",
+      "status": "VERIFIED",
+      "sha256": "411a157073b1654fd9688c2876e81cb8df8eeb32407dd42ff350f698933f0e21",
+      "rows": 12000
+    },
+    {
+      "dataset": "entertainment_ops.activities",
+      "status": "VERIFIED",
+      "sha256": "32be8e6b8080ef8eb22d7dfc5454b82df9a5773fe60c0029a074f95c4d7f15ee",
+      "rows": 12
+    },
+    {
+      "dataset": "entertainment_ops.closures",
+      "status": "VERIFIED",
+      "sha256": "d19abc3fe0e284608e337f760879131642cd8f5a93cd1f50480efecafe5a676d",
+      "rows": 272
+    },
+    {
+      "dataset": "entertainment_ops.ticket_orders",
+      "status": "VERIFIED",
+      "sha256": "a57966158d39ba65d26d56f5c75e8d90103f9ab02302e1e9eb4102f44c03d8bc",
+      "rows": 20690
+    },
+    {
+      "dataset": "entertainment_ops.tickets",
+      "status": "VERIFIED",
+      "sha256": "034796a53a972aabc18f537a393732f2f97ef55a3eb617c58e4b32b3d39870b7",
+      "rows": 44478
+    },
+    {
+      "dataset": "entertainment_ops.admissions",
+      "status": "VERIFIED",
+      "sha256": "1301e6b0735056982b87ab5fc1b4519ca7538cfe79d1cf7bbead41f86d87a5ab",
+      "rows": 39827
+    },
+    {
+      "dataset": "entertainment_ops.vehicles",
+      "status": "VERIFIED",
+      "sha256": "b50b718746a7a7f180af9a8a894adfdccbb509829b7df32ac2883bce77bbbdd0",
+      "rows": 120
+    },
+    {
+      "dataset": "entertainment_ops.vehicle_maintenance",
+      "status": "VERIFIED",
+      "sha256": "69e6df0cd5fa7add8ee0789c4ae45039144318d38ec4a5470984cd79c82df8f1",
+      "rows": 240
+    },
+    {
+      "dataset": "entertainment_ops.rentals",
+      "status": "VERIFIED",
+      "sha256": "0cbd37428775795969722be8f97a62a0e3834279a473b03ffdc157726df54865",
+      "rows": 7723
+    },
+    {
+      "dataset": "entertainment_ops.cash_events",
+      "status": "VERIFIED",
+      "sha256": "2aaea55888e7951c3db3efd20e680332c4de43bb5079318094522b67114e1d16",
+      "rows": 29271
+    }
+  ],
+  "source_status": {
+    "hotel_ops.sites": "COMPLETE",
+    "hotel_ops.hotels": "COMPLETE",
+    "hotel_ops.rooms": "COMPLETE",
+    "hotel_ops.channels": "COMPLETE",
+    "hotel_ops.guests": "COMPLETE",
+    "hotel_ops.membership_plans": "COMPLETE",
+    "hotel_ops.memberships": "COMPLETE",
+    "hotel_ops.member_cards": "COMPLETE",
+    "hotel_ops.promotions": "COMPLETE",
+    "hotel_ops.rate_plans": "COMPLETE",
+    "hotel_ops.bookings": "COMPLETE",
+    "hotel_ops.booking_rooms": "COMPLETE",
+    "hotel_ops.stays": "COMPLETE",
+    "hotel_ops.breakfast_entitlements": "COMPLETE",
+    "hotel_ops.outlets": "COMPLETE",
+    "hotel_ops.dining_orders": "COMPLETE",
+    "hotel_ops.meal_sessions": "COMPLETE",
+    "hotel_ops.payments": "COMPLETE",
+    "hotel_ops.settlements": "COMPLETE",
+    "hotel_ops.suppliers": "COMPLETE",
+    "hotel_ops.items": "COMPLETE",
+    "hotel_ops.purchase_orders": "COMPLETE",
+    "hotel_ops.purchase_lines": "COMPLETE",
+    "hotel_ops.receipts": "COMPLETE",
+    "hotel_ops.stock_movements": "COMPLETE",
+    "hotel_ops.assets": "COMPLETE",
+    "hotel_ops.maintenance": "COMPLETE",
+    "hotel_ops.weather_daily": "COMPLETE",
+    "hotel_ops.booking_revisions": "COMPLETE",
+    "hotel_ops.booking_room_revisions": "COMPLETE",
+    "entertainment_ops.centres": "COMPLETE",
+    "entertainment_ops.customers": "COMPLETE",
+    "entertainment_ops.activities": "COMPLETE",
+    "entertainment_ops.closures": "COMPLETE",
+    "entertainment_ops.ticket_orders": "COMPLETE",
+    "entertainment_ops.tickets": "COMPLETE",
+    "entertainment_ops.admissions": "COMPLETE",
+    "entertainment_ops.vehicles": "COMPLETE",
+    "entertainment_ops.vehicle_maintenance": "COMPLETE",
+    "entertainment_ops.rentals": "COMPLETE",
+    "entertainment_ops.cash_events": "COMPLETE"
+  },
+  "quarantine": [],
+  "calendar_start": "2023-01-01",
+  "calendar_end": "2026-12-31",
+  "date_errors": [],
+  "accounting": {
+    "hotel_ops.sites": {
+      "expected": 4,
+      "accepted": 4,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.hotels": {
+      "expected": 8,
+      "accepted": 8,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.rooms": {
+      "expected": 240,
+      "accepted": 240,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.channels": {
+      "expected": 13,
+      "accepted": 13,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.guests": {
+      "expected": 12120,
+      "accepted": 12120,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.membership_plans": {
+      "expected": 3,
+      "accepted": 3,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.memberships": {
+      "expected": 4099,
+      "accepted": 4099,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.member_cards": {
+      "expected": 4099,
+      "accepted": 4099,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.promotions": {
+      "expected": 40,
+      "accepted": 40,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.rate_plans": {
+      "expected": 72,
+      "accepted": 72,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.bookings": {
+      "expected": 32000,
+      "accepted": 32000,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.booking_rooms": {
+      "expected": 36711,
+      "accepted": 36711,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.stays": {
+      "expected": 30736,
+      "accepted": 30736,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.breakfast_entitlements": {
+      "expected": 52979,
+      "accepted": 52979,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.outlets": {
+      "expected": 16,
+      "accepted": 16,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.dining_orders": {
+      "expected": 31357,
+      "accepted": 31357,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.meal_sessions": {
+      "expected": 11696,
+      "accepted": 11696,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.payments": {
+      "expected": 36399,
+      "accepted": 36399,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.settlements": {
+      "expected": 19223,
+      "accepted": 19223,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.suppliers": {
+      "expected": 16,
+      "accepted": 16,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.items": {
+      "expected": 6,
+      "accepted": 6,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.purchase_orders": {
+      "expected": 19055,
+      "accepted": 19055,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.purchase_lines": {
+      "expected": 23680,
+      "accepted": 23680,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.receipts": {
+      "expected": 29621,
+      "accepted": 29621,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.stock_movements": {
+      "expected": 88032,
+      "accepted": 88032,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.assets": {
+      "expected": 256,
+      "accepted": 256,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.maintenance": {
+      "expected": 512,
+      "accepted": 512,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.weather_daily": {
+      "expected": 2924,
+      "accepted": 2924,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.booking_revisions": {
+      "expected": 320,
+      "accepted": 320,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "hotel_ops.booking_room_revisions": {
+      "expected": 368,
+      "accepted": 368,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.centres": {
+      "expected": 4,
+      "accepted": 4,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.customers": {
+      "expected": 12000,
+      "accepted": 12000,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.activities": {
+      "expected": 12,
+      "accepted": 12,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.closures": {
+      "expected": 272,
+      "accepted": 272,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.ticket_orders": {
+      "expected": 20690,
+      "accepted": 20690,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.tickets": {
+      "expected": 44478,
+      "accepted": 44478,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.admissions": {
+      "expected": 39827,
+      "accepted": 39827,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.vehicles": {
+      "expected": 120,
+      "accepted": 120,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.vehicle_maintenance": {
+      "expected": 240,
+      "accepted": 240,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.rentals": {
+      "expected": 7723,
+      "accepted": 7723,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    },
+    "entertainment_ops.cash_events": {
+      "expected": 29271,
+      "accepted": 29271,
+      "direct_quarantine": 0,
+      "dependency_excluded": 0,
+      "coverage": 1.0
+    }
+  }
+}

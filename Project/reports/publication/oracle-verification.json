@@ -1,0 +1,11 @@
+{
+  "lines": [
+    "GUARD|CE_DWH_A|SEALED|pub_3f41f8fafa4c913187af2cc3",
+    "GUARD|CE_DWH_B|OPEN|",
+    "GUARD|TEST_A|SEALED|pub_fixture_a_c8be62a95dc9",
+    "GUARD|TEST_B|SEALED|pub_fixture_b_c8be62a95dc9",
+    "TRIGGERS|ENABLED|78",
+    "INVALID|0"
+  ],
+  "enabled_guard_triggers": 78
+}

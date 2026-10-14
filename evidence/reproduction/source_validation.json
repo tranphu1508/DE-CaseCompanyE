@@ -1,0 +1,122 @@
+{
+  "evaluated_at": "2026-10-14T12:46:15.272248+00:00",
+  "checks": [
+    {
+      "database": "hotel_ops",
+      "check": "five_star_breakfast_missing",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "booking_room_hotel_mismatch",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "booking_price_mismatch",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "room_overlaps",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "stay_during_maintenance",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "invalid_stay_status",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "invalid_breakfast_day",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "negative_lot_balance",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "meal_cost_mismatch",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "promotion_outside_conditions",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "hotel_ops",
+      "check": "breakfast_cover_mismatch",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "entertainment_ops",
+      "check": "admission_when_closed",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "entertainment_ops",
+      "check": "admission_wrong_status",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "entertainment_ops",
+      "check": "ticket_total_mismatch",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "entertainment_ops",
+      "check": "vehicle_overlaps",
+      "violations": 0,
+      "passed": true
+    },
+    {
+      "database": "entertainment_ops",
+      "check": "rental_during_maintenance",
+      "violations": 0,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "golden_aggregates_DO_NOT_USE_AS_TRANSFORM_INPUT": {
+    "hotel_ops.bookings": {
+      "gross_vnd": 137268202000,
+      "discount_vnd": 2929708000,
+      "company_share_vnd": 1587126840,
+      "partner_share_vnd": 1342581160,
+      "customer_due_vnd": 134338494000
+    },
+    "hotel_ops.meal_sessions": {
+      "actual_covers": 113887,
+      "ingredient_cost_vnd": 4435254200
+    },
+    "entertainment_ops.ticket_orders": {
+      "gross_vnd": 9347990000,
+      "refunded_vnd": 165860000
+    },
+    "entertainment_ops.rentals": {
+      "agreed_vnd": 5622840000
+    }
+  }
+}

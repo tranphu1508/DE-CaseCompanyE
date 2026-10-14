@@ -1,0 +1,223 @@
+{
+  "status": "PASSED_SERVICE_PROVISIONING_AND_RESTART",
+  "recorded_at": "2026-10-13T16:55:07.193737+00:00",
+  "run_id": "runtime_20261013_165245",
+  "services": [
+    {
+      "service": "oracle",
+      "container_id": "6977e9a2e2e1eb824d65d2d410cb77474a08e2474717a5d3e35cacd69dbe695a",
+      "image": "sha256:f988b0c04c4c386cd306a2a914c0d7a9702d83acc31b064a28ad8eb6278a8fba",
+      "configured_image": "container-registry.oracle.com/database/free@sha256:f988b0c04c4c386cd306a2a914c0d7a9702d83acc31b064a28ad8eb6278a8fba",
+      "state": "running",
+      "health": "healthy",
+      "started_at": "2026-10-13T16:53:18.096148537Z",
+      "ports": {
+        "1521/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "11521"
+          }
+        ]
+      },
+      "memory_bytes": 4294967296,
+      "cpu_quota_nano": 2000000000,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "companye-analytics_oracle_data",
+          "Source": "/var/lib/docker/volumes/companye-analytics_oracle_data/_data",
+          "Destination": "/opt/oracle/oradata",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ]
+    },
+    {
+      "service": "metadata",
+      "container_id": "b7d0e86097f532ebdf2fcc2e0cd713ad614b7b1092806c5a06e2d890614d808b",
+      "image": "sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+      "configured_image": "postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+      "state": "running",
+      "health": "healthy",
+      "started_at": "2026-10-13T16:53:13.994704115Z",
+      "ports": {
+        "5432/tcp": null
+      },
+      "memory_bytes": 536870912,
+      "cpu_quota_nano": 1000000000,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "companye-analytics_metadata_data",
+          "Source": "/var/lib/docker/volumes/companye-analytics_metadata_data/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ]
+    },
+    {
+      "service": "spark",
+      "container_id": "72f8fe2798ada2c516d44de1ef8a4e5e5fe630d104183c0a3b6bb53638ff32b0",
+      "image": "sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba",
+      "configured_image": "apache/spark@sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba",
+      "state": "running",
+      "health": null,
+      "started_at": "2026-10-13T16:53:14.961310911Z",
+      "ports": {},
+      "memory_bytes": 4294967296,
+      "cpu_quota_nano": 2000000000,
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "D:\\Study\\Bách Khoa University\\Kỹ Thuật Dữ Liệu CO5173\\Project\\.secrets\\analytics\\oracle_probe_password",
+          "Destination": "/run/secrets/oracle_probe_password",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "D:\\Study\\Bách Khoa University\\Kỹ Thuật Dữ Liệu CO5173\\Project\\reports",
+          "Destination": "/workspace/reports",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "volume",
+          "Name": "companye-analytics_analytics_data",
+          "Source": "/var/lib/docker/volumes/companye-analytics_analytics_data/_data",
+          "Destination": "/analytics",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        },
+        {
+          "Type": "bind",
+          "Source": "/run/desktop/mnt/host/d/Study/Bách Khoa University/Kỹ Thuật Dữ Liệu CO5173/Project/src",
+          "Destination": "/workspace/src",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/run/desktop/mnt/host/d/Study/Bách Khoa University/Kỹ Thuật Dữ Liệu CO5173/Project/config",
+          "Destination": "/workspace/config",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/run/desktop/mnt/host/d/Study/Bách Khoa University/Kỹ Thuật Dữ Liệu CO5173/Project/config/analytics",
+          "Destination": "/workspace/analytics_conf",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/run/desktop/mnt/host/d/Study/Bách Khoa University/Kỹ Thuật Dữ Liệu CO5173/Project/lake/v2",
+          "Destination": "/workspace/lake/v2",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "D:\\Study\\Bách Khoa University\\Kỹ Thuật Dữ Liệu CO5173\\Project\\.secrets\\analytics\\catalog_password",
+          "Destination": "/run/secrets/catalog_password",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ]
+    }
+  ],
+  "versions": {
+    "oracle": "23.26.3.0.0",
+    "postgres": "17.11",
+    "spark": "3.5.7",
+    "iceberg": "Apache Iceberg 1.10.2 (commit 57396d628cb9f92e121f9c2919398475393f0a3a)",
+    "java": "11.0.27",
+    "python": "3.8.10"
+  },
+  "checks": [
+    "Oracle TCP/JDBC connection",
+    "Iceberg PostgreSQL JDBC catalog",
+    "Parquet write/read",
+    "Unicode Vietnamese",
+    "DECIMAL(19,0) max positive value",
+    "DECIMAL(18,3) negative boundary",
+    "NULL versus numeric zero",
+    "Timestamp microseconds across Vietnam midnight in UTC",
+    "Both engines exactly match independent literal fixture",
+    "Data and Iceberg snapshot IDs preserved across container restart"
+  ],
+  "published_checksums_verified": true,
+  "oracle_host_endpoint": "127.0.0.1:11521/FREEPDB1",
+  "oracle_host_tcp_checked": true,
+  "metadata": "ce_metadata.iceberg_catalog, owned by ce_catalog; ce_control schema, owned by ce_meta_admin",
+  "catalog_tables": [
+    "iceberg_catalog.iceberg_tables",
+    "iceberg_catalog.iceberg_namespace_properties"
+  ],
+  "storage_windows_vhdx": "E:/DockerDesktopData/DockerDesktopWSL/disk/docker_data.vhdx",
+  "host_storage": [
+    {
+      "DriveLetter": "D",
+      "Size": 157285347328,
+      "SizeRemaining": 9594232832
+    },
+    {
+      "DriveLetter": "E",
+      "Size": 524286947328,
+      "SizeRemaining": 318008954880
+    },
+    {
+      "DriveLetter": "C",
+      "Size": 316871274496,
+      "SizeRemaining": 90318241792
+    }
+  ],
+  "business_schema_deployed": false,
+  "business_etl_run": false,
+  "benchmark_run": false,
+  "secret_locations": [
+    ".env.analytics",
+    ".secrets/analytics/"
+  ],
+  "evidence_sha256": {
+    "bootstrap.json": "f96aec9eb87aa80e1c6c9c90adef3a5401b88273d8fe7d8d32848be57f3b81d9",
+    "jars.json": "2a50ddc8da262e8d3a8f1c31bdc129213aa55710953495670594624776d82632",
+    "services.json": "44fb1c8cc2b1497de92c0add90717e0a20174ae45481b2f23ece0758fcf6f8e9",
+    "host-storage.json": "abd4c06109041658da5d9d89432d80747b6839bb80958748a8b73c4d3778a43c",
+    "active-probe.json": "640d28f685cce503182fe96dc66958202b3a3dd3adeaeaa5270c2f684979cf91",
+    "runtime_20261013_165245-write.json": "a57a74569bdc1ee252301877ad83962ca5e696588cd8b230d50bf7bfc6ea6683",
+    "runtime_20261013_165245-verify.json": "5769db6c14e2175897c20840bf6c60399d28b5d6cefe81c2d20c2b48d63af48e"
+  },
+  "code_sha256": {
+    "compose.analytics.yaml": "3354f5bcc1ba0411001b92d6329948e3c6e67cb0684120a02be3a63c8dfb77b5",
+    "config/analytics/spark-defaults.conf": "3b23a49974892ed72bafe4da6536daa64184d875a950f14a87e87daebc16e963",
+    "scripts/analytics-services.py": "ab9ddee170c21b91afa78c470accbac5ec1935ad4d69aeec167500b515aec983",
+    "scripts/analytics-probe.py": "44aa45faaebc2a88e69c348aba2c11b7c8e47431c4725a3d2fac26b6937661b9",
+    "src/analytics_runtime/session.py": "99f246a2b25598b055661d13fa398a43305e54be7307953d364fe988e3e93ccb",
+    "src/analytics_runtime/install_jars.py": "22a7d2aba30117163b7fc67ce62f026bee093f2bcfd3226a680321c81e6e332c",
+    "src/analytics_runtime/probe.py": "176e6e953c394a9513be5e75b9d9c2cd959376127ab155cec72dd78d156fbe24",
+    "scripts/finalize-analytics-runtime.py": "02b27658385b8d8256f00c3c0ec897036c5303d43b01003250d2b159e5689ee6"
+  },
+  "runtime_lock_sha256": "ccb498654bb5287f294383a84724bc922069d141e12fd303c69cc92ef7781b1e",
+  "limitations": [
+    "Three-row service integration fixture only; business DDL, SCD2, 47 KPIs and performance remain untested.",
+    "Spark runs local[2] jobs via spark-submit, not a persistent Thrift/JDBC SQL server.",
+    "ce_control currently has a schema only; publication/control tables and coordinator are not implemented.",
+    "Probe tables intentionally retained for verification; they are separate from business tables."
+  ]
+}

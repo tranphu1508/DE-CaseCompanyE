@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "checked_at": "2026-10-13T17:20:54.174823+00:00",
+  "native_rejections": [
+    "a_duplicate_pk",
+    "a_duplicate_current",
+    "a_normal_required_attribute",
+    "a_current_end_consistency",
+    "a_not_null",
+    "a_orphan_fk",
+    "b_duplicate_pk",
+    "b_duplicate_current",
+    "b_normal_required_attribute",
+    "b_current_end_consistency",
+    "b_not_null",
+    "b_orphan_fk"
+  ],
+  "scd_overlap_requires_pipeline": true,
+  "fixtures_rolled_back": true
+}

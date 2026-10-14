@@ -1,0 +1,147 @@
+{
+  "active": [
+    {
+      "singleton": true,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    }
+  ],
+  "publications": [
+    {
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+      "run_id": "facts_v2_20261012T092023738754Z_8a65e73962da",
+      "oracle_slot": "CE_DWH_A",
+      "manifest_sha256": "70b7b919f1ae654e433ce08f756f36299b97995d91396f237c514aa7b2583cd7",
+      "created_at": "2026-10-13T19:14:13.027458+00:00"
+    }
+  ],
+  "candidates": [
+    {
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+      "state": "PUBLISHED",
+      "generation": 1,
+      "manifest_sha256": "70b7b919f1ae654e433ce08f756f36299b97995d91396f237c514aa7b2583cd7"
+    }
+  ],
+  "publication_table_count": 37,
+  "live_readers": 0,
+  "events": [
+    {
+      "event_id": 1,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+      "action": "RESERVED",
+      "occurred_at": "2026-10-13T18:58:40.031343+00:00",
+      "detail": {}
+    },
+    {
+      "event_id": 34,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+      "action": "PREPARED",
+      "occurred_at": "2026-10-13T19:13:53.376298+00:00",
+      "detail": {
+        "sha256": "70b7b919f1ae654e433ce08f756f36299b97995d91396f237c514aa7b2583cd7"
+      }
+    },
+    {
+      "event_id": 35,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+      "action": "PUBLISHED",
+      "occurred_at": "2026-10-13T19:14:13.031714+00:00",
+      "detail": {
+        "previous": null
+      }
+    }
+  ],
+  "schema_versions": [
+    1,
+    2,
+    3
+  ],
+  "roles": [
+    {
+      "rolname": "ce_publisher",
+      "rolsuper": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    },
+    {
+      "rolname": "ce_reader",
+      "rolsuper": false,
+      "rolcreaterole": false,
+      "rolcreatedb": false
+    }
+  ],
+  "role_grants": [
+    {
+      "grantee": "ce_publisher",
+      "table_name": "active_publication",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "benchmark_run",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "key_registry",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "pipeline_run",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "publication",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "publication_candidate",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "publication_event",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "publication_policy",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "publication_table",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "quality_entity",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "quality_metric",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "reader_lease",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "schema_version",
+      "privilege_type": "SELECT"
+    },
+    {
+      "grantee": "ce_publisher",
+      "table_name": "slot_reservation",
+      "privilege_type": "SELECT"
+    }
+  ],
+  "reader_direct_update": false,
+  "publisher_direct_update": false
+}

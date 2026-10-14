@@ -1,0 +1,265 @@
+{
+  "status": "PASSED",
+  "checked_at": "2026-10-11T20:27:28.714803+00:00",
+  "batch_id": "v1_20261011T191347796699Z",
+  "persisted_hive_tables": [
+    {
+      "table": "companye_hotel.sites",
+      "rows": 4,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.hotels",
+      "rows": 8,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.rooms",
+      "rows": 240,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.channels",
+      "rows": 13,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.guests",
+      "rows": 12000,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.membership_plans",
+      "rows": 3,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.memberships",
+      "rows": 4099,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.member_cards",
+      "rows": 4099,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.promotions",
+      "rows": 40,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.rate_plans",
+      "rows": 72,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.bookings",
+      "rows": 32000,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.booking_rooms",
+      "rows": 36711,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.stays",
+      "rows": 30736,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.breakfast_entitlements",
+      "rows": 52979,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.outlets",
+      "rows": 16,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.dining_orders",
+      "rows": 31357,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.meal_sessions",
+      "rows": 11696,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.payments",
+      "rows": 36239,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.settlements",
+      "rows": 19223,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.suppliers",
+      "rows": 16,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.items",
+      "rows": 6,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.purchase_orders",
+      "rows": 23680,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.purchase_lines",
+      "rows": 23680,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.receipts",
+      "rows": 23680,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.stock_movements",
+      "rows": 76474,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.assets",
+      "rows": 256,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.maintenance",
+      "rows": 512,
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.weather_daily",
+      "rows": 2924,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.centres",
+      "rows": 4,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.customers",
+      "rows": 12000,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.activities",
+      "rows": 12,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.closures",
+      "rows": 272,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.ticket_orders",
+      "rows": 20690,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.tickets",
+      "rows": 44478,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.admissions",
+      "rows": 39827,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.vehicles",
+      "rows": 120,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.vehicle_maintenance",
+      "rows": 240,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.rentals",
+      "rows": 7723,
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.cash_events",
+      "rows": 29271,
+      "passed": true
+    }
+  ],
+  "source_vs_lake_aggregates": [
+    {
+      "table": "companye_hotel.bookings",
+      "expected": {
+        "gross_vnd": 137268202000,
+        "discount_vnd": 2929708000,
+        "company_share_vnd": 1587126840,
+        "partner_share_vnd": 1342581160,
+        "customer_due_vnd": 134338494000
+      },
+      "actual": {
+        "gross_vnd": 137268202000,
+        "discount_vnd": 2929708000,
+        "company_share_vnd": 1587126840,
+        "partner_share_vnd": 1342581160,
+        "customer_due_vnd": 134338494000
+      },
+      "passed": true
+    },
+    {
+      "table": "companye_hotel.meal_sessions",
+      "expected": {
+        "actual_covers": 113887,
+        "ingredient_cost_vnd": 4435254200
+      },
+      "actual": {
+        "actual_covers": 113887,
+        "ingredient_cost_vnd": 4435254200
+      },
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.ticket_orders",
+      "expected": {
+        "gross_vnd": 9347990000,
+        "refunded_vnd": 165860000
+      },
+      "actual": {
+        "gross_vnd": 9347990000,
+        "refunded_vnd": 165860000
+      },
+      "passed": true
+    },
+    {
+      "table": "companye_entertainment.rentals",
+      "expected": {
+        "agreed_vnd": 5622840000
+      },
+      "actual": {
+        "agreed_vnd": 5622840000
+      },
+      "passed": true
+    }
+  ],
+  "invariants": {
+    "breakfast_policy": 0,
+    "funding_balance": 0,
+    "no_source_truth_in_catalog": 0,
+    "cross_system_booking_refs": 0
+  },
+  "supplier_accepted": 77,
+  "supplier_quarantined": 44,
+  "catalog_implementation": "hive"
+}

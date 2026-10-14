@@ -1,0 +1,1368 @@
+{
+  "version": "companye-publication-1",
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "run_id": "facts_v2_20261012T092023738754Z_8a65e73962da",
+  "dimension_run_id": "dim_v2_20261012T092023738754Z_43f097c2b062",
+  "source_batch_id": "v2_20261012T092023738754Z",
+  "source_catalog_sha256": "301f47ffd0714c26bf62cf957a09c1ca231afdb927d6ecad807030717034c9e7",
+  "source_cutoff": {
+    "kind": "PINNED_FINAL_SNAPSHOT",
+    "catalog_batch": "v2_20261012T092023738754Z",
+    "source_file_count": 267
+  },
+  "oracle_slot": "CE_DWH_A",
+  "generation": 1,
+  "expected_active": null,
+  "tables": {
+    "D01": {
+      "name": "dim_date",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_date",
+      "rows": 1463,
+      "content_sha256": "187bdff6d1fff9ad6b5c1801a1ada7be65007632b76f77842585e929f625fa9e",
+      "snapshot_id": 2652956355243845150,
+      "iceberg_table": "ce.gold.dim_date"
+    },
+    "D02": {
+      "name": "dim_site",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_site",
+      "rows": 6,
+      "content_sha256": "637889a1e203ab561829ee4cb6ae226711bb13f0ecd8998f3f443e96db633fca",
+      "snapshot_id": 1668090417455306394,
+      "iceberg_table": "ce.gold.dim_site"
+    },
+    "D03": {
+      "name": "dim_hotel",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_hotel",
+      "rows": 10,
+      "content_sha256": "b979d2c8c27d01ecb88ca0cf928659c90f03dbbb137ea04e2cf9787d511969a2",
+      "snapshot_id": 2018270986699516642,
+      "iceberg_table": "ce.gold.dim_hotel"
+    },
+    "D04": {
+      "name": "dim_room",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_room",
+      "rows": 242,
+      "content_sha256": "f843755d3f2be63c031bbbccf0bc075b1e0afbf9f52e55250ea8b38ee2117dae",
+      "snapshot_id": 766208586265563327,
+      "iceberg_table": "ce.gold.dim_room"
+    },
+    "D05": {
+      "name": "dim_channel",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_channel",
+      "rows": 17,
+      "content_sha256": "01643bc149852a013a26cba782aa27917f0eb0bb71db6ed282f994461455fa9d",
+      "snapshot_id": 283618311351975291,
+      "iceberg_table": "ce.gold.dim_channel"
+    },
+    "D06": {
+      "name": "dim_promotion",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_promotion",
+      "rows": 42,
+      "content_sha256": "c6e551f91eefea1f0f2500a548544165d2b884451b596397ffcaea5cc8f57c77",
+      "snapshot_id": 115752973003662423,
+      "iceberg_table": "ce.gold.dim_promotion"
+    },
+    "D07": {
+      "name": "dim_customer_profile",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_customer_profile",
+      "rows": 24122,
+      "content_sha256": "fb2ff4fa784015a2177cb61b95886fd2a69b9f0579c063fded01e56a5a45c740",
+      "snapshot_id": 6670194918957772769,
+      "iceberg_table": "ce.gold.dim_customer_profile"
+    },
+    "D08": {
+      "name": "dim_rate_plan",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_rate_plan",
+      "rows": 74,
+      "content_sha256": "c2f6fdc872a41810b4e00727ed660df39941d6c43eca04c70cec1f88656945f0",
+      "snapshot_id": 7556075986062832371,
+      "iceberg_table": "ce.gold.dim_rate_plan"
+    },
+    "D09": {
+      "name": "dim_outlet",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_outlet",
+      "rows": 18,
+      "content_sha256": "935da08c41f29c297ba16369b91e6977376006dd0c32e58ba3b73f9d7692791a",
+      "snapshot_id": 7625212643016971667,
+      "iceberg_table": "ce.gold.dim_outlet"
+    },
+    "D10": {
+      "name": "dim_meal",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_meal",
+      "rows": 6,
+      "content_sha256": "fdf31ac35500a563ab4a327c97ef43e8f0b76079b9c9791d8443bb82fd0f6620",
+      "snapshot_id": 6345128997426089408,
+      "iceberg_table": "ce.gold.dim_meal"
+    },
+    "D11": {
+      "name": "dim_centre",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_centre",
+      "rows": 6,
+      "content_sha256": "6f4e513eb2370f1beb663f56ab82e76894c1bfad42e57d3c405240afc9073574",
+      "snapshot_id": 8576264377716222795,
+      "iceberg_table": "ce.gold.dim_centre"
+    },
+    "D12": {
+      "name": "dim_activity",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_activity",
+      "rows": 14,
+      "content_sha256": "3012b33d4c3578fe613d82638d3ee648d737c4d2dc8ec195d5c00e21ac213dd2",
+      "snapshot_id": 6049433213804883252,
+      "iceberg_table": "ce.gold.dim_activity"
+    },
+    "D13": {
+      "name": "dim_vehicle",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_vehicle",
+      "rows": 122,
+      "content_sha256": "4e01439c6205111eef719fdaec07189ae6ee3423b66a3007dc8ca0f3cb086f31",
+      "snapshot_id": 6982889157295976974,
+      "iceberg_table": "ce.gold.dim_vehicle"
+    },
+    "D14": {
+      "name": "dim_supplier",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_supplier",
+      "rows": 18,
+      "content_sha256": "c76bfbdcb55574e036cfd3623dd93cf74bcf7c62267244b7bc70e6aff428aa12",
+      "snapshot_id": 2224418885666873148,
+      "iceberg_table": "ce.gold.dim_supplier"
+    },
+    "D15": {
+      "name": "dim_item",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_item",
+      "rows": 8,
+      "content_sha256": "7d71b33f27da274f46ba7872759cc63783e386423fad72877c53d9e660213e43",
+      "snapshot_id": 3703582320251981450,
+      "iceberg_table": "ce.gold.dim_item"
+    },
+    "D16": {
+      "name": "dim_asset",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.dim_asset",
+      "rows": 258,
+      "content_sha256": "b5d7038aa0d383ece6bcf352bc3cec15c69725052387e5006ce20a5d945400a4",
+      "snapshot_id": 2528914434378115834,
+      "iceberg_table": "ce.gold.dim_asset"
+    },
+    "F01": {
+      "name": "fact_booking",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_booking",
+      "rows": 32000,
+      "content_sha256": "61ac22488c0f65085672f8d4b814584205df823ba35525bfd057977766b3acc3",
+      "snapshot_id": 2971785770740754178,
+      "iceberg_table": "ce.gold.fact_booking"
+    },
+    "F02": {
+      "name": "fact_room_day",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_room_day",
+      "rows": 175440,
+      "content_sha256": "8cdd8cc24293eb4e23fb6f70ee30a68089047064aad577a76311e3457f9135aa",
+      "snapshot_id": 8149393538466871549,
+      "iceberg_table": "ce.gold.fact_room_day"
+    },
+    "F03": {
+      "name": "fact_stay_night",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_stay_night",
+      "rows": 73275,
+      "content_sha256": "6e711608c80aa01a7e73071953dff6711fa5c1fb1aa1b32b87a167f5a231ba9e",
+      "snapshot_id": 474059817811095858,
+      "iceberg_table": "ce.gold.fact_stay_night"
+    },
+    "F04": {
+      "name": "fact_ticket_order",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_ticket_order",
+      "rows": 20690,
+      "content_sha256": "4fd33e6034ca8b71818ece5fe7c807b8a176fc8ba458c0e426216a289fcad34c",
+      "snapshot_id": 4185357234104766656,
+      "iceberg_table": "ce.gold.fact_ticket_order"
+    },
+    "F05": {
+      "name": "fact_rental",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_rental",
+      "rows": 7723,
+      "content_sha256": "b315beb8e229810fbf3ab08e9d6d4bfae958b85c23f9a49a3a324069c41e2e56",
+      "snapshot_id": 5442739705893115867,
+      "iceberg_table": "ce.gold.fact_rental"
+    },
+    "F06": {
+      "name": "fact_breakfast_entitlement",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_breakfast_entitlement",
+      "rows": 52979,
+      "content_sha256": "912fff845b8a6d0cb62ac37d91c65093804e279e308810761da189fc0dc85085",
+      "snapshot_id": 2008495040958866345,
+      "iceberg_table": "ce.gold.fact_breakfast_entitlement"
+    },
+    "F07": {
+      "name": "fact_dining_order",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_dining_order",
+      "rows": 31357,
+      "content_sha256": "0bd8118facfe0891925f37e808e71f1843e9d163b29c60152db1e3563a64db39",
+      "snapshot_id": 6444743510822956765,
+      "iceberg_table": "ce.gold.fact_dining_order"
+    },
+    "F08": {
+      "name": "fact_meal_session",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_meal_session",
+      "rows": 11696,
+      "content_sha256": "7849ac462add6bcfe7b968e3f7f425144d2321eb5994763d321774f4f93a09d2",
+      "snapshot_id": 5169403589273469035,
+      "iceberg_table": "ce.gold.fact_meal_session"
+    },
+    "F09": {
+      "name": "fact_admission",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_admission",
+      "rows": 39827,
+      "content_sha256": "7c176d0c0e60b9216336e3c8f65e375d8bbbe38944e932c355fbafd73f03191e",
+      "snapshot_id": 803243339690476948,
+      "iceberg_table": "ce.gold.fact_admission"
+    },
+    "F10": {
+      "name": "fact_activity_day",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_activity_day",
+      "rows": 8772,
+      "content_sha256": "7677814f46e69077f891044b47a99cb8de351222f88faade939e2fafc73f6c2b",
+      "snapshot_id": 2518874239010153493,
+      "iceberg_table": "ce.gold.fact_activity_day"
+    },
+    "F11": {
+      "name": "fact_vehicle_day",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_vehicle_day",
+      "rows": 87720,
+      "content_sha256": "abc03517f121688693206a2ebb20db960028c536e4bee0466e12e52e6643116b",
+      "snapshot_id": 3566708075770946499,
+      "iceberg_table": "ce.gold.fact_vehicle_day"
+    },
+    "F12": {
+      "name": "fact_purchase_line",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_purchase_line",
+      "rows": 23680,
+      "content_sha256": "143234eb517df000e54dfa1cca6da34a7bbaffcc6be413593c8463617dad4816",
+      "snapshot_id": 3717406177203024209,
+      "iceberg_table": "ce.gold.fact_purchase_line"
+    },
+    "F13": {
+      "name": "fact_receipt",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_receipt",
+      "rows": 29621,
+      "content_sha256": "33cab5def469fd9876c617b47d77ee37cc6453bb3885a795cf0163ca289c9e1a",
+      "snapshot_id": 6376398625269128276,
+      "iceberg_table": "ce.gold.fact_receipt"
+    },
+    "F14": {
+      "name": "fact_stock_movement",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_stock_movement",
+      "rows": 88032,
+      "content_sha256": "5c53409da37397b2ed68f391b92bd3e24f38072105682a35ed56c292240a9004",
+      "snapshot_id": 1119304298308652810,
+      "iceberg_table": "ce.gold.fact_stock_movement"
+    },
+    "F15": {
+      "name": "agg_inventory_lot_day",
+      "mode": "DISABLED",
+      "oracle_object": "CE_DWH_A.agg_inventory_lot_day",
+      "rows": 0,
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "snapshot_id": null
+    },
+    "F16": {
+      "name": "fact_maintenance_work",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_maintenance_work",
+      "rows": 512,
+      "content_sha256": "521453586223e95f52dd0fcceed80945abd5bf3b1075517122acaa7123c150f2",
+      "snapshot_id": 8555595998935164880,
+      "iceberg_table": "ce.gold.fact_maintenance_work"
+    },
+    "F17": {
+      "name": "fact_weather_day",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.fact_weather_day",
+      "rows": 2924,
+      "content_sha256": "ac3f0783c39742967cd24bda46fbf7592a17c70d94a2a99d2d50470fd1b6777b",
+      "snapshot_id": 3068776709187747005,
+      "iceberg_table": "ce.gold.fact_weather_day"
+    },
+    "L01": {
+      "name": "bridge_booking_room",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.bridge_booking_room",
+      "rows": 36711,
+      "content_sha256": "26e0f3c44f4703bb70ce493765f5dec2293ae8782a60b34238789a7bb8c1851d",
+      "snapshot_id": 1479398976220454922,
+      "iceberg_table": "ce.gold.bridge_booking_room"
+    },
+    "L02": {
+      "name": "bridge_room_day_maintenance",
+      "mode": "TABLE",
+      "oracle_object": "CE_DWH_A.bridge_room_day_maintenance",
+      "rows": 962,
+      "content_sha256": "f474800491f505eec4d7ec02fe72ba4bceb8611b66343455fdacdefe0ebf60a8",
+      "snapshot_id": 2929053156120940263,
+      "iceberg_table": "ce.gold.bridge_room_day_maintenance"
+    },
+    "L03": {
+      "name": "validated_booking_service_link",
+      "mode": "HELPER",
+      "oracle_object": "CE_DWH_A.validated_booking_service_link",
+      "rows": 21213,
+      "content_sha256": "ea0975d96870646986ca9b4d4a0f41cf70305487b9edb746f74c5baf2953004e",
+      "snapshot_id": null
+    },
+    "L04": {
+      "name": "site_crosswalk",
+      "mode": "HELPER",
+      "oracle_object": "CE_DWH_A.site_crosswalk",
+      "rows": 4,
+      "content_sha256": "9ee7957e4d31e8230b404f7e1e66422fd300baf5b6396cece5e386008da805b5",
+      "snapshot_id": null
+    }
+  },
+  "helpers": {
+    "validated_booking_service_link": {
+      "path": "/analytics/canonical/facts_v2_20261012T092023738754Z_8a65e73962da/validated_booking_service_link",
+      "sha256": {
+        "._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+        ".part-00000-dae5bacc-6579-4265-8a8c-a8c20cb83ef6-c000.snappy.parquet.crc": "eaa6f4d24916ea83ca81e0031b175e30ecd18d5be8fc17d7a146f76fc9929105",
+        ".part-00001-dae5bacc-6579-4265-8a8c-a8c20cb83ef6-c000.snappy.parquet.crc": "6f700339d5dabbb3eeb575234df2d73fd0a0463f59002c5d6816a86d368c760c",
+        "_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "part-00000-dae5bacc-6579-4265-8a8c-a8c20cb83ef6-c000.snappy.parquet": "b795a4e80df5a2ea8674787b57baf00a560d864c127ade46c3ab286c2d1a4927",
+        "part-00001-dae5bacc-6579-4265-8a8c-a8c20cb83ef6-c000.snappy.parquet": "77a2a8e2dd2096e4d7bf4501d2ae2817e00bb6ffbc2c4c3dbb14cd92027c2b17"
+      },
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "service_source_system",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "service_type",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "service_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "booking_source_system",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "booking_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_batch_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "transform_version",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "row_hash",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "created_at_utc",
+            "type": "timestamp_ntz",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "updated_at_utc",
+            "type": "timestamp_ntz",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      }
+    },
+    "site_crosswalk": {
+      "path": "/analytics/canonical/facts_v2_20261012T092023738754Z_8a65e73962da/site_crosswalk",
+      "sha256": {
+        "._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+        ".part-00000-3ed7019f-d8a0-4027-b529-d011953d183c-c000.snappy.parquet.crc": "8d7689e77d2e97a6324c5bef5c546ace3e45a19162be9540db8079ee8c988609",
+        ".part-00001-3ed7019f-d8a0-4027-b529-d011953d183c-c000.snappy.parquet.crc": "3335babb9f1e0cba884a47a8c5ad97e3e169f4c3277a733baf1c06f09d52f7af",
+        "_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "part-00000-3ed7019f-d8a0-4027-b529-d011953d183c-c000.snappy.parquet": "a06804f89a1a8ce0d06305677068aa3eebaf9082d3b031ab09b5f608dd7f2b1e",
+        "part-00001-3ed7019f-d8a0-4027-b529-d011953d183c-c000.snappy.parquet": "6adaab711f9148e46bab32ddcd8e083bb7416980d45dadaeb3edbd8f2cf7e61e"
+      },
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "centre_source_system",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "centre_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "site_source_system",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "site_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_batch_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "transform_version",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "row_hash",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "created_at_utc",
+            "type": "timestamp_ntz",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "updated_at_utc",
+            "type": "timestamp_ntz",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      }
+    }
+  },
+  "quality_entities": {
+    "D01": {
+      "status": "COMPLETE",
+      "accepted": 1461,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D02": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.sites"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D03": {
+      "status": "COMPLETE",
+      "accepted": 8,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.hotels"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D04": {
+      "status": "COMPLETE",
+      "accepted": 240,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.rooms"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D05": {
+      "status": "COMPLETE",
+      "accepted": 15,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.channels",
+        "entertainment_ops.ticket_orders"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D06": {
+      "status": "COMPLETE",
+      "accepted": 40,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.promotions"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D07": {
+      "status": "COMPLETE",
+      "accepted": 24120,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.guests",
+        "entertainment_ops.customers"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D08": {
+      "status": "COMPLETE",
+      "accepted": 72,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.rate_plans"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D09": {
+      "status": "COMPLETE",
+      "accepted": 16,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.outlets"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D10": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D11": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "entertainment_ops.centres"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D12": {
+      "status": "COMPLETE",
+      "accepted": 12,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "entertainment_ops.activities"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D13": {
+      "status": "COMPLETE",
+      "accepted": 120,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "entertainment_ops.vehicles"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D14": {
+      "status": "COMPLETE",
+      "accepted": 16,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.suppliers"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D15": {
+      "status": "COMPLETE",
+      "accepted": 6,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.items"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D16": {
+      "status": "COMPLETE",
+      "accepted": 256,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.assets"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "L04": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "hotel_ops.sites"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "L03": {
+      "status": "COMPLETE",
+      "accepted": 21213,
+      "rejected": 0,
+      "business_filtered": 7200,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.rentals",
+        "entertainment_ops.ticket_orders",
+        "hotel_ops.bookings"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F01": {
+      "status": "COMPLETE",
+      "accepted": 32000,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.bookings",
+        "hotel_ops.hotels"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F08": {
+      "status": "COMPLETE",
+      "accepted": 11696,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.meal_sessions",
+        "hotel_ops.outlets"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F10": {
+      "status": "COMPLETE",
+      "accepted": 8772,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.activities",
+        "entertainment_ops.centres",
+        "entertainment_ops.closures"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F11": {
+      "status": "COMPLETE",
+      "accepted": 87720,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "entertainment_ops.rentals",
+        "entertainment_ops.vehicle_maintenance",
+        "entertainment_ops.vehicles"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F12": {
+      "status": "COMPLETE",
+      "accepted": 23680,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.purchase_lines",
+        "hotel_ops.purchase_orders"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F16": {
+      "status": "COMPLETE",
+      "accepted": 512,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.assets",
+        "hotel_ops.hotels",
+        "hotel_ops.maintenance"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F17": {
+      "status": "COMPLETE",
+      "accepted": 2924,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.weather_daily"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "L02": {
+      "status": "COMPLETE",
+      "accepted": 962,
+      "rejected": 0,
+      "business_filtered": 64,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.assets",
+        "hotel_ops.maintenance",
+        "hotel_ops.rooms"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F02": {
+      "status": "COMPLETE",
+      "accepted": 175440,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.assets",
+        "hotel_ops.hotels",
+        "hotel_ops.maintenance",
+        "hotel_ops.rooms"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F04": {
+      "status": "COMPLETE",
+      "accepted": 20690,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "entertainment_ops.ticket_orders",
+        "hotel_ops.bookings",
+        "hotel_ops.hotels"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F05": {
+      "status": "COMPLETE",
+      "accepted": 7723,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "entertainment_ops.rentals",
+        "entertainment_ops.vehicles",
+        "hotel_ops.bookings",
+        "hotel_ops.hotels"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F07": {
+      "status": "COMPLETE",
+      "accepted": 31357,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.bookings",
+        "hotel_ops.dining_orders",
+        "hotel_ops.hotels",
+        "hotel_ops.outlets"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F09": {
+      "status": "COMPLETE",
+      "accepted": 39827,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.activities",
+        "entertainment_ops.admissions",
+        "entertainment_ops.centres",
+        "entertainment_ops.ticket_orders",
+        "entertainment_ops.tickets"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F13": {
+      "status": "COMPLETE",
+      "accepted": 29621,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.purchase_lines",
+        "hotel_ops.purchase_orders",
+        "hotel_ops.receipts"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "L01": {
+      "status": "COMPLETE",
+      "accepted": 36711,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.booking_rooms",
+        "hotel_ops.bookings",
+        "hotel_ops.rate_plans",
+        "hotel_ops.rooms"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F03": {
+      "status": "COMPLETE",
+      "accepted": 73275,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.booking_rooms",
+        "hotel_ops.bookings",
+        "hotel_ops.hotels",
+        "hotel_ops.rate_plans",
+        "hotel_ops.rooms",
+        "hotel_ops.stays"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F14": {
+      "status": "COMPLETE",
+      "accepted": 88032,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.purchase_lines",
+        "hotel_ops.purchase_orders",
+        "hotel_ops.receipts",
+        "hotel_ops.stock_movements"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F06": {
+      "status": "COMPLETE",
+      "accepted": 52979,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.booking_rooms",
+        "hotel_ops.bookings",
+        "hotel_ops.breakfast_entitlements",
+        "hotel_ops.hotels",
+        "hotel_ops.outlets",
+        "hotel_ops.rate_plans",
+        "hotel_ops.rooms",
+        "hotel_ops.stays"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    }
+  },
+  "quality_metrics": {
+    "B01.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F03"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B01.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F02"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B01.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F03",
+        "F02"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B01.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B01.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B02.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B02.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B02.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B02.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B02.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B02.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B03.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F04",
+        "F05",
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B03.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F04",
+        "F05",
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B03.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F04",
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B03.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F05",
+        "F01"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B03.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01",
+        "F04",
+        "F05"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B04.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F06"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B04.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F06"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B04.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F06"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B04.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F07"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B04.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F06",
+        "F07"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B04.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F08"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B04.07": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F08"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B04.08": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F07"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B05.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F09"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B05.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F10"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B05.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F09",
+        "F10"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B05.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F11"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B05.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F11"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B05.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F11"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B06.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F12"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B06.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F13",
+        "F12"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B06.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F13",
+        "F12"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B06.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F13",
+        "F12"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B06.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F12",
+        "F13"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B06.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F13",
+        "F12"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B06.07": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F12",
+        "F13"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B07.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B07.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B07.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B07.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B07.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B07.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B08.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F16"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B08.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F02"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B08.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F02"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    },
+    "B08.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F02"
+      ],
+      "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+    }
+  },
+  "quality_scope": [],
+  "external_warnings": [
+    {
+      "receipt_ref": "RECEIPTS-0024695",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0027378",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0024135",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0001934",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0023078",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0025496",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0011604",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0021166",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0013274",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0019011",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0007065",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0021248",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    }
+  ],
+  "validation": {
+    "all_columns_equal": true,
+    "oracle_sealed": true,
+    "tags_pinned": true
+  },
+  "retention": {
+    "policy": "RETAIN_ALL_NO_AUTOMATIC_GC",
+    "reader_max_ttl_seconds": 3600
+  },
+  "provenance": {
+    "fact_verification_sha256": "d2f74b651f7139defa8fa1cf4a4a483ffe9cf8bc0bd1d6bcdb2f3f83444f40e4",
+    "dimension_verification_sha256": "57d0553d110c5e74eb55ac0e437059aac63789c43ab671a4a1bfffcbd4ecd08d"
+  }
+}

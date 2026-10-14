@@ -1,0 +1,200 @@
+{
+  "status": "PASSED_PUBLICATION_READER",
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "checks": [
+    {
+      "entity": "D01",
+      "rows": 1463,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D02",
+      "rows": 6,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D03",
+      "rows": 10,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D04",
+      "rows": 242,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D05",
+      "rows": 17,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D06",
+      "rows": 42,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D07",
+      "rows": 24122,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D08",
+      "rows": 74,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D09",
+      "rows": 18,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D10",
+      "rows": 6,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D11",
+      "rows": 6,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D12",
+      "rows": 14,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D13",
+      "rows": 122,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D14",
+      "rows": 18,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D15",
+      "rows": 8,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "D16",
+      "rows": 258,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F01",
+      "rows": 32000,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F02",
+      "rows": 175440,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F03",
+      "rows": 73275,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F04",
+      "rows": 20690,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F05",
+      "rows": 7723,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F06",
+      "rows": 52979,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F07",
+      "rows": 31357,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F08",
+      "rows": 11696,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F09",
+      "rows": 39827,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F10",
+      "rows": 8772,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F11",
+      "rows": 87720,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F12",
+      "rows": 23680,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F13",
+      "rows": 29621,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F14",
+      "rows": 88032,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F16",
+      "rows": 512,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "F17",
+      "rows": 2924,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "L01",
+      "rows": 36711,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "L02",
+      "rows": 962,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "L03",
+      "rows": 21213,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "entity": "L04",
+      "rows": 4,
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    }
+  ],
+  "cross_table": [
+    [
+      "32000",
+      "134356879000"
+    ]
+  ],
+  "publish_replay": {
+    "outcome": "ALREADY_COMMITTED",
+    "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+    "active_publication": "pub_3f41f8fafa4c913187af2cc3"
+  },
+  "active_publication": "pub_3f41f8fafa4c913187af2cc3",
+  "released_readers": true,
+  "quality_metrics": 47
+}

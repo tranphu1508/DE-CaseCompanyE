@@ -1,0 +1,609 @@
+{
+  "status": "PASSED",
+  "phase": "baseline",
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "semantic_version": "companye-semantic-1.0",
+  "checked_at": "2026-10-13T19:24:14.716799+00:00",
+  "source_files_checked": 267,
+  "group_queries": 16,
+  "metric_comparisons": 47,
+  "code_sha256": {
+    "src/semantic/fixtures.py": "a7b8e375c142e53e597fdcf6d489bf056d23915ed27710de5cadc6e3973b91fb",
+    "src/semantic/main.py": "b16c53d0fc8335bfc22d9ae0d6280c05f36dce3be6bc34e2c7c53f5d89bd9975",
+    "src/semantic/queries.py": "74ac2e8df98e070fe27b4f7651a9135aaef35ff50725330395bef65233ad946e",
+    "src/semantic/reference.py": "c5a07a9b5706614c2f0ae95abfde8c7572be99900fbbcbfe1cf34a5e27cc97c1",
+    "src/semantic/service.py": "9685dc4a3af3484be90bfb66a82ed59e10d1d34fdbc83dccf1d64e3335d88ce2",
+    "src/semantic/__init__.py": "5f929a72364d46654477a953c74caf2691fff4e35aa6aa86933379361f1c7b78",
+    "scripts/kpi-pipeline.py": "842f2a9410fd65805eba8fd5ce14b99f850667a19dd72c03a15e26dcafdc4335",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332"
+  },
+  "checks": [
+    {
+      "case": "baseline",
+      "group": "B01",
+      "context": {},
+      "selected": [
+        "B01.01",
+        "B01.02",
+        "B01.03",
+        "B01.04",
+        "B01.05"
+      ],
+      "oracle": {
+        "B01.01": {
+          "numerator": "73275",
+          "denominator": "1",
+          "value": "73275",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "73275",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B01.02": {
+          "numerator": "174478",
+          "denominator": "1",
+          "value": "174478",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "174478",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B01.03": {
+          "numerator": "73275",
+          "denominator": "174478",
+          "value": "0.41996698724194454315157211797475899540343195130618",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "73275",
+          "diagnostic_accepted_denominator": "174478"
+        },
+        "B01.04": {
+          "numerator": "4239",
+          "denominator": "32000",
+          "value": "0.13246875",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "4239",
+          "diagnostic_accepted_denominator": "32000"
+        },
+        "B01.05": {
+          "numerator": "941",
+          "denominator": "32000",
+          "value": "0.02940625",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "941",
+          "diagnostic_accepted_denominator": "32000"
+        }
+      },
+      "iceberg_equal": true,
+      "raw_reference_equal": true,
+      "sql_sha256": "c8ae338b22d8a865e4056ecd1f16242157e0a2022cea9b2cb17b80f3842c44d7"
+    },
+    {
+      "case": "baseline",
+      "group": "B02",
+      "context": {},
+      "selected": [
+        "B02.01",
+        "B02.02",
+        "B02.03",
+        "B02.04",
+        "B02.05",
+        "B02.06"
+      ],
+      "oracle": {
+        "B02.01": {
+          "numerator": "114943890000",
+          "denominator": "1",
+          "value": "114943890000",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "114943890000",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B02.02": {
+          "numerator": "112484242500",
+          "denominator": "1",
+          "value": "112484242500",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "112484242500",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B02.03": {
+          "numerator": "1334727040",
+          "denominator": "1",
+          "value": "1334727040",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "1334727040",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B02.04": {
+          "numerator": "1124920460",
+          "denominator": "1",
+          "value": "1124920460",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "1124920460",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B02.05": {
+          "numerator": "8063289953",
+          "denominator": "1",
+          "value": "8063289953",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "8063289953",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B02.06": {
+          "numerator": "105545873007",
+          "denominator": "1",
+          "value": "105545873007",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "105545873007",
+          "diagnostic_accepted_denominator": "1"
+        }
+      },
+      "iceberg_equal": true,
+      "raw_reference_equal": true,
+      "sql_sha256": "4f5a0e7d992fa9c7a40281efacaf1baf63c9fb22475cd911c2bdb637096baac4"
+    },
+    {
+      "case": "baseline",
+      "group": "B03",
+      "context": {},
+      "selected": [
+        "B03.01",
+        "B03.02",
+        "B03.03",
+        "B03.04",
+        "B03.05"
+      ],
+      "oracle": {
+        "B03.01": {
+          "numerator": "17281",
+          "denominator": "1",
+          "value": "17281",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "17281",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B03.02": {
+          "numerator": "17281",
+          "denominator": "26820",
+          "value": "0.64433258762117822520507084265473527218493661446682",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "17281",
+          "diagnostic_accepted_denominator": "26820"
+        },
+        "B03.03": {
+          "numerator": "6078050000",
+          "denominator": "1",
+          "value": "6078050000",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "6078050000",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B03.04": {
+          "numerator": "4436100000",
+          "denominator": "1",
+          "value": "4436100000",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "4436100000",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B03.05": {
+          "numerator": "122998392500",
+          "denominator": "1",
+          "value": "122998392500",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "122998392500",
+          "diagnostic_accepted_denominator": "1"
+        }
+      },
+      "iceberg_equal": true,
+      "raw_reference_equal": true,
+      "sql_sha256": "f1d97f66c85f110c7c847549596465269b0d1012054c3bfd5c5f915934938c31"
+    },
+    {
+      "case": "baseline",
+      "group": "B04",
+      "context": {},
+      "selected": [
+        "B04.01",
+        "B04.02",
+        "B04.03",
+        "B04.04",
+        "B04.05",
+        "B04.06",
+        "B04.07",
+        "B04.08"
+      ],
+      "oracle": {
+        "B04.01": {
+          "numerator": "92683",
+          "denominator": "1",
+          "value": "92683",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "92683",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B04.02": {
+          "numerator": "83489",
+          "denominator": "1",
+          "value": "83489",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "83489",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B04.03": {
+          "numerator": "83489",
+          "denominator": "92683",
+          "value": "0.90080165726184953011879201147999093684926038216286",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "83489",
+          "diagnostic_accepted_denominator": "92683"
+        },
+        "B04.04": {
+          "numerator": "20104308000",
+          "denominator": "1",
+          "value": "20104308000",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "20104308000",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B04.05": {
+          "numerator": "143967",
+          "denominator": "1",
+          "value": "143967",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "143967",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B04.06": {
+          "numerator": "3964648500",
+          "denominator": "1",
+          "value": "3964648500",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "3964648500",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B04.07": {
+          "numerator": "3964648500",
+          "denominator": "113887",
+          "value": "34812.125176710247877281867113893596284035930352016",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "3964648500",
+          "diagnostic_accepted_denominator": "113887"
+        },
+        "B04.08": {
+          "numerator": "94805",
+          "denominator": "31357",
+          "value": "3.0234078515164078196256019389609975444079471888255",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "94805",
+          "diagnostic_accepted_denominator": "31357"
+        }
+      },
+      "iceberg_equal": true,
+      "raw_reference_equal": true,
+      "sql_sha256": "44f2a67c1e1816a6ed397ea990fae7931cd6df66ab98ed38947d4c34109fae7f"
+    },
+    {
+      "case": "baseline",
+      "group": "B05",
+      "context": {},
+      "selected": [
+        "B05.01",
+        "B05.02",
+        "B05.03",
+        "B05.04",
+        "B05.05",
+        "B05.06"
+      ],
+      "oracle": {
+        "B05.01": {
+          "numerator": "39827",
+          "denominator": "1",
+          "value": "39827",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "39827",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B05.02": {
+          "numerator": "3825000",
+          "denominator": "1",
+          "value": "3825000",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "3825000",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B05.03": {
+          "numerator": "39827",
+          "denominator": "3825000",
+          "value": "0.010412287581699346405228758169934640522875816993464",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "39827",
+          "diagnostic_accepted_denominator": "3825000"
+        },
+        "B05.04": {
+          "numerator": "9580",
+          "denominator": "1",
+          "value": "9580",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "9580",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B05.05": {
+          "numerator": "87000",
+          "denominator": "1",
+          "value": "87000",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "87000",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B05.06": {
+          "numerator": "9580",
+          "denominator": "87000",
+          "value": "0.11011494252873563218390804597701149425287356321839",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "9580",
+          "diagnostic_accepted_denominator": "87000"
+        }
+      },
+      "iceberg_equal": true,
+      "raw_reference_equal": true,
+      "sql_sha256": "523cbdf49def074deced4dde746a6a0f3ad463bb5a28f5157c1b2c193e51bd8d"
+    },
+    {
+      "case": "baseline",
+      "group": "B06",
+      "context": {},
+      "selected": [
+        "B06.01",
+        "B06.02",
+        "B06.03",
+        "B06.04",
+        "B06.05",
+        "B06.06",
+        "B06.07"
+      ],
+      "oracle": {
+        "B06.01": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "96083",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B06.02": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "93993",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B06.03": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "2090",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B06.04": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "13438",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B06.05": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "93993",
+          "diagnostic_accepted_denominator": "96083"
+        },
+        "B06.06": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "2090",
+          "diagnostic_accepted_denominator": "96083"
+        },
+        "B06.07": {
+          "numerator": "15441",
+          "denominator": "23680",
+          "value": "0.65206925675675675675675675675675675675675675675676",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "15441",
+          "diagnostic_accepted_denominator": "23680"
+        }
+      },
+      "iceberg_equal": true,
+      "raw_reference_equal": true,
+      "sql_sha256": "a28407093d5810a46cf3111b71bb5f7e49cb06d0a96ce3ee652824c8e1e96e85"
+    },
+    {
+      "case": "baseline",
+      "group": "B07",
+      "context": {},
+      "selected": [
+        "B07.01",
+        "B07.02",
+        "B07.03",
+        "B07.04",
+        "B07.05",
+        "B07.06"
+      ],
+      "oracle": {
+        "B07.01": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "0",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B07.02": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "2869",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B07.03": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "62853",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B07.04": {
+          "numerator": null,
+          "denominator": null,
+          "value": null,
+          "quality": "NOT_APPLICABLE",
+          "reasons": [
+            "SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY"
+          ],
+          "diagnostic_accepted_numerator": "28271",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B07.05": {
+          "numerator": "2461968600",
+          "denominator": "1",
+          "value": "2461968600",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "2461968600",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B07.06": {
+          "numerator": "2461968600",
+          "denominator": "7990111300",
+          "value": "0.30812694686743600179887356512793507644880991832992",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "2461968600",
+          "diagnostic_accepted_denominator": "7990111300"
+        }
+      },
+      "iceberg_equal": true,
+      "raw_reference_equal": true,
+      "sql_sha256": "cd8c99714424a9699373bd9181d6c864ba325082f670489e1f55a1c0b691196b"
+    },
+    {
+      "case": "baseline",
+      "group": "B08",
+      "context": {},
+      "selected": [
+        "B08.01",
+        "B08.02",
+        "B08.03",
+        "B08.04"
+      ],
+      "oracle": {
+        "B08.01": {
+          "numerator": "167200000",
+          "denominator": "1",
+          "value": "167200000",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "167200000",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B08.02": {
+          "numerator": "962",
+          "denominator": "1",
+          "value": "962",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "962",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B08.03": {
+          "numerator": "174478",
+          "denominator": "1",
+          "value": "174478",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "174478",
+          "diagnostic_accepted_denominator": "1"
+        },
+        "B08.04": {
+          "numerator": "962",
+          "denominator": "175440",
+          "value": "0.0054833561331509347925216598267213862289101687186503",
+          "quality": "COMPLETE",
+          "reasons": [],
+          "diagnostic_accepted_numerator": "962",
+          "diagnostic_accepted_denominator": "175440"
+        }
+      },
+      "iceberg_equal": true,
+      "raw_reference_equal": true,
+      "sql_sha256": "cb71433c7694138a0f134739605bfa2d056e7324180ddb8753aaa7242c97af6e"
+    }
+  ]
+}

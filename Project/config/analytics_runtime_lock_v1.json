@@ -1,0 +1,98 @@
+{
+  "version": "companye-analytics-runtime-1.0",
+  "verified_on": "2026-10-13",
+  "status": "PROVISIONED_SERVICE_SMOKE_AND_RESTART_PASSED",
+  "oracle": {
+    "edition": "Oracle AI Database 26ai Free",
+    "tag": "container-registry.oracle.com/database/free:23.26.3.0",
+    "image": "container-registry.oracle.com/database/free@sha256:f988b0c04c4c386cd306a2a914c0d7a9702d83acc31b064a28ad8eb6278a8fba",
+    "amd64_manifest_digest": "sha256:c4d9b15a1b2240ce90730c23ce298fcdd34f6793792c1b3849181a080009c322",
+    "verification": "Pinned image pulled; FREEPDB1 READ WRITE, AL32UTF8, JDBC typed round trip and restart persistence passed. See reports/analytics-runtime/verification.json.",
+    "database_runtime_version": "23.26.3.0.0",
+    "service": "FREEPDB1",
+    "port": 11521,
+    "limits": {
+      "cpu_cores": 2,
+      "database_memory_gb": 2,
+      "user_data_gb": 12
+    }
+  },
+  "spark": {
+    "version": "3.5.7",
+    "scala": "2.12.18",
+    "java": "11.0.27",
+    "image": "apache/spark@sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba",
+    "tag": "apache/spark:3.5.7-python3",
+    "verification": "Analytics Spark session 3.5.7 with Iceberg 1.10.2 and both JDBC drivers passed typed round trip and restart persistence.",
+    "python": "3.8.10"
+  },
+  "metadata_postgres": {
+    "image": "postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+    "tag": "postgres:17",
+    "purpose": "Separate Iceberg JDBC catalog and shared ETL control/key registry; not a third analytics comparison",
+    "new_service_started": true,
+    "database_runtime_version": "17.11"
+  },
+  "packages": [
+    {
+      "coordinate": "org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.10.2",
+      "pom_url": "https://repo.maven.apache.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.5_2.12/1.10.2/iceberg-spark-runtime-3.5_2.12-1.10.2.pom",
+      "pom_sha256": "47715a16887935e3008a22c85d47ca8dcd9d7104e20a9b987e87a70930d4f710",
+      "http_status": 200,
+      "jar_url": "https://repo.maven.apache.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.5_2.12/1.10.2/iceberg-spark-runtime-3.5_2.12-1.10.2.jar",
+      "jar_sha256": "c562d482dcd16b666e808b755469fbc4b2604284b41622c9d87e2c02b7cc6c5f",
+      "jar_sha512": "0153eadc5ee2e052064e272e453adeeccd9d2acbd6f0338e176f69e5f44886e559aff47145019324a4f34f488216861c71c4bfe8ae3e57f1bc7992ddc2b9c67d",
+      "jar_published_checksum_algorithm": "sha512",
+      "jar_published_checksum": "0153eadc5ee2e052064e272e453adeeccd9d2acbd6f0338e176f69e5f44886e559aff47145019324a4f34f488216861c71c4bfe8ae3e57f1bc7992ddc2b9c67d",
+      "jar_bytes": 47157008
+    },
+    {
+      "coordinate": "org.postgresql:postgresql:42.7.8",
+      "pom_url": "https://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.7.8/postgresql-42.7.8.pom",
+      "pom_sha256": "812580abbb7576bcb7edda3c4cb2135d595ea857083acb60805798351854af93",
+      "http_status": 200,
+      "jar_url": "https://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.7.8/postgresql-42.7.8.jar",
+      "jar_sha256": "2a32a9dcbc42d67a50ad3a0de5efd102c8d2be46720045f2cbd6689f160ab7c7",
+      "jar_sha512": "3ec6f2186ad9f2cbd7916cc1749b61433137c78c13e13b7583507051733318423505fa61908242f4d02e0d90f7db6eecdb6d573a966773d274bf2c78d976573b",
+      "jar_published_checksum_algorithm": "sha1",
+      "jar_published_checksum": "81b840fbfe0a6c0b7aa14c6bd4856108d36ed780",
+      "jar_bytes": 1116727
+    },
+    {
+      "coordinate": "com.oracle.database.jdbc:ojdbc11:23.9.0.25.07",
+      "pom_url": "https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc11/23.9.0.25.07/ojdbc11-23.9.0.25.07.pom",
+      "pom_sha256": "4131db75dedb94435c5e418694ea26fa9bb797349cd8a1c337bbe77a80e71b3f",
+      "http_status": 200,
+      "jar_url": "https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc11/23.9.0.25.07/ojdbc11-23.9.0.25.07.jar",
+      "jar_sha256": "f52e9335276cd3999c23bb5a364fa01a628f3468945444d03cb7f92271bca1da",
+      "jar_sha512": "0c0fd97fd054da6b582d948840796ce45fbec3b768fb25ce11c41e6a59d47ac482793b8cee2a48188bf412e8bd495eb1e51b165e77b7088f9efa14ba1fdba577",
+      "jar_published_checksum_algorithm": "sha1",
+      "jar_published_checksum": "4fe3479be8322eaac43f1cd0fb5818e93048201d",
+      "jar_bytes": 7493107
+    }
+  ],
+  "artifact_verification_limit": "Three runtime JARs downloaded and matched published HTTPS Maven checksums; local SHA-256 pins saved. Iceberg publishes SHA-512; PostgreSQL and Oracle artifacts publish SHA-1. Integration and restart probe passed; no dependency vulnerability audit claimed.",
+  "storage_observation": {
+    "docker_root_linux": "/var/lib/docker",
+    "windows_vhdx": "E:/DockerDesktopData/DockerDesktopWSL/disk/docker_data.vhdx",
+    "vhdx_bytes": 14364442624,
+    "hot_storage": "Docker named volumes backed by the E-drive Linux VHDX; source lake stays on D; analytics source mount is read-only",
+    "source_catalog_entries": 267,
+    "catalog_rows_with_known_count": 591242,
+    "lake_v2_measured_mib": 60.9,
+    "verified_at": "2026-10-13T05:34:56.5193480+07:00",
+    "migration_evidence": "reports/docker-storage-migration-20261013/verification.json",
+    "recovery_copy": "E:/DockerMigrationBackup-20261013/docker_data.vhdx"
+  },
+  "official_references": [
+    "https://docs.oracle.com/en/database/oracle/oracle-database/26/xeinl/licensing-restrictions.html",
+    "https://github.com/oracle/docker-images/blob/main/OracleDatabase/SingleInstance/README.md",
+    "https://iceberg.apache.org/releases/",
+    "https://iceberg.apache.org/docs/1.10.2/jdbc/",
+    "https://iceberg.apache.org/docs/1.10.2/configuration/",
+    "https://iceberg.apache.org/docs/1.10.2/spark-getting-started/",
+    "https://iceberg.apache.org/spec/",
+    "https://spark.apache.org/docs/3.5.7/configuration.html"
+  ],
+  "provisioned_at": "2026-10-13T16:53:47.226991+00:00"
+}

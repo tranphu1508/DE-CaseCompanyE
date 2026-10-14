@@ -1,0 +1,147 @@
+{
+  "publication_id": "SCHEMA_VALIDATION_ONLY_NOT_PUBLISHED",
+  "helpers": {
+    "validated_booking_service_link": {
+      "path": "/analytics/schema-validation/871b11d92f16e191/validated_booking_service_link",
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "service_source_system",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "service_type",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "service_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "booking_source_system",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "booking_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_batch_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "transform_version",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "row_hash",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "created_at_utc",
+            "type": "timestamp_ntz",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "updated_at_utc",
+            "type": "timestamp_ntz",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "sha256": {
+        "._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+        ".part-00000-9a66b1e8-af24-4462-a8c3-1f3128afecfc-c000.snappy.parquet.crc": "13b3a8cf190be6f021cef5aecbd2d4d619420a759757d926f51bc9af1fd9004d",
+        "_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "part-00000-9a66b1e8-af24-4462-a8c3-1f3128afecfc-c000.snappy.parquet": "2ed32c6b271db3bc75ec655c8ef6718471fe10529c976a33c40c23fed4ba67b1"
+      }
+    },
+    "site_crosswalk": {
+      "path": "/analytics/schema-validation/871b11d92f16e191/site_crosswalk",
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "centre_source_system",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "centre_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "site_source_system",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "site_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source_batch_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "transform_version",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "row_hash",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "created_at_utc",
+            "type": "timestamp_ntz",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "updated_at_utc",
+            "type": "timestamp_ntz",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "sha256": {
+        "._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+        ".part-00000-42aba731-db4d-4d85-9ba2-0320729a8bfb-c000.snappy.parquet.crc": "57432c7142a0f8537ce1ac3db8c0c55ebc41d6f3d3cfeb807fe0893d2c5ddef5",
+        "_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "part-00000-42aba731-db4d-4d85-9ba2-0320729a8bfb-c000.snappy.parquet": "6c56a1f8fe46b6ffdb965874a9493a0b735bd187f9875d3303bb2286bfd7d6ed"
+      }
+    }
+  }
+}

@@ -1,0 +1,772 @@
+{
+  "status": "PASSED_OBSERVED_UI_AND_NUMERIC_CHECKS",
+  "created_at": "2026-10-14T09:56:03.272827+00:00",
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "pages": 10,
+  "charts": 18,
+  "kpi_cards": 36,
+  "tables": 37,
+  "relationships": 69,
+  "measures": 223,
+  "original_measure_expressions_unchanged": 196,
+  "chart_value_checks": 457,
+  "kpi_regression_checks": 1148,
+  "visual_counts": {
+    "clusteredColumnChart": 4,
+    "slicer": 44,
+    "textbox": 18,
+    "card": 55,
+    "tableEx": 10,
+    "lineChart": 9,
+    "clusteredBarChart": 5
+  },
+  "ui_evidence": [
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\overview.png",
+      "sha256": "56832841dd157b0cfdb63e15c0740a63a4186e2f78b852b053bc91c067bfae41",
+      "observation": "Oracle default; full period; four sites; 105.55 billion retained, 42.00% occupancy, 64.43% cross-sell, 65.21% OTIF; 24 monthly points."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\overview-month-filter.png",
+      "sha256": "5b2a81cb6ed92c37d1237d8dbcda78af30000c62397b3ba2704bd7dd7850e5b2",
+      "observation": "2024-01 selected: 3.50 billion retained, 36.05% occupancy; exactly one monthly point. Clearing Period restored 24 points."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\overview-iceberg.png",
+      "sha256": "b233536fb1a964b7578dd6c20a521f5d52509df5a514abc4064f6e3dc5a8815c",
+      "observation": "Switched source to Iceberg; cards, site table and monthly trend matched Oracle. Cleared source afterwards."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\overview-reopened.png",
+      "sha256": "d1c8c651e1fdea5658f0b948875f340072989ab0b341463cc326dcdd3453513e",
+      "observation": "Closed and reopened saved PBIP; overview cards, four-site totals, 24-point trend and COMPLETE warning rendered with original totals."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B01.png",
+      "sha256": "4c8eaa2b6983c8d900bf09b3a462dcb0542cb69ea88a39c44b680dcd7bec6c4c",
+      "observation": "Eight-hotel occupied/available comparison and monthly occupancy rendered."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B02.png",
+      "sha256": "5705196a4efa0f6a5d1b30fd7091da1958dde34c16ebd7db27bf85522e64da8b",
+      "observation": "Channel retained-value comparison and monthly trend rendered; long channel list scrolls."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B03.png",
+      "sha256": "2d40262c9097424d677b67430c1f2f897faddef4ac20d4c1a8e360e28cd106b1",
+      "observation": "Hotel cross-sell comparison, monthly trend and 17,281 cross-selling bookings rendered."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B04.png",
+      "sha256": "bd3a3e6c07bdfac58179b064c3ebb4cb4a9dde75cf6577eaba15c3b7f57a2e1d",
+      "observation": "Eight-hotel buffet material cost comparison and monthly food-value trend rendered."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B05.png",
+      "sha256": "33dd896116283715c0ca5944b775c8069370ad5fec1634beac333e865067a452",
+      "observation": "Site comparison and monthly trends both rendered two series for attraction and rental utilization."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B06-no-item.png",
+      "sha256": "e9b490a33ba3f415c9269615d2ebf2ae137098fd8bb3908d290a7c1e0482e3bc",
+      "observation": "Quantity cards BLANK; detail requests one item; order-count OTIF still renders."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B06-RICE.png",
+      "sha256": "54eb9c58c4ebdb5fbc82019987488abfe22d0bbbba4ccb96dce1b3c4713a0a89",
+      "observation": "RICE selected: OTIF 64.30%, accepted 97.72%, rejected 2.28%, late quantity 3,589; supplier and monthly charts render."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B07-no-item.png",
+      "sha256": "40cbf30c5b1f4fe01b825db51a8f27c4beb41b2884712a6a42c6e8210d4c26cf",
+      "observation": "Quantity cards and stock charts BLANK; detail explicitly requests one item; money and supported ratio remain."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B07-RICE.png",
+      "sha256": "5ffa90c52dd818bfeed32bd9fdb92e2ea0348432acd1d1dddec7f58478ae70eb",
+      "observation": "RICE selected: opening 0, closing 1,790, usage 16,516; eight hotel bars and 24 monthly closing balances render."
+    },
+    {
+      "file": "reports\\powerbi\\dashboard\\ui\\B08.png",
+      "sha256": "b60145e588703d3397be41d2c2ab8f3291e932768bf43e574215feceb067ed5c",
+      "observation": "Maintenance 167,200,000 VND, blocked 962, available 174,478, blocked ratio 0.55%; both charts render."
+    }
+  ],
+  "saved_state": {
+    "active_page": "overview",
+    "quantity_pages_default_item": "RICE",
+    "format": "TMSL",
+    "desktop_save_observed": true,
+    "reopen_ui_observed": true
+  },
+  "schema_validation": {
+    "status": "INCOMPLETE_SCHEMA_UNAVAILABLE",
+    "checked_files": 95,
+    "unavailable_files": 63
+  },
+  "limitations": [
+    "UI checks cover only the observations listed; not every filter combination.",
+    "B01/B02 screenshots precede the DOUBLE scaling correction; final presentation measures pass the 457 numeric checks.",
+    "QA page retained from prior acceptance; simulated PARTIAL is not a live incomplete publication.",
+    "Frozen COMPLETE publication via local Import; no DirectQuery, scheduled refresh or web deployment.",
+    "Microsoft visual schema 2.13.0 unavailable; those files are not counted as schema passes."
+  ],
+  "files": [
+    {
+      "path": "powerbi\\CompanyE.pbip",
+      "sha256": "479914f660d29772e325a639e630f5961f6052d2e44a6cd2c15f54209a1e341d"
+    },
+    {
+      "path": "powerbi\\CompanyE.SemanticModel\\model.bim",
+      "sha256": "d5b19bb342f80efd8c19b661d9c54d443cb1f477418b9dd52697abf24d3cb8b4"
+    },
+    {
+      "path": "scripts\\build-powerbi-dashboard.py",
+      "sha256": "7c831bd304aff5c5c6abdbcbb3405e7b2036f191ba2ec28ac85a7506a9c78103"
+    },
+    {
+      "path": "scripts\\verify-powerbi-dashboard.py",
+      "sha256": "dd64b1cdba4c30a3033fee766aa377c4bbf984057a09d8165d8378a09172b1d8"
+    },
+    {
+      "path": "scripts\\finalize-powerbi-dashboard.py",
+      "sha256": "bd779475ac7ddc4f9517a1d22a61af1035e9c270886533b481a2111292be2d11"
+    },
+    {
+      "path": "powerbi\\data\\dashboard-months.csv",
+      "sha256": "8090987ab6cfbbccf1315f2cfd51028d1bedb7f4c8aa0359b20be1a2d848644a"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\page.json",
+      "sha256": "1416096b3a2026259cc4da56a293223e18378f0df302a49e6fda4149f13f30ac"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\comparison\\visual.json",
+      "sha256": "6fd71163bb2af1225837d92750a274d3f2ae59b77d68bbb43208d88db7e58b12"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\detail\\visual.json",
+      "sha256": "e41ddcd7049bc2873e8e0407de1cfc7d84733fffa2c5c876f1272786768671c5"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\engine\\visual.json",
+      "sha256": "713864c113795ad7d432091bc3226b9e21505e18a495defed0fab7598235b44f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\guidance\\visual.json",
+      "sha256": "6e5233cc86a6f5d6cd708e6e5b9c7e690675d31c41b24fdf4781ff5c1eb720b7"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\heading\\visual.json",
+      "sha256": "0354ae87b1683c2d8a7ebed8e7cbe343e3ef56577e55a7758ec0fd0bbdefa8c9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\hotel\\visual.json",
+      "sha256": "e7a6463e655a0e08308331daf318147e1bbd56d2f830460a392baddaa7a98e67"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\metrics\\visual.json",
+      "sha256": "54d2f22501a31537de2e7106e2de415e75eef2b9adefddf1ae5dc6faac6348cf"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\period\\visual.json",
+      "sha256": "d444cc52dcd0597ab28d12c554cd13416b8b6b779619bc6fb9f6856752b2d7e1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\score1\\visual.json",
+      "sha256": "143d51213ac2065724f41adc9ad754cbcbf868287b7005a825e925692dc0109a"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\score2\\visual.json",
+      "sha256": "447106b1c790d482a514ad14a4c4b12d73d7284dd6b9cf34b571cceae7d34bf8"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\score3\\visual.json",
+      "sha256": "49068477de501585d0464a8978473972ec0b3c1ede98682dfc981a77366533e1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\score4\\visual.json",
+      "sha256": "93b6722d1bd0ccf2cdc6465f6909ed013e93d5e9731ea52ab3097e66f86fd003"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\site\\visual.json",
+      "sha256": "b4b6434d924ac9416dd68c5e84ae3c00b7c68aaa8a1e630b79b7bd1915210004"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\title\\visual.json",
+      "sha256": "90eab5c8ad736f7bde6709e231c4e8a31021ea3da0b51ea536d3d77a5a28e6ff"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\trend\\visual.json",
+      "sha256": "dc8d57110a4f09bc6d14338f554d691cbf82543100b97c1e03ce0a7db0416e26"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\warning\\visual.json",
+      "sha256": "e3aec657ffd6d1e601fc3827235e8ce66d57c1d4a2d542d9271a5ed5ca415215"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\page.json",
+      "sha256": "de3c72b0e52ebd7cdc0a009da1ac8b91ee29c45f4c1793faaffd914a2c9055f8"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\comparison\\visual.json",
+      "sha256": "4ebf0210198f0dac0d5262c0e928156a5b3afeb95e960f175e8e8637edf52d77"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\detail\\visual.json",
+      "sha256": "a5b81dde04a7aa6810e20fc65f1646eff9604f4e873b2c7be429f6b94aa336c1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\engine\\visual.json",
+      "sha256": "713864c113795ad7d432091bc3226b9e21505e18a495defed0fab7598235b44f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\guidance\\visual.json",
+      "sha256": "bd26aa034f35afa9ce9d91af7308382da3b823a098dd45f325db0ce3de7f2a4a"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\heading\\visual.json",
+      "sha256": "0354ae87b1683c2d8a7ebed8e7cbe343e3ef56577e55a7758ec0fd0bbdefa8c9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\hotel\\visual.json",
+      "sha256": "e7a6463e655a0e08308331daf318147e1bbd56d2f830460a392baddaa7a98e67"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\metrics\\visual.json",
+      "sha256": "54d2f22501a31537de2e7106e2de415e75eef2b9adefddf1ae5dc6faac6348cf"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\period\\visual.json",
+      "sha256": "d444cc52dcd0597ab28d12c554cd13416b8b6b779619bc6fb9f6856752b2d7e1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\score1\\visual.json",
+      "sha256": "9a80c323a8ad0000a84642b166d57f9c8f40047cc4169513ed6e1c353fad8e31"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\score2\\visual.json",
+      "sha256": "95a79c701bf2aa0591013fdbc642b08bb2bd4693eeb61e149b21cd43ea5be9b1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\score3\\visual.json",
+      "sha256": "239ab1560f0416b88365d019bf46d29e841de06c587a479df2294e6a688676f6"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\score4\\visual.json",
+      "sha256": "f37a1a52969aa1e35c5fc7df58e1146474cf92d7b887c2d0b413922c4a8f90ee"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\site\\visual.json",
+      "sha256": "b4b6434d924ac9416dd68c5e84ae3c00b7c68aaa8a1e630b79b7bd1915210004"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\title\\visual.json",
+      "sha256": "8cb42fe7beca8c59d193bbf3482d659ede409c17a0cbd62934d97963fbd3badb"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\trend\\visual.json",
+      "sha256": "9ea1c3a08d182714cd811429565d0e6f2c7b40b27a1485e54b1d20a8b80f6f62"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\warning\\visual.json",
+      "sha256": "e3aec657ffd6d1e601fc3827235e8ce66d57c1d4a2d542d9271a5ed5ca415215"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\page.json",
+      "sha256": "a6f3084660c9d80f02354fd18f83b3a106b18124e5a056b4a9e35c8f955a7705"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\comparison\\visual.json",
+      "sha256": "34e85b82acb26044ce0a1b3c9174638dce661b6bc806044c20dd43c9e45f214c"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\detail\\visual.json",
+      "sha256": "a5b81dde04a7aa6810e20fc65f1646eff9604f4e873b2c7be429f6b94aa336c1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\engine\\visual.json",
+      "sha256": "713864c113795ad7d432091bc3226b9e21505e18a495defed0fab7598235b44f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\guidance\\visual.json",
+      "sha256": "6e951e9a9767bbc3d39aca4eaa2b63944f56f8d9e477235254015f9ef0bd743f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\heading\\visual.json",
+      "sha256": "0354ae87b1683c2d8a7ebed8e7cbe343e3ef56577e55a7758ec0fd0bbdefa8c9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\hotel\\visual.json",
+      "sha256": "e7a6463e655a0e08308331daf318147e1bbd56d2f830460a392baddaa7a98e67"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\metrics\\visual.json",
+      "sha256": "54d2f22501a31537de2e7106e2de415e75eef2b9adefddf1ae5dc6faac6348cf"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\period\\visual.json",
+      "sha256": "d444cc52dcd0597ab28d12c554cd13416b8b6b779619bc6fb9f6856752b2d7e1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\score1\\visual.json",
+      "sha256": "aa7f4bb648360c94ecd646fc71c0da06811fe6fced7ea0edb25c8b4e5323dbd4"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\score2\\visual.json",
+      "sha256": "35c53ec4fa2d2143395ec7b1bb1c55e6afe28b49f012b9e3598d4912f5566dbe"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\score3\\visual.json",
+      "sha256": "7bbf5bf347b7c07d246e659b740cda55df9780e2d66791fdeabd557ac355edab"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\score4\\visual.json",
+      "sha256": "75d436d30b7b6808b28fa6a68f32cff8c69a80b8cd41ee24699175345f3e212e"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\site\\visual.json",
+      "sha256": "b4b6434d924ac9416dd68c5e84ae3c00b7c68aaa8a1e630b79b7bd1915210004"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\title\\visual.json",
+      "sha256": "f98c2c78440b854504eb39cbdcdfbcba65451399097718a38111d3d4d7baf2c6"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\trend\\visual.json",
+      "sha256": "f81a7a39bbd991aeb6038a1198daa6e5fefeb5c9fa617cf813ae7d1d2e67cbb1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\warning\\visual.json",
+      "sha256": "e3aec657ffd6d1e601fc3827235e8ce66d57c1d4a2d542d9271a5ed5ca415215"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\page.json",
+      "sha256": "53d4bfb78d0dc113a1f06493504461245fae2a6a7e7193916d5dcdb0fe0b75c0"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\comparison\\visual.json",
+      "sha256": "9e6381e50529841b321d9da915e71df292e9f681be838e45bfc8fe3c1a270b5b"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\detail\\visual.json",
+      "sha256": "72adba7fdc0917fe47132fae4af3cafe596c61415240bc915571234d209ce829"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\engine\\visual.json",
+      "sha256": "713864c113795ad7d432091bc3226b9e21505e18a495defed0fab7598235b44f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\guidance\\visual.json",
+      "sha256": "6a06b65b372ab020cc388bbd5dbc36a77428dbb945a59fc7881efe71625873d6"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\heading\\visual.json",
+      "sha256": "0354ae87b1683c2d8a7ebed8e7cbe343e3ef56577e55a7758ec0fd0bbdefa8c9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\hotel\\visual.json",
+      "sha256": "e7a6463e655a0e08308331daf318147e1bbd56d2f830460a392baddaa7a98e67"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\metrics\\visual.json",
+      "sha256": "54d2f22501a31537de2e7106e2de415e75eef2b9adefddf1ae5dc6faac6348cf"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\period\\visual.json",
+      "sha256": "d444cc52dcd0597ab28d12c554cd13416b8b6b779619bc6fb9f6856752b2d7e1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\score1\\visual.json",
+      "sha256": "a6e72a6504cae53c1fa484601d76dd6bfec0c64eacc75bfe5ebeade095ecab07"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\score2\\visual.json",
+      "sha256": "84f48fa7ab9f3efd3cbf89c3e124bc1e51c84c87e2417367f14a2378c52d7da6"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\score3\\visual.json",
+      "sha256": "64a2b7c47b019af7babb7ff7fd3161ba9de21ea59f33c6d125af7a62a88cffa1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\score4\\visual.json",
+      "sha256": "497a130fdcd3bb18ca2814e026490be57bbf63b0ac8360518b5d9e10c018c192"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\site\\visual.json",
+      "sha256": "b4b6434d924ac9416dd68c5e84ae3c00b7c68aaa8a1e630b79b7bd1915210004"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\title\\visual.json",
+      "sha256": "b473971e6b807b490e295f48dc627f607166206c30e9e627c13347f7b672037a"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\trend\\visual.json",
+      "sha256": "ee86f35a5a72a434f20205c05566ad719dcef2df4cd80e564b3ead95b1bec87f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\warning\\visual.json",
+      "sha256": "e3aec657ffd6d1e601fc3827235e8ce66d57c1d4a2d542d9271a5ed5ca415215"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\page.json",
+      "sha256": "dd950f44e2cbbcbd6b524cd95f843a20b693b46101db5c1b0d16cd801b1168eb"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\comparison\\visual.json",
+      "sha256": "f5895552a27f72c360dc154bf2ca856b518a0e7748abb0b82a4ddecd1842ee27"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\detail\\visual.json",
+      "sha256": "f1d296b0f32a729c2243fbdc9443663569c7b9911d0b28d91fca200e2c8a8087"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\engine\\visual.json",
+      "sha256": "713864c113795ad7d432091bc3226b9e21505e18a495defed0fab7598235b44f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\guidance\\visual.json",
+      "sha256": "5109ca9e58bf8906bc069dcc0b9b51753611d16a770c0b4b5e3d7e67eea64492"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\heading\\visual.json",
+      "sha256": "0354ae87b1683c2d8a7ebed8e7cbe343e3ef56577e55a7758ec0fd0bbdefa8c9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\metrics\\visual.json",
+      "sha256": "7a6ace5e774a5c463ca7b9b3a127186edb2fdffb5cfe29cf56c05e066aac44e0"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\period\\visual.json",
+      "sha256": "d444cc52dcd0597ab28d12c554cd13416b8b6b779619bc6fb9f6856752b2d7e1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\score1\\visual.json",
+      "sha256": "eb030d514adf568cbd7a654137343ce65de80f054c23c7193b29a7b4c4296e32"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\score2\\visual.json",
+      "sha256": "bb2ad56767099e6dcb1a0a4ac489a5569d92be0da2df72ec1c3efecd05713612"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\score3\\visual.json",
+      "sha256": "54daf50e0645e6205364db543592ae164d2fcd1ab7702fbd8f3ea6ef80859be8"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\score4\\visual.json",
+      "sha256": "91509d4cc6cba4a1cdf9c362e95a29d20b63b466478928483addd275b4eb8514"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\site\\visual.json",
+      "sha256": "b4b6434d924ac9416dd68c5e84ae3c00b7c68aaa8a1e630b79b7bd1915210004"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\title\\visual.json",
+      "sha256": "860c982c713372b818ed0f0423d715c7f2cdd125e1a095fa3c116ca107fdb4ba"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\trend\\visual.json",
+      "sha256": "152320f103160dd5a09ff3e08418051a8f910bfaf888a1893291cfc4e269f110"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\warning\\visual.json",
+      "sha256": "95d6c7720e4be95806e9f968cbf63f1b6835da6f553069899f9bd7ddf64948f0"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\page.json",
+      "sha256": "c403912ea994f2439579e0e564724d95a8271498fc40c4c1786d14dc923c0000"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\comparison\\visual.json",
+      "sha256": "6383c3186e6eb357ff3dc267abf919e03a7fc07a1251c0e0d16faeac8c1ea117"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\detail\\visual.json",
+      "sha256": "a2e3e8ce557d432dec71a6073827bbe923ad50915760026971236ae390615c20"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\engine\\visual.json",
+      "sha256": "713864c113795ad7d432091bc3226b9e21505e18a495defed0fab7598235b44f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\guidance\\visual.json",
+      "sha256": "bbb61ee02c52d752a5473e5b3e3c0b060ca40426e0f79d99f27bc65f662afe05"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\heading\\visual.json",
+      "sha256": "0354ae87b1683c2d8a7ebed8e7cbe343e3ef56577e55a7758ec0fd0bbdefa8c9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\hotel\\visual.json",
+      "sha256": "e7a6463e655a0e08308331daf318147e1bbd56d2f830460a392baddaa7a98e67"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\metrics\\visual.json",
+      "sha256": "54d2f22501a31537de2e7106e2de415e75eef2b9adefddf1ae5dc6faac6348cf"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\period\\visual.json",
+      "sha256": "d444cc52dcd0597ab28d12c554cd13416b8b6b779619bc6fb9f6856752b2d7e1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\score1\\visual.json",
+      "sha256": "b640b3a6c8b08fef16203e86709b54e8fc272cd81b3b474849d54c6a9010681a"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\score2\\visual.json",
+      "sha256": "b3e461521be939e9622a359c61a14fe24004dc425f8b7cfa87c2f3ae3d5f0618"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\score3\\visual.json",
+      "sha256": "0b2a3e78b30dfb4c248d97cd3c6b6b3056d99b2583c6ab26cd9da288b4eef2b4"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\score4\\visual.json",
+      "sha256": "aa2acc6c7fbc799e643e696e88e8ea6f3eb9ba01fb0ab4df45db39d7cab516a1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\site\\visual.json",
+      "sha256": "b4b6434d924ac9416dd68c5e84ae3c00b7c68aaa8a1e630b79b7bd1915210004"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\title\\visual.json",
+      "sha256": "7cbc8b90b672f3b7593dc24e3e01a236c15269734667e378bcfa4aa859133eb8"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\trend\\visual.json",
+      "sha256": "2178f285096e34b11cb4427256e94a55036c872b930b991bee2da03185aadd69"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\warning\\visual.json",
+      "sha256": "e3aec657ffd6d1e601fc3827235e8ce66d57c1d4a2d542d9271a5ed5ca415215"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\page.json",
+      "sha256": "b3de57e902a05f1c86b42a06e5ec51790346c9d00a231aae70f36318e49e9efd"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\comparison\\visual.json",
+      "sha256": "dc55fb6152a79499c4502839287e4de5e85f02ccb9e8744645bb9a5d92359fff"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\detail\\visual.json",
+      "sha256": "a2e3e8ce557d432dec71a6073827bbe923ad50915760026971236ae390615c20"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\engine\\visual.json",
+      "sha256": "713864c113795ad7d432091bc3226b9e21505e18a495defed0fab7598235b44f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\guidance\\visual.json",
+      "sha256": "9a1dc5b5dc58af43bfb7cb14ecf2c6cce3ff06684884b0ba542274593a73aba1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\heading\\visual.json",
+      "sha256": "0354ae87b1683c2d8a7ebed8e7cbe343e3ef56577e55a7758ec0fd0bbdefa8c9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\hotel\\visual.json",
+      "sha256": "e7a6463e655a0e08308331daf318147e1bbd56d2f830460a392baddaa7a98e67"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\metrics\\visual.json",
+      "sha256": "54d2f22501a31537de2e7106e2de415e75eef2b9adefddf1ae5dc6faac6348cf"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\period\\visual.json",
+      "sha256": "d444cc52dcd0597ab28d12c554cd13416b8b6b779619bc6fb9f6856752b2d7e1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\score1\\visual.json",
+      "sha256": "78fbb09a4e2fc54a16d391f5a64f2babdae5b65927419daad9e710d1a10a1732"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\score2\\visual.json",
+      "sha256": "4cb2ed60e48ac6b31c045612bcad44be0287693ac2ba76690aa37c7660dddab8"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\score3\\visual.json",
+      "sha256": "24b2b0dfdb974df7a452d43642975b4edbd1e6671feba01c533119e4c4d9c2ab"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\score4\\visual.json",
+      "sha256": "90cee48a8d5f58edd5cb82f7ed41ff7c9d2c6dc65637a3a0040591493e32cc30"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\site\\visual.json",
+      "sha256": "b4b6434d924ac9416dd68c5e84ae3c00b7c68aaa8a1e630b79b7bd1915210004"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\title\\visual.json",
+      "sha256": "ed2eb153901c46e6f36d8f4667f55cc0efd4328f2fc3ef7044df363ab05aed72"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\trend\\visual.json",
+      "sha256": "4b1e5976901176cee990ce3335be910552cc8582d82aeb7a400f1e7752799e34"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\warning\\visual.json",
+      "sha256": "e3aec657ffd6d1e601fc3827235e8ce66d57c1d4a2d542d9271a5ed5ca415215"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\page.json",
+      "sha256": "3ca20d177b4bfcd3b4e65eed64bcfbdd974c40835895300510d2e55b0332d727"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\comparison\\visual.json",
+      "sha256": "e9af865d20bd32967ff133d8bff39f494c34c81e75c4ee78d93485e9fe75224e"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\detail\\visual.json",
+      "sha256": "e41ddcd7049bc2873e8e0407de1cfc7d84733fffa2c5c876f1272786768671c5"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\engine\\visual.json",
+      "sha256": "713864c113795ad7d432091bc3226b9e21505e18a495defed0fab7598235b44f"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\guidance\\visual.json",
+      "sha256": "5a40d28e55d281c3a73f0ca6768fe249a3a36811d622d02600d431c29cf75de1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\heading\\visual.json",
+      "sha256": "0354ae87b1683c2d8a7ebed8e7cbe343e3ef56577e55a7758ec0fd0bbdefa8c9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\hotel\\visual.json",
+      "sha256": "e7a6463e655a0e08308331daf318147e1bbd56d2f830460a392baddaa7a98e67"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\metrics\\visual.json",
+      "sha256": "54d2f22501a31537de2e7106e2de415e75eef2b9adefddf1ae5dc6faac6348cf"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\period\\visual.json",
+      "sha256": "d444cc52dcd0597ab28d12c554cd13416b8b6b779619bc6fb9f6856752b2d7e1"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\score1\\visual.json",
+      "sha256": "fb5662656c2c978ecb699b879e1f811c504e1c2364858ed8dff8b72385e25b61"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\score2\\visual.json",
+      "sha256": "3d4281e7bbef5b8131218b5dcfc47af540fd0ababa5c5b328d7d087324d491e7"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\score3\\visual.json",
+      "sha256": "623e2e421fc407a9e712b94d811c894f7e3da9a5f641275106cf9f02cc5b8222"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\score4\\visual.json",
+      "sha256": "86b0c1dabac95297589ed95a0dbac8fd1f26deb1cebea04561086545fb20dcb4"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\site\\visual.json",
+      "sha256": "b4b6434d924ac9416dd68c5e84ae3c00b7c68aaa8a1e630b79b7bd1915210004"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\title\\visual.json",
+      "sha256": "d92b22d5ceabb72a8c596b861af2c3d4172edbea7ecbb188b5c860781f1cd2cb"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\trend\\visual.json",
+      "sha256": "f481b4ceabd554049e4bc755a06a292d5157f971de6b9949b4b98245048697c5"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\warning\\visual.json",
+      "sha256": "e3aec657ffd6d1e601fc3827235e8ce66d57c1d4a2d542d9271a5ed5ca415215"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\page.json",
+      "sha256": "832a353f65df57e86093ff9fe3ad3cdef52772ac84e45371483f697d7de352e4"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\comparison\\visual.json",
+      "sha256": "568f9e00509de06b35da1d183af5f8e324566ecc514451e6f684d64a5d3a33a9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\engine\\visual.json",
+      "sha256": "736d32c2134ace0bb2b0a34c8119046b3983e21e867e73401623121f3d758bf9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\guidance\\visual.json",
+      "sha256": "d7e8c5db768ae6c3e82df29cf779dc28b242ab5c580911b81b9baef6b13325e5"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\heading\\visual.json",
+      "sha256": "0354ae87b1683c2d8a7ebed8e7cbe343e3ef56577e55a7758ec0fd0bbdefa8c9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\hotel\\visual.json",
+      "sha256": "e7a6463e655a0e08308331daf318147e1bbd56d2f830460a392baddaa7a98e67"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\metrics\\visual.json",
+      "sha256": "6e66344bbbf1d9d034ea69908f6afbeb123bfa948d25ed33f82ace7347c255eb"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\period\\visual.json",
+      "sha256": "a903092bc0f2de34e2d0fab067b74fb7df46a50adf23e44de122262db06a62d8"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\score1\\visual.json",
+      "sha256": "81a43fd178df80d54ec0ef414e4ac87ff0358c54d3adc12958bc6d4e96c5e7b9"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\score2\\visual.json",
+      "sha256": "f2c93566f381967f72b3045ceec3bd844591016d5bd0c22f6a4b81d6d07f50b3"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\score3\\visual.json",
+      "sha256": "be9c3515abd201456c4b6b3da3755efdf2ffdf50879454c8898739f40ff6ca74"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\score4\\visual.json",
+      "sha256": "c16f83a89e71e25574ee4827b734b1f94ad5ed93236c7145ca5875bd0df688a5"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\site\\visual.json",
+      "sha256": "b4b6434d924ac9416dd68c5e84ae3c00b7c68aaa8a1e630b79b7bd1915210004"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\title\\visual.json",
+      "sha256": "825dc63d445f658811fb93096d9cd4388f092620c2c32b0686ed5fa39194412a"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\trend\\visual.json",
+      "sha256": "3a22b5d8c6426b96072e744106fc6e01f141e5a64691c5dcfdb665fa3df28be3"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\warning\\visual.json",
+      "sha256": "95d6c7720e4be95806e9f968cbf63f1b6835da6f553069899f9bd7ddf64948f0"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\pages.json",
+      "sha256": "90bf2918f1fbb0a14078964b2ed4417e0c5e17f9113bcc1132bd2a682a290687"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\qa\\page.json",
+      "sha256": "cffedff4b394d9738f4a374881d3d7e5ba3c09a1e1c85a3785dbbff8572eb6d0"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\qa\\visuals\\scenario\\visual.json",
+      "sha256": "08259ba7b46d7b02b92a159e5e501d6e12f090227e41830b103e1a03090d9fc3"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\qa\\visuals\\value\\visual.json",
+      "sha256": "88a74064cee138780cb4ec261e10fa55541988103016ae7ddf689297e9e0951d"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\qa\\visuals\\warning\\visual.json",
+      "sha256": "dbeb6176ea3b86088bb001d17facd3b1b535d03a4644d9696ba2443f5776a20c"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\report.json",
+      "sha256": "b76e1542152da4ab8bf01872aa66581f2fc970e3262219e503402a821634d746"
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\version.json",
+      "sha256": "c8bdd966a85f1eaab4312d2096b6d7b508243e4d7bc5a4d25af3cfcb1056a4e7"
+    }
+  ]
+}

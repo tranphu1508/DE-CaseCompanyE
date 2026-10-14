@@ -1,0 +1,179 @@
+{
+  "status": "PASSED",
+  "checks": [
+    {
+      "database": "hotel_ops_v2",
+      "rule": "five_star_breakfast_missing",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "booking_room_hotel_mismatch",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "booking_price_mismatch",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "room_overlaps",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "stay_during_maintenance",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "invalid_stay_status",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "invalid_breakfast_day",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "negative_lot_balance",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "meal_cost_mismatch",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "promotion_outside_conditions",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "breakfast_cover_mismatch",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "received_quantity_balance",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "lot_receipt_quantity",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "stock_before_receipt",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "daily_negative_stock",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "final_revision_money",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "revision_room_total",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "final_revision_room_rate",
+      "violations": 0
+    },
+    {
+      "database": "hotel_ops_v2",
+      "rule": "completed_payment_balance",
+      "violations": 0
+    },
+    {
+      "database": "entertainment_ops_v2",
+      "rule": "admission_when_closed",
+      "violations": 0
+    },
+    {
+      "database": "entertainment_ops_v2",
+      "rule": "admission_wrong_status",
+      "violations": 0
+    },
+    {
+      "database": "entertainment_ops_v2",
+      "rule": "ticket_total_mismatch",
+      "violations": 0
+    },
+    {
+      "database": "entertainment_ops_v2",
+      "rule": "vehicle_overlaps",
+      "violations": 0
+    },
+    {
+      "database": "entertainment_ops_v2",
+      "rule": "rental_during_maintenance",
+      "violations": 0
+    }
+  ],
+  "counts": {
+    "hotel_ops": {
+      "sites": 4,
+      "hotels": 8,
+      "rooms": 240,
+      "channels": 13,
+      "guests": 12120,
+      "membership_plans": 3,
+      "memberships": 4099,
+      "member_cards": 4099,
+      "promotions": 40,
+      "rate_plans": 72,
+      "bookings": 32000,
+      "booking_rooms": 36711,
+      "stays": 30736,
+      "breakfast_entitlements": 52979,
+      "outlets": 16,
+      "dining_orders": 31357,
+      "meal_sessions": 11696,
+      "payments": 36399,
+      "settlements": 19223,
+      "suppliers": 16,
+      "items": 6,
+      "purchase_orders": 19055,
+      "purchase_lines": 23680,
+      "receipts": 29621,
+      "stock_movements": 88032,
+      "assets": 256,
+      "maintenance": 512,
+      "weather_daily": 2924,
+      "booking_revisions": 320,
+      "booking_room_revisions": 368
+    },
+    "entertainment_ops": {
+      "centres": 4,
+      "customers": 12000,
+      "activities": 12,
+      "closures": 272,
+      "ticket_orders": 20690,
+      "tickets": 44478,
+      "admissions": 39827,
+      "vehicles": 120,
+      "vehicle_maintenance": 240,
+      "rentals": 7723,
+      "cash_events": 29271
+    }
+  },
+  "coverage": {
+    "multi_item_orders": 4007,
+    "split_receipt_lines": 5941,
+    "revised_bookings": 160,
+    "shared_phones": 706,
+    "missing_source_contacts": 1267
+  }
+}

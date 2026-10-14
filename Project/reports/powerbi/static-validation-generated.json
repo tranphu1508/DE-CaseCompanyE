@@ -1,0 +1,387 @@
+{
+  "status": "PASSED_STATIC_SCHEMA",
+  "checked_files": 95,
+  "checks": [
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\report.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\version.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\pages.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\qa\\page.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\detail\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\engine\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\heading\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\hotel\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\metrics\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\period\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\publication\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\site\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B01\\visuals\\warning\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\detail\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\engine\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\heading\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\hotel\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\metrics\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\period\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\publication\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\site\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B02\\visuals\\warning\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\detail\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\engine\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\heading\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\hotel\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\metrics\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\period\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\publication\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\site\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B03\\visuals\\warning\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\detail\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\engine\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\heading\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\hotel\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\metrics\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\period\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\publication\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\site\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B04\\visuals\\warning\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\detail\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\engine\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\heading\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\metrics\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\period\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\publication\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\site\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B05\\visuals\\warning\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\detail\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\engine\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\heading\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\hotel\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\metrics\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\period\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\publication\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\site\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B06\\visuals\\warning\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\detail\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\engine\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\heading\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\hotel\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\metrics\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\period\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\publication\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\site\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B07\\visuals\\warning\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\detail\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\engine\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\heading\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\hotel\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\metrics\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\period\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\publication\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\site\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\B08\\visuals\\warning\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\engine\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\heading\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\hotel\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\occupancy\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\period\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\publication\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\site\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\overview\\visuals\\warning\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\qa\\visuals\\scenario\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\qa\\visuals\\value\\visual.json",
+      "errors": []
+    },
+    {
+      "path": "powerbi\\CompanyE.Report\\definition\\pages\\qa\\visuals\\warning\\visual.json",
+      "errors": []
+    }
+  ],
+  "limitations": "Does not execute Power Query, DAX or Desktop UI. Those remain mandatory integration checks."
+}

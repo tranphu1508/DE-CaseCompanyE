@@ -1,0 +1,70 @@
+{
+  "status": "PASSED",
+  "sheet_order": [
+    "Bus tong quan",
+    "Nhu cau va Fact",
+    "Fact va Dimension",
+    "Grain va Nguon",
+    "Dimension",
+    "KPI va Fact",
+    "Lien ket"
+  ],
+  "verified_bus_cells": 192,
+  "existing_model_preserved": true,
+  "existing_sheet_checks": {
+    "Nhu cau va Fact": {
+      "cells": true,
+      "merges": true,
+      "pane": true,
+      "conditional_formats": true,
+      "column_widths": true,
+      "row_heights": true,
+      "table_count": true
+    },
+    "Fact va Dimension": {
+      "cells": true,
+      "merges": true,
+      "pane": true,
+      "conditional_formats": true,
+      "column_widths": true,
+      "row_heights": true,
+      "table_count": true
+    },
+    "Grain va Nguon": {
+      "cells": true,
+      "merges": true,
+      "pane": true,
+      "conditional_formats": true,
+      "column_widths": true,
+      "row_heights": true,
+      "table_count": true
+    },
+    "Dimension": {
+      "cells": true,
+      "merges": true,
+      "pane": true,
+      "conditional_formats": true,
+      "column_widths": true,
+      "row_heights": true,
+      "table_count": true
+    },
+    "KPI va Fact": {
+      "cells": true,
+      "merges": true,
+      "pane": true,
+      "conditional_formats": true,
+      "column_widths": true,
+      "row_heights": true,
+      "table_count": true
+    },
+    "Lien ket": {
+      "cells": true,
+      "merges": true,
+      "pane": true,
+      "conditional_formats": true,
+      "column_widths": true,
+      "row_heights": true,
+      "table_count": true
+    }
+  }
+}

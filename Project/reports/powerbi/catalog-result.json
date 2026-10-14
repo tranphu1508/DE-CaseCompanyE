@@ -1,0 +1,20 @@
+﻿[
+    {
+        "CATALOG_NAME":  "b49ac373-54fe-47c7-be54-bcc7c7cbb292",
+        "DESCRIPTION":  "",
+        "ROLES":  "*,ActAsUsers",
+        "DATE_MODIFIED":  "\/Date(1791942982450)\/",
+        "COMPATIBILITY_LEVEL":  1606,
+        "TYPE":  3,
+        "VERSION":  5,
+        "DATABASE_ID":  "b49ac373-54fe-47c7-be54-bcc7c7cbb292",
+        "DATABASE_GUID":  null,
+        "DATE_QUERIED":  "\/Date(1791942986490)\/",
+        "CURRENTLY_USED":  true,
+        "POPULARITY":  45.5,
+        "WEIGHTEDPOPULARITY":  138.5,
+        "CLIENTCACHEREFRESHPOLICY":  4294967295,
+        "ENCRYPTION_LEVEL":  "Analysis Services 2019",
+        "CRYPTOKEY_UPDATED":  "\/Date(1791942581063)\/"
+    }
+]

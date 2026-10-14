@@ -1,0 +1,318 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "B02",
+  "displayName": "B02 | Đánh giá kênh bán và khuyến mãi",
+  "displayOption": "FitToPage",
+  "width": 1440,
+  "height": 900,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F2F5F8'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "B02_filter",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "KPI"
+              }
+            },
+            "Property": "group"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "s",
+              "Entity": "KPI",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "s"
+                          }
+                        },
+                        "Property": "group"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'B02'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "comparison",
+      "target": "title",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "engine",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "period",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "site",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "hotel",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "detail",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "score1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "score2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "score3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "score4",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "metrics",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "guidance",
+      "type": "NoFilter"
+    },
+    {
+      "source": "comparison",
+      "target": "warning",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "title",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "engine",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "period",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "site",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "hotel",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "detail",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "score1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "score2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "score3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "score4",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "comparison",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "metrics",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "guidance",
+      "type": "NoFilter"
+    },
+    {
+      "source": "trend",
+      "target": "warning",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "title",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "heading",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "engine",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "period",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "site",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "hotel",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "detail",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "score1",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "score2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "score3",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "score4",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "comparison",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "trend",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "guidance",
+      "type": "NoFilter"
+    },
+    {
+      "source": "metrics",
+      "target": "warning",
+      "type": "NoFilter"
+    }
+  ]
+}

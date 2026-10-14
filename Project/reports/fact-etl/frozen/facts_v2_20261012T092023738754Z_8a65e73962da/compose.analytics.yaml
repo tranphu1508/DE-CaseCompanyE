@@ -1,0 +1,89 @@
+# Analytics runtime. Business schema and ETL are deployed separately.
+# Use a private .env.analytics when provisioning; never the source DB .env.
+name: companye-analytics
+services:
+  oracle:
+    image: container-registry.oracle.com/database/free@sha256:f988b0c04c4c386cd306a2a914c0d7a9702d83acc31b064a28ad8eb6278a8fba
+    platform: linux/amd64
+    profiles: [oracle]
+    environment:
+      ORACLE_PWD: ${COMPANYE_ORACLE_ADMIN_PASSWORD:?Set in private .env.analytics}
+      ORACLE_CHARACTERSET: AL32UTF8
+    ports:
+      - "127.0.0.1:11521:1521"
+    volumes:
+      - oracle_data:/opt/oracle/oradata
+    cpus: 2.0
+    mem_limit: 4g
+    shm_size: 1g
+    stop_grace_period: 120s
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+  metadata:
+    image: postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3
+    profiles: [oracle, lakehouse]
+    environment:
+      POSTGRES_USER: ce_meta_admin
+      POSTGRES_DB: ce_metadata
+      POSTGRES_PASSWORD: ${COMPANYE_METADATA_ADMIN_PASSWORD:?Set in private .env.analytics}
+    command: [postgres, -c, shared_buffers=128MB, -c, max_connections=30]
+    volumes:
+      - metadata_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"']
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    cpus: 1.0
+    mem_limit: 512m
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+  spark:
+    image: apache/spark@sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba
+    profiles: [oracle, lakehouse]
+    user: "0:0"
+    working_dir: /workspace
+    entrypoint: [/bin/bash, -c]
+    command: ["mkdir -p /analytics/iceberg /analytics/staging /analytics/spark-local /analytics/events /analytics/ivy /analytics/jars && exec sleep infinity"]
+    environment:
+      SPARK_LOCAL_IP: 127.0.0.1
+      SPARK_CONF_DIR: /workspace/analytics_conf
+      PYTHONPATH: /workspace/src
+      CE_CATALOG_PASSWORD_FILE: /run/secrets/catalog_password
+      CE_ORACLE_PROBE_PASSWORD_FILE: /run/secrets/oracle_probe_password
+      CE_CONTROL_PASSWORD_FILE: /run/secrets/control_password
+      CE_ORACLE_LOADER_PASSWORD_FILE: /run/secrets/oracle_loader_password
+    secrets:
+      - catalog_password
+      - oracle_probe_password
+      - control_password
+      - oracle_loader_password
+    volumes:
+      - ./src:/workspace/src:ro
+      - ./config:/workspace/config:ro
+      - ./config/analytics:/workspace/analytics_conf:ro
+      - ./lake/v2:/workspace/lake/v2:ro
+      - ./reports:/workspace/reports
+      - analytics_data:/analytics
+    depends_on:
+      metadata: {condition: service_healthy}
+    cpus: 2.0
+    mem_limit: 4g
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+volumes:
+  oracle_data:
+  metadata_data:
+  analytics_data:
+secrets:
+  catalog_password:
+    file: ./.secrets/analytics/catalog_password
+  oracle_probe_password:
+    file: ./.secrets/analytics/oracle_probe_password
+  control_password:
+    file: ./.secrets/analytics/control_password
+  oracle_loader_password:
+    file: ./.secrets/analytics/oracle_loader_password

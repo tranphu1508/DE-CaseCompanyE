@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="10.708" timestamp="2026-10-14T12:50:11.698073+00:00" hostname="13f8822f305e"><testcase classname="tests.test_gx" name="test_gx_postgres_spark_and_negative_control" time="8.307" /></testsuite></testsuites>

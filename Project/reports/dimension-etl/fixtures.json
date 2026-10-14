@@ -1,0 +1,31 @@
+{
+  "status": "PASSED",
+  "tests": [
+    "bootstrap_both_engines",
+    "unchanged_payload_preserves_key_and_audit",
+    "changed_payload_closes_opens",
+    "A_B_A_has_three_durable_keys",
+    "exclusive_end_exact_microsecond_boundary",
+    "late_event_split_preserves_future_keys_and_renumbers_ordinal",
+    "event_replay_noop_both_engines",
+    "same_time_conflict_rejected",
+    "missing_history_lookup_rejected",
+    "overlap_rejected_before_both_writes",
+    "noop_event_retained_for_late_history_rebuild",
+    "Vietnam_midnight_normalized_to_UTC",
+    "PostgreSQL_COPY_hour_only_offsets_supported",
+    "fraction_precision_and_missing_timezone_rejected",
+    "concurrent_registry_allocation_same_key",
+    "loader_privileges_restricted",
+    "PARTIAL_rejects_three_keeps_one_actual_engines_and_control",
+    "missing_file_explicit_UNAVAILABLE"
+  ],
+  "count": 18,
+  "fixture_rows_removed": true,
+  "oracle_table": "CE_DWH_B.DIM_SITE",
+  "iceberg_table": "ce.etl_test.dim_site",
+  "source_mutated": false,
+  "limits": [
+    "No full publication/coordinator crash test until facts and publication are implemented."
+  ]
+}

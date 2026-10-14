@@ -1,0 +1,340 @@
+{
+  "status": "PASSED_INDEPENDENT_BASELINE",
+  "run_id": "facts_v2_20261012T092023738754Z_8a65e73962da",
+  "source_files_unchanged": 267,
+  "source_tables": 41,
+  "source_rows": 591242,
+  "target_rows": 745138,
+  "expected_target_counts": {
+    "F01": 32000,
+    "F04": 20690,
+    "F05": 7723,
+    "F06": 52979,
+    "F07": 31357,
+    "F08": 11696,
+    "F09": 39827,
+    "F12": 23680,
+    "F13": 29621,
+    "F14": 88032,
+    "F16": 512,
+    "F17": 2924,
+    "L01": 36711,
+    "L04": 4,
+    "F02": 175440,
+    "F10": 8772,
+    "F11": 87720,
+    "F03": 73275,
+    "L03": 21213,
+    "L02": 962
+  },
+  "checks": [
+    {
+      "check": "F01_raw_count",
+      "expected": "32000",
+      "oracle": "32000",
+      "iceberg": "32000"
+    },
+    {
+      "check": "F04_raw_count",
+      "expected": "20690",
+      "oracle": "20690",
+      "iceberg": "20690"
+    },
+    {
+      "check": "F05_raw_count",
+      "expected": "7723",
+      "oracle": "7723",
+      "iceberg": "7723"
+    },
+    {
+      "check": "F06_raw_count",
+      "expected": "52979",
+      "oracle": "52979",
+      "iceberg": "52979"
+    },
+    {
+      "check": "F07_raw_count",
+      "expected": "31357",
+      "oracle": "31357",
+      "iceberg": "31357"
+    },
+    {
+      "check": "F08_raw_count",
+      "expected": "11696",
+      "oracle": "11696",
+      "iceberg": "11696"
+    },
+    {
+      "check": "F09_raw_count",
+      "expected": "39827",
+      "oracle": "39827",
+      "iceberg": "39827"
+    },
+    {
+      "check": "F12_raw_count",
+      "expected": "23680",
+      "oracle": "23680",
+      "iceberg": "23680"
+    },
+    {
+      "check": "F13_raw_count",
+      "expected": "29621",
+      "oracle": "29621",
+      "iceberg": "29621"
+    },
+    {
+      "check": "F14_raw_count",
+      "expected": "88032",
+      "oracle": "88032",
+      "iceberg": "88032"
+    },
+    {
+      "check": "F16_raw_count",
+      "expected": "512",
+      "oracle": "512",
+      "iceberg": "512"
+    },
+    {
+      "check": "F17_raw_count",
+      "expected": "2924",
+      "oracle": "2924",
+      "iceberg": "2924"
+    },
+    {
+      "check": "L01_raw_count",
+      "expected": "36711",
+      "oracle": "36711",
+      "iceberg": "36711"
+    },
+    {
+      "check": "L04_raw_count",
+      "expected": 4,
+      "oracle": 4,
+      "iceberg": 4
+    },
+    {
+      "check": "F02_raw_count",
+      "expected": "175440",
+      "oracle": "175440",
+      "iceberg": "175440"
+    },
+    {
+      "check": "F10_raw_count",
+      "expected": "8772",
+      "oracle": "8772",
+      "iceberg": "8772"
+    },
+    {
+      "check": "F11_raw_count",
+      "expected": "87720",
+      "oracle": "87720",
+      "iceberg": "87720"
+    },
+    {
+      "check": "F03_raw_count",
+      "expected": "73275",
+      "oracle": "73275",
+      "iceberg": "73275"
+    },
+    {
+      "check": "L03_raw_count",
+      "expected": 21213,
+      "oracle": 21213,
+      "iceberg": 21213
+    },
+    {
+      "check": "L02_raw_count",
+      "expected": "962",
+      "oracle": "962",
+      "iceberg": "962"
+    },
+    {
+      "check": "booking_gross_vnd",
+      "expected": "137286802000",
+      "oracle": "137286802000",
+      "iceberg": "137286802000"
+    },
+    {
+      "check": "booking_discount_vnd",
+      "expected": "2929923000",
+      "oracle": "2929923000",
+      "iceberg": "2929923000"
+    },
+    {
+      "check": "booking_customer_due_vnd",
+      "expected": "134356879000",
+      "oracle": "134356879000",
+      "iceberg": "134356879000"
+    },
+    {
+      "check": "booking_company_share_vnd",
+      "expected": "1587216840",
+      "oracle": "1587216840",
+      "iceberg": "1587216840"
+    },
+    {
+      "check": "booking_partner_share_vnd",
+      "expected": "1342706160",
+      "oracle": "1342706160",
+      "iceberg": "1342706160"
+    },
+    {
+      "check": "booking_commission_vnd",
+      "expected": "9636806963",
+      "oracle": "9636806963",
+      "iceberg": "9636806963"
+    },
+    {
+      "check": "room_unavailable_union",
+      "expected": "962",
+      "oracle": "962",
+      "iceberg": "962"
+    },
+    {
+      "check": "room_available",
+      "expected": "174478",
+      "oracle": "174478",
+      "iceberg": "174478"
+    },
+    {
+      "check": "night_measure",
+      "expected": "73275",
+      "oracle": "73275",
+      "iceberg": "73275"
+    },
+    {
+      "check": "breakfast_eligible_covers",
+      "expected": "92683",
+      "oracle": "92683",
+      "iceberg": "92683"
+    },
+    {
+      "check": "breakfast_redeemed_covers",
+      "expected": "83489",
+      "oracle": "83489",
+      "iceberg": "83489"
+    },
+    {
+      "check": "dining_net_vnd",
+      "expected": "20104308000",
+      "oracle": "20104308000",
+      "iceberg": "20104308000"
+    },
+    {
+      "check": "dining_covers",
+      "expected": "60478",
+      "oracle": "60478",
+      "iceberg": "60478"
+    },
+    {
+      "check": "rating_sum",
+      "expected": "94805",
+      "oracle": "94805",
+      "iceberg": "94805"
+    },
+    {
+      "check": "session_cost",
+      "expected": "3964648500",
+      "oracle": "3964648500",
+      "iceberg": "3964648500"
+    },
+    {
+      "check": "ticket_net",
+      "expected": "9182130000",
+      "oracle": "9182130000",
+      "iceberg": "9182130000"
+    },
+    {
+      "check": "rental_agreed_once",
+      "expected": "5622840000",
+      "oracle": "5622840000",
+      "iceberg": "5622840000"
+    },
+    {
+      "check": "rented_days",
+      "expected": "9580",
+      "oracle": "9580",
+      "iceberg": "9580"
+    },
+    {
+      "check": "receipt_accepted_qty",
+      "expected": "93993.000",
+      "oracle": "93993",
+      "iceberg": "93993.000"
+    },
+    {
+      "check": "receipt_rejected_qty",
+      "expected": "2090.000",
+      "oracle": "2090",
+      "iceberg": "2090.000"
+    },
+    {
+      "check": "ordered_qty",
+      "expected": "96083.000",
+      "oracle": "96083",
+      "iceberg": "96083.000"
+    },
+    {
+      "check": "movement_IN",
+      "expected": "93993.000",
+      "oracle": "93993",
+      "iceberg": "93993.000"
+    },
+    {
+      "check": "movement_USE",
+      "expected": "62853.000",
+      "oracle": "62853",
+      "iceberg": "62853.000"
+    },
+    {
+      "check": "movement_WASTE",
+      "expected": "28271.000",
+      "oracle": "28271",
+      "iceberg": "28271.000"
+    },
+    {
+      "check": "stock_signed",
+      "expected": "2869.000",
+      "oracle": "2869",
+      "iceberg": "2869.000"
+    },
+    {
+      "check": "maintenance_cost_once",
+      "expected": "167200000",
+      "oracle": "167200000",
+      "iceberg": "167200000"
+    },
+    {
+      "check": "rescheduled_admissions_in_raw_and_complete_F09",
+      "expected": 754,
+      "verified_by": "F09 full raw count plus transformation fixture"
+    },
+    {
+      "check": "F15_disabled",
+      "expected": "0",
+      "oracle": "0",
+      "iceberg": "0"
+    }
+  ],
+  "dimensions_unchanged": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16"
+  ],
+  "metric_readiness_rows": 47,
+  "publication_count": 0,
+  "limitation": "Complete frozen-v2 controls, not a general missing-data oracle, not KPI query acceptance or performance benchmark."
+}

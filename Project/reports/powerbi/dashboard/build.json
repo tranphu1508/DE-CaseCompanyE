@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-10-14T09:43:08.365992+00:00",
+  "pages": 10,
+  "charts": 18,
+  "kpi_cards": 36,
+  "original_measures_unchanged": 196,
+  "added_measures": 27,
+  "tables": 37,
+  "chart_month_rows": 24,
+  "model_sha256": "272c6e4a1fdadbfff8575d494499bea22c818191771a223f0a365f7cd8d533e6",
+  "monthly_scope": "Only full calendar months within selected Period; ratios and stocks re-evaluated per month.",
+  "interactions": "Slicers filter. Charts/detail table do not cross-filter other visuals.",
+  "source_publication": "pub_3f41f8fafa4c913187af2cc3"
+}

@@ -1,0 +1,1 @@
+EVALUATE SUMMARIZECOLUMNS('KPI'[id], "value", [Giá trị hiển thị], "quality", [Trạng thái KPI])

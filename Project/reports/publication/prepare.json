@@ -1,0 +1,9 @@
+{
+  "status": "PREPARED",
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "manifest_sha256": "70b7b919f1ae654e433ce08f756f36299b97995d91396f237c514aa7b2583cd7",
+  "table_entries": 37,
+  "tags": 34,
+  "oracle_slot": "CE_DWH_A",
+  "active_unchanged": true
+}

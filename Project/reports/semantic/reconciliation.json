@@ -1,0 +1,244 @@
+{
+  "status": "PASSED",
+  "site_rollup": [
+    {
+      "metric": "B01.01",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B01.02",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B01.03",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B01.04",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B01.05",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B02.01",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B02.02",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B02.03",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B02.04",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B02.05",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B02.06",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B03.01",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B03.02",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B03.03",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B03.04",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B03.05",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B04.01",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B04.02",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B04.03",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B04.04",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B04.05",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B04.06",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B04.07",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B04.08",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B05.01",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B05.02",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B05.03",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B05.04",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B05.05",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B05.06",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B06.01",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B06.02",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B06.03",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B06.04",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B06.05",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B06.06",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B06.07",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B07.01",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B07.02",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B07.03",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B07.04",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B07.05",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B07.06",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    },
+    {
+      "metric": "B08.01",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B08.02",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B08.03",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": false
+    },
+    {
+      "metric": "B08.04",
+      "site_numerators_roll_up": true,
+      "site_denominators_roll_up": true
+    }
+  ],
+  "available_room_identity": true,
+  "retained_value_identity": true,
+  "cross_sell_value_identity": true,
+  "repeated_read_unchanged": true
+}

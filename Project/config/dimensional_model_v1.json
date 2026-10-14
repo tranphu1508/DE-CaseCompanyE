@@ -1,0 +1,1778 @@
+{
+  "version": "companye-dimensional-1.0",
+  "created_on": "2026-10-12",
+  "status": "LOGICAL_DESIGN_NOT_IMPLEMENTED",
+  "kpi_contract": "companye-kpi-1.0",
+  "source_dataset": "v2",
+  "dimensions": [
+    {
+      "id": "D01",
+      "name": "DimDate",
+      "business_key": "calendar_date",
+      "attributes": "Ngày, tháng, quý, năm, thứ; ngày lễ/mùa chỉ thêm khi có bộ quy tắc có phiên bản.",
+      "source_columns": {},
+      "history_policy": "Lịch sinh xác định; phủ mọi ngày nguồn kể cả booked_on năm 2023; cùng khóa YYYYMMDD ở hai nhánh."
+    },
+    {
+      "id": "D02",
+      "name": "DimSite",
+      "business_key": "hotel_ops.sites.site_id",
+      "attributes": "Tên cụm, vùng khí hậu.",
+      "source_columns": {
+        "hotel_ops.sites": [
+          "site_id",
+          "site_name",
+          "climate_region"
+        ],
+        "entertainment_ops.centres": [
+          "site_code"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D03",
+      "name": "DimHotel",
+      "business_key": "hotel_ops + hotel_id",
+      "attributes": "Tên, hạng sao, site_key, website_channel.",
+      "source_columns": {
+        "hotel_ops.hotels": [
+          "hotel_id",
+          "hotel_name",
+          "site_id",
+          "stars",
+          "website_channel"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D04",
+      "name": "DimRoom",
+      "business_key": "hotel_ops + room_id",
+      "attributes": "Loại phòng, sức chứa, khách sạn; giá niêm yết không thay giá giao dịch.",
+      "source_columns": {
+        "hotel_ops.rooms": [
+          "room_id",
+          "hotel_id",
+          "room_type",
+          "capacity",
+          "base_rate_vnd"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D05",
+      "name": "DimChannel",
+      "business_key": "source_namespace + channel_code",
+      "attributes": "Tên và loại kênh. Kênh đặt phòng khác kênh bán vé.",
+      "source_columns": {
+        "hotel_ops.channels": [
+          "channel_id",
+          "channel_name",
+          "channel_type",
+          "commission_bps"
+        ],
+        "entertainment_ops.ticket_orders": [
+          "sales_channel"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D06",
+      "name": "DimPromotion",
+      "business_key": "hotel_ops + promotion_id",
+      "attributes": "Chiến dịch, phạm vi bán/lưu trú, mức giảm, tỷ lệ đối tác tài trợ.",
+      "source_columns": {
+        "hotel_ops.promotions": [
+          "promotion_id",
+          "promotion_name",
+          "channel_id",
+          "site_id",
+          "sale_from",
+          "sale_to",
+          "stay_from",
+          "stay_to",
+          "discount_bps",
+          "partner_share_bps",
+          "cap_vnd"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D07",
+      "name": "DimCustomerProfile",
+      "business_key": "source_system + source_customer_id",
+      "attributes": "Hồ sơ khách nguồn; giữ riêng guest_id và customer_id, không mặc định cùng người.",
+      "source_columns": {
+        "hotel_ops.guests": [
+          "guest_id",
+          "full_name",
+          "phone",
+          "email"
+        ],
+        "entertainment_ops.customers": [
+          "customer_id",
+          "full_name",
+          "phone",
+          "email",
+          "member_card_ref"
+        ]
+      },
+      "history_policy": "Type 1 hồ sơ nguồn; chưa tạo Golden Customer. Không dùng audit_only để hợp nhất khách."
+    },
+    {
+      "id": "D08",
+      "name": "DimRatePlan",
+      "business_key": "hotel_ops + rate_plan_id",
+      "attributes": "Gói giá, bao gồm sáng, hoàn hủy, khách sạn và kênh áp dụng.",
+      "source_columns": {
+        "hotel_ops.rate_plans": [
+          "rate_plan_id",
+          "hotel_id",
+          "channel_id",
+          "plan_name",
+          "breakfast_included",
+          "refundable"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D09",
+      "name": "DimOutlet",
+      "business_key": "hotel_ops + outlet_id",
+      "attributes": "Loại điểm ăn uống, sức chứa, quality_profile, khách sạn phục vụ.",
+      "source_columns": {
+        "hotel_ops.outlets": [
+          "outlet_id",
+          "hotel_id",
+          "outlet_type",
+          "capacity",
+          "quality_profile"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D10",
+      "name": "DimMeal",
+      "business_key": "meal_code",
+      "attributes": "BREAKFAST, LUNCH, DINNER, BAR; BREAKFAST cho quyền lợi sáng.",
+      "source_columns": {
+        "hotel_ops.dining_orders": [
+          "meal"
+        ],
+        "hotel_ops.meal_sessions": [
+          "meal"
+        ]
+      },
+      "history_policy": "Danh mục chuẩn có kiểm soát; không đồng nhất BAR với buffet."
+    },
+    {
+      "id": "D11",
+      "name": "DimCentre",
+      "business_key": "entertainment_ops + centre_id",
+      "attributes": "Tên trung tâm và site_key qua site_code.",
+      "source_columns": {
+        "entertainment_ops.centres": [
+          "centre_id",
+          "centre_name",
+          "site_code"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D12",
+      "name": "DimActivity",
+      "business_key": "entertainment_ops + activity_id",
+      "attributes": "Tên hoạt động, outdoor, capacity_per_day, trung tâm.",
+      "source_columns": {
+        "entertainment_ops.activities": [
+          "activity_id",
+          "centre_id",
+          "activity_name",
+          "outdoor",
+          "capacity_per_day"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D13",
+      "name": "DimVehicle",
+      "business_key": "entertainment_ops + vehicle_id",
+      "attributes": "Loại xe, trung tâm, giá niêm yết.",
+      "source_columns": {
+        "entertainment_ops.vehicles": [
+          "vehicle_id",
+          "centre_id",
+          "vehicle_type",
+          "daily_rate_vnd"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D14",
+      "name": "DimSupplier",
+      "business_key": "hotel_ops + supplier_id",
+      "attributes": "Tên, nhóm, cụm nhà cung cấp và định dạng giao dữ liệu.",
+      "source_columns": {
+        "hotel_ops.suppliers": [
+          "supplier_id",
+          "supplier_name",
+          "category",
+          "site_id",
+          "delivery_format"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D15",
+      "name": "DimItem",
+      "business_key": "hotel_ops + item_id",
+      "attributes": "Tên, quy cách, base_unit, hạn dùng; không cộng chéo đơn vị.",
+      "source_columns": {
+        "hotel_ops.items": [
+          "item_id",
+          "item_name",
+          "specification",
+          "base_unit",
+          "shelf_life_days"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    },
+    {
+      "id": "D16",
+      "name": "DimAsset",
+      "business_key": "hotel_ops + asset_id",
+      "attributes": "Loại tài sản, khách sạn, room_id có thể NULL, nhà cung cấp tài sản.",
+      "source_columns": {
+        "hotel_ops.assets": [
+          "asset_id",
+          "hotel_id",
+          "room_id",
+          "asset_type",
+          "supplier_id"
+        ]
+      },
+      "history_policy": "V2: thuộc tính hiện hành cố định; Type 1. Không bịa lịch sử trước snapshot. Thiết kế SCD2 tương lai cần effective timestamp và hợp đồng mới."
+    }
+  ],
+  "facts": [
+    {
+      "id": "F01",
+      "name": "FactBooking",
+      "grain": "Một booking ở trạng thái cuối của batch.",
+      "unique_key": "source_system + booking_id",
+      "measures": "booking_count=1; gross, discount, customer_due, company_share, partner_share, commission; giữ status.",
+      "date_roles": "booked_on; arrival cho B01.04–05; departure cho B02–B03.",
+      "dimension_roles": {
+        "D01": "R: đặt/đến/trả",
+        "D02": "cụm đặt phòng",
+        "D03": "khách sạn đặt",
+        "D05": "kênh booking",
+        "D06": "chiến dịch",
+        "D07": "hồ sơ đặt"
+      },
+      "source_columns": {
+        "hotel_ops.bookings": [
+          "booking_id",
+          "hotel_id",
+          "guest_id",
+          "channel_id",
+          "promotion_id",
+          "booked_on",
+          "arrival",
+          "departure",
+          "status",
+          "gross_vnd",
+          "discount_vnd",
+          "customer_due_vnd",
+          "company_share_vnd",
+          "partner_share_vnd",
+          "commission_vnd",
+          "updated_at"
+        ]
+      },
+      "rules": "B02 chỉ COMPLETED; không nhân giá theo phòng, vé hoặc revision. Room type lọc booking qua EXISTS BridgeBookingRoom, không phân bổ tiền ngầm.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F02",
+      "name": "FactRoomDay",
+      "grain": "Một phòng và một ngày danh mục.",
+      "unique_key": "room_key + date_key",
+      "measures": "inventory_day=1; blocked_day 0/1; available_day=1-blocked_day.",
+      "date_roles": "calendar_date trong [S,E).",
+      "dimension_roles": {
+        "D01": "ngày khả dụng",
+        "D02": "cụm",
+        "D03": "khách sạn",
+        "D04": "phòng"
+      },
+      "source_columns": {
+        "hotel_ops.rooms": [
+          "room_id",
+          "hotel_id"
+        ],
+        "hotel_ops.assets": [
+          "asset_id",
+          "room_id"
+        ],
+        "hotel_ops.maintenance": [
+          "maintenance_id",
+          "asset_id",
+          "starts_on",
+          "ends_on"
+        ]
+      },
+      "rules": "Hợp DISTINCT mọi khoảng bảo trì [starts_on,ends_on). Dùng chung B01.02 và B08.03; không chịu bộ lọc kênh/khách hoặc loại công việc chi phí.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F03",
+      "name": "FactStayNight",
+      "grain": "Một phòng và một đêm thực ở hợp lệ.",
+      "unique_key": "room_key + service_date_key",
+      "measures": "occupied_night=1; booking_id, booking_room_id và stay_id để truy vết.",
+      "date_roles": "Mở rộng [checkin_date,checkout_date) thực tế.",
+      "dimension_roles": {
+        "D01": "ngày thực ở",
+        "D02": "cụm",
+        "D03": "khách sạn",
+        "D04": "phòng",
+        "D05": "kênh booking",
+        "D07": "khách nguồn",
+        "D08": "gói giá"
+      },
+      "source_columns": {
+        "hotel_ops.stays": [
+          "stay_id",
+          "booking_room_id",
+          "checkin_date",
+          "checkout_date"
+        ],
+        "hotel_ops.booking_rooms": [
+          "booking_room_id",
+          "booking_id",
+          "room_id",
+          "rate_plan_id"
+        ],
+        "hotel_ops.bookings": [
+          "booking_id",
+          "status",
+          "channel_id",
+          "guest_id"
+        ]
+      },
+      "rules": "Chỉ booking COMPLETED; overlap và ở trùng ngày ngừng bán là lỗi. Kênh có thể lọc đêm bán nhưng không tạo công suất theo kênh.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F04",
+      "name": "FactTicketOrder",
+      "grain": "Một đơn vé.",
+      "unique_key": "entertainment_ops + ticket_order_id",
+      "measures": "gross_vnd; refunded_vnd; net_ticket_vnd; validated hotel_booking_ref nullable.",
+      "date_roles": "ordered_on; departure booking khi tính cohort B03.",
+      "dimension_roles": {
+        "D01": "R: bán/cohort",
+        "D02": "R: cụm phục vụ/đặt",
+        "D03": "khách sạn giới thiệu nullable",
+        "D05": "R: kênh vé/kênh booking",
+        "D07": "khách mua vé",
+        "D11": "trung tâm phục vụ"
+      },
+      "source_columns": {
+        "entertainment_ops.ticket_orders": [
+          "ticket_order_id",
+          "centre_id",
+          "customer_id",
+          "hotel_booking_ref",
+          "ordered_on",
+          "sales_channel",
+          "gross_vnd",
+          "refunded_vnd"
+        ]
+      },
+      "rules": "B03 tổng riêng về booking. Không phân bổ giá đơn theo hoạt động nếu không có quy tắc. Đơn không ref là bán độc lập; vé UNUSED chưa hoàn vẫn là mua.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F05",
+      "name": "FactRental",
+      "grain": "Một hợp đồng thuê một xe.",
+      "unique_key": "entertainment_ops + rental_id",
+      "measures": "agreed_vnd; status; hotel_booking_ref nullable.",
+      "date_roles": "pickup_date, return_date; departure booking cho B03.",
+      "dimension_roles": {
+        "D01": "R: nhận/trả/cohort",
+        "D02": "R: cụm phục vụ/đặt",
+        "D03": "khách sạn giới thiệu nullable",
+        "D05": "kênh booking qua ref",
+        "D07": "khách thuê",
+        "D11": "trung tâm",
+        "D13": "xe"
+      },
+      "source_columns": {
+        "entertainment_ops.rentals": [
+          "rental_id",
+          "vehicle_id",
+          "customer_id",
+          "hotel_booking_ref",
+          "pickup_date",
+          "return_date",
+          "status",
+          "agreed_vnd"
+        ]
+      },
+      "rules": "B03 chỉ COMPLETED; số tiền ghi một lần, không chép lên mỗi ngày xe. B05 lấy ngày từ F11, không cộng số hợp đồng thành ngày xe.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F06",
+      "name": "FactBreakfastEntitlement",
+      "grain": "Một quyền lợi phòng và ngày phục vụ.",
+      "unique_key": "hotel_ops + entitlement_id; kiểm tra booking_room_id + service_date",
+      "measures": "eligible_covers; redeemed_covers; không tạo doanh thu mới.",
+      "date_roles": "service_date.",
+      "dimension_roles": {
+        "D01": "ngày ăn",
+        "D02": "cụm",
+        "D03": "khách sạn phục vụ",
+        "D04": "phòng",
+        "D07": "khách đặt",
+        "D08": "gói giá",
+        "D09": "nhà hàng ánh xạ",
+        "D10": "BREAKFAST"
+      },
+      "source_columns": {
+        "hotel_ops.breakfast_entitlements": [
+          "entitlement_id",
+          "booking_room_id",
+          "service_date",
+          "eligible_covers",
+          "redeemed_covers"
+        ],
+        "hotel_ops.booking_rooms": [
+          "booking_room_id",
+          "booking_id",
+          "room_id",
+          "rate_plan_id"
+        ],
+        "hotel_ops.bookings": [
+          "booking_id",
+          "hotel_id",
+          "guest_id",
+          "status"
+        ],
+        "hotel_ops.outlets": [
+          "outlet_id",
+          "hotel_id",
+          "outlet_type"
+        ]
+      },
+      "rules": "Chỉ COMPLETED. Ánh xạ đúng một RESTAURANT mỗi khách sạn ở v2; nhiều hơn một phải báo lỗi thay vì chọn ngẫu nhiên.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F07",
+      "name": "FactDiningOrder",
+      "grain": "Một hóa đơn ăn uống, không phải dòng món.",
+      "unique_key": "hotel_ops + dining_order_id",
+      "measures": "net_vnd; covers; rating_sum=rating hợp lệ; rating_count; booking_id nullable.",
+      "date_roles": "service_date.",
+      "dimension_roles": {
+        "D01": "ngày ăn",
+        "D02": "cụm phục vụ",
+        "D03": "R: phục vụ/đặt nullable",
+        "D07": "khách ăn nullable",
+        "D09": "điểm ăn uống",
+        "D10": "bữa"
+      },
+      "source_columns": {
+        "hotel_ops.dining_orders": [
+          "dining_order_id",
+          "outlet_id",
+          "guest_id",
+          "booking_id",
+          "service_date",
+          "meal",
+          "covers",
+          "net_vnd",
+          "rating"
+        ]
+      },
+      "rules": "Cơ sở phục vụ theo outlet, không theo booking. Rating có trọng số mỗi hóa đơn, không theo covers. Không có dimension món ăn từ schema hiện tại.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F08",
+      "name": "FactMealSession",
+      "grain": "Một outlet, ngày và bữa buffet.",
+      "unique_key": "outlet_key + service_date_key + meal_key",
+      "measures": "actual_covers; ingredient_cost_vnd.",
+      "date_roles": "service_date.",
+      "dimension_roles": {
+        "D01": "ngày ăn",
+        "D02": "cụm phục vụ",
+        "D03": "khách sạn phục vụ",
+        "D09": "outlet",
+        "D10": "bữa"
+      },
+      "source_columns": {
+        "hotel_ops.meal_sessions": [
+          "session_id",
+          "outlet_id",
+          "service_date",
+          "meal",
+          "actual_covers",
+          "ingredient_cost_vnd"
+        ]
+      },
+      "rules": "BREAKFAST/DINNER; không cộng actual_covers lần nữa vào B04.05. Không nối chi phí phiên với từng hóa đơn rồi SUM.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F09",
+      "name": "FactAdmission",
+      "grain": "Một lượt admission thực tế.",
+      "unique_key": "entertainment_ops + admission_id",
+      "measures": "admission_count=1; ticket_id để truy vết.",
+      "date_roles": "DATE(entered_at tại Asia/Ho_Chi_Minh).",
+      "dimension_roles": {
+        "D01": "ngày thực dùng",
+        "D02": "cụm",
+        "D07": "khách đơn vé",
+        "D11": "trung tâm",
+        "D12": "hoạt động"
+      },
+      "source_columns": {
+        "entertainment_ops.admissions": [
+          "admission_id",
+          "ticket_id",
+          "entered_at"
+        ],
+        "entertainment_ops.tickets": [
+          "ticket_id",
+          "ticket_order_id",
+          "activity_id",
+          "status"
+        ],
+        "entertainment_ops.ticket_orders": [
+          "ticket_order_id",
+          "customer_id"
+        ]
+      },
+      "rules": "Không thay entered_at bằng valid_date hoặc chỉ nhận vé USED. Admission RESCHEDULED hợp lệ vẫn tính; vượt capacity/đóng cửa phải báo lỗi.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F10",
+      "name": "FactActivityDay",
+      "grain": "Một hoạt động và ngày danh mục.",
+      "unique_key": "activity_key + date_key",
+      "measures": "nominal_capacity; is_closed; available_capacity.",
+      "date_roles": "calendar_date.",
+      "dimension_roles": {
+        "D01": "ngày hoạt động",
+        "D02": "cụm",
+        "D11": "trung tâm",
+        "D12": "hoạt động"
+      },
+      "source_columns": {
+        "entertainment_ops.activities": [
+          "activity_id",
+          "centre_id",
+          "capacity_per_day"
+        ],
+        "entertainment_ops.closures": [
+          "closure_id",
+          "activity_id",
+          "closed_on",
+          "reason"
+        ]
+      },
+      "rules": "Closure đóng trọn ngày; gộp nhiều lý do trước khi tính. Không có phân bổ capacity theo khách, kênh hoặc khách sạn giới thiệu.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F11",
+      "name": "FactVehicleDay",
+      "grain": "Một xe và ngày danh mục.",
+      "unique_key": "vehicle_key + date_key",
+      "measures": "inventory_day=1; maintenance_day; available_day; rented_day.",
+      "date_roles": "calendar_date; khoảng thuê và bảo trì [start,end).",
+      "dimension_roles": {
+        "D01": "ngày xe",
+        "D02": "cụm",
+        "D11": "trung tâm",
+        "D13": "xe"
+      },
+      "source_columns": {
+        "entertainment_ops.vehicles": [
+          "vehicle_id",
+          "centre_id"
+        ],
+        "entertainment_ops.rentals": [
+          "rental_id",
+          "vehicle_id",
+          "pickup_date",
+          "return_date",
+          "status"
+        ],
+        "entertainment_ops.vehicle_maintenance": [
+          "vehicle_work_id",
+          "vehicle_id",
+          "starts_on",
+          "ends_on"
+        ]
+      },
+      "rules": "rented_day từ COMPLETED; overlap thuê hoặc thuê trong bảo trì là lỗi. Không chứa agreed_vnd nhân theo số ngày.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F12",
+      "name": "FactPurchaseLine",
+      "grain": "Một dòng đặt mua.",
+      "unique_key": "hotel_ops + purchase_line_id",
+      "measures": "ordered_qty; unit_price_vnd; purchase_order_id.",
+      "date_roles": "ordered_on; expected_on cho cohort B06; ngày đánh giá A là tham số.",
+      "dimension_roles": {
+        "D01": "R: đặt/hẹn",
+        "D02": "cụm nhận",
+        "D03": "khách sạn nhận",
+        "D14": "nhà cung cấp",
+        "D15": "mặt hàng"
+      },
+      "source_columns": {
+        "hotel_ops.purchase_lines": [
+          "purchase_line_id",
+          "purchase_order_id",
+          "item_id",
+          "ordered_qty",
+          "unit_price_vnd"
+        ],
+        "hotel_ops.purchase_orders": [
+          "purchase_order_id",
+          "hotel_id",
+          "supplier_id",
+          "ordered_on",
+          "expected_on"
+        ]
+      },
+      "rules": "Giữ dòng đến hạn không receipt. Ordered_qty tính một lần; không lặp theo từng lần giao. Mỗi A phải tổng lại receipt received_on<=A.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F13",
+      "name": "FactReceipt",
+      "grain": "Một lần nhận của một dòng đặt mua.",
+      "unique_key": "hotel_ops + receipt_id",
+      "measures": "accepted_qty; rejected_qty; late_accepted_qty theo expected_on; purchase_line_id.",
+      "date_roles": "received_on; expected_on để đối chiếu; expires_on là ngày hạn dùng.",
+      "dimension_roles": {
+        "D01": "R: nhận/hẹn/hạn",
+        "D02": "cụm nhận",
+        "D03": "khách sạn nhận",
+        "D14": "nhà cung cấp",
+        "D15": "mặt hàng"
+      },
+      "source_columns": {
+        "hotel_ops.receipts": [
+          "receipt_id",
+          "purchase_line_id",
+          "received_on",
+          "accepted_qty",
+          "rejected_qty",
+          "expires_on"
+        ],
+        "hotel_ops.purchase_lines": [
+          "purchase_line_id",
+          "purchase_order_id",
+          "item_id",
+          "unit_price_vnd"
+        ],
+        "hotel_ops.purchase_orders": [
+          "purchase_order_id",
+          "supplier_id",
+          "hotel_id",
+          "expected_on"
+        ]
+      },
+      "rules": "Feed ngoài là đối chiếu, không cộng thêm receipt. receipt_id cũng là định danh lô; rejected không nhập kho và không thành WASTE.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F14",
+      "name": "FactStockMovement",
+      "grain": "Một chuyển động của một lô tại khách sạn.",
+      "unique_key": "hotel_ops + movement_id",
+      "measures": "quantity; signed_qty; in/use/waste_qty; quantity*giá lô; movement_type, usage_area, receipt_id.",
+      "date_roles": "movement_date; lấy lịch sử trước S cho đầu kỳ.",
+      "dimension_roles": {
+        "D01": "ngày biến động",
+        "D02": "cụm kho",
+        "D03": "khách sạn quản lý kho",
+        "D14": "nhà cung cấp lô",
+        "D15": "mặt hàng"
+      },
+      "source_columns": {
+        "hotel_ops.stock_movements": [
+          "movement_id",
+          "hotel_id",
+          "item_id",
+          "receipt_id",
+          "session_id",
+          "movement_date",
+          "movement_type",
+          "usage_area",
+          "quantity"
+        ],
+        "hotel_ops.receipts": [
+          "receipt_id",
+          "purchase_line_id"
+        ],
+        "hotel_ops.purchase_lines": [
+          "purchase_line_id",
+          "purchase_order_id",
+          "unit_price_vnd"
+        ],
+        "hotel_ops.purchase_orders": [
+          "purchase_order_id",
+          "supplier_id"
+        ]
+      },
+      "rules": "Tồn đầu=sum trước S; cuối=sum trước E. Không có warehouse_id nên chưa tạo DimWarehouse vật lý. usage_area chỉ lọc lượng USE, không lọc tồn. session_id phục vụ drill-through có kiểm soát.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F15",
+      "name": "AggInventoryLotDay",
+      "grain": "Một lô, khách sạn, mặt hàng và ngày cuối ngày.",
+      "unique_key": "receipt_id + hotel_key + item_key + date_key",
+      "measures": "closing_qty; closing_value_vnd; in/use/waste trong ngày.",
+      "date_roles": "snapshot_date, cuối ngày.",
+      "dimension_roles": {
+        "D01": "ngày chốt tồn",
+        "D02": "cụm kho",
+        "D03": "khách sạn kho",
+        "D14": "nhà cung cấp lô",
+        "D15": "mặt hàng"
+      },
+      "source_columns": {
+        "hotel_ops.stock_movements": [
+          "movement_id",
+          "receipt_id",
+          "hotel_id",
+          "item_id",
+          "movement_date",
+          "movement_type",
+          "quantity"
+        ]
+      },
+      "rules": "Tùy chọn vật hóa từ F14. Không cộng closing qua ngày; đầu kỳ lấy cuối ngày trước S hoặc lịch sử F14. Giữ lô còn tồn dù không có movement trong kỳ. Không cộng F14 và F15.",
+      "scope": "OPTIONAL_AGGREGATE"
+    },
+    {
+      "id": "F16",
+      "name": "FactMaintenanceWork",
+      "grain": "Một công việc bảo trì tài sản khách sạn.",
+      "unique_key": "hotel_ops + maintenance_id",
+      "measures": "cost_vnd; work_type; status; maintenance_id.",
+      "date_roles": "starts_on, ends_on; chi phí theo ends_on và COMPLETED.",
+      "dimension_roles": {
+        "D01": "R: bắt đầu/kết thúc",
+        "D02": "cụm",
+        "D03": "khách sạn",
+        "D04": "phòng nullable",
+        "D16": "tài sản"
+      },
+      "source_columns": {
+        "hotel_ops.maintenance": [
+          "maintenance_id",
+          "asset_id",
+          "starts_on",
+          "ends_on",
+          "work_type",
+          "cost_vnd",
+          "status"
+        ],
+        "hotel_ops.assets": [
+          "asset_id",
+          "hotel_id",
+          "room_id",
+          "asset_type",
+          "supplier_id"
+        ]
+      },
+      "rules": "Tiền ghi một lần, không nhân theo ngày. Supplier của asset là bên bán tài sản, không coi là vendor bảo trì. Ngày chặn phòng dùng F02 và bridge overlap.",
+      "scope": "CORE"
+    },
+    {
+      "id": "F17",
+      "name": "FactWeatherDay",
+      "grain": "Một cụm và ngày thời tiết.",
+      "unique_key": "site_key + date_key",
+      "measures": "temperature_c; rain_mm; severe_weather; provenance.",
+      "date_roles": "weather_date.",
+      "dimension_roles": {
+        "D01": "ngày thời tiết",
+        "D02": "cụm"
+      },
+      "source_columns": {
+        "hotel_ops.weather_daily": [
+          "weather_id",
+          "site_id",
+          "weather_date",
+          "temperature_c",
+          "rain_mm",
+          "severe_weather",
+          "provenance"
+        ]
+      },
+      "rules": "Ngữ cảnh B05. Nối 1:1 site/date sau khi xác minh duy nhất hoặc semijoin bộ ngày; không nhân thời tiết theo admission rồi lấy SUM. Không kết luận nhân quả.",
+      "scope": "CONTEXT"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "B01",
+      "name": "Đánh giá hoạt động lưu trú",
+      "fact_usage": {
+        "F03": "D",
+        "F02": "D",
+        "F01": "D"
+      }
+    },
+    {
+      "id": "B02",
+      "name": "Đánh giá kênh bán và khuyến mãi",
+      "fact_usage": {
+        "F01": "D"
+      }
+    },
+    {
+      "id": "B03",
+      "name": "Phân tích bán chéo khách sạn và giải trí",
+      "fact_usage": {
+        "F04": "D",
+        "F05": "D",
+        "F01": "D"
+      }
+    },
+    {
+      "id": "B04",
+      "name": "Đánh giá buffet và nhà hàng",
+      "fact_usage": {
+        "F06": "D",
+        "F07": "D",
+        "F08": "D"
+      }
+    },
+    {
+      "id": "B05",
+      "name": "Đánh giá giải trí và phương tiện",
+      "fact_usage": {
+        "F09": "D",
+        "F10": "D",
+        "F11": "D",
+        "F05": "S",
+        "F17": "C"
+      }
+    },
+    {
+      "id": "B06",
+      "name": "Đánh giá giao hàng nhà cung cấp",
+      "fact_usage": {
+        "F12": "D",
+        "F13": "D"
+      }
+    },
+    {
+      "id": "B07",
+      "name": "Kiểm soát tồn kho và hao hụt",
+      "fact_usage": {
+        "F14": "D",
+        "F15": "O"
+      }
+    },
+    {
+      "id": "B08",
+      "name": "Đánh giá bảo trì và khả năng cung cấp phòng",
+      "fact_usage": {
+        "F16": "D",
+        "F02": "D"
+      }
+    }
+  ],
+  "metric_mapping": [
+    {
+      "id": "B01.01",
+      "name": "Đêm phòng thực ở",
+      "date_role": "stay_date",
+      "formula": "COUNTD(room_id, stay_date) trong kỳ từ stay của booking COMPLETED",
+      "primary_facts": [
+        "F03"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B01.02",
+      "name": "Đêm phòng khả dụng",
+      "date_role": "calendar_date",
+      "formula": "COUNTD(room_id, date) trong kỳ không ngừng bán",
+      "primary_facts": [
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B01.03",
+      "name": "Công suất phòng",
+      "date_role": "stay_date/calendar_date",
+      "formula": "DIV(B01.01, B01.02)",
+      "primary_facts": [
+        "F03",
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B01.04",
+      "name": "Tỷ lệ booking hủy",
+      "date_role": "bookings.arrival cohort",
+      "formula": "COUNTD(booking_id có status CANCELLED)/COUNTD(booking_id) trong cohort ngày arrival thuộc kỳ",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B01.05",
+      "name": "Tỷ lệ booking no-show",
+      "date_role": "bookings.arrival cohort",
+      "formula": "COUNTD(booking_id có status NO_SHOW)/COUNTD(booking_id) trong cùng cohort arrival",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B02.01",
+      "name": "Giá trị gói phòng trước giảm",
+      "date_role": "bookings.departure",
+      "formula": "SUM(gross_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B02.02",
+      "name": "Giá trị khách phải trả",
+      "date_role": "bookings.departure",
+      "formula": "SUM(customer_due_vnd) = SUM(gross_vnd − discount_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B02.03",
+      "name": "Chi phí giảm giá CompanyE chịu",
+      "date_role": "bookings.departure",
+      "formula": "SUM(company_share_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B02.04",
+      "name": "Phần giảm giá đối tác tài trợ",
+      "date_role": "bookings.departure",
+      "formula": "SUM(partner_share_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B02.05",
+      "name": "Hoa hồng phân phối",
+      "date_role": "bookings.departure",
+      "formula": "SUM(commission_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B02.06",
+      "name": "Giá trị giữ lại trước chi phí vận hành",
+      "date_role": "bookings.departure",
+      "formula": "B02.01 − B02.03 − B02.05 = B02.02 + B02.04 − B02.05",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B03.01",
+      "name": "Booking có mua chéo",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "COUNTD(booking_id trong cohort thỏa điều kiện mua chéo)",
+      "primary_facts": [
+        "F04",
+        "F05"
+      ],
+      "supporting_facts": [
+        "F01"
+      ],
+      "optional_facts": []
+    },
+    {
+      "id": "B03.02",
+      "name": "Tỷ lệ booking có mua chéo",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "DIV(B03.01, COUNTD(booking_id COMPLETED trong cohort))",
+      "primary_facts": [
+        "F04",
+        "F05"
+      ],
+      "supporting_facts": [
+        "F01"
+      ],
+      "optional_facts": []
+    },
+    {
+      "id": "B03.03",
+      "name": "Giá trị vé sau hoàn gắn booking",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "SUM(gross_vnd − refunded_vnd) của các ticket_order liên kết cohort",
+      "primary_facts": [
+        "F04"
+      ],
+      "supporting_facts": [
+        "F01"
+      ],
+      "optional_facts": []
+    },
+    {
+      "id": "B03.04",
+      "name": "Giá trị thuê xe hoàn thành gắn booking",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "SUM(agreed_vnd) của rental COMPLETED liên kết cohort",
+      "primary_facts": [
+        "F05"
+      ],
+      "supporting_facts": [
+        "F01"
+      ],
+      "optional_facts": []
+    },
+    {
+      "id": "B03.05",
+      "name": "Giá trị dịch vụ kết hợp của cohort",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "SUM(bookings.customer_due_vnd) trong cohort + B03.03 + B03.04",
+      "primary_facts": [
+        "F01",
+        "F04",
+        "F05"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B04.01",
+      "name": "Suất sáng được hưởng",
+      "date_role": "service_date",
+      "formula": "SUM(eligible_covers) từ entitlement của booking COMPLETED",
+      "primary_facts": [
+        "F06"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B04.02",
+      "name": "Suất sáng quyền lợi thực dùng",
+      "date_role": "service_date",
+      "formula": "SUM(redeemed_covers) trên cùng tập entitlement",
+      "primary_facts": [
+        "F06"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B04.03",
+      "name": "Tỷ lệ sử dụng quyền lợi sáng",
+      "date_role": "service_date",
+      "formula": "DIV(B04.02, B04.01)",
+      "primary_facts": [
+        "F06"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B04.04",
+      "name": "Giá trị ăn uống bán riêng sau giảm",
+      "date_role": "service_date",
+      "formula": "SUM(dining_orders.net_vnd)",
+      "primary_facts": [
+        "F07"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B04.05",
+      "name": "Lượt phục vụ ăn uống",
+      "date_role": "service_date",
+      "formula": "SUM(dining_orders.covers) + SUM(redeemed_covers) áp đúng bữa/outlet",
+      "primary_facts": [
+        "F06",
+        "F07"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B04.06",
+      "name": "Chi phí nguyên liệu buffet",
+      "date_role": "service_date",
+      "formula": "SUM(meal_sessions.ingredient_cost_vnd) cho BREAKFAST/DINNER",
+      "primary_facts": [
+        "F08"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B04.07",
+      "name": "Chi phí nguyên liệu mỗi lượt buffet",
+      "date_role": "service_date",
+      "formula": "DIV(B04.06, SUM(meal_sessions.actual_covers) cùng phiên)",
+      "primary_facts": [
+        "F08"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B04.08",
+      "name": "Điểm đánh giá trung bình theo hóa đơn",
+      "date_role": "service_date",
+      "formula": "DIV(SUM(rating hợp lệ), COUNT(dining_order_id có rating hợp lệ))",
+      "primary_facts": [
+        "F07"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B05.01",
+      "name": "Lượt sử dụng hoạt động thực tế",
+      "date_role": "local date of admissions.entered_at",
+      "formula": "COUNTD(admission_id) có ngày vào trong kỳ",
+      "primary_facts": [
+        "F09"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B05.02",
+      "name": "Công suất hoạt động khả dụng",
+      "date_role": "calendar_date",
+      "formula": "SUM(capacity_per_day) trên activity × date trong kỳ không có closure",
+      "primary_facts": [
+        "F10"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B05.03",
+      "name": "Tỷ lệ sử dụng hoạt động",
+      "date_role": "admission_date/calendar_date",
+      "formula": "DIV(B05.01, B05.02)",
+      "primary_facts": [
+        "F09",
+        "F10"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B05.04",
+      "name": "Ngày xe được thuê",
+      "date_role": "expanded pickup_date to return_date exclusive",
+      "formula": "COUNTD(vehicle_id, date) mở rộng `[pickup_date,return_date)` của rental COMPLETED trong kỳ",
+      "primary_facts": [
+        "F11"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B05.05",
+      "name": "Ngày xe sẵn sàng",
+      "date_role": "calendar_date",
+      "formula": "COUNTD(vehicle_id, date) toàn kỳ trừ hợp DISTINCT ngày bảo trì xe",
+      "primary_facts": [
+        "F11"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B05.06",
+      "name": "Tỷ lệ sử dụng đội xe",
+      "date_role": "rental_date/calendar_date",
+      "formula": "DIV(B05.04, B05.05)",
+      "primary_facts": [
+        "F11"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B06.01",
+      "name": "Lượng đặt đến hạn",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "SUM(O), mỗi purchase_line đúng một lần",
+      "primary_facts": [
+        "F12"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B06.02",
+      "name": "Lượng nhận đạt",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "SUM(G)",
+      "primary_facts": [
+        "F13"
+      ],
+      "supporting_facts": [
+        "F12"
+      ],
+      "optional_facts": []
+    },
+    {
+      "id": "B06.03",
+      "name": "Lượng bị từ chối",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "SUM(R)",
+      "primary_facts": [
+        "F13"
+      ],
+      "supporting_facts": [
+        "F12"
+      ],
+      "optional_facts": []
+    },
+    {
+      "id": "B06.04",
+      "name": "Lượng nhận đạt nhưng trễ",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "SUM(L)",
+      "primary_facts": [
+        "F13"
+      ],
+      "supporting_facts": [
+        "F12"
+      ],
+      "optional_facts": []
+    },
+    {
+      "id": "B06.05",
+      "name": "Tỷ lệ đáp ứng lượng đạt",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "DIV(SUM(G), SUM(O))",
+      "primary_facts": [
+        "F12",
+        "F13"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B06.06",
+      "name": "Tỷ lệ từ chối lượng giao",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "DIV(SUM(R), SUM(G + R))",
+      "primary_facts": [
+        "F13"
+      ],
+      "supporting_facts": [
+        "F12"
+      ],
+      "optional_facts": []
+    },
+    {
+      "id": "B06.07",
+      "name": "Tỷ lệ dòng được nhận đủ đạt đúng hạn",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "COUNTD(line_id có T ≥ O)/COUNTD(line_id đến hạn)",
+      "primary_facts": [
+        "F12",
+        "F13"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B07.01",
+      "name": "Tồn đầu kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(Q0)",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ]
+    },
+    {
+      "id": "B07.02",
+      "name": "Tồn cuối kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(Q1)",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ]
+    },
+    {
+      "id": "B07.03",
+      "name": "Lượng sử dụng trong kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(U)",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ]
+    },
+    {
+      "id": "B07.04",
+      "name": "Lượng hủy trong kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(W)",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ]
+    },
+    {
+      "id": "B07.05",
+      "name": "Giá trị hao hụt trong kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(quantity × unit_price_vnd) của WASTE trong kỳ theo từng lô",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ]
+    },
+    {
+      "id": "B07.06",
+      "name": "Tỷ lệ hao hụt theo giá trị sẵn có",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "DIV(giá trị WASTE trong kỳ, giá trị tồn đầu kỳ + giá trị IN trong kỳ), định giá từng lô",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ]
+    },
+    {
+      "id": "B08.01",
+      "name": "Chi phí bảo trì tài sản khách sạn hoàn tất",
+      "date_role": "maintenance.ends_on",
+      "formula": "SUM(cost_vnd) mỗi maintenance_id COMPLETED có ends_on trong kỳ",
+      "primary_facts": [
+        "F16"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B08.02",
+      "name": "Ngày phòng ngừng bán do bảo trì",
+      "date_role": "maintenance interval intersection with calendar_date",
+      "formula": "COUNTD(room_id, date) thuộc hợp các khoảng bảo trì trong kỳ",
+      "primary_facts": [
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B08.03",
+      "name": "Ngày phòng khả dụng",
+      "date_role": "calendar_date",
+      "formula": "COUNTD(room_id,date) danh mục trong kỳ − B08.02",
+      "primary_facts": [
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    },
+    {
+      "id": "B08.04",
+      "name": "Tỷ trọng ngày phòng ngừng bán",
+      "date_role": "calendar_date",
+      "formula": "DIV(B08.02, COUNTD(room_id,date) danh mục trong kỳ)",
+      "primary_facts": [
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": []
+    }
+  ],
+  "links": [
+    {
+      "name": "BridgeBookingRoom",
+      "grain": "Một booking_room_id",
+      "sources": [
+        "hotel_ops.booking_rooms"
+      ],
+      "keys": "booking_id, room_key, rate_plan_key",
+      "rule": "EXISTS/COUNTD cho bộ lọc loại phòng của booking; không copy giá F01 lên bridge."
+    },
+    {
+      "name": "BridgeRoomDayMaintenance",
+      "grain": "Một room_key, date_key, maintenance_id",
+      "sources": [
+        "hotel_ops.maintenance",
+        "hotel_ops.assets"
+      ],
+      "keys": "room_key, date_key, maintenance_id",
+      "rule": "Giải thích lý do ngừng phòng; F02 lấy hợp DISTINCT. Không SUM cost sau khi nối bridge."
+    },
+    {
+      "name": "ValidatedBookingServiceLink",
+      "grain": "Một service_type, service_id với booking_ref hợp lệ",
+      "sources": [
+        "entertainment_ops.ticket_orders",
+        "entertainment_ops.rentals",
+        "hotel_ops.bookings"
+      ],
+      "keys": "service_type, service_id, booking_id",
+      "rule": "Liên kết n:1 về booking; có thể là view kiểm tra, không bắt buộc bảng bridge vật lý. Bán độc lập giữ NULL; ref sai quarantine."
+    },
+    {
+      "name": "SiteCrosswalk",
+      "grain": "Một centre_id → một site_id",
+      "sources": [
+        "entertainment_ops.centres",
+        "hotel_ops.sites"
+      ],
+      "keys": "centres.site_code = sites.site_id",
+      "rule": "Chỉ ánh xạ công khai trong nguồn; không dùng identity truth hoặc suy theo tên khách."
+    }
+  ],
+  "enterprise_bus_matrix": {
+    "version": "companye-enterprise-bus-1.0",
+    "reference": "CO5173 Chapter 2, slide 89, Figure 5.1",
+    "rows": "business processes",
+    "columns": "conformed dimension candidates",
+    "marker": "X",
+    "processes": [
+      {
+        "id": "P01",
+        "name": "Tiếp nhận đặt phòng",
+        "facts": [
+          "F01"
+        ],
+        "requirements": [
+          "B01",
+          "B02",
+          "B03"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06",
+          "D07",
+          "D08"
+        ],
+        "additional_dimensions": [
+          "D04",
+          "D08"
+        ],
+        "note": "Phòng và gói giá qua BridgeBookingRoom; chỉ lọc EXISTS, không phân bổ tiền booking."
+      },
+      {
+        "id": "P02",
+        "name": "Thực hiện lưu trú",
+        "facts": [
+          "F03"
+        ],
+        "requirements": [
+          "B01"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D07",
+          "D08"
+        ],
+        "additional_dimensions": [],
+        "note": "Đêm thực ở; phân biệt kênh của đêm bán với mẫu số công suất."
+      },
+      {
+        "id": "P03",
+        "name": "Theo dõi phòng khả dụng",
+        "facts": [
+          "F02"
+        ],
+        "requirements": [
+          "B01",
+          "B08"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D04"
+        ],
+        "additional_dimensions": [],
+        "note": "Room-day dùng chung cho lưu trú và ảnh hưởng bảo trì."
+      },
+      {
+        "id": "P04",
+        "name": "Bán vé giải trí",
+        "facts": [
+          "F04"
+        ],
+        "requirements": [
+          "B03"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D05",
+          "D07",
+          "D11"
+        ],
+        "additional_dimensions": [],
+        "note": "Khách sạn/kênh booking chỉ có khi có tham chiếu booking hợp lệ."
+      },
+      {
+        "id": "P05",
+        "name": "Tiếp nhận lượt dùng hoạt động",
+        "facts": [
+          "F09",
+          "F10"
+        ],
+        "requirements": [
+          "B05"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D07",
+          "D11",
+          "D12"
+        ],
+        "additional_dimensions": [],
+        "note": "Lượt dùng và capacity có grain riêng; chiều khách không lọc capacity."
+      },
+      {
+        "id": "P06",
+        "name": "Cho thuê phương tiện",
+        "facts": [
+          "F05",
+          "F11"
+        ],
+        "requirements": [
+          "B03",
+          "B05"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D05",
+          "D07",
+          "D11",
+          "D13"
+        ],
+        "additional_dimensions": [],
+        "note": "Hợp đồng và ngày xe có grain riêng; khách/kênh không lọc ngày xe sẵn sàng."
+      },
+      {
+        "id": "P07",
+        "name": "Cấp và sử dụng quyền lợi sáng",
+        "facts": [
+          "F06"
+        ],
+        "requirements": [
+          "B04"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D07",
+          "D08",
+          "D09",
+          "D10"
+        ],
+        "additional_dimensions": [],
+        "note": "Quyền lợi đi kèm phòng không tạo thêm doanh thu ăn uống."
+      },
+      {
+        "id": "P08",
+        "name": "Bán và phục vụ ăn uống",
+        "facts": [
+          "F07",
+          "F08"
+        ],
+        "requirements": [
+          "B04"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D07",
+          "D09",
+          "D10"
+        ],
+        "additional_dimensions": [],
+        "note": "Hóa đơn và phiên buffet có grain riêng; khách không lọc chi phí phiên."
+      },
+      {
+        "id": "P09",
+        "name": "Đặt mua hàng",
+        "facts": [
+          "F12"
+        ],
+        "requirements": [
+          "B06"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D14",
+          "D15"
+        ],
+        "additional_dimensions": [],
+        "note": "Một dòng đặt mua; giữ lượng đặt một lần khi nối nhiều lần nhận."
+      },
+      {
+        "id": "P10",
+        "name": "Tiếp nhận hàng mua",
+        "facts": [
+          "F13"
+        ],
+        "requirements": [
+          "B06"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D14",
+          "D15"
+        ],
+        "additional_dimensions": [],
+        "note": "Một lần nhận của một dòng đặt mua; file ngoài chỉ đối chiếu."
+      },
+      {
+        "id": "P11",
+        "name": "Ghi nhận nhập xuất và tồn kho",
+        "facts": [
+          "F14",
+          "F15"
+        ],
+        "requirements": [
+          "B07"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D14",
+          "D15"
+        ],
+        "additional_dimensions": [],
+        "note": "F15 tùy chọn; số dư không cộng qua ngày hoặc lọc theo usage_area."
+      },
+      {
+        "id": "P12",
+        "name": "Bảo trì tài sản khách sạn",
+        "facts": [
+          "F16"
+        ],
+        "requirements": [
+          "B08"
+        ],
+        "dimensions": [
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D16"
+        ],
+        "additional_dimensions": [],
+        "note": "Bên cung cấp tài sản không mặc định là nhà thầu bảo trì. Ngày phòng khả dụng ở P03."
+      }
+    ],
+    "context_facts": [
+      "F17"
+    ],
+    "context_note": "F17 là dữ liệu thời tiết theo cụm/ngày hỗ trợ B05, không phải quá trình giao dịch riêng. Tồn theo ngày F15 nằm trong P11 và là tùy chọn."
+  }
+}

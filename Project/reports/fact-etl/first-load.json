@@ -1,0 +1,536 @@
+{
+  "status": "PASSED_FACT_ETL",
+  "run_id": "facts_v2_20261012T092023738754Z_8a65e73962da",
+  "canonical_path": "/analytics/canonical/facts_v2_20261012T092023738754Z_8a65e73962da",
+  "canonical_manifest_sha256": "8574b4894792ea75ee75a5402cbbc57789aa6bea1078c0781834bc7924e4686d",
+  "input_sha256": {
+    "config/warehouse_design_v1.json": "7b6d76ca44a9039e61b9b29c3a175770642651171dbb9d91dd7299c7eed36def",
+    "config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332",
+    "config/analytics/ddl/manifest.json": "871b11d92f16e1915c487f679b25cf8f114408e7b701c3330fa9b61e0f9d4e71",
+    "config/physical_design_v1.json": "7b03a9e56386105935747236c0dd662b738a75e58f5e59700271fe01ed1b2c74",
+    "config/logical_model_v1_1.json": "c53a238e363d391fb0f27fc88ca582deb873e3da8d91d5eb928aaacef4e987a5",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "lake/v2/catalog/catalog.json": "301f47ffd0714c26bf62cf957a09c1ca231afdb927d6ecad807030717034c9e7",
+    "reports/dimension-etl/verification.json": "57d0553d110c5e74eb55ac0e437059aac63789c43ab671a4a1bfffcbd4ecd08d"
+  },
+  "code_sha256": {
+    "src/fact_etl/__init__.py": "d386397ec735abe1a492d8f2e19581cf6a85693a50698a9608a28b0d5a941526",
+    "src/fact_etl/pipeline.py": "4aaca8c0e5f325442f430deb30703c3878f00295c1f5ad53c53cce7b7c15c0ed",
+    "src/fact_etl/transform.py": "53b2dd3f8a8f4561ef929bdc2a70b67f85f3ece79a80bd9afdf77c1ab80e3e3b",
+    "src/analytics_runtime/deploy_schema.py": "d90218b7befeee4cf86e4fc4ed3352c762cf2a073b8d68b34c546e9df014a5c1",
+    "src/analytics_runtime/dimensions.py": "96a11dae2196b515fd51c41e54777472a0b58ea8341a638ce7b1c3ec4bec8c26",
+    "src/analytics_runtime/dimension_fixtures.py": "c7776b8a70584e9066fbb00a512f464a6286df682a43772d6e95eceaf194db6d",
+    "src/analytics_runtime/dimension_transform.py": "829261510ec5b2e37d27eda2827f3e9c61aab571e5f9b713720f0de7ca3b8474",
+    "src/analytics_runtime/etl_io.py": "e901c06545f981fb9f5656385491036029ab7826c58ad82cb24517df6787e250",
+    "src/analytics_runtime/install_jars.py": "22a7d2aba30117163b7fc67ce62f026bee093f2bcfd3226a680321c81e6e332c",
+    "src/analytics_runtime/probe.py": "176e6e953c394a9513be5e75b9d9c2cd959376127ab155cec72dd78d156fbe24",
+    "src/analytics_runtime/scd2.py": "e866ab80efb619adf742ff3e2f5a842a6429b64a520c37db05931d2e97f91167",
+    "src/analytics_runtime/session.py": "99f246a2b25598b055661d13fa398a43305e54be7307953d364fe988e3e93ccb",
+    "src/analytics_runtime/validation_views.py": "743d1f12291a53b2a84aef808ee0393045b0db83b8e7459e17bfa13d27ac5a53",
+    "src/analytics_runtime/__init__.py": "916eac3c089b1c75c32ab87e25c6f059d1cb7392f5364b0c495c21494f5b8ded"
+  },
+  "quality": {
+    "L04": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "hotel_ops.sites"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "L03": {
+      "status": "COMPLETE",
+      "accepted": 21213,
+      "rejected": 0,
+      "business_filtered": 7200,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.rentals",
+        "entertainment_ops.ticket_orders",
+        "hotel_ops.bookings"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F01": {
+      "status": "COMPLETE",
+      "accepted": 32000,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.bookings",
+        "hotel_ops.hotels"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F08": {
+      "status": "COMPLETE",
+      "accepted": 11696,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.meal_sessions",
+        "hotel_ops.outlets"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F10": {
+      "status": "COMPLETE",
+      "accepted": 8772,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.activities",
+        "entertainment_ops.centres",
+        "entertainment_ops.closures"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F11": {
+      "status": "COMPLETE",
+      "accepted": 87720,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "entertainment_ops.rentals",
+        "entertainment_ops.vehicle_maintenance",
+        "entertainment_ops.vehicles"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F12": {
+      "status": "COMPLETE",
+      "accepted": 23680,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.purchase_lines",
+        "hotel_ops.purchase_orders"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F16": {
+      "status": "COMPLETE",
+      "accepted": 512,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.assets",
+        "hotel_ops.hotels",
+        "hotel_ops.maintenance"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F17": {
+      "status": "COMPLETE",
+      "accepted": 2924,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.weather_daily"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "L02": {
+      "status": "COMPLETE",
+      "accepted": 962,
+      "rejected": 0,
+      "business_filtered": 64,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.assets",
+        "hotel_ops.maintenance",
+        "hotel_ops.rooms"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F02": {
+      "status": "COMPLETE",
+      "accepted": 175440,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.assets",
+        "hotel_ops.hotels",
+        "hotel_ops.maintenance",
+        "hotel_ops.rooms"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F04": {
+      "status": "COMPLETE",
+      "accepted": 20690,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "entertainment_ops.ticket_orders",
+        "hotel_ops.bookings",
+        "hotel_ops.hotels"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F05": {
+      "status": "COMPLETE",
+      "accepted": 7723,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "entertainment_ops.rentals",
+        "entertainment_ops.vehicles",
+        "hotel_ops.bookings",
+        "hotel_ops.hotels"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F07": {
+      "status": "COMPLETE",
+      "accepted": 31357,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.bookings",
+        "hotel_ops.dining_orders",
+        "hotel_ops.hotels",
+        "hotel_ops.outlets"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F09": {
+      "status": "COMPLETE",
+      "accepted": 39827,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.activities",
+        "entertainment_ops.admissions",
+        "entertainment_ops.centres",
+        "entertainment_ops.ticket_orders",
+        "entertainment_ops.tickets"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F13": {
+      "status": "COMPLETE",
+      "accepted": 29621,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.purchase_lines",
+        "hotel_ops.purchase_orders",
+        "hotel_ops.receipts"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "L01": {
+      "status": "COMPLETE",
+      "accepted": 36711,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.booking_rooms",
+        "hotel_ops.bookings",
+        "hotel_ops.rate_plans",
+        "hotel_ops.rooms"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F03": {
+      "status": "COMPLETE",
+      "accepted": 73275,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.booking_rooms",
+        "hotel_ops.bookings",
+        "hotel_ops.hotels",
+        "hotel_ops.rate_plans",
+        "hotel_ops.rooms",
+        "hotel_ops.stays"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F14": {
+      "status": "COMPLETE",
+      "accepted": 88032,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.purchase_lines",
+        "hotel_ops.purchase_orders",
+        "hotel_ops.receipts",
+        "hotel_ops.stock_movements"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F06": {
+      "status": "COMPLETE",
+      "accepted": 52979,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.booking_rooms",
+        "hotel_ops.bookings",
+        "hotel_ops.breakfast_entitlements",
+        "hotel_ops.hotels",
+        "hotel_ops.outlets",
+        "hotel_ops.rate_plans",
+        "hotel_ops.rooms",
+        "hotel_ops.stays"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    }
+  },
+  "tables": [
+    {
+      "entity": "L04",
+      "table": "site_crosswalk",
+      "rows": 4,
+      "content_sha256": "9ee7957e4d31e8230b404f7e1e66422fd300baf5b6396cece5e386008da805b5",
+      "oracle_rows": 4,
+      "iceberg_rows": 4,
+      "iceberg_snapshot_id": null,
+      "oracle_seconds": 1.2653371429914841,
+      "iceberg_seconds": 0.19898240399197675
+    },
+    {
+      "entity": "L03",
+      "table": "validated_booking_service_link",
+      "rows": 21213,
+      "content_sha256": "ea0975d96870646986ca9b4d4a0f41cf70305487b9edb746f74c5baf2953004e",
+      "oracle_rows": 21213,
+      "iceberg_rows": 21213,
+      "iceberg_snapshot_id": null,
+      "oracle_seconds": 1.5751744949957356,
+      "iceberg_seconds": 0.32229406099941116
+    },
+    {
+      "entity": "F01",
+      "table": "fact_booking",
+      "rows": 32000,
+      "content_sha256": "61ac22488c0f65085672f8d4b814584205df823ba35525bfd057977766b3acc3",
+      "oracle_rows": 32000,
+      "iceberg_rows": 32000,
+      "iceberg_snapshot_id": 2971785770740754178,
+      "oracle_seconds": 2.945735015004175,
+      "iceberg_seconds": 4.538956110001891
+    },
+    {
+      "entity": "F08",
+      "table": "fact_meal_session",
+      "rows": 11696,
+      "content_sha256": "7849ac462add6bcfe7b968e3f7f425144d2321eb5994763d321774f4f93a09d2",
+      "oracle_rows": 11696,
+      "iceberg_rows": 11696,
+      "iceberg_snapshot_id": 5169403589273469035,
+      "oracle_seconds": 0.8659161800023867,
+      "iceberg_seconds": 0.7503169349947711
+    },
+    {
+      "entity": "F10",
+      "table": "fact_activity_day",
+      "rows": 8772,
+      "content_sha256": "7677814f46e69077f891044b47a99cb8de351222f88faade939e2fafc73f6c2b",
+      "oracle_rows": 8772,
+      "iceberg_rows": 8772,
+      "iceberg_snapshot_id": 2518874239010153493,
+      "oracle_seconds": 0.6522533719980856,
+      "iceberg_seconds": 0.37932380801066756
+    },
+    {
+      "entity": "F11",
+      "table": "fact_vehicle_day",
+      "rows": 87720,
+      "content_sha256": "abc03517f121688693206a2ebb20db960028c536e4bee0466e12e52e6643116b",
+      "oracle_rows": 87720,
+      "iceberg_rows": 87720,
+      "iceberg_snapshot_id": 3566708075770946499,
+      "oracle_seconds": 3.846438438005862,
+      "iceberg_seconds": 1.5000281590037048
+    },
+    {
+      "entity": "F12",
+      "table": "fact_purchase_line",
+      "rows": 23680,
+      "content_sha256": "143234eb517df000e54dfa1cca6da34a7bbaffcc6be413593c8463617dad4816",
+      "oracle_rows": 23680,
+      "iceberg_rows": 23680,
+      "iceberg_snapshot_id": 3717406177203024209,
+      "oracle_seconds": 1.5750565909984289,
+      "iceberg_seconds": 0.6717142999987118
+    },
+    {
+      "entity": "F16",
+      "table": "fact_maintenance_work",
+      "rows": 512,
+      "content_sha256": "521453586223e95f52dd0fcceed80945abd5bf3b1075517122acaa7123c150f2",
+      "oracle_rows": 512,
+      "iceberg_rows": 512,
+      "iceberg_snapshot_id": 8555595998935164880,
+      "oracle_seconds": 0.5015567609952996,
+      "iceberg_seconds": 0.19964349699148443
+    },
+    {
+      "entity": "F17",
+      "table": "fact_weather_day",
+      "rows": 2924,
+      "content_sha256": "ac3f0783c39742967cd24bda46fbf7592a17c70d94a2a99d2d50470fd1b6777b",
+      "oracle_rows": 2924,
+      "iceberg_rows": 2924,
+      "iceberg_snapshot_id": 3068776709187747005,
+      "oracle_seconds": 0.3634245360008208,
+      "iceberg_seconds": 0.2237146340048639
+    },
+    {
+      "entity": "L02",
+      "table": "bridge_room_day_maintenance",
+      "rows": 962,
+      "content_sha256": "f474800491f505eec4d7ec02fe72ba4bceb8611b66343455fdacdefe0ebf60a8",
+      "oracle_rows": 962,
+      "iceberg_rows": 962,
+      "iceberg_snapshot_id": 2929053156120940263,
+      "oracle_seconds": 0.30565533600747585,
+      "iceberg_seconds": 0.4227099069976248
+    },
+    {
+      "entity": "F02",
+      "table": "fact_room_day",
+      "rows": 175440,
+      "content_sha256": "8cdd8cc24293eb4e23fb6f70ee30a68089047064aad577a76311e3457f9135aa",
+      "oracle_rows": 175440,
+      "iceberg_rows": 175440,
+      "iceberg_snapshot_id": 8149393538466871549,
+      "oracle_seconds": 7.212140458999784,
+      "iceberg_seconds": 3.000852287004818
+    },
+    {
+      "entity": "F04",
+      "table": "fact_ticket_order",
+      "rows": 20690,
+      "content_sha256": "4fd33e6034ca8b71818ece5fe7c807b8a176fc8ba458c0e426216a289fcad34c",
+      "oracle_rows": 20690,
+      "iceberg_rows": 20690,
+      "iceberg_snapshot_id": 4185357234104766656,
+      "oracle_seconds": 2.167835747008212,
+      "iceberg_seconds": 1.1691371120105032
+    },
+    {
+      "entity": "F05",
+      "table": "fact_rental",
+      "rows": 7723,
+      "content_sha256": "b315beb8e229810fbf3ab08e9d6d4bfae958b85c23f9a49a3a324069c41e2e56",
+      "oracle_rows": 7723,
+      "iceberg_rows": 7723,
+      "iceberg_snapshot_id": 5442739705893115867,
+      "oracle_seconds": 0.8196835030103102,
+      "iceberg_seconds": 0.45799276100296993
+    },
+    {
+      "entity": "F07",
+      "table": "fact_dining_order",
+      "rows": 31357,
+      "content_sha256": "0bd8118facfe0891925f37e808e71f1843e9d163b29c60152db1e3563a64db39",
+      "oracle_rows": 31357,
+      "iceberg_rows": 31357,
+      "iceberg_snapshot_id": 6444743510822956765,
+      "oracle_seconds": 1.8654443280101987,
+      "iceberg_seconds": 2.8848852930095745
+    },
+    {
+      "entity": "F09",
+      "table": "fact_admission",
+      "rows": 39827,
+      "content_sha256": "7c176d0c0e60b9216336e3c8f65e375d8bbbe38944e932c355fbafd73f03191e",
+      "oracle_rows": 39827,
+      "iceberg_rows": 39827,
+      "iceberg_snapshot_id": 803243339690476948,
+      "oracle_seconds": 2.03212424099911,
+      "iceberg_seconds": 0.9701512710016686
+    },
+    {
+      "entity": "F13",
+      "table": "fact_receipt",
+      "rows": 29621,
+      "content_sha256": "33cab5def469fd9876c617b47d77ee37cc6453bb3885a795cf0163ca289c9e1a",
+      "oracle_rows": 29621,
+      "iceberg_rows": 29621,
+      "iceberg_snapshot_id": 6376398625269128276,
+      "oracle_seconds": 1.6604542229906656,
+      "iceberg_seconds": 0.8444486829976086
+    },
+    {
+      "entity": "L01",
+      "table": "bridge_booking_room",
+      "rows": 36711,
+      "content_sha256": "26e0f3c44f4703bb70ce493765f5dec2293ae8782a60b34238789a7bb8c1851d",
+      "oracle_rows": 36711,
+      "iceberg_rows": 36711,
+      "iceberg_snapshot_id": 1479398976220454922,
+      "oracle_seconds": 1.3851804940059083,
+      "iceberg_seconds": 0.7264000959985424
+    },
+    {
+      "entity": "F03",
+      "table": "fact_stay_night",
+      "rows": 73275,
+      "content_sha256": "6e711608c80aa01a7e73071953dff6711fa5c1fb1aa1b32b87a167f5a231ba9e",
+      "oracle_rows": 73275,
+      "iceberg_rows": 73275,
+      "iceberg_snapshot_id": 474059817811095858,
+      "oracle_seconds": 3.973679379996611,
+      "iceberg_seconds": 1.732481156999711
+    },
+    {
+      "entity": "F14",
+      "table": "fact_stock_movement",
+      "rows": 88032,
+      "content_sha256": "5c53409da37397b2ed68f391b92bd3e24f38072105682a35ed56c292240a9004",
+      "oracle_rows": 88032,
+      "iceberg_rows": 88032,
+      "iceberg_snapshot_id": 1119304298308652810,
+      "oracle_seconds": 25.246026873006485,
+      "iceberg_seconds": 4.522018071002094
+    },
+    {
+      "entity": "F06",
+      "table": "fact_breakfast_entitlement",
+      "rows": 52979,
+      "content_sha256": "912fff845b8a6d0cb62ac37d91c65093804e279e308810761da189fc0dc85085",
+      "oracle_rows": 52979,
+      "iceberg_rows": 52979,
+      "iceberg_snapshot_id": 2008495040958866345,
+      "oracle_seconds": 2.85496809000324,
+      "iceberg_seconds": 1.588013468994177
+    }
+  ],
+  "published": false,
+  "optional_disabled": [
+    "F15"
+  ]
+}

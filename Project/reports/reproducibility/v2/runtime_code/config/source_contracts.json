@@ -1,0 +1,2520 @@
+{
+  "hotel_ops": [
+    {
+      "name": "sites",
+      "description": "Bốn cụm du lịch.",
+      "grain": "Một cụm.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "site_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "site_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên địa điểm.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "climate_region",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Nhóm khí hậu giả định.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "hotels",
+      "description": "Tám khách sạn CompanyE.",
+      "grain": "Một khách sạn.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "stars IN (3,5)"
+      ],
+      "columns": [
+        {
+          "name": "hotel_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "site_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES sites(site_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi sites trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên cơ sở.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "stars",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Hạng sao giả định.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "website_channel",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Mã website chính thức riêng.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "rooms",
+      "description": "Phòng vật lý thuộc khách sạn.",
+      "grain": "Một phòng.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "capacity > 0",
+        "base_rate_vnd > 0"
+      ],
+      "columns": [
+        {
+          "name": "room_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES hotels(hotel_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi hotels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "room_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "STANDARD hoặc DELUXE.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "capacity",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Số khách tối đa.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "base_rate_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá nền mỗi đêm trước điều chỉnh mùa. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "channels",
+      "description": "Kênh bán, độc lập phương thức thanh toán.",
+      "grain": "Một kênh.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "commission_bps BETWEEN 0 AND 10000"
+      ],
+      "columns": [
+        {
+          "name": "channel_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "channel_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên kênh.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "channel_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "DIRECT hoặc DISTRIBUTOR.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "commission_bps",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Hoa hồng giả định theo basis points.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "guests",
+      "description": "Hồ sơ khách của hệ thống khách sạn.",
+      "grain": "Một hồ sơ khách địa phương.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "guest_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "full_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên khách hoàn toàn giả lập.",
+          "classification": "synthetic_contact",
+          "unit": null
+        },
+        {
+          "name": "phone",
+          "sql_type": "TEXT",
+          "constraints": "",
+          "nullable": true,
+          "description": "Liên hệ giả lập, có thể khác định dạng giữa nguồn.",
+          "classification": "synthetic_contact",
+          "unit": null
+        },
+        {
+          "name": "email",
+          "sql_type": "TEXT",
+          "constraints": "",
+          "nullable": true,
+          "description": "Email giả lập thuộc example.invalid.",
+          "classification": "synthetic_contact",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "membership_plans",
+      "description": "Gói hội viên.",
+      "grain": "Một gói.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "plan_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "plan_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "E Member, E Plus hoặc E Family.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "duration_months",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "0 là không quy định hết hạn.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "fee_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Phí gói giả định. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "memberships",
+      "description": "Hợp đồng hội viên và thời hạn.",
+      "grain": "Một lần đăng ký gói.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "membership_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "plan_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES membership_plans(plan_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi membership_plans trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "guest_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES guests(guest_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi guests trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "valid_from",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày bắt đầu.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "valid_to",
+          "sql_type": "DATE",
+          "constraints": "",
+          "nullable": true,
+          "description": "Ngày hết hạn nếu có.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "paid_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tiền mua gói; không cộng lại vào từng lần dùng quyền lợi. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "member_cards",
+      "description": "Thẻ nhận diện của thành viên.",
+      "grain": "Một thẻ gắn khách với gói.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "card_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "membership_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES memberships(membership_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi memberships trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "guest_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES guests(guest_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi guests trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "card_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "DIGITAL hoặc PHYSICAL.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "promotions",
+      "description": "Chính sách chiến dịch giả định.",
+      "grain": "Một chiến dịch.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "discount_bps BETWEEN 0 AND 10000",
+        "partner_share_bps BETWEEN 0 AND 10000",
+        "sale_to >= sale_from",
+        "stay_to >= stay_from"
+      ],
+      "columns": [
+        {
+          "name": "promotion_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "channel_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES channels(channel_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi channels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "site_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES sites(site_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi sites trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "promotion_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên chiến dịch.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "sale_from",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Bắt đầu mở bán.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "sale_to",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Kết thúc mở bán.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "stay_from",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Bắt đầu khoảng lưu trú hợp lệ.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "stay_to",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Kết thúc khoảng lưu trú hợp lệ.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "discount_bps",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tỷ lệ giảm trên giá gói.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "partner_share_bps",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tỷ lệ đối tác chịu trong phần giảm.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "cap_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giới hạn giảm mỗi booking. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "rate_plans",
+      "description": "Gói giá theo khách sạn và kênh.",
+      "grain": "Một gói giá có quyền lợi ăn sáng.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "breakfast_included IN (0,1)",
+        "refundable IN (0,1)"
+      ],
+      "columns": [
+        {
+          "name": "rate_plan_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES hotels(hotel_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi hotels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "channel_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES channels(channel_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi channels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "plan_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên sản phẩm đặt phòng.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "breakfast_included",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "1 gồm ăn sáng, 0 không gồm.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "refundable",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "1 cho phép hoàn theo điều kiện.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "bookings",
+      "description": "Đặt phòng và điều kiện giá đã chốt.",
+      "grain": "Một đơn đặt phòng, có thể nhiều phòng.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "departure > arrival",
+        "booked_on <= arrival",
+        "discount_vnd = company_share_vnd + partner_share_vnd",
+        "customer_due_vnd = gross_vnd - discount_vnd",
+        "customer_due_vnd >= 0"
+      ],
+      "columns": [
+        {
+          "name": "booking_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES hotels(hotel_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi hotels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "guest_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES guests(guest_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi guests trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "channel_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES channels(channel_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi channels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "promotion_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES promotions(promotion_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi promotions trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "booked_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày đặt.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "arrival",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày nhận phòng dự kiến.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "departure",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày trả phòng dự kiến.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "status",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "COMPLETED, CANCELLED hoặc NO_SHOW.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "payment_method",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Phương thức thanh toán, độc lập channel.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "gross_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá trị gói phòng trước giảm. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "discount_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tổng giảm khách được hưởng. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "company_share_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Phần giảm CompanyE chịu. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "partner_share_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Phần giảm đối tác chịu. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "customer_due_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá khách trả trước hoàn tiền. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "commission_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Phí phân phối trên cơ sở tính giả định đã chốt. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "updated_at",
+          "sql_type": "TIMESTAMPTZ",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Thời điểm phiên bản cuối trong snapshot. Múi giờ nguồn +07:00.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "booking_rooms",
+      "description": "Phòng cụ thể trong booking.",
+      "grain": "Một phòng trong một booking.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "adults > 0",
+        "children >= 0",
+        "breakfast_guests >= 0"
+      ],
+      "columns": [
+        {
+          "name": "booking_room_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "booking_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES bookings(booking_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi bookings trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "room_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES rooms(room_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi rooms trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "rate_plan_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES rate_plans(rate_plan_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi rate_plans trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "adults",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Số người lớn.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "children",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Số trẻ em.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "breakfast_guests",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Số người được hưởng ăn sáng mỗi ngày.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "nightly_rate_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá mỗi đêm đã chốt, gồm quyền lợi của gói. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "stays",
+      "description": "Lưu trú đã thực hiện.",
+      "grain": "Một lần ở của booking room.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "checkout_date > checkin_date"
+      ],
+      "columns": [
+        {
+          "name": "stay_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "booking_room_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES booking_rooms(booking_room_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi booking_rooms trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "checkin_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày nhận thực tế.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "checkout_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày trả thực tế.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "breakfast_entitlements",
+      "description": "Quyền lợi buffet theo phòng và ngày.",
+      "grain": "Một phòng booking và một ngày ăn.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "eligible_covers >= redeemed_covers",
+        "redeemed_covers >= 0"
+      ],
+      "columns": [
+        {
+          "name": "entitlement_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "booking_room_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES booking_rooms(booking_room_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi booking_rooms trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "service_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày hưởng quyền lợi.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "eligible_covers",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Suất được hưởng.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "redeemed_covers",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Suất thực dùng.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "outlets",
+      "description": "Nhà hàng và bar.",
+      "grain": "Một điểm phục vụ.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "outlet_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES hotels(hotel_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi hotels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "outlet_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "RESTAURANT hoặc BAR.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "capacity",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Sức chứa.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "quality_profile",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Mức nền mô phỏng, không suy từ hạng sao.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "dining_orders",
+      "description": "Hóa đơn bữa trưa, buffet tối, bar và ăn sáng bán thêm.",
+      "grain": "Một hóa đơn.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "net_vnd = gross_vnd - discount_vnd",
+        "rating BETWEEN 1 AND 5"
+      ],
+      "columns": [
+        {
+          "name": "dining_order_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "outlet_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES outlets(outlet_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi outlets trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "guest_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES guests(guest_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi guests trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "booking_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES bookings(booking_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi bookings trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "service_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày dùng dịch vụ.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "meal",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "BREAKFAST, LUNCH, DINNER hoặc BAR.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "covers",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Số khách phục vụ.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "gross_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá trị bán riêng; không gồm suất sáng đi kèm phòng. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "discount_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ưu đãi áp dụng. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "net_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá trị sau ưu đãi. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "wait_minutes",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Thời gian chờ giả lập.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "rating",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Đánh giá 1 đến 5.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "meal_sessions",
+      "description": "Bữa buffet và nguyên liệu sử dụng.",
+      "grain": "Một nhà hàng, ngày và bữa.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "session_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "outlet_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES outlets(outlet_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi outlets trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "service_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày phục vụ.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "meal",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "BREAKFAST hoặc DINNER.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "actual_covers",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tổng suất thực dùng.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ingredient_cost_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Chi phí nguyên liệu phân bổ theo bữa; không phải chi phí tiêu thụ từng khách. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "payments",
+      "description": "Dòng tiền khách sạn.",
+      "grain": "Một lần thu hoặc hoàn cho booking.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "amount_vnd >= 0",
+        "event_type IN ('CHARGE','REFUND')"
+      ],
+      "columns": [
+        {
+          "name": "payment_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "booking_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES bookings(booking_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi bookings trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "event_time",
+          "sql_type": "TIMESTAMPTZ",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Thời điểm dòng tiền. Múi giờ nguồn +07:00.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "event_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "CHARGE hoặc REFUND.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "amount_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Số tiền dương; hướng theo event_type. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "settlements",
+      "description": "Đối soát tài trợ và hoa hồng.",
+      "grain": "Một booking đối tác.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "settlement_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "booking_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES bookings(booking_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi bookings trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "sponsor_due_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tài trợ được hưởng sau trạng thái sử dụng. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "sponsor_received_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tài trợ đã đối soát nhận. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "commission_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Hoa hồng sau hủy/hoàn. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "status",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "MATCHED hoặc PENDING.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "suppliers",
+      "description": "Nhà cung cấp đầu vào; quan hệ thương mại giả định.",
+      "grain": "Một đơn vị cung cấp.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "supplier_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "supplier_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên thương hiệu thật hoặc thương nhân giả định.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "category",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "FOOD, EQUIPMENT hoặc MAINTENANCE.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "site_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES sites(site_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi sites trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "delivery_format",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "CSV, TEXT hoặc MIXED; giả định tích hợp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "items",
+      "description": "Danh mục nguyên liệu và vật tư chuẩn trong HotelOps.",
+      "grain": "Một mặt hàng theo quy cách.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "item_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "item_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên hàng chuẩn.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "specification",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Quy cách phân biệt mặt hàng.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "base_unit",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "kg, litre hoặc piece.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "shelf_life_days",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Hạn dùng giả định sau nhận; 0 cho hàng bền.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "reference_cost_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá tham chiếu trên đơn vị chuẩn. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "purchase_orders",
+      "description": "Đơn mua hàng.",
+      "grain": "Một đơn của cơ sở tới nhà cung cấp.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "purchase_order_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES hotels(hotel_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi hotels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "supplier_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES suppliers(supplier_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi suppliers trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ordered_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày đặt.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "expected_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày hẹn giao.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "purchase_lines",
+      "description": "Dòng hàng của đơn mua.",
+      "grain": "Một mặt hàng trên đơn.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "ordered_qty > 0"
+      ],
+      "columns": [
+        {
+          "name": "purchase_line_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "purchase_order_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES purchase_orders(purchase_order_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi purchase_orders trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "item_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES items(item_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi items trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ordered_qty",
+          "sql_type": "NUMERIC(12,3)",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Lượng đặt theo đơn vị chuẩn.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "unit_price_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Đơn giá thỏa thuận trên đơn vị chuẩn. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "receipts",
+      "description": "Lô hàng thực nhận.",
+      "grain": "Một lần nhận của một dòng đơn.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "accepted_qty >= 0",
+        "rejected_qty >= 0"
+      ],
+      "columns": [
+        {
+          "name": "receipt_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "purchase_line_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES purchase_lines(purchase_line_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi purchase_lines trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "received_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày thực nhận.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "accepted_qty",
+          "sql_type": "NUMERIC(12,3)",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Lượng chấp nhận.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "rejected_qty",
+          "sql_type": "NUMERIC(12,3)",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Lượng từ chối.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "expires_on",
+          "sql_type": "DATE",
+          "constraints": "",
+          "nullable": true,
+          "description": "Hạn dùng nếu có.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "stock_movements",
+      "description": "Sổ biến động kho theo lô.",
+      "grain": "Một biến động một lô tại một khách sạn.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "quantity >= 0",
+        "movement_type IN ('IN','USE','WASTE')"
+      ],
+      "columns": [
+        {
+          "name": "movement_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES hotels(hotel_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi hotels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "item_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES items(item_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi items trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "receipt_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES receipts(receipt_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi receipts trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "session_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES meal_sessions(session_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi meal_sessions trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "movement_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày biến động.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "movement_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "IN, USE hoặc WASTE.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "usage_area",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "BUFFET, KITCHEN_OTHER, HOUSEKEEPING hoặc WAREHOUSE.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "quantity",
+          "sql_type": "NUMERIC(12,3)",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Số dương; chiều theo loại.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "assets",
+      "description": "Tài sản khách sạn.",
+      "grain": "Một tài sản.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "asset_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES hotels(hotel_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi hotels trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "room_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES rooms(room_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi rooms trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "asset_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "AC, LIFT hoặc COLD_STORAGE.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "supplier_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES suppliers(supplier_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi suppliers trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "maintenance",
+      "description": "Công việc bảo dưỡng tài sản khách sạn.",
+      "grain": "Một lần ngừng và xử lý.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "ends_on > starts_on"
+      ],
+      "columns": [
+        {
+          "name": "maintenance_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "asset_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES assets(asset_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi assets trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "starts_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Bắt đầu không sẵn sàng.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ends_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Kết thúc, khoảng [start,end).",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "work_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "PLANNED hoặc BREAKDOWN.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "cost_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Chi phí ghi nhận của công việc. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "status",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "COMPLETED.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "weather_daily",
+      "description": "Thời tiết giả lập dùng làm ngữ cảnh.",
+      "grain": "Một cụm và ngày.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "weather_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "site_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES sites(site_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi sites trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "weather_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày địa phương.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "temperature_c",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Nhiệt độ giả lập.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "rain_mm",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Lượng mưa giả lập.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "severe_weather",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "1 là tình huống hạn chế ngoài trời.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "provenance",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "SYNTHETIC_CLIMATE_SCENARIO, không phải quan trắc thật.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    }
+  ],
+  "entertainment_ops": [
+    {
+      "name": "centres",
+      "description": "Trung tâm giải trí độc lập HotelOps.",
+      "grain": "Một trung tâm.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "centre_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "site_code",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Mã cụm dùng trong thỏa thuận liên đơn vị.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "centre_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên trung tâm.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "customers",
+      "description": "Hồ sơ khách EntertainmentOps.",
+      "grain": "Một hồ sơ khách nguồn.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "customer_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "full_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên giả lập có thể không dấu.",
+          "classification": "synthetic_contact",
+          "unit": null
+        },
+        {
+          "name": "phone",
+          "sql_type": "TEXT",
+          "constraints": "",
+          "nullable": true,
+          "description": "Điện thoại nguồn có định dạng khác.",
+          "classification": "synthetic_contact",
+          "unit": null
+        },
+        {
+          "name": "email",
+          "sql_type": "TEXT",
+          "constraints": "",
+          "nullable": true,
+          "description": "Email có thể thiếu.",
+          "classification": "synthetic_contact",
+          "unit": null
+        },
+        {
+          "name": "member_card_ref",
+          "sql_type": "TEXT",
+          "constraints": "",
+          "nullable": true,
+          "description": "Mã thẻ khách xuất trình; tham chiếu hợp lệ liên hệ thống.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "activities",
+      "description": "Hoạt động trong trung tâm.",
+      "grain": "Một hoạt động.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "activity_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "centre_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES centres(centre_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi centres trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "activity_name",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Tên hoạt động.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "outdoor",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "1 nếu phụ thuộc hoạt động ngoài trời.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "capacity_per_day",
+          "sql_type": "INTEGER",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Sức chứa giả định mỗi ngày.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ticket_price_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá lượt chuẩn. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "closures",
+      "description": "Lịch đóng theo thời tiết hoặc bảo trì.",
+      "grain": "Một hoạt động và ngày đóng.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "closure_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "activity_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES activities(activity_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi activities trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "closed_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày không phục vụ.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "reason",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "WEATHER hoặc MAINTENANCE.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "ticket_orders",
+      "description": "Đơn vé, dùng mã và vòng đời riêng.",
+      "grain": "Một đơn mua vé.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "gross_vnd >= refunded_vnd",
+        "refunded_vnd >= 0"
+      ],
+      "columns": [
+        {
+          "name": "ticket_order_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "centre_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES centres(centre_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi centres trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "customer_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES customers(customer_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi customers trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_booking_ref",
+          "sql_type": "TEXT",
+          "constraints": "",
+          "nullable": true,
+          "description": "Booking khách sạn khi bán liên kết; không có FK xuyên database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ordered_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày mua.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "sales_channel",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "HOTEL_RECEPTION hoặc GATE.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "gross_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá vé trước hoàn. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        },
+        {
+          "name": "refunded_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Phần đã hoàn. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "tickets",
+      "description": "Vé từng khách cho một hoạt động.",
+      "grain": "Một vé cá nhân.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "ticket_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ticket_order_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES ticket_orders(ticket_order_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi ticket_orders trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "activity_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES activities(activity_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi activities trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "original_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày sử dụng dự kiến ban đầu.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "valid_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày sau điều chỉnh.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "status",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "USED, UNUSED, REFUNDED hoặc RESCHEDULED.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "price_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá vé. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "admissions",
+      "description": "Lượt dùng thực tế.",
+      "grain": "Một vé vào một hoạt động.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "admission_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ticket_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES tickets(ticket_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi tickets trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "entered_at",
+          "sql_type": "TIMESTAMPTZ",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Thời điểm vào thực tế. Múi giờ nguồn +07:00.",
+          "classification": "synthetic_internal",
+          "unit": null
+        }
+      ]
+    },
+    {
+      "name": "vehicles",
+      "description": "Đội phương tiện theo cụm.",
+      "grain": "Một xe.",
+      "owner": "CompanyE Operations",
+      "checks": [],
+      "columns": [
+        {
+          "name": "vehicle_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "centre_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES centres(centre_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi centres trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "vehicle_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "CAR hoặc MOTORBIKE.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "daily_rate_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá một ngày thuê. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "vehicle_maintenance",
+      "description": "Khoảng xe ngừng phục vụ.",
+      "grain": "Một lần bảo trì xe.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "ends_on > starts_on"
+      ],
+      "columns": [
+        {
+          "name": "vehicle_work_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "vehicle_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES vehicles(vehicle_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi vehicles trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "starts_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày bắt đầu.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ends_on",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày kết thúc, không gồm ngày này.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "cost_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Chi phí công việc. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "rentals",
+      "description": "Hợp đồng thuê và thời gian thực hiện.",
+      "grain": "Một lần thuê một xe.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "return_date > pickup_date"
+      ],
+      "columns": [
+        {
+          "name": "rental_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "vehicle_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES vehicles(vehicle_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi vehicles trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "customer_id",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL REFERENCES customers(customer_id)",
+          "nullable": false,
+          "description": "Tham chiếu bản ghi customers trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "hotel_booking_ref",
+          "sql_type": "TEXT",
+          "constraints": "",
+          "nullable": true,
+          "description": "Tham chiếu bán qua khách sạn.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "pickup_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày nhận.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "return_date",
+          "sql_type": "DATE",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Ngày trả, không gồm ngày này.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "status",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "COMPLETED hoặc CANCELLED.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "agreed_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Giá trị thỏa thuận. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    },
+    {
+      "name": "cash_events",
+      "description": "Thu hoàn của khối giải trí.",
+      "grain": "Một sự kiện dòng tiền cho đơn vé hoặc thuê xe.",
+      "owner": "CompanyE Operations",
+      "checks": [
+        "(ticket_order_id IS NULL) <> (rental_id IS NULL)",
+        "amount_vnd >= 0",
+        "event_type IN ('CHARGE','REFUND')"
+      ],
+      "columns": [
+        {
+          "name": "cash_event_id",
+          "sql_type": "TEXT",
+          "constraints": "PRIMARY KEY",
+          "nullable": false,
+          "description": "Mã định danh trong hệ thống nguồn; không phải mã khách toàn doanh nghiệp.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "ticket_order_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES ticket_orders(ticket_order_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi ticket_orders trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "rental_id",
+          "sql_type": "TEXT",
+          "constraints": " REFERENCES rentals(rental_id)",
+          "nullable": true,
+          "description": "Tham chiếu bản ghi rentals trong cùng database.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "event_time",
+          "sql_type": "TIMESTAMPTZ",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Thời điểm thu hoàn. Múi giờ nguồn +07:00.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "event_type",
+          "sql_type": "TEXT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "CHARGE hoặc REFUND.",
+          "classification": "synthetic_internal",
+          "unit": null
+        },
+        {
+          "name": "amount_vnd",
+          "sql_type": "BIGINT",
+          "constraints": "NOT NULL",
+          "nullable": false,
+          "description": "Số tiền dương. Số nguyên VND; không dùng float cho tiền.",
+          "classification": "synthetic_internal",
+          "unit": "VND"
+        }
+      ]
+    }
+  ]
+}

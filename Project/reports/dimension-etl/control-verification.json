@@ -1,0 +1,33 @@
+{
+  "tables": [
+    "active_publication",
+    "benchmark_run",
+    "key_registry",
+    "pipeline_run",
+    "publication",
+    "publication_table",
+    "quality_entity",
+    "quality_metric",
+    "reader_lease",
+    "schema_version"
+  ],
+  "registry_keys": 24934,
+  "pipeline_runs": [
+    {
+      "run_id": "dim_v2_20261012T092023738754Z_43f097c2b062",
+      "state": "DIMENSIONS_READY",
+      "slot": "CE_DWH_A"
+    },
+    {
+      "run_id": "fixture_dimension_partial",
+      "state": "FAILED",
+      "slot": "CE_DWH_B"
+    }
+  ],
+  "active_publications": 0,
+  "publications": 0,
+  "metrics": 0,
+  "writer_superuser": false,
+  "registry_update": false,
+  "active_update": false
+}

@@ -1,0 +1,97 @@
+{
+  "version":"reference-contracts-1",
+  "status":"PROPOSED_REFERENCE_ONLY",
+  "note":"Hand-calculated fixtures and provisional metric definitions. These are not a deployed warehouse or final approval of the eight requirements. No hidden identity truth is used.",
+  "cases":[
+    {
+      "id":"B01","name":"Phòng thực ở và booking hủy",
+      "definition":"Số đêm phòng thực ở chỉ tính COMPLETED; tỷ lệ hủy có mẫu số là số booking, không phải số phòng.",
+      "tables":{
+        "a_bookings":{"schema":"booking_id string, status string","rows":[["B1","COMPLETED"],["B2","CANCELLED"],["B3","NO_SHOW"]]},
+        "a_rooms":{"schema":"booking_id string, room_id string, nights long","rows":[["B1","R1",2],["B1","R2",2],["B2","R3",3],["B3","R1",1]]}
+      },
+      "sql":"SELECT (SELECT sum(r.nights) FROM a_rooms r JOIN a_bookings b USING(booking_id) WHERE b.status='COMPLETED') AS occupied_room_nights, count(*) AS bookings, sum(CASE WHEN status='CANCELLED' THEN 1 ELSE 0 END) AS cancelled_bookings FROM a_bookings",
+      "expected":[{"occupied_room_nights":4,"bookings":3,"cancelled_bookings":1}],
+      "catches":"Nhân số booking theo số phòng; tính đêm hủy/no-show thành lưu trú."
+    },
+    {
+      "id":"B02","name":"Chi phí khuyến mãi và kênh",
+      "definition":"Giá trị giữ lại trước chi phí vận hành = gross - company_discount - commission, chỉ giao dịch hoàn thành. Đây chưa phải lợi nhuận hay tiền thực thu.",
+      "tables":{
+        "a_sales":{"schema":"booking_id string, status string, gross long, discount long, company_discount long, partner_discount long, commission long","rows":[["B1","COMPLETED",2000000,200000,80000,120000,100000],["B2","COMPLETED",1000000,100000,0,100000,100000],["B3","CANCELLED",900000,90000,90000,0,0]]}
+      },
+      "sql":"SELECT sum(gross-discount) AS customer_due, sum(company_discount) AS company_promotion_cost, sum(partner_discount) AS partner_funding, sum(gross-company_discount-commission) AS retained_before_operating_cost FROM a_sales WHERE status='COMPLETED'",
+      "expected":[{"customer_due":2700000,"company_promotion_cost":80000,"partner_funding":220000,"retained_before_operating_cost":2720000}],
+      "catches":"Gán toàn bộ giảm giá cho CompanyE; tính đơn đã hủy; nhầm chỉ tiêu thành lợi nhuận."
+    },
+    {
+      "id":"B03","name":"Bán chéo khách sạn và giải trí",
+      "definition":"Liên kết theo booking reference rõ ràng; cộng doanh số con trước khi nối, không suy danh tính từ ID tổng hợp.",
+      "tables":{
+        "a_bookings":{"schema":"booking_id string, room_amount long","rows":[["B1",2000000],["B2",1000000]]},
+        "a_tickets":{"schema":"booking_id string, amount long","rows":[["B1",100000],["B1",200000]]},
+        "a_rentals":{"schema":"booking_id string, amount long","rows":[["B1",400000]]}
+      },
+      "sql":"WITH t AS (SELECT booking_id,sum(amount) amount FROM a_tickets GROUP BY booking_id), r AS (SELECT booking_id,sum(amount) amount FROM a_rentals GROUP BY booking_id) SELECT sum(b.room_amount) AS hotel_amount, sum(coalesce(t.amount,0)) AS ticket_amount, sum(coalesce(r.amount,0)) AS rental_amount, sum(CASE WHEN t.booking_id IS NOT NULL OR r.booking_id IS NOT NULL THEN 1 ELSE 0 END) AS cross_sold_bookings FROM a_bookings b LEFT JOIN t USING(booking_id) LEFT JOIN r USING(booking_id)",
+      "expected":[{"hotel_amount":3000000,"ticket_amount":300000,"rental_amount":400000,"cross_sold_bookings":1}],
+      "catches":"Join nhiều-nhiều làm nhân đôi doanh số phòng/xe."
+    },
+    {
+      "id":"B04","name":"Buffet và doanh số nhà hàng bán riêng",
+      "definition":"Suất đi kèm phòng tính vào lượt dùng nhưng không tự tạo thêm doanh thu bán riêng; chưa phân bổ giá phòng sang buffet.",
+      "tables":{
+        "a_entitlements":{"schema":"id string, used_covers long","rows":[["E1",2],["E2",0]]},
+        "a_dining":{"schema":"id string, covers long, net_vnd long","rows":[["D1",1,150000],["D2",2,900000]]},
+        "a_meal_cost":{"schema":"id string, ingredient_cost long","rows":[["M1",100000],["M2",200000]]}
+      },
+      "sql":"SELECT (SELECT sum(net_vnd) FROM a_dining) AS separately_sold_amount, (SELECT sum(covers) FROM a_dining)+(SELECT sum(used_covers) FROM a_entitlements) AS served_covers, (SELECT sum(ingredient_cost) FROM a_meal_cost) AS ingredient_cost",
+      "expected":[{"separately_sold_amount":1050000,"served_covers":5,"ingredient_cost":300000}],
+      "catches":"Tính doanh thu buffet đi kèm lần thứ hai; cộng suất được hưởng nhưng không dùng."
+    },
+    {
+      "id":"B05","name":"Công suất giải trí và xe sẵn sàng",
+      "definition":"Mẫu số dùng công suất thực mở cửa và xe sẵn sàng; đếm lượt vào thực tế, không đếm mọi vé bán.",
+      "tables":{
+        "a_activity_days":{"schema":"day string, capacity long, closed boolean","rows":[["2024-01-01",10,false],["2024-01-02",10,true]]},
+        "a_admissions":{"schema":"id string, day string","rows":[["A1","2024-01-01"],["A2","2024-01-01"],["A3","2024-01-01"]]},
+        "a_vehicle_days":{"schema":"vehicle string, day string, available boolean, used boolean","rows":[["V1","2024-01-01",true,true],["V2","2024-01-01",true,false],["V1","2024-01-02",false,false],["V2","2024-01-02",true,false]]}
+      },
+      "sql":"SELECT (SELECT sum(capacity) FROM a_activity_days WHERE NOT closed) AS available_admissions, (SELECT count(*) FROM a_admissions) AS actual_admissions, (SELECT count(*) FROM a_vehicle_days WHERE available) AS available_vehicle_days, (SELECT count(*) FROM a_vehicle_days WHERE used) AS used_vehicle_days",
+      "expected":[{"available_admissions":10,"actual_admissions":3,"available_vehicle_days":3,"used_vehicle_days":1}],
+      "catches":"Dùng công suất danh nghĩa cả ngày đóng và xe bảo trì."
+    },
+    {
+      "id":"B06","name":"Nhà cung cấp giao nhiều đợt",
+      "definition":"Số lượng đặt tính một lần mỗi dòng mua; nhận/chối/nhận trễ tổng hợp theo từng lần giao.",
+      "tables":{
+        "a_purchase":{"schema":"line_id string, ordered long, due string","rows":[["L1",10,"2024-01-03"]]},
+        "a_receipts":{"schema":"line_id string, received string, accepted long, rejected long","rows":[["L1","2024-01-03",6,0],["L1","2024-01-05",3,1]]}
+      },
+      "sql":"WITH r AS (SELECT p.line_id,sum(r.accepted) accepted,sum(r.rejected) rejected,sum(CASE WHEN r.received>p.due THEN r.accepted ELSE 0 END) late_accepted FROM a_purchase p JOIN a_receipts r USING(line_id) GROUP BY p.line_id) SELECT sum(p.ordered) AS ordered_qty,sum(r.accepted) AS accepted_qty,sum(r.rejected) AS rejected_qty,sum(r.late_accepted) AS late_accepted_qty FROM a_purchase p JOIN r USING(line_id)",
+      "expected":[{"ordered_qty":10,"accepted_qty":9,"rejected_qty":1,"late_accepted_qty":3}],
+      "catches":"Nhân đôi lượng đặt khi nhận nhiều đợt; thiếu quy đổi số lượng trước tổng hợp."
+    },
+    {
+      "id":"B07","name":"Tồn kho và hao hụt",
+      "definition":"Tồn cuối = nhập - sử dụng - hủy; giá trị hao hụt theo đơn giá lô, không lấy toàn giá trị mua.",
+      "tables":{
+        "a_lots":{"schema":"lot string, unit_price long","rows":[["L1",10000]]},
+        "a_moves":{"schema":"lot string, kind string, qty long","rows":[["L1","IN",10],["L1","USE",6],["L1","WASTE",2]]}
+      },
+      "sql":"SELECT sum(CASE WHEN kind='IN' THEN qty ELSE -qty END) AS closing_qty,sum(CASE WHEN kind='WASTE' THEN qty*unit_price ELSE 0 END) AS waste_cost FROM a_moves JOIN a_lots USING(lot)",
+      "expected":[{"closing_qty":2,"waste_cost":20000}],
+      "catches":"Sai dấu xuất/hủy kho; định giá hao hụt bằng tổng giá trị lô."
+    },
+    {
+      "id":"B08","name":"Bảo trì và số ngày phòng ngừng bán",
+      "definition":"Khoảng bảo trì [start,end); cùng một phòng/ngày bị nhiều công việc ảnh hưởng chỉ bị loại một lần.",
+      "tables":{
+        "a_room_days":{"schema":"room string, day string","rows":[["R1","2024-01-01"],["R1","2024-01-02"],["R1","2024-01-03"],["R2","2024-01-01"],["R2","2024-01-02"],["R2","2024-01-03"]]},
+        "a_maintenance":{"schema":"room string, starts string, ends string, cost long","rows":[["R1","2024-01-01","2024-01-03",100000],["R1","2024-01-02","2024-01-04",200000]]}
+      },
+      "sql":"WITH blocked AS (SELECT DISTINCT d.room,d.day FROM a_room_days d JOIN a_maintenance m ON d.room=m.room AND d.day>=m.starts AND d.day<m.ends) SELECT (SELECT count(*) FROM blocked) AS blocked_room_days,(SELECT count(*) FROM a_room_days)-(SELECT count(*) FROM blocked) AS available_room_days,(SELECT sum(cost) FROM a_maintenance) AS maintenance_cost",
+      "expected":[{"blocked_room_days":3,"available_room_days":3,"maintenance_cost":300000}],
+      "catches":"Cộng trùng ngày phòng bảo trì khi hai công việc chồng nhau."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "observed_at": "2026-10-13T19:12:21.733900+00:00",
+  "status": "OBSERVED_BEFORE_RESUME",
+  "metadata": {
+    "candidates": [
+      {
+        "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+        "run_id": "facts_v2_20261012T092023738754Z_8a65e73962da",
+        "slot": "CE_DWH_A",
+        "generation": 1,
+        "expected_active": null,
+        "state": "BUILDING",
+        "manifest_sha256": null,
+        "created_at": "2026-10-13T18:58:40.031089+00:00"
+      }
+    ],
+    "active": [],
+    "runs": [
+      {
+        "run_id": "dim_v2_20261012T092023738754Z_43f097c2b062",
+        "state": "DIMENSIONS_READY",
+        "oracle_slot": "CE_DWH_A"
+      },
+      {
+        "run_id": "fixture_dimension_partial",
+        "state": "FAILED",
+        "oracle_slot": "CE_DWH_B"
+      },
+      {
+        "run_id": "facts_v2_20261012T092023738754Z_8a65e73962da",
+        "state": "ETL_READY",
+        "oracle_slot": "CE_DWH_A"
+      }
+    ],
+    "events": [
+      {
+        "event_id": 1,
+        "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+        "action": "RESERVED",
+        "occurred_at": "2026-10-13T18:58:40.031343+00:00",
+        "detail": {}
+      }
+    ],
+    "reservations": [
+      {
+        "slot": "CE_DWH_B",
+        "generation": 0,
+        "publication_id": null
+      },
+      {
+        "slot": "CE_DWH_A",
+        "generation": 1,
+        "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+      }
+    ],
+    "live_readers": 0
+  },
+  "oracle_guards": [
+    {
+      "slot": "CE_DWH_A",
+      "state": "SEALED",
+      "publication_id": "pub_3f41f8fafa4c913187af2cc3"
+    },
+    {
+      "slot": "CE_DWH_B",
+      "state": "OPEN",
+      "publication_id": ""
+    },
+    {
+      "slot": "TEST_A",
+      "state": "SEALED",
+      "publication_id": "pub_fixture_a_c8be62a95dc9"
+    },
+    {
+      "slot": "TEST_B",
+      "state": "SEALED",
+      "publication_id": "pub_fixture_b_c8be62a95dc9"
+    }
+  ],
+  "interrupted_log_sha256": "61d75139560f10512cef79d24b5f2afd30c0f57896efd1781b5498f6c9118f3a",
+  "host_restart": "Reported by user; cause not established",
+  "docker_recovery": "Preserved stale socket directories and let Docker recreate runtime sockets; no volume reset"
+}

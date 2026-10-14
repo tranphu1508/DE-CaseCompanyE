@@ -1,0 +1,9 @@
+{
+  "reason": "Compatibility repair for Python 3.8: explicit UTC format for PostgreSQL run timestamps and normalize COPY hour-only offsets (+07/+00). Re-scan the source, require identical business payloads for all 16 dimensions, and attach corrected Date quality evidence without rewriting immutable canonical files, keys, audit fields or target rows. Fixtures add hour-only offset coverage.",
+  "files": {
+    "reports\\dimension-etl\\frozen\\replay_dim_v2_20261012T092023738754Z_43f097c2b062\\dimensions.py": "96a11dae2196b515fd51c41e54777472a0b58ea8341a638ce7b1c3ec4bec8c26",
+    "reports\\dimension-etl\\frozen\\replay_dim_v2_20261012T092023738754Z_43f097c2b062\\dimension_fixtures.py": "c7776b8a70584e9066fbb00a512f464a6286df682a43772d6e95eceaf194db6d",
+    "reports\\dimension-etl\\frozen\\replay_dim_v2_20261012T092023738754Z_43f097c2b062\\dimension_replay_compatibility_v1.json": "a7fa0e875adbf8bccd7c49975071d6ef5aedf70866cdcc6f8fe43fca3bfa7a91",
+    "reports\\dimension-etl\\frozen\\replay_dim_v2_20261012T092023738754Z_43f097c2b062\\dimension_transform.py": "829261510ec5b2e37d27eda2827f3e9c61aab571e5f9b713720f0de7ca3b8474"
+  }
+}

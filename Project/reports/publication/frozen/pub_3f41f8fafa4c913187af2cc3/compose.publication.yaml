@@ -1,0 +1,24 @@
+# Additive override: publication/reader identities, no business volume changes.
+services:
+  spark:
+    volumes:
+      - ./scripts:/workspace/scripts:ro
+    environment:
+      CE_PUBLICATION_PASSWORD_FILE: /run/secrets/publication_password
+      CE_READER_PASSWORD_FILE: /run/secrets/reader_password
+      CE_ORACLE_PUBLICATION_PASSWORD_FILE: /run/secrets/oracle_publication_password
+      CE_ORACLE_READER_PASSWORD_FILE: /run/secrets/oracle_reader_password
+    secrets:
+      - publication_password
+      - reader_password
+      - oracle_publication_password
+      - oracle_reader_password
+secrets:
+  publication_password:
+    file: ./.secrets/analytics/publication_password
+  reader_password:
+    file: ./.secrets/analytics/reader_password
+  oracle_publication_password:
+    file: ./.secrets/analytics/oracle_publication_password
+  oracle_reader_password:
+    file: ./.secrets/analytics/oracle_reader_password

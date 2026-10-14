@@ -1,0 +1,23 @@
+{
+  "action": "build",
+  "batch_id": "v1_20261011T191347796699Z",
+  "started_at": "2026-10-11T19:18:51.404174+00:00",
+  "files": {
+    "src/manage.py": {
+      "sha256": "6e93dfd7a511551ed9b3a18a9a08bf603240bba901a1583b444393f6ea442e56",
+      "archive_file": "manage.py"
+    },
+    "src/lake_job.py": {
+      "sha256": "a35fbceac2f3f07612d44f351df1e197f7d77968084dde5490af96cb4a37496c",
+      "archive_file": "lake_job.py"
+    },
+    "src/model.py": {
+      "sha256": "c4f6bdcab5f1fbccd56872e827ac8e9d4c2f92eeac784d83a821b85b3d76d03c",
+      "archive_file": "model.py"
+    },
+    "compose.yaml": {
+      "sha256": "34b20ee051eabe00d4e41419f1c30b94f2ca18a37aea324df689cf38769ca238",
+      "archive_file": "compose.yaml"
+    }
+  }
+}

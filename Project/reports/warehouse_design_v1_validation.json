@@ -1,0 +1,639 @@
+{
+  "status": "PASSED_DESIGN_CHECKS",
+  "implemented_pipeline": false,
+  "assertions": 1224,
+  "entity_count": 37,
+  "dimension_count": 16,
+  "scd2_dimension_count": 14,
+  "static_dimension_count": 2,
+  "fact_count": 17,
+  "link_count": 4,
+  "column_count": 631,
+  "fact_dimension_fk_count": 102,
+  "source_reference_count": 152,
+  "kpi_count": 47,
+  "observed_source_date_min": "2023-10-03",
+  "observed_source_date_max": "2026-06-28",
+  "calendar_start": "2023-01-01",
+  "calendar_end_inclusive": "2026-12-31",
+  "grain_checks": [
+    {
+      "table": "hotel_ops.breakfast_entitlements",
+      "key": [
+        "booking_room_id",
+        "service_date"
+      ],
+      "duplicate_count": 0
+    },
+    {
+      "table": "hotel_ops.meal_sessions",
+      "key": [
+        "outlet_id",
+        "service_date",
+        "meal"
+      ],
+      "duplicate_count": 0
+    },
+    {
+      "table": "hotel_ops.weather_daily",
+      "key": [
+        "site_id",
+        "weather_date"
+      ],
+      "duplicate_count": 0
+    }
+  ],
+  "source_profile": [
+    {
+      "table": "hotel_ops.sites",
+      "rows": 4,
+      "max_text_characters": {
+        "site_id": 2,
+        "site_name": 8,
+        "climate_region": 14
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.hotels",
+      "rows": 8,
+      "max_text_characters": {
+        "hotel_id": 4,
+        "hotel_name": 16,
+        "stars": 1,
+        "site_id": 2,
+        "website_channel": 8
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.rooms",
+      "rows": 240,
+      "max_text_characters": {
+        "room_id": 8,
+        "hotel_id": 4,
+        "room_type": 8,
+        "capacity": 1,
+        "base_rate_vnd": 7
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.channels",
+      "rows": 13,
+      "max_text_characters": {
+        "channel_id": 8,
+        "channel_name": 24,
+        "channel_type": 11,
+        "commission_bps": 4
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.guests",
+      "rows": 12120,
+      "max_text_characters": {
+        "guest_id": 26,
+        "full_name": 17,
+        "phone": 10,
+        "email": 26
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.membership_plans",
+      "rows": 3,
+      "max_text_characters": {},
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.memberships",
+      "rows": 4099,
+      "max_text_characters": {},
+      "date_ranges": {
+        "valid_from": [
+          "2024-01-01",
+          "2024-01-01"
+        ],
+        "valid_to": [
+          "2024-12-31",
+          "2024-12-31"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.member_cards",
+      "rows": 4099,
+      "max_text_characters": {},
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.promotions",
+      "rows": 40,
+      "max_text_characters": {
+        "promotion_id": 18,
+        "promotion_name": 22,
+        "channel_id": 7,
+        "site_id": 2,
+        "sale_from": 10,
+        "sale_to": 10,
+        "stay_from": 10,
+        "stay_to": 10,
+        "discount_bps": 4,
+        "partner_share_bps": 5,
+        "cap_vnd": 6
+      },
+      "date_ranges": {
+        "sale_from": [
+          "2023-10-03",
+          "2025-01-31"
+        ],
+        "sale_to": [
+          "2024-04-30",
+          "2025-08-30"
+        ],
+        "stay_from": [
+          "2024-01-01",
+          "2025-05-01"
+        ],
+        "stay_to": [
+          "2024-04-30",
+          "2025-08-30"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.rate_plans",
+      "rows": 72,
+      "max_text_characters": {
+        "rate_plan_id": 18,
+        "hotel_id": 4,
+        "channel_id": 8,
+        "plan_name": 19,
+        "breakfast_included": 1,
+        "refundable": 1
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.bookings",
+      "rows": 32000,
+      "max_text_characters": {
+        "booking_id": 16,
+        "status": 9,
+        "updated_at": 25,
+        "gross_vnd": 8,
+        "discount_vnd": 6,
+        "customer_due_vnd": 8,
+        "company_share_vnd": 6,
+        "partner_share_vnd": 6,
+        "commission_vnd": 7
+      },
+      "date_ranges": {
+        "booked_on": [
+          "2023-11-02",
+          "2025-12-25"
+        ],
+        "arrival": [
+          "2024-01-01",
+          "2025-12-25"
+        ],
+        "departure": [
+          "2024-01-02",
+          "2025-12-30"
+        ],
+        "updated_at": [
+          "2024-01-02",
+          "2025-12-30"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.booking_rooms",
+      "rows": 36711,
+      "max_text_characters": {
+        "booking_room_id": 21,
+        "booking_id": 16
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.stays",
+      "rows": 30736,
+      "max_text_characters": {
+        "stay_id": 13
+      },
+      "date_ranges": {
+        "checkin_date": [
+          "2024-01-01",
+          "2025-12-25"
+        ],
+        "checkout_date": [
+          "2024-01-02",
+          "2025-12-30"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.breakfast_entitlements",
+      "rows": 52979,
+      "max_text_characters": {
+        "entitlement_id": 30,
+        "booking_room_id": 21,
+        "eligible_covers": 1,
+        "redeemed_covers": 1
+      },
+      "date_ranges": {
+        "service_date": [
+          "2024-01-02",
+          "2025-12-30"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.outlets",
+      "rows": 16,
+      "max_text_characters": {
+        "outlet_id": 15,
+        "hotel_id": 4,
+        "outlet_type": 10,
+        "capacity": 3,
+        "quality_profile": 1
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.dining_orders",
+      "rows": 31357,
+      "max_text_characters": {
+        "dining_order_id": 21,
+        "booking_id": 16,
+        "net_vnd": 7,
+        "covers": 1,
+        "rating": 1
+      },
+      "date_ranges": {
+        "service_date": [
+          "2024-01-01",
+          "2025-12-29"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.meal_sessions",
+      "rows": 11696,
+      "max_text_characters": {
+        "session_id": 21,
+        "actual_covers": 2,
+        "ingredient_cost_vnd": 7
+      },
+      "date_ranges": {
+        "service_date": [
+          "2024-01-01",
+          "2025-12-31"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.payments",
+      "rows": 36399,
+      "max_text_characters": {},
+      "date_ranges": {
+        "event_time": [
+          "2023-11-02",
+          "2025-12-25"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.settlements",
+      "rows": 19223,
+      "max_text_characters": {},
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.suppliers",
+      "rows": 16,
+      "max_text_characters": {
+        "supplier_id": 10,
+        "supplier_name": 32,
+        "category": 11,
+        "site_id": 2,
+        "delivery_format": 5
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.items",
+      "rows": 6,
+      "max_text_characters": {
+        "item_id": 6,
+        "item_name": 13,
+        "specification": 20,
+        "base_unit": 5,
+        "shelf_life_days": 3
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.purchase_orders",
+      "rows": 19055,
+      "max_text_characters": {},
+      "date_ranges": {
+        "ordered_on": [
+          "2023-12-30",
+          "2025-12-26"
+        ],
+        "expected_on": [
+          "2024-01-01",
+          "2025-12-28"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.purchase_lines",
+      "rows": 23680,
+      "max_text_characters": {
+        "purchase_line_id": 22,
+        "purchase_order_id": 23,
+        "ordered_qty": 2,
+        "unit_price_vnd": 6
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.receipts",
+      "rows": 29621,
+      "max_text_characters": {
+        "receipt_id": 16,
+        "purchase_line_id": 22,
+        "accepted_qty": 2,
+        "rejected_qty": 1
+      },
+      "date_ranges": {
+        "received_on": [
+          "2024-01-01",
+          "2025-12-30"
+        ],
+        "expires_on": [
+          "2024-01-08",
+          "2026-06-28"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.stock_movements",
+      "rows": 88032,
+      "max_text_characters": {
+        "movement_id": 23,
+        "receipt_id": 16,
+        "session_id": 21,
+        "movement_type": 5,
+        "usage_area": 13,
+        "quantity": 2
+      },
+      "date_ranges": {
+        "movement_date": [
+          "2024-01-01",
+          "2025-12-31"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.assets",
+      "rows": 256,
+      "max_text_characters": {
+        "asset_id": 14,
+        "hotel_id": 4,
+        "room_id": 8,
+        "asset_type": 12,
+        "supplier_id": 10
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "hotel_ops.maintenance",
+      "rows": 512,
+      "max_text_characters": {
+        "maintenance_id": 19,
+        "work_type": 9,
+        "status": 9,
+        "cost_vnd": 6
+      },
+      "date_ranges": {
+        "starts_on": [
+          "2024-03-02",
+          "2025-09-17"
+        ],
+        "ends_on": [
+          "2024-03-04",
+          "2025-09-19"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.weather_daily",
+      "rows": 2924,
+      "max_text_characters": {
+        "weather_id": 21,
+        "provenance": 26,
+        "temperature_c": 2,
+        "rain_mm": 2,
+        "severe_weather": 1
+      },
+      "date_ranges": {
+        "weather_date": [
+          "2024-01-01",
+          "2025-12-31"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.booking_revisions",
+      "rows": 320,
+      "max_text_characters": {},
+      "date_ranges": {
+        "occurred_at": [
+          "2023-11-12",
+          "2025-11-22"
+        ]
+      }
+    },
+    {
+      "table": "hotel_ops.booking_room_revisions",
+      "rows": 368,
+      "max_text_characters": {},
+      "date_ranges": {}
+    },
+    {
+      "table": "entertainment_ops.centres",
+      "rows": 4,
+      "max_text_characters": {
+        "centre_id": 4,
+        "centre_name": 12,
+        "site_code": 2
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "entertainment_ops.customers",
+      "rows": 12000,
+      "max_text_characters": {
+        "customer_id": 26,
+        "full_name": 17,
+        "phone": 13,
+        "email": 30,
+        "member_card_ref": 20
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "entertainment_ops.activities",
+      "rows": 12,
+      "max_text_characters": {
+        "activity_id": 18,
+        "centre_id": 4,
+        "activity_name": 24,
+        "outdoor": 1,
+        "capacity_per_day": 3
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "entertainment_ops.closures",
+      "rows": 272,
+      "max_text_characters": {},
+      "date_ranges": {
+        "closed_on": [
+          "2024-01-02",
+          "2025-12-19"
+        ]
+      }
+    },
+    {
+      "table": "entertainment_ops.ticket_orders",
+      "rows": 20690,
+      "max_text_characters": {
+        "sales_channel": 15,
+        "ticket_order_id": 21,
+        "hotel_booking_ref": 16,
+        "gross_vnd": 7,
+        "refunded_vnd": 7
+      },
+      "date_ranges": {
+        "ordered_on": [
+          "2024-01-01",
+          "2025-12-29"
+        ]
+      }
+    },
+    {
+      "table": "entertainment_ops.tickets",
+      "rows": 44478,
+      "max_text_characters": {},
+      "date_ranges": {
+        "original_date": [
+          "2024-01-01",
+          "2025-12-29"
+        ],
+        "valid_date": [
+          "2024-01-01",
+          "2025-12-29"
+        ]
+      }
+    },
+    {
+      "table": "entertainment_ops.admissions",
+      "rows": 39827,
+      "max_text_characters": {
+        "admission_id": 18,
+        "ticket_id": 15,
+        "entered_at": 25
+      },
+      "date_ranges": {
+        "entered_at": [
+          "2024-01-01",
+          "2025-12-29"
+        ]
+      }
+    },
+    {
+      "table": "entertainment_ops.vehicles",
+      "rows": 120,
+      "max_text_characters": {
+        "vehicle_id": 16,
+        "centre_id": 4,
+        "vehicle_type": 9,
+        "daily_rate_vnd": 6
+      },
+      "date_ranges": {}
+    },
+    {
+      "table": "entertainment_ops.vehicle_maintenance",
+      "rows": 240,
+      "max_text_characters": {},
+      "date_ranges": {
+        "starts_on": [
+          "2024-06-01",
+          "2025-06-20"
+        ],
+        "ends_on": [
+          "2024-06-04",
+          "2025-06-23"
+        ]
+      }
+    },
+    {
+      "table": "entertainment_ops.rentals",
+      "rows": 7723,
+      "max_text_characters": {
+        "rental_id": 15,
+        "hotel_booking_ref": 16,
+        "status": 9,
+        "agreed_vnd": 7
+      },
+      "date_ranges": {
+        "pickup_date": [
+          "2024-01-01",
+          "2025-12-29"
+        ],
+        "return_date": [
+          "2024-01-02",
+          "2025-12-31"
+        ]
+      }
+    },
+    {
+      "table": "entertainment_ops.cash_events",
+      "rows": 29271,
+      "max_text_characters": {},
+      "date_ranges": {
+        "event_time": [
+          "2024-01-01",
+          "2025-12-29"
+        ]
+      }
+    }
+  ],
+  "input_sha256": {
+    "config/dimensional_model_v1.json": "7f9af7435bfe8ccffad979c540bdff0c04386a51a1a889e4d3ce7519f0793fcf",
+    "config/dimensional_diagram_roles_v1.json": "09192d5d822f4ca7db96f86ca1caecb55c4d17f6382c203e4a8bc448cd86de24",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "config/generation_v2.json": "fcc7825cfe6e8eadcf6387bf7d95515eef0e953dab4c912b2e8bddf1d042ea7d",
+    "generated/v2/contracts.json": "e94f7e0993dc9aa12b313315ef1002b727b4e0a8f04965138e15732567628379",
+    "generated/v2/hotel_ops/schema.sql": "f3267058876afd1b5f5096bde61a4e4ef9c5259caaea3657c95de10bf8dc2b47",
+    "generated/v2/entertainment_ops/schema.sql": "3a0d7b886b7afaa7eeb6d417076cd8a01b918a8cab9aff8981fb5833662555a0",
+    "src/model.py": "c4f6bdcab5f1fbccd56872e827ac8e9d4c2f92eeac784d83a821b85b3d76d03c",
+    "src/model_v2.py": "47716876e9b312f4a994c7b1b8865ea96929643874f1e7f08a31499e6e3c9405"
+  },
+  "limitations": [
+    "No Oracle/Iceberg DDL executed.",
+    "No transformed-row correctness or KPI parity test performed.",
+    "Source field type compatibility and selected grains checked; not a full source quality re-audit."
+  ],
+  "pending_decisions": [],
+  "output_sha256": {
+    "config/warehouse_design_v1.json": "7b6d76ca44a9039e61b9b29c3a175770642651171dbb9d91dd7299c7eed36def",
+    "docs/CompanyE_Warehouse_Detailed_Design.md": "bd39e0278ccf799032d94a2d88ad673718bd470ba64a31b28184362a63c0d076"
+  }
+}

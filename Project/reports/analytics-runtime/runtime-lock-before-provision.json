@@ -1,0 +1,77 @@
+{
+  "version": "companye-analytics-runtime-1.0",
+  "verified_on": "2026-10-13",
+  "status": "SELECTED_AND_METADATA_VERIFIED_NOT_PROVISIONED",
+  "oracle": {
+    "edition": "Oracle AI Database 26ai Free",
+    "tag": "container-registry.oracle.com/database/free:23.26.3.0",
+    "image": "container-registry.oracle.com/database/free@sha256:f988b0c04c4c386cd306a2a914c0d7a9702d83acc31b064a28ad8eb6278a8fba",
+    "amd64_manifest_digest": "sha256:c4d9b15a1b2240ce90730c23ce298fcdd34f6793792c1b3849181a080009c322",
+    "verification": "docker buildx imagetools inspect returned the official registry manifest; no image pull or Oracle startup performed",
+    "database_runtime_version": null,
+    "service": "FREEPDB1",
+    "port": 11521,
+    "limits": {
+      "cpu_cores": 2,
+      "database_memory_gb": 2,
+      "user_data_gb": 12
+    }
+  },
+  "spark": {
+    "version": "3.5.7",
+    "scala": "2.12.18",
+    "java": "11.0.27",
+    "image": "apache/spark@sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba",
+    "tag": "apache/spark:3.5.7-python3",
+    "verification": "image digest and spark-submit --version read from existing companye-spark-1; new analytics service not started"
+  },
+  "metadata_postgres": {
+    "image": "postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+    "tag": "postgres:17",
+    "purpose": "Separate Iceberg JDBC catalog and shared ETL control/key registry; not a third analytics comparison",
+    "new_service_started": false
+  },
+  "packages": [
+    {
+      "coordinate": "org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.10.2",
+      "pom_url": "https://repo.maven.apache.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.5_2.12/1.10.2/iceberg-spark-runtime-3.5_2.12-1.10.2.pom",
+      "pom_sha256": "47715a16887935e3008a22c85d47ca8dcd9d7104e20a9b987e87a70930d4f710",
+      "http_status": 200
+    },
+    {
+      "coordinate": "org.postgresql:postgresql:42.7.8",
+      "pom_url": "https://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.7.8/postgresql-42.7.8.pom",
+      "pom_sha256": "812580abbb7576bcb7edda3c4cb2135d595ea857083acb60805798351854af93",
+      "http_status": 200
+    },
+    {
+      "coordinate": "com.oracle.database.jdbc:ojdbc11:23.9.0.25.07",
+      "pom_url": "https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc11/23.9.0.25.07/ojdbc11-23.9.0.25.07.pom",
+      "pom_sha256": "4131db75dedb94435c5e418694ea26fa9bb797349cd8a1c337bbe77a80e71b3f",
+      "http_status": 200
+    }
+  ],
+  "artifact_verification_limit": "POM existence and checksum verified; JARs/transitive dependencies not yet downloaded, hashed or smoke-tested together.",
+  "storage_observation": {
+    "docker_root_linux": "/var/lib/docker",
+    "windows_vhdx": "E:/DockerDesktopData/DockerDesktopWSL/disk/docker_data.vhdx",
+    "vhdx_bytes": 14364442624,
+    "hot_storage": "Docker named volumes backed by the E-drive Linux VHDX; source lake stays on D; analytics source mount is read-only",
+    "source_catalog_entries": 267,
+    "catalog_rows_with_known_count": 591242,
+    "lake_v2_measured_mib": 60.9,
+    "verified_at": "2026-10-13T05:34:56.5193480+07:00",
+    "migration_evidence": "reports/docker-storage-migration-20261013/verification.json",
+    "recovery_copy": "E:/DockerMigrationBackup-20261013/docker_data.vhdx"
+  },
+  "official_references": [
+    "https://docs.oracle.com/en/database/oracle/oracle-database/26/xeinl/licensing-restrictions.html",
+    "https://github.com/oracle/docker-images/blob/main/OracleDatabase/SingleInstance/README.md",
+    "https://iceberg.apache.org/releases/",
+    "https://iceberg.apache.org/docs/1.10.2/jdbc/",
+    "https://iceberg.apache.org/docs/1.10.2/configuration/",
+    "https://iceberg.apache.org/docs/1.10.2/spark-getting-started/",
+    "https://iceberg.apache.org/spec/",
+    "https://spark.apache.org/docs/3.5.7/configuration.html"
+  ]
+}

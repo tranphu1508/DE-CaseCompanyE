@@ -1,0 +1,23 @@
+{
+  "id": "B05",
+  "name": "Công suất giải trí và xe sẵn sàng",
+  "scope": "REFERENCE_ONLY_NOT_WAREHOUSE",
+  "definition": "Mẫu số dùng công suất thực mở cửa và xe sẵn sàng; đếm lượt vào thực tế, không đếm mọi vé bán.",
+  "expected": [
+    {
+      "available_admissions": 10,
+      "actual_admissions": 3,
+      "available_vehicle_days": 3,
+      "used_vehicle_days": 1
+    }
+  ],
+  "actual": [
+    {
+      "available_admissions": 10,
+      "actual_admissions": 3,
+      "available_vehicle_days": 3,
+      "used_vehicle_days": 1
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,90 @@
+{
+  "status": "PASSED_DESIGN_AND_CONFIGURATION_CHECKS",
+  "runtime_smoke_test": "PASSED_SERVICE_INTEGRATION_AND_RESTART",
+  "compose_validation": "PASSED_DOCKER_COMPOSE_CONFIG_QUIET",
+  "generated_on": "2026-10-13",
+  "entities": 37,
+  "business_tables_per_branch": 35,
+  "logical_views_per_branch": 2,
+  "columns": 631,
+  "oracle_integrity_indexes": 99,
+  "foreign_keys": 106,
+  "fact_dimension_foreign_keys": 102,
+  "scd2_dimensions": 14,
+  "static_dimensions": 2,
+  "kpis": 47,
+  "input_sha256": {
+    "config/warehouse_design_v1.json": "7b6d76ca44a9039e61b9b29c3a175770642651171dbb9d91dd7299c7eed36def",
+    "config/logical_model_v1_1.json": "c53a238e363d391fb0f27fc88ca582deb873e3da8d91d5eb928aaacef4e987a5",
+    "config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "config/analytics_runtime_lock_v1.json": "ccb498654bb5287f294383a84724bc922069d141e12fd303c69cc92ef7781b1e",
+    "reports/local_environment_physical_design.json": "7c7df9754c3d817d7dcec5016f5b08b17da03f8377be0c603fb51fa13549fadb",
+    "lake/v2/catalog/catalog.json": "301f47ffd0714c26bf62cf957a09c1ca231afdb927d6ecad807030717034c9e7",
+    "compose.analytics.yaml": "3354f5bcc1ba0411001b92d6329948e3c6e67cb0684120a02be3a63c8dfb77b5",
+    "config/analytics/spark-defaults.conf": "3b23a49974892ed72bafe4da6536daa64184d875a950f14a87e87daebc16e963",
+    "reports/docker-storage-migration-20261013/verification.json": "50f9d2d90fdcdf4fd03d9546d56a3aee5153f2afaffd1b79efb32df2ca169d51",
+    "reports/analytics-runtime/verification.json": "6698722ded6321308d3ed8741e8b40896459d3ab794ab5b6abb9da41de08e650"
+  },
+  "output_sha256": {
+    "config/physical_design_v1.json": "7b03a9e56386105935747236c0dd662b738a75e58f5e59700271fe01ed1b2c74",
+    "docs/CompanyE_Physical_Design.md": "8364cef5941a6524dbd6bb6d995d46697ab4982798b10679bff5b71110bcf29e",
+    "compose.analytics.yaml": "dc4829d458ea805f341a3d080be871eabccf0190ad29213eb24260c0b5c5ce44",
+    "config/analytics/spark-defaults.conf": "3b23a49974892ed72bafe4da6536daa64184d875a950f14a87e87daebc16e963",
+    "config/analytics_runtime_lock_v1.json": "ccb498654bb5287f294383a84724bc922069d141e12fd303c69cc92ef7781b1e",
+    "scripts/build-physical-design.py": "fd960c110e6c779d5047ecbb099dfd3380e55f89228c95371f45e0830a9648d0"
+  },
+  "host_free_gib": {
+    "D": 8.94,
+    "E": 296.17,
+    "C": 84.12
+  },
+  "checks": [
+    "All 631 column types mapped",
+    "UTC is TIMESTAMP_NTZ in Spark and timezone-free timestamp in both engines",
+    "PK/UK and SCD2 conditional index plan",
+    "35 tables and two logical views per branch",
+    "106 FK roles retained",
+    "No baseline partition or optional tuning enabled",
+    "Input hashes preserved"
+  ],
+  "limits": [
+    "No business ETL, SCD2 pipeline, KPI query benchmark or stress test run",
+    "Storage gates must be rechecked before data loads/scale-up"
+  ],
+  "compose_validation_details": "Validated actual private env-file without printing interpolated configuration; three services independently passed runtime integration and restart probe.",
+  "document_checks": {
+    "local_links_valid": 16,
+    "runtime_status_synchronized": true,
+    "business_schema_not_deployed": false
+  },
+  "subsequent_schema_deployment": {
+    "status": "PASSED_SCHEMA_DEPLOYMENT",
+    "local_date": "2026-10-14",
+    "evidence": "reports/schema-deployment/verification.json",
+    "note": "Physical model remains the frozen input snapshot from 2026-10-13."
+  },
+  "subsequent_dimension_etl": {
+    "status": "PASSED_DIMENSION_ETL",
+    "local_date": "2026-10-14",
+    "evidence": "reports/dimension-etl/verification.json",
+    "tables_per_branch": 16,
+    "rows_per_branch": 26426,
+    "facts_loaded": false,
+    "published": false
+  },
+  "current_limitations": [
+    "No fact/bridge/helper ETL or active publication.",
+    "No KPI, Power BI or benchmark/stress test.",
+    "Production incremental/rekey coordinator not implemented; SCD reducer tested on isolated fixtures."
+  ],
+  "prior_output_sha256_before_dimension_runtime_extension": {
+    "config/physical_design_v1.json": "7b03a9e56386105935747236c0dd662b738a75e58f5e59700271fe01ed1b2c74",
+    "docs/CompanyE_Physical_Design.md": "8364cef5941a6524dbd6bb6d995d46697ab4982798b10679bff5b71110bcf29e",
+    "compose.analytics.yaml": "3354f5bcc1ba0411001b92d6329948e3c6e67cb0684120a02be3a63c8dfb77b5",
+    "config/analytics/spark-defaults.conf": "3b23a49974892ed72bafe4da6536daa64184d875a950f14a87e87daebc16e963",
+    "config/analytics_runtime_lock_v1.json": "ccb498654bb5287f294383a84724bc922069d141e12fd303c69cc92ef7781b1e",
+    "scripts/build-physical-design.py": "fd960c110e6c779d5047ecbb099dfd3380e55f89228c95371f45e0830a9648d0"
+  },
+  "output_extension_note": "Current artifact hashes include ETL secret mounts and section 17 documentation. Original physical contract remains frozen; actual dimension validation is reports/dimension-etl/verification.json."
+}

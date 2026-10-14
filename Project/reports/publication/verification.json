@@ -1,0 +1,58 @@
+{
+  "status": "PASSED_CONSISTENT_PUBLICATION",
+  "checked_at": "2026-10-13T19:16:14.196197+00:00",
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "manifest_sha256": "70b7b919f1ae654e433ce08f756f36299b97995d91396f237c514aa7b2583cd7",
+  "published": true,
+  "active_publications": 1,
+  "entity_entries": 37,
+  "reader_entities_checked": 36,
+  "iceberg_snapshot_tags": 34,
+  "canonical_helpers": 2,
+  "optional_disabled": [
+    "F15"
+  ],
+  "total_logical_rows_per_branch": 771564,
+  "fault_tests_passed": 28,
+  "source_files_unchanged": 267,
+  "etl_frozen_evidence_unchanged": true,
+  "metric_input_readiness_count": 47,
+  "all_columns_equal_between_engines": true,
+  "cross_table_query": [
+    [
+      "32000",
+      "134356879000"
+    ]
+  ],
+  "live_readers": 0,
+  "interrupted_prepare_resumed_same_id_and_generation": true,
+  "duplicate_publications": 0,
+  "retention": "RETAIN_ALL_NO_AUTOMATIC_GC",
+  "next_step": "Semantic KPI queries and quality propagation; Power BI/web; controlled comparative benchmarks.",
+  "limitations": [
+    "Atomic visibility for protocol-compliant readers, not distributed XA or 2PC.",
+    "Initial baseline published; production incremental loader and slot retirement/GC are not implemented.",
+    "Real interrupted BUILDING recovery observed; no guarantee for every power-loss or storage failure and no full backup restore drill.",
+    "KPI input readiness is not acceptance of 47 KPI formulas; Power BI/web integration remains.",
+    "Oracle and catalog admins remain trusted; shared local Spark catalog credentials can mutate catalog.",
+    "Local prototype; no high availability, scale benchmark or stress-test conclusion."
+  ],
+  "evidence_sha256": {
+    "reports/publication/control-verification.json": "034bd5458738f38324b77859e5100042c2df49325a24b593095e70010fe87e5c",
+    "reports/publication/fixtures.json": "40d1191481c008ba4877441ef540f71b1975caa18bbef39e3457959ca20abb69",
+    "reports/publication/fixtures.log": "e45f54f9ba536c99de106352c906fd1fcf6336f42bcbef389b0dee3fef803a29",
+    "reports/publication/frozen-code.json": "37f3317409854e8daa2deedc95ddb0ae5c232363c103bea3b9c5b726b8794176",
+    "reports/publication/manifest.json": "8289ba972c8eeacea229cdedb9901028cd8f9567f8125fd9814953ee90161555",
+    "reports/publication/metadata-backup.json": "5b0972af6e0c545fda0197f7bc78df4e37e0a28a523b6ad1f76aeedd32ebc663",
+    "reports/publication/oracle-guards.sql": "b596a93da224cc073635155e2f5d019f3a937a3139fdc3b3843d2be2463609a6",
+    "reports/publication/oracle-verification.json": "33bcc4f925f4fac66f9cb1ef920bc81594b70a611fafc3b0396ac99de05870de",
+    "reports/publication/prepare-interrupted-reboot.log": "61d75139560f10512cef79d24b5f2afd30c0f57896efd1781b5498f6c9118f3a",
+    "reports/publication/prepare.json": "b52414330a94519b7663177931cb513e27e29a04cc8d19b7b2d23ab3c70edb3f",
+    "reports/publication/prepare.log": "b4dd523fcd6d57506050ba7dfaa881d722b65f656d8fb3dd4ae624a7922ec32a",
+    "reports/publication/publish.json": "903e20934cc5ce5b5323471f16a8351dd87ebd875cdf7c4832d659403bf3568e",
+    "reports/publication/publish.log": "670aa4f93e6ed772fba24789edff3e299c9aad747477f2cb46bc008377925615",
+    "reports/publication/reboot-recovery.json": "008d4bb889bb812665a34ccecc1ba8202b993efa320ad1dc442bf61c2efba751",
+    "reports/publication/verify.json": "eaa8682ba37244a81b8334ce5f2e7af15c6285a2a2d24dc2e623427293e9212d",
+    "reports/publication/verify.log": "d7ebb228faa99acd08a07d539db44e84be120c0a2409e3baca216d961beced7f"
+  }
+}

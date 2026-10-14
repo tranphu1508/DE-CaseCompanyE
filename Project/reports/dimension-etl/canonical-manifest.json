@@ -1,0 +1,273 @@
+{
+  "run_id": "dim_v2_20261012T092023738754Z_43f097c2b062",
+  "input_sha256": {
+    "config/warehouse_design_v1.json": "7b6d76ca44a9039e61b9b29c3a175770642651171dbb9d91dd7299c7eed36def",
+    "config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332",
+    "config/analytics/ddl/manifest.json": "871b11d92f16e1915c487f679b25cf8f114408e7b701c3330fa9b61e0f9d4e71",
+    "config/physical_design_v1.json": "7b03a9e56386105935747236c0dd662b738a75e58f5e59700271fe01ed1b2c74",
+    "config/logical_model_v1_1.json": "c53a238e363d391fb0f27fc88ca582deb873e3da8d91d5eb928aaacef4e987a5",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "lake/v2/catalog/catalog.json": "301f47ffd0714c26bf62cf957a09c1ca231afdb927d6ecad807030717034c9e7"
+  },
+  "code_sha256": {
+    "__init__.py": "916eac3c089b1c75c32ab87e25c6f059d1cb7392f5364b0c495c21494f5b8ded",
+    "deploy_schema.py": "d90218b7befeee4cf86e4fc4ed3352c762cf2a073b8d68b34c546e9df014a5c1",
+    "dimension_fixtures.py": "8aa433aa5bc4822e1813c9b170940ff46f47864037d3fa0622c2cf4653a38ca3",
+    "dimension_transform.py": "243e47c825393235e2195b5b9aaadfc8225b39350b3b35805f67883980558076",
+    "dimensions.py": "8c6d9424e8126d8fee28f3beaba1fe23b3fca4a2b9eab9fb2b0c1da8b1b14a1d",
+    "etl_io.py": "e901c06545f981fb9f5656385491036029ab7826c58ad82cb24517df6787e250",
+    "install_jars.py": "22a7d2aba30117163b7fc67ce62f026bee093f2bcfd3226a680321c81e6e332c",
+    "probe.py": "176e6e953c394a9513be5e75b9d9c2cd959376127ab155cec72dd78d156fbe24",
+    "scd2.py": "e866ab80efb619adf742ff3e2f5a842a6429b64a520c37db05931d2e97f91167",
+    "session.py": "99f246a2b25598b055661d13fa398a43305e54be7307953d364fe988e3e93ccb",
+    "validation_views.py": "743d1f12291a53b2a84aef808ee0393045b0db83b8e7459e17bfa13d27ac5a53"
+  },
+  "transform_version": "43f097c2b06245d1d0c98baac281fcc61ff0d66da5991001364882cfff8af817",
+  "source_batch_id": "v2_20261012T092023738754Z",
+  "started_at_utc": "2026-10-13T17:35:06.268412Z",
+  "quality": {
+    "D01": {
+      "status": "PARTIAL",
+      "accepted": 1461,
+      "rejected": 0,
+      "coverage": null,
+      "source_tables": [],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D02": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.sites"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D03": {
+      "status": "COMPLETE",
+      "accepted": 8,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.hotels"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D04": {
+      "status": "COMPLETE",
+      "accepted": 240,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.rooms"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D05": {
+      "status": "COMPLETE",
+      "accepted": 15,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.channels",
+        "entertainment_ops.ticket_orders"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D06": {
+      "status": "COMPLETE",
+      "accepted": 40,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.promotions"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D07": {
+      "status": "COMPLETE",
+      "accepted": 24120,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.guests",
+        "entertainment_ops.customers"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D08": {
+      "status": "COMPLETE",
+      "accepted": 72,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.rate_plans"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D09": {
+      "status": "COMPLETE",
+      "accepted": 16,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.outlets"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D10": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D11": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "entertainment_ops.centres"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D12": {
+      "status": "COMPLETE",
+      "accepted": 12,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "entertainment_ops.activities"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D13": {
+      "status": "COMPLETE",
+      "accepted": 120,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "entertainment_ops.vehicles"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D14": {
+      "status": "COMPLETE",
+      "accepted": 16,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.suppliers"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D15": {
+      "status": "COMPLETE",
+      "accepted": 6,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.items"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    },
+    "D16": {
+      "status": "COMPLETE",
+      "accepted": 256,
+      "rejected": 0,
+      "coverage": 1,
+      "source_tables": [
+        "hotel_ops.assets"
+      ],
+      "reason": "Dimension coverage only; no KPI completeness inferred"
+    }
+  },
+  "files": {
+    "D01-events.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "D02-events.json": "19d6b8a8f2f1d66b28b14741552a9b3ced4170d121682061d93da75155b7a429",
+    "D03-events.json": "7d4e1f8adf73e2322c41f17df5edfe2829b617fde751275dfee751217a9427bf",
+    "D04-events.json": "2cef5007f91a847590e1ceed48a0ef0d0bd69fd0e6d109278d36ae79ce0bd3e9",
+    "D05-events.json": "1adfad1b5516848e7fa496f92bb9613e2bbf03a6d9f3ae72609be9290e14bf80",
+    "D06-events.json": "a5ec81154105db45b0f2fb58a573bb3aa8a48134de9fe888e55c9a892518199e",
+    "D07-events.json": "b51dd90f76a9dcb1d1662543fd7bbcac46e8a5e26b374151c45ec7a20a4d1d4a",
+    "D08-events.json": "c69e7d32f302e1c73bac2d2989a44c264e3d8669f269e79fae978a1664162518",
+    "D09-events.json": "be81ad40c3c06947748d5feabf705567c17a2734ac284f9bb9249798f2c126e0",
+    "D10-events.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "D11-events.json": "f1f38b2e7c0debe2890017f2ef38bd5bf31ac82ff287fa8d500fff38f8228cda",
+    "D12-events.json": "c9d1eafbc06771ac866dc7fd24410c4cb9085426ebbb3f701121b26b39f193ee",
+    "D13-events.json": "daa74f73672194470f728d3755aefa28233279f65a36e5ce3d85685dbbdc8921",
+    "D14-events.json": "d52b8a6a614bc0a342560aa755c8cd10dba3a870be5d8373756e1d11072a46a0",
+    "D15-events.json": "471c095958cc8be88f1ca1fc5009af1f2bf54d9ace36b00c1d374427e063ecdc",
+    "D16-events.json": "1f1d2fed6fdeacb498fa33a87a19584bf89c7c41a68cbe6e108bf6ea1ab536e2",
+    "dim_activity/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_activity/.part-00000-f3de442b-132f-459a-bcbc-6cf34699abbb-c000.snappy.parquet.crc": "7beaaa60f8b3524eebd51c8247fa14f2f169e1f8f5000c81a5eb162be75158f6",
+    "dim_activity/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_activity/part-00000-f3de442b-132f-459a-bcbc-6cf34699abbb-c000.snappy.parquet": "b239ee62b58000c4bd169676e3bbacc6571a1611254b94b669b7342017f13947",
+    "dim_asset/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_asset/.part-00000-069dd9e5-b507-4e2e-a3c9-5282bab0a7bb-c000.snappy.parquet.crc": "d21806bb5574650ba456c1728c6f0db3103534f338639f894cfc0b2148fe35a3",
+    "dim_asset/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_asset/part-00000-069dd9e5-b507-4e2e-a3c9-5282bab0a7bb-c000.snappy.parquet": "c457c9c44082d269710e29d315b913c247cda90731fe72a178a78a6c26ea651f",
+    "dim_centre/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_centre/.part-00000-b0f1fe19-db1f-4440-83ff-988c776d6d47-c000.snappy.parquet.crc": "a21dcf91529229026ca359f3fe026314974488b2cc116451a016038506585d2d",
+    "dim_centre/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_centre/part-00000-b0f1fe19-db1f-4440-83ff-988c776d6d47-c000.snappy.parquet": "9a9404b824ee628fba533c82e074082b7c74b0b56d49b5dd990e955149a8cd2a",
+    "dim_channel/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_channel/.part-00000-469fbfb0-aa74-4a49-b8f8-6af14b702e97-c000.snappy.parquet.crc": "1d512ff910d63ce12eaa6d3da383a73a15e47d3506bab989200a483b6df35323",
+    "dim_channel/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_channel/part-00000-469fbfb0-aa74-4a49-b8f8-6af14b702e97-c000.snappy.parquet": "3a1b0b903e5e27c37da24368fbb06fbb3c55e289c7b64846e4cfcb96e6274075",
+    "dim_customer_profile/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_customer_profile/.part-00000-43a2b739-6c6f-4017-9b95-4ca29cb822c6-c000.snappy.parquet.crc": "93e5ca6e051052bd122b1a68a887f7bda13b0663e65393db36df9a0d7f02bd8e",
+    "dim_customer_profile/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_customer_profile/part-00000-43a2b739-6c6f-4017-9b95-4ca29cb822c6-c000.snappy.parquet": "c2aeaab1147acfb6d2a56bb78b80305949a49e2d3ae385884dc84784a135681b",
+    "dim_date/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_date/.part-00000-b722df9b-7d46-44a2-b4b4-c268842dc566-c000.snappy.parquet.crc": "c8c157ce7aff04e2bc1a109a18770602bf79291f7fd3c92e2df0a3f2684e8a9d",
+    "dim_date/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_date/part-00000-b722df9b-7d46-44a2-b4b4-c268842dc566-c000.snappy.parquet": "3a1536480d0bf083f7cc3cb1d0e3a073d7e2b198144aea41fadb0dab3ed563fe",
+    "dim_hotel/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_hotel/.part-00000-a7820495-96b8-48e0-86ef-ebb213f08b21-c000.snappy.parquet.crc": "13e9f18fb2fd46ac7ad609e97e8d1e494b793f767d458eb46298521665f787a2",
+    "dim_hotel/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_hotel/part-00000-a7820495-96b8-48e0-86ef-ebb213f08b21-c000.snappy.parquet": "94a3150e500df628afad216a8d67c3936f1a93304158b93e3b82bee38f501dd2",
+    "dim_item/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_item/.part-00000-4cbde7da-203c-40a8-9f8b-25e14778ac25-c000.snappy.parquet.crc": "cb7b600f75c6493cb1eab6111d58fdecdeb5a1de280d02dc412f1e47cfb79560",
+    "dim_item/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_item/part-00000-4cbde7da-203c-40a8-9f8b-25e14778ac25-c000.snappy.parquet": "b204a388c849530a22e301a60bd8ab33734ff07a32e730dc8a7869de43c1e677",
+    "dim_meal/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_meal/.part-00000-fbe28bbb-c408-404a-b65e-8b84620aef2d-c000.snappy.parquet.crc": "098dd816e7b6282222fc7df057004827d82e2e854dd1f8294c4d86c990c8447a",
+    "dim_meal/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_meal/part-00000-fbe28bbb-c408-404a-b65e-8b84620aef2d-c000.snappy.parquet": "25cf9277c2388ee2db5fec7b49c74990e21373166fc57dad56c085d004be5d9d",
+    "dim_outlet/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_outlet/.part-00000-2aab81a5-c318-4d12-8be2-eb96b93d35a6-c000.snappy.parquet.crc": "17df9d42797e0c3840f8439e80513137e862593ccd69df1bce198f0f9d1f5cc3",
+    "dim_outlet/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_outlet/part-00000-2aab81a5-c318-4d12-8be2-eb96b93d35a6-c000.snappy.parquet": "1f34b4649578c038966c38cc54a4df8476014a7162ce0334b4ca557a21470849",
+    "dim_promotion/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_promotion/.part-00000-5b089320-cb99-4ebb-831e-9c3be628488e-c000.snappy.parquet.crc": "170591f0ddc69a6a024e3c19b05e10abece893f1da9cb88bc201ddd8e24119de",
+    "dim_promotion/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_promotion/part-00000-5b089320-cb99-4ebb-831e-9c3be628488e-c000.snappy.parquet": "4c2455682701c02801cdfd7f23038f606a4c59b4331b28ec0bfdc171c8d12db0",
+    "dim_rate_plan/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_rate_plan/.part-00000-aee04934-2c89-49ab-a57b-bd24383d8073-c000.snappy.parquet.crc": "fd30f56f8bafcafb8bad5f52d17faddf4e2e2dccc783d21387106e29ed216b12",
+    "dim_rate_plan/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_rate_plan/part-00000-aee04934-2c89-49ab-a57b-bd24383d8073-c000.snappy.parquet": "ef3e873881c7a1f208b428ad979b3393052322658d976c841581c7d0d5b435b1",
+    "dim_room/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_room/.part-00000-9cfbcceb-4814-4afe-a89f-c865adc11320-c000.snappy.parquet.crc": "2ca1f078859c59c7526efcfac613c3581317278f60fad3d092f689c25434732c",
+    "dim_room/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_room/part-00000-9cfbcceb-4814-4afe-a89f-c865adc11320-c000.snappy.parquet": "6da45aaa5d5de83458798045740c4afad6399c58378997e80f66f6c196737796",
+    "dim_site/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_site/.part-00000-3202ff67-0f52-445f-a9ff-9c08e1ccaca6-c000.snappy.parquet.crc": "695e4295d061b3b6b2f8f35a4f390630e9f99e337c12551573ea9ab0f711cf28",
+    "dim_site/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_site/part-00000-3202ff67-0f52-445f-a9ff-9c08e1ccaca6-c000.snappy.parquet": "0d43a8791687e4db5cd1d27c6d5acad7a2fad5e41cda3f175bd95b4896529be6",
+    "dim_supplier/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_supplier/.part-00000-31b244ad-515b-4edd-aca1-2bbb9aaacc64-c000.snappy.parquet.crc": "5b5d7fcbdbbafdb02f8d1bf48db14333be2fe78078b9e3868f9bffbbea7f30e0",
+    "dim_supplier/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_supplier/part-00000-31b244ad-515b-4edd-aca1-2bbb9aaacc64-c000.snappy.parquet": "3078cbadcef662f7ad015707641b701a25619b9d8d96e8132056c36783e13429",
+    "dim_vehicle/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "dim_vehicle/.part-00000-be6c2ad6-a2c3-4ec1-a277-b71cab3c6e22-c000.snappy.parquet.crc": "3102fd3fb57e7f35629760c6975d85405558854a0a0f7f0772d0cdc035b6f5e9",
+    "dim_vehicle/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "dim_vehicle/part-00000-be6c2ad6-a2c3-4ec1-a277-b71cab3c6e22-c000.snappy.parquet": "0bc13f0b0acb31f563fdf4e2a0bbb2cfdb2d5af83648f4233d8da06f20a8ab7f",
+    "registry.json": "ba4c10230fa9d77a2778286bb4e7dd1701c0bd4edf44229ea53bafe3efbdba3c",
+    "source-quality.json": "f2e5ad769b027afadbc3b7ec0e439c6877abda8ad91c32949cd75391be32aeb8"
+  },
+  "publication_state": "NOT_PUBLISHED"
+}

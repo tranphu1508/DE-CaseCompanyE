@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-14",
+  "url": "https://companye-data-observatory.giaphuwork1508.chatgpt.site/",
+  "unauthenticated_http_status": 200,
+  "html_robots": "noindex, nofollow, noarchive",
+  "x_robots_tag_header": null,
+  "repository_link_hidden": true,
+  "browser_overview_loaded": true,
+  "limitations": [
+    "The host did not apply the optional _headers file. HTML meta robots is the verified indexing directive.",
+    "No authentication: people with or discovering the URL can access and forward it. Search engine behavior is not guaranteed."
+  ]
+}

@@ -1,0 +1,237 @@
+﻿[
+    {
+        "KPI[id]":  "B01.01",
+        "[value]":  "73,275",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B01.02",
+        "[value]":  "174,478",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B01.03",
+        "[value]":  "42.00%",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B01.04",
+        "[value]":  "13.25%",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B01.05",
+        "[value]":  "2.94%",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B02.01",
+        "[value]":  "114,943,890,000",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B02.02",
+        "[value]":  "112,484,242,500",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B02.03",
+        "[value]":  "1,334,727,040",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B02.04",
+        "[value]":  "1,124,920,460",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B02.05",
+        "[value]":  "8,063,289,953",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B02.06",
+        "[value]":  "105,545,873,007",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B03.01",
+        "[value]":  "17,281",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B03.02",
+        "[value]":  "64.43%",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B03.03",
+        "[value]":  "6,078,050,000",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B03.04",
+        "[value]":  "4,436,100,000",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B03.05",
+        "[value]":  "122,998,392,500",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B04.01",
+        "[value]":  "92,683",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B04.02",
+        "[value]":  "83,489",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B04.03",
+        "[value]":  "90.08%",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B04.04",
+        "[value]":  "20,104,308,000",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B04.05",
+        "[value]":  "143,967",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B04.06",
+        "[value]":  "3,964,648,500",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B04.07",
+        "[value]":  "34,812",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B04.08",
+        "[value]":  "3.02",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B05.01",
+        "[value]":  "39,827",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B05.02",
+        "[value]":  "3,825,000",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B05.03",
+        "[value]":  "1.04%",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B05.04",
+        "[value]":  "9,580",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B05.05",
+        "[value]":  "87,000",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B05.06",
+        "[value]":  "11.01%",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B06.01",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B06.02",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B06.03",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B06.04",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B06.05",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B06.06",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B06.07",
+        "[value]":  "65.21%",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B07.01",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B07.02",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B07.03",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B07.04",
+        "[value]":  "—",
+        "[quality]":  "CHỌN MỘT MẶT HÀNG"
+    },
+    {
+        "KPI[id]":  "B07.05",
+        "[value]":  "2,461,968,600.00",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B07.06",
+        "[value]":  "30.81%",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B08.01",
+        "[value]":  "167,200,000",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B08.02",
+        "[value]":  "962",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B08.03",
+        "[value]":  "174,478",
+        "[quality]":  "COMPLETE"
+    },
+    {
+        "KPI[id]":  "B08.04",
+        "[value]":  "0.55%",
+        "[quality]":  "COMPLETE"
+    }
+]

@@ -1,0 +1,28 @@
+{
+  "path": "reports\\dimension-etl\\frozen\\dim_v2_20261012T092023738754Z_43f097c2b062",
+  "sha256": {
+    "config/warehouse_design_v1.json": "7b6d76ca44a9039e61b9b29c3a175770642651171dbb9d91dd7299c7eed36def",
+    "config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332",
+    "config/analytics/ddl/manifest.json": "871b11d92f16e1915c487f679b25cf8f114408e7b701c3330fa9b61e0f9d4e71",
+    "config/physical_design_v1.json": "7b03a9e56386105935747236c0dd662b738a75e58f5e59700271fe01ed1b2c74",
+    "config/logical_model_v1_1.json": "c53a238e363d391fb0f27fc88ca582deb873e3da8d91d5eb928aaacef4e987a5",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "lake/v2/catalog/catalog.json": "301f47ffd0714c26bf62cf957a09c1ca231afdb927d6ecad807030717034c9e7",
+    "src/analytics_runtime/__init__.py": "916eac3c089b1c75c32ab87e25c6f059d1cb7392f5364b0c495c21494f5b8ded",
+    "src/analytics_runtime/deploy_schema.py": "d90218b7befeee4cf86e4fc4ed3352c762cf2a073b8d68b34c546e9df014a5c1",
+    "src/analytics_runtime/dimension_fixtures.py": "8aa433aa5bc4822e1813c9b170940ff46f47864037d3fa0622c2cf4653a38ca3",
+    "src/analytics_runtime/dimension_transform.py": "243e47c825393235e2195b5b9aaadfc8225b39350b3b35805f67883980558076",
+    "src/analytics_runtime/dimensions.py": "8c6d9424e8126d8fee28f3beaba1fe23b3fca4a2b9eab9fb2b0c1da8b1b14a1d",
+    "src/analytics_runtime/etl_io.py": "e901c06545f981fb9f5656385491036029ab7826c58ad82cb24517df6787e250",
+    "src/analytics_runtime/install_jars.py": "22a7d2aba30117163b7fc67ce62f026bee093f2bcfd3226a680321c81e6e332c",
+    "src/analytics_runtime/probe.py": "176e6e953c394a9513be5e75b9d9c2cd959376127ab155cec72dd78d156fbe24",
+    "src/analytics_runtime/scd2.py": "e866ab80efb619adf742ff3e2f5a842a6429b64a520c37db05931d2e97f91167",
+    "src/analytics_runtime/session.py": "99f246a2b25598b055661d13fa398a43305e54be7307953d364fe988e3e93ccb",
+    "src/analytics_runtime/validation_views.py": "743d1f12291a53b2a84aef808ee0393045b0db83b8e7459e17bfa13d27ac5a53",
+    "scripts/dimension-pipeline.py": "25d561c1e982f5bda8aa7ec204eb8b0d31b08b82c392b94c261c52905f14a81f",
+    "scripts/analytics-services.py": "9fc3f04f3b7bdb9da18ec88d5078b5497cd7ce1f318bb164d07c8526bcc9329d",
+    "config/analytics/ddl/control_schema.sql": "16c3266bdd62617b7289ac16a46ab34efe722ffa53679c530f18460b958bfdad",
+    "compose.analytics.yaml": "dc4829d458ea805f341a3d080be871eabccf0190ad29213eb24260c0b5c5ce44"
+  },
+  "secrets_included": false
+}

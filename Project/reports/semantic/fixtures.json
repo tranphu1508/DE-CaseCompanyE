@@ -1,0 +1,644 @@
+{
+  "status": "PASSED",
+  "sql_fixture_cases": 20,
+  "metric_checks": 117,
+  "policy_checks": [
+    "mixed_units_quantity_blank",
+    "mixed_items_inventory_blank",
+    "breakfast_not_lunch",
+    "no_bar_cost",
+    "out_of_coverage_not_zero",
+    "partial_cross_sell_propagates",
+    "weather_dependency",
+    "negative_lot_closing_suppressed",
+    "opening_before_first_bad_day_valid",
+    "channel_capacity_rejected",
+    "usage_area_balance_rejected",
+    "asset_filter_capacity_rejected",
+    "invalid_date_order",
+    "sql_injection_rejected",
+    "unknown_filter_not_zero"
+  ],
+  "checks": [
+    {
+      "name": "hand_B01",
+      "metrics": 5,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "empty_B01",
+      "metrics": 5,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "hand_B02",
+      "metrics": 6,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          3000000,
+          1
+        ],
+        [
+          2700000,
+          1
+        ],
+        [
+          80000,
+          1
+        ],
+        [
+          220000,
+          1
+        ],
+        [
+          200000,
+          1
+        ],
+        [
+          2720000,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "empty_B02",
+      "metrics": 6,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "hand_B03",
+      "metrics": 5,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          300000,
+          1
+        ],
+        [
+          400000,
+          1
+        ],
+        [
+          3700000,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "empty_B03",
+      "metrics": 5,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "name": "hand_B04",
+      "metrics": 8,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          3,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          1050000,
+          1
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          300000,
+          1
+        ],
+        [
+          300000,
+          5
+        ],
+        [
+          6,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "empty_B04",
+      "metrics": 8,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "hand_B05",
+      "metrics": 6,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          3,
+          1
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "name": "empty_B05",
+      "metrics": 6,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "hand_B06",
+      "metrics": 7,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          15,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          9,
+          15
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "empty_B06",
+      "metrics": 7,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "hand_B07",
+      "metrics": 6,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          20000,
+          1
+        ],
+        [
+          20000,
+          100000
+        ]
+      ]
+    },
+    {
+      "name": "empty_B07",
+      "metrics": 6,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "hand_B08",
+      "metrics": 4,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          150000,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          6
+        ]
+      ]
+    },
+    {
+      "name": "empty_B08",
+      "metrics": 4,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "name": "inventory_carry_in",
+      "metrics": 6,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          10000,
+          1
+        ],
+        [
+          10000,
+          20000
+        ]
+      ]
+    },
+    {
+      "name": "inventory_no_movement",
+      "metrics": 6,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          10000
+        ]
+      ]
+    },
+    {
+      "name": "receipt_asof_cutoff",
+      "metrics": 7,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          15,
+          1
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "name": "maintenance_end_exclusive",
+      "metrics": 4,
+      "both_engines": true,
+      "hand_expected": [
+        [
+          200000,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "code_sha256": {
+    "src/semantic/fixtures.py": "a7b8e375c142e53e597fdcf6d489bf056d23915ed27710de5cadc6e3973b91fb",
+    "src/semantic/main.py": "da1a74ac6f516d6fd2a74cba33d4972ec7c8ddf34a74419284e5b270ae37d5e8",
+    "src/semantic/queries.py": "74ac2e8df98e070fe27b4f7651a9135aaef35ff50725330395bef65233ad946e",
+    "src/semantic/reference.py": "c5a07a9b5706614c2f0ae95abfde8c7572be99900fbbcbfe1cf34a5e27cc97c1",
+    "src/semantic/service.py": "861aedc9fde9f0afaf89cc245c5f4eec7d1601916f0db57f99955604774a3e9a",
+    "src/semantic/__init__.py": "5f929a72364d46654477a953c74caf2691fff4e35aa6aa86933379361f1c7b78",
+    "scripts/kpi-pipeline.py": "842f2a9410fd65805eba8fd5ce14b99f850667a19dd72c03a15e26dcafdc4335",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332"
+  },
+  "business_tables_mutated": false
+}

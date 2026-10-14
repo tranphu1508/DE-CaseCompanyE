@@ -1,0 +1,18 @@
+{
+  "path": "reports/publication/frozen/pub_3f41f8fafa4c913187af2cc3",
+  "sha256": {
+    "src/publication/__init__.py": "719ac7630a000592b6863ced2fc961562d9eab3a6dfaa88b48a03ce48fc50760",
+    "src/publication/core.py": "7aa1c14211ac9c0406873dffdccad4eebfc5ea313f353abc748eb030b7898352",
+    "src/publication/fixtures.py": "5b0836ff26dcc9e9f52816aa38a9edb15772788a638928e7f0607ab1fe8bde39",
+    "src/publication/main.py": "a8be87aeb4707a5781dab228bda8943a37c4257b878dea00271251a8bc80ffc3",
+    "scripts/publication.py": "59e0169c91085caeca05274767a60bee85854adaf5d42202d0bca2954d25cd6c",
+    "scripts/inspect-publication-recovery.py": "6688ea43672feef43388dd564f29b99fd7498b96620cffa5c82aea99d10be2cd",
+    "scripts/finalize-publication.py": "87989a4d5b05e1e09f7773270d09571ea17a780020ed074e1f197e7efed5f943",
+    "config/analytics/ddl/publication_v3.sql": "0f8ffe3bf46359e2fc66502ea333cf085ecb8ccde6ad0cf736e6a4f3bdce40d8",
+    "compose.publication.yaml": "3332d73696b2c40af450ed74e3970af620e25580a72961ba38392ddeb8b842cc",
+    "docs/CompanyE_Physical_Design.md": "55bf3bb013805145fb82c495be6d936b02bb7fea358d576bc05c7b80079cae93",
+    "README.md": "07f065d7dc744354a8b0d928114148e71d9bb0faaba1c695562faf767b2e5273",
+    "reports/publication/oracle-guards.sql": "b596a93da224cc073635155e2f5d019f3a937a3139fdc3b3843d2be2463609a6"
+  },
+  "secrets_included": false
+}

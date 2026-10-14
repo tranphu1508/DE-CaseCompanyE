@@ -1,0 +1,29 @@
+{
+  "checked_on": "2026-10-14",
+  "checks": [
+    {
+      "command": "python -X utf8 Project/tests/test_fact_transform.py",
+      "result": "PASSED",
+      "tests": 16
+    },
+    {
+      "command": "python -X utf8 Project/web/companye-demo/verify.py",
+      "result": "PASSED_STATIC_EXPORT",
+      "checks": 3138,
+      "metric_component_comparisons": 2965
+    },
+    {
+      "command": "node --check Project/web/companye-demo/dist/app.js",
+      "exit_code": 0
+    },
+    {
+      "check": "new repository documentation local links",
+      "links": 48,
+      "missing": 0
+    }
+  ],
+  "limitations": [
+    "No fresh live Oracle/Iceberg/Power BI integration run during packaging.",
+    "Web validation checks exported values; previous browser UI evidence is retained separately."
+  ]
+}

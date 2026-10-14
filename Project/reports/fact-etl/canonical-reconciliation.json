@@ -1,0 +1,5 @@
+{
+  "meal_session_mismatches": [],
+  "negative_lot_prefixes": [],
+  "stock_policy": "Balance is unavailable from an invalid/missing movement; retained transaction facts do not certify complete balances."
+}

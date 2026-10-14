@@ -1,0 +1,129 @@
+{
+  "hotel_ops.hotels": {
+    "stars": "32"
+  },
+  "hotel_ops.rooms": {
+    "capacity": "960",
+    "base_rate_vnd": "395400000"
+  },
+  "hotel_ops.channels": {
+    "commission_bps": "4300"
+  },
+  "hotel_ops.membership_plans": {
+    "duration_months": "24",
+    "fee_vnd": "4000000"
+  },
+  "hotel_ops.memberships": {
+    "paid_vnd": "2175500000"
+  },
+  "hotel_ops.promotions": {
+    "discount_bps": "40000",
+    "partner_share_bps": "224000",
+    "cap_vnd": "20000000"
+  },
+  "hotel_ops.rate_plans": {
+    "breakfast_included": "48",
+    "refundable": "72"
+  },
+  "hotel_ops.bookings": {
+    "gross_vnd": "137286802000",
+    "discount_vnd": "2929923000",
+    "company_share_vnd": "1587216840",
+    "partner_share_vnd": "1342706160",
+    "customer_due_vnd": "134356879000",
+    "commission_vnd": "9636806963"
+  },
+  "hotel_ops.booking_rooms": {
+    "adults": "64298",
+    "children": "12095",
+    "breakfast_guests": "46511",
+    "nightly_rate_vnd": "57468901000"
+  },
+  "hotel_ops.breakfast_entitlements": {
+    "eligible_covers": "92683",
+    "redeemed_covers": "83489"
+  },
+  "hotel_ops.outlets": {
+    "capacity": "1320",
+    "quality_profile": "47"
+  },
+  "hotel_ops.dining_orders": {
+    "covers": "60478",
+    "gross_vnd": "20351140000",
+    "discount_vnd": "246832000",
+    "net_vnd": "20104308000",
+    "wait_minutes": "486105",
+    "rating": "94805"
+  },
+  "hotel_ops.meal_sessions": {
+    "actual_covers": "113887",
+    "ingredient_cost_vnd": "3964648500"
+  },
+  "hotel_ops.payments": {
+    "amount_vnd": "152259595800"
+  },
+  "hotel_ops.settlements": {
+    "sponsor_due_vnd": "1124920460",
+    "sponsor_received_vnd": "1074128120",
+    "commission_vnd": "8336794468"
+  },
+  "hotel_ops.items": {
+    "shelf_life_days": "247",
+    "reference_cost_vnd": "715000"
+  },
+  "hotel_ops.purchase_lines": {
+    "ordered_qty": "96083.000",
+    "unit_price_vnd": "2043423700"
+  },
+  "hotel_ops.receipts": {
+    "accepted_qty": "93993.000",
+    "rejected_qty": "2090.000"
+  },
+  "hotel_ops.stock_movements": {
+    "quantity": "185117.000"
+  },
+  "hotel_ops.maintenance": {
+    "cost_vnd": "167200000"
+  },
+  "hotel_ops.weather_daily": {
+    "temperature_c": "66843",
+    "rain_mm": "35464",
+    "severe_weather": "178"
+  },
+  "hotel_ops.booking_revisions": {
+    "revision_no": "480",
+    "gross_vnd": "1311324000",
+    "discount_vnd": "27128000",
+    "company_share_vnd": "12647880",
+    "partner_share_vnd": "14480120",
+    "customer_due_vnd": "1284196000",
+    "commission_vnd": "94385960"
+  },
+  "hotel_ops.booking_room_revisions": {
+    "nightly_rate_vnd": "563808000"
+  },
+  "entertainment_ops.activities": {
+    "outdoor": "4",
+    "capacity_per_day": "5400",
+    "ticket_price_vnd": "2520000"
+  },
+  "entertainment_ops.ticket_orders": {
+    "gross_vnd": "9347990000",
+    "refunded_vnd": "165860000"
+  },
+  "entertainment_ops.tickets": {
+    "price_vnd": "9347990000"
+  },
+  "entertainment_ops.vehicles": {
+    "daily_rate_vnd": "64800000"
+  },
+  "entertainment_ops.vehicle_maintenance": {
+    "cost_vnd": "210000000"
+  },
+  "entertainment_ops.rentals": {
+    "agreed_vnd": "5622840000"
+  },
+  "entertainment_ops.cash_events": {
+    "amount_vnd": "15522970000"
+  }
+}

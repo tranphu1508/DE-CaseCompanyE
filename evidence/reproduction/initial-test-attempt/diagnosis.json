@@ -1,0 +1,7 @@
+{
+  "status": "RESOLVED_RETEST_PASSED",
+  "failure": "The new workspace lacked the legacy v1 lake and golden aggregates required by existing lake/GX tests.",
+  "fix": "platform.py test now creates or verifies the v1 lake with the original manage.py before running the unchanged test suite.",
+  "source_data_or_expectations_changed": false,
+  "passing_run": "20261014T124803355384Z"
+}

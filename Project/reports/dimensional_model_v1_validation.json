@@ -1,0 +1,13 @@
+{
+  "status": "PASSED",
+  "scope": "Specification integrity only; no warehouse/lakehouse execution",
+  "business_processes": 12,
+  "bus_matrix_cells": 192,
+  "requirements": 8,
+  "metrics": 47,
+  "facts": 17,
+  "dimensions": 16,
+  "source_column_references": 255,
+  "generator_hashes_unchanged": true,
+  "model_sha256": "7f9af7435bfe8ccffad979c540bdff0c04386a51a1a889e4d3ce7519f0793fcf"
+}

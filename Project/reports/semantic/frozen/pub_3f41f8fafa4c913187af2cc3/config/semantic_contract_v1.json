@@ -1,0 +1,1037 @@
+{
+  "version": "companye-semantic-1.0",
+  "kpi_contract_version": "companye-kpi-1.0",
+  "kpi_contract_sha256": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "coverage": {
+    "start": "2024-01-01",
+    "end_exclusive": "2026-01-01",
+    "assessment_default": "2025-12-31"
+  },
+  "result_contract": [
+    "publication_id",
+    "source_batch_id",
+    "contract_version",
+    "semantic_version",
+    "engine",
+    "context",
+    "metrics",
+    "external_reconciliation_warnings"
+  ],
+  "consumption_rule": "Use SemanticSession with Publication Reader. SQL templates expose diagnostic components; quality/quantity policy is mandatory.",
+  "source_manifest_sha256": "301f47ffd0714c26bf62cf957a09c1ca231afdb927d6ecad807030717034c9e7",
+  "metrics": [
+    {
+      "id": "B01.01",
+      "name": "Đêm phòng thực ở",
+      "date_role": "stay_date",
+      "formula": "COUNTD(room_id, stay_date) trong kỳ từ stay của booking COMPLETED",
+      "primary_facts": [
+        "F03"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "room_type",
+        "site",
+        "stars"
+      ],
+      "aggregation": "distinct_count",
+      "query_template": "reports/semantic/sql/B01.01.sql",
+      "verified": true
+    },
+    {
+      "id": "B01.02",
+      "name": "Đêm phòng khả dụng",
+      "date_role": "calendar_date",
+      "formula": "COUNTD(room_id, date) trong kỳ không ngừng bán",
+      "primary_facts": [
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "room_type",
+        "site",
+        "stars"
+      ],
+      "aggregation": "distinct_count",
+      "query_template": "reports/semantic/sql/B01.02.sql",
+      "verified": true
+    },
+    {
+      "id": "B01.03",
+      "name": "Công suất phòng",
+      "date_role": "stay_date/calendar_date",
+      "formula": "DIV(B01.01, B01.02)",
+      "primary_facts": [
+        "F03",
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "room_type",
+        "site",
+        "stars"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B01.03.sql",
+      "verified": true
+    },
+    {
+      "id": "B01.04",
+      "name": "Tỷ lệ booking hủy",
+      "date_role": "bookings.arrival cohort",
+      "formula": "COUNTD(booking_id có status CANCELLED)/COUNTD(booking_id) trong cohort ngày arrival thuộc kỳ",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "room_type",
+        "site",
+        "stars"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B01.04.sql",
+      "verified": true
+    },
+    {
+      "id": "B01.05",
+      "name": "Tỷ lệ booking no-show",
+      "date_role": "bookings.arrival cohort",
+      "formula": "COUNTD(booking_id có status NO_SHOW)/COUNTD(booking_id) trong cùng cohort arrival",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "room_type",
+        "site",
+        "stars"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B01.05.sql",
+      "verified": true
+    },
+    {
+      "id": "B02.01",
+      "name": "Giá trị gói phòng trước giảm",
+      "date_role": "bookings.departure",
+      "formula": "SUM(gross_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "promotion",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B02.01.sql",
+      "verified": true
+    },
+    {
+      "id": "B02.02",
+      "name": "Giá trị khách phải trả",
+      "date_role": "bookings.departure",
+      "formula": "SUM(customer_due_vnd) = SUM(gross_vnd − discount_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "promotion",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B02.02.sql",
+      "verified": true
+    },
+    {
+      "id": "B02.03",
+      "name": "Chi phí giảm giá CompanyE chịu",
+      "date_role": "bookings.departure",
+      "formula": "SUM(company_share_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "promotion",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B02.03.sql",
+      "verified": true
+    },
+    {
+      "id": "B02.04",
+      "name": "Phần giảm giá đối tác tài trợ",
+      "date_role": "bookings.departure",
+      "formula": "SUM(partner_share_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "promotion",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B02.04.sql",
+      "verified": true
+    },
+    {
+      "id": "B02.05",
+      "name": "Hoa hồng phân phối",
+      "date_role": "bookings.departure",
+      "formula": "SUM(commission_vnd)",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "promotion",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B02.05.sql",
+      "verified": true
+    },
+    {
+      "id": "B02.06",
+      "name": "Giá trị giữ lại trước chi phí vận hành",
+      "date_role": "bookings.departure",
+      "formula": "B02.01 − B02.03 − B02.05 = B02.02 + B02.04 − B02.05",
+      "primary_facts": [
+        "F01"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "promotion",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B02.06.sql",
+      "verified": true
+    },
+    {
+      "id": "B03.01",
+      "name": "Booking có mua chéo",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "COUNTD(booking_id trong cohort thỏa điều kiện mua chéo)",
+      "primary_facts": [
+        "F04",
+        "F05"
+      ],
+      "supporting_facts": [
+        "F01"
+      ],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "site",
+        "stars"
+      ],
+      "aggregation": "distinct_count",
+      "query_template": "reports/semantic/sql/B03.01.sql",
+      "verified": true
+    },
+    {
+      "id": "B03.02",
+      "name": "Tỷ lệ booking có mua chéo",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "DIV(B03.01, COUNTD(booking_id COMPLETED trong cohort))",
+      "primary_facts": [
+        "F04",
+        "F05"
+      ],
+      "supporting_facts": [
+        "F01"
+      ],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "site",
+        "stars"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B03.02.sql",
+      "verified": true
+    },
+    {
+      "id": "B03.03",
+      "name": "Giá trị vé sau hoàn gắn booking",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "SUM(gross_vnd − refunded_vnd) của các ticket_order liên kết cohort",
+      "primary_facts": [
+        "F04"
+      ],
+      "supporting_facts": [
+        "F01"
+      ],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B03.03.sql",
+      "verified": true
+    },
+    {
+      "id": "B03.04",
+      "name": "Giá trị thuê xe hoàn thành gắn booking",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "SUM(agreed_vnd) của rental COMPLETED liên kết cohort",
+      "primary_facts": [
+        "F05"
+      ],
+      "supporting_facts": [
+        "F01"
+      ],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B03.04.sql",
+      "verified": true
+    },
+    {
+      "id": "B03.05",
+      "name": "Giá trị dịch vụ kết hợp của cohort",
+      "date_role": "hotel bookings.departure cohort",
+      "formula": "SUM(bookings.customer_due_vnd) trong cohort + B03.03 + B03.04",
+      "primary_facts": [
+        "F01",
+        "F04",
+        "F05"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "channel",
+        "hotel",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B03.05.sql",
+      "verified": true
+    },
+    {
+      "id": "B04.01",
+      "name": "Suất sáng được hưởng",
+      "date_role": "service_date",
+      "formula": "SUM(eligible_covers) từ entitlement của booking COMPLETED",
+      "primary_facts": [
+        "F06"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "meal",
+        "outlet",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B04.01.sql",
+      "verified": true
+    },
+    {
+      "id": "B04.02",
+      "name": "Suất sáng quyền lợi thực dùng",
+      "date_role": "service_date",
+      "formula": "SUM(redeemed_covers) trên cùng tập entitlement",
+      "primary_facts": [
+        "F06"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "meal",
+        "outlet",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B04.02.sql",
+      "verified": true
+    },
+    {
+      "id": "B04.03",
+      "name": "Tỷ lệ sử dụng quyền lợi sáng",
+      "date_role": "service_date",
+      "formula": "DIV(B04.02, B04.01)",
+      "primary_facts": [
+        "F06"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "meal",
+        "outlet",
+        "site",
+        "stars"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B04.03.sql",
+      "verified": true
+    },
+    {
+      "id": "B04.04",
+      "name": "Giá trị ăn uống bán riêng sau giảm",
+      "date_role": "service_date",
+      "formula": "SUM(dining_orders.net_vnd)",
+      "primary_facts": [
+        "F07"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "meal",
+        "outlet",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B04.04.sql",
+      "verified": true
+    },
+    {
+      "id": "B04.05",
+      "name": "Lượt phục vụ ăn uống",
+      "date_role": "service_date",
+      "formula": "SUM(dining_orders.covers) + SUM(redeemed_covers) áp đúng bữa/outlet",
+      "primary_facts": [
+        "F06",
+        "F07"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "meal",
+        "outlet",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B04.05.sql",
+      "verified": true
+    },
+    {
+      "id": "B04.06",
+      "name": "Chi phí nguyên liệu buffet",
+      "date_role": "service_date",
+      "formula": "SUM(meal_sessions.ingredient_cost_vnd) cho BREAKFAST/DINNER",
+      "primary_facts": [
+        "F08"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "meal",
+        "outlet",
+        "site",
+        "stars"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B04.06.sql",
+      "verified": true
+    },
+    {
+      "id": "B04.07",
+      "name": "Chi phí nguyên liệu mỗi lượt buffet",
+      "date_role": "service_date",
+      "formula": "DIV(B04.06, SUM(meal_sessions.actual_covers) cùng phiên)",
+      "primary_facts": [
+        "F08"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "meal",
+        "outlet",
+        "site",
+        "stars"
+      ],
+      "aggregation": "weighted_mean",
+      "query_template": "reports/semantic/sql/B04.07.sql",
+      "verified": true
+    },
+    {
+      "id": "B04.08",
+      "name": "Điểm đánh giá trung bình theo hóa đơn",
+      "date_role": "service_date",
+      "formula": "DIV(SUM(rating hợp lệ), COUNT(dining_order_id có rating hợp lệ))",
+      "primary_facts": [
+        "F07"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "meal",
+        "outlet",
+        "site",
+        "stars"
+      ],
+      "aggregation": "weighted_mean",
+      "query_template": "reports/semantic/sql/B04.08.sql",
+      "verified": true
+    },
+    {
+      "id": "B05.01",
+      "name": "Lượt sử dụng hoạt động thực tế",
+      "date_role": "local date of admissions.entered_at",
+      "formula": "COUNTD(admission_id) có ngày vào trong kỳ",
+      "primary_facts": [
+        "F09"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "activity",
+        "centre",
+        "outdoor",
+        "severe_weather",
+        "site"
+      ],
+      "aggregation": "distinct_count",
+      "query_template": "reports/semantic/sql/B05.01.sql",
+      "verified": true
+    },
+    {
+      "id": "B05.02",
+      "name": "Công suất hoạt động khả dụng",
+      "date_role": "calendar_date",
+      "formula": "SUM(capacity_per_day) trên activity × date trong kỳ không có closure",
+      "primary_facts": [
+        "F10"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "activity",
+        "centre",
+        "outdoor",
+        "severe_weather",
+        "site"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B05.02.sql",
+      "verified": true
+    },
+    {
+      "id": "B05.03",
+      "name": "Tỷ lệ sử dụng hoạt động",
+      "date_role": "admission_date/calendar_date",
+      "formula": "DIV(B05.01, B05.02)",
+      "primary_facts": [
+        "F09",
+        "F10"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "activity",
+        "centre",
+        "outdoor",
+        "severe_weather",
+        "site"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B05.03.sql",
+      "verified": true
+    },
+    {
+      "id": "B05.04",
+      "name": "Ngày xe được thuê",
+      "date_role": "expanded pickup_date to return_date exclusive",
+      "formula": "COUNTD(vehicle_id, date) mở rộng `[pickup_date,return_date)` của rental COMPLETED trong kỳ",
+      "primary_facts": [
+        "F11"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "centre",
+        "severe_weather",
+        "site",
+        "vehicle_type"
+      ],
+      "aggregation": "distinct_count",
+      "query_template": "reports/semantic/sql/B05.04.sql",
+      "verified": true
+    },
+    {
+      "id": "B05.05",
+      "name": "Ngày xe sẵn sàng",
+      "date_role": "calendar_date",
+      "formula": "COUNTD(vehicle_id, date) toàn kỳ trừ hợp DISTINCT ngày bảo trì xe",
+      "primary_facts": [
+        "F11"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "centre",
+        "severe_weather",
+        "site",
+        "vehicle_type"
+      ],
+      "aggregation": "distinct_count",
+      "query_template": "reports/semantic/sql/B05.05.sql",
+      "verified": true
+    },
+    {
+      "id": "B05.06",
+      "name": "Tỷ lệ sử dụng đội xe",
+      "date_role": "rental_date/calendar_date",
+      "formula": "DIV(B05.04, B05.05)",
+      "primary_facts": [
+        "F11"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "centre",
+        "severe_weather",
+        "site",
+        "vehicle_type"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B05.06.sql",
+      "verified": true
+    },
+    {
+      "id": "B06.01",
+      "name": "Lượng đặt đến hạn",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "SUM(O), mỗi purchase_line đúng một lần",
+      "primary_facts": [
+        "F12"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B06.01.sql",
+      "verified": true
+    },
+    {
+      "id": "B06.02",
+      "name": "Lượng nhận đạt",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "SUM(G)",
+      "primary_facts": [
+        "F13"
+      ],
+      "supporting_facts": [
+        "F12"
+      ],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B06.02.sql",
+      "verified": true
+    },
+    {
+      "id": "B06.03",
+      "name": "Lượng bị từ chối",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "SUM(R)",
+      "primary_facts": [
+        "F13"
+      ],
+      "supporting_facts": [
+        "F12"
+      ],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B06.03.sql",
+      "verified": true
+    },
+    {
+      "id": "B06.04",
+      "name": "Lượng nhận đạt nhưng trễ",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "SUM(L)",
+      "primary_facts": [
+        "F13"
+      ],
+      "supporting_facts": [
+        "F12"
+      ],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B06.04.sql",
+      "verified": true
+    },
+    {
+      "id": "B06.05",
+      "name": "Tỷ lệ đáp ứng lượng đạt",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "DIV(SUM(G), SUM(O))",
+      "primary_facts": [
+        "F12",
+        "F13"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B06.05.sql",
+      "verified": true
+    },
+    {
+      "id": "B06.06",
+      "name": "Tỷ lệ từ chối lượng giao",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "DIV(SUM(R), SUM(G + R))",
+      "primary_facts": [
+        "F13"
+      ],
+      "supporting_facts": [
+        "F12"
+      ],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B06.06.sql",
+      "verified": true
+    },
+    {
+      "id": "B06.07",
+      "name": "Tỷ lệ dòng được nhận đủ đạt đúng hạn",
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "formula": "COUNTD(line_id có T ≥ O)/COUNTD(line_id đến hạn)",
+      "primary_facts": [
+        "F12",
+        "F13"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B06.07.sql",
+      "verified": true
+    },
+    {
+      "id": "B07.01",
+      "name": "Tồn đầu kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(Q0)",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "period_balance",
+      "query_template": "reports/semantic/sql/B07.01.sql",
+      "verified": true
+    },
+    {
+      "id": "B07.02",
+      "name": "Tồn cuối kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(Q1)",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "period_balance",
+      "query_template": "reports/semantic/sql/B07.02.sql",
+      "verified": true
+    },
+    {
+      "id": "B07.03",
+      "name": "Lượng sử dụng trong kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(U)",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier",
+        "usage_area"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B07.03.sql",
+      "verified": true
+    },
+    {
+      "id": "B07.04",
+      "name": "Lượng hủy trong kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(W)",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B07.04.sql",
+      "verified": true
+    },
+    {
+      "id": "B07.05",
+      "name": "Giá trị hao hụt trong kỳ",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "SUM(quantity × unit_price_vnd) của WASTE trong kỳ theo từng lô",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B07.05.sql",
+      "verified": true
+    },
+    {
+      "id": "B07.06",
+      "name": "Tỷ lệ hao hụt theo giá trị sẵn có",
+      "date_role": "movement_date; opening before S, closing before E",
+      "formula": "DIV(giá trị WASTE trong kỳ, giá trị tồn đầu kỳ + giá trị IN trong kỳ), định giá từng lô",
+      "primary_facts": [
+        "F14"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [
+        "F15"
+      ],
+      "allowed_filters": [
+        "hotel",
+        "item",
+        "site",
+        "stars",
+        "supplier"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B07.06.sql",
+      "verified": true
+    },
+    {
+      "id": "B08.01",
+      "name": "Chi phí bảo trì tài sản khách sạn hoàn tất",
+      "date_role": "maintenance.ends_on",
+      "formula": "SUM(cost_vnd) mỗi maintenance_id COMPLETED có ends_on trong kỳ",
+      "primary_facts": [
+        "F16"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "asset_type",
+        "hotel",
+        "site",
+        "stars",
+        "work_type"
+      ],
+      "aggregation": "sum",
+      "query_template": "reports/semantic/sql/B08.01.sql",
+      "verified": true
+    },
+    {
+      "id": "B08.02",
+      "name": "Ngày phòng ngừng bán do bảo trì",
+      "date_role": "maintenance interval intersection with calendar_date",
+      "formula": "COUNTD(room_id, date) thuộc hợp các khoảng bảo trì trong kỳ",
+      "primary_facts": [
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "room_type",
+        "site",
+        "stars"
+      ],
+      "aggregation": "distinct_count",
+      "query_template": "reports/semantic/sql/B08.02.sql",
+      "verified": true
+    },
+    {
+      "id": "B08.03",
+      "name": "Ngày phòng khả dụng",
+      "date_role": "calendar_date",
+      "formula": "COUNTD(room_id,date) danh mục trong kỳ − B08.02",
+      "primary_facts": [
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "room_type",
+        "site",
+        "stars"
+      ],
+      "aggregation": "distinct_count",
+      "query_template": "reports/semantic/sql/B08.03.sql",
+      "verified": true
+    },
+    {
+      "id": "B08.04",
+      "name": "Tỷ trọng ngày phòng ngừng bán",
+      "date_role": "calendar_date",
+      "formula": "DIV(B08.02, COUNTD(room_id,date) danh mục trong kỳ)",
+      "primary_facts": [
+        "F02"
+      ],
+      "supporting_facts": [],
+      "optional_facts": [],
+      "allowed_filters": [
+        "hotel",
+        "room_type",
+        "site",
+        "stars"
+      ],
+      "aggregation": "ratio_of_totals",
+      "query_template": "reports/semantic/sql/B08.04.sql",
+      "verified": true
+    }
+  ]
+}

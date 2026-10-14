@@ -1,0 +1,50 @@
+{
+  "verified_at": "2026-10-11T19:12:30.824896+00:00",
+  "dataset_version": "v1",
+  "counts": {
+    "hotel_ops": {
+      "membership_plans": 3,
+      "sites": 4,
+      "items": 6,
+      "hotels": 8,
+      "channels": 13,
+      "suppliers": 16,
+      "outlets": 16,
+      "promotions": 40,
+      "rate_plans": 72,
+      "rooms": 240,
+      "assets": 256,
+      "maintenance": 512,
+      "weather_daily": 2924,
+      "memberships": 4099,
+      "member_cards": 4099,
+      "meal_sessions": 11696,
+      "guests": 12000,
+      "settlements": 19223,
+      "purchase_orders": 23680,
+      "receipts": 23680,
+      "purchase_lines": 23680,
+      "stays": 30736,
+      "payments": 36239,
+      "stock_movements": 76474,
+      "booking_rooms": 36711,
+      "breakfast_entitlements": 52979,
+      "bookings": 32000,
+      "dining_orders": 31357
+    },
+    "entertainment_ops": {
+      "centres": 4,
+      "activities": 12,
+      "vehicles": 120,
+      "vehicle_maintenance": 240,
+      "closures": 272,
+      "rentals": 7723,
+      "customers": 12000,
+      "ticket_orders": 20690,
+      "cash_events": 29271,
+      "admissions": 39827,
+      "tickets": 44478
+    }
+  },
+  "manifest_sha256": "16ad3905369c0be5572e5f53049e0adf3bf3479f5ce1790bb25d45c236ad6dfc"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "VERIFIED",
+  "jars": [
+    {
+      "coordinate": "org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.10.2",
+      "file": "/analytics/jars/iceberg-spark-runtime-3.5_2.12-1.10.2.jar",
+      "url": "https://repo.maven.apache.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.5_2.12/1.10.2/iceberg-spark-runtime-3.5_2.12-1.10.2.jar",
+      "bytes": 47157008,
+      "sha256": "c562d482dcd16b666e808b755469fbc4b2604284b41622c9d87e2c02b7cc6c5f",
+      "sha512": "0153eadc5ee2e052064e272e453adeeccd9d2acbd6f0338e176f69e5f44886e559aff47145019324a4f34f488216861c71c4bfe8ae3e57f1bc7992ddc2b9c67d",
+      "published_checksum_algorithm": "sha512",
+      "published_checksum": "0153eadc5ee2e052064e272e453adeeccd9d2acbd6f0338e176f69e5f44886e559aff47145019324a4f34f488216861c71c4bfe8ae3e57f1bc7992ddc2b9c67d",
+      "checksum_source": "https://repo.maven.apache.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.5_2.12/1.10.2/iceberg-spark-runtime-3.5_2.12-1.10.2.jar.sha512",
+      "verified_at": "2026-10-13T16:51:47.097416+00:00"
+    },
+    {
+      "coordinate": "org.postgresql:postgresql:42.7.8",
+      "file": "/analytics/jars/postgresql-42.7.8.jar",
+      "url": "https://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.7.8/postgresql-42.7.8.jar",
+      "bytes": 1116727,
+      "sha256": "2a32a9dcbc42d67a50ad3a0de5efd102c8d2be46720045f2cbd6689f160ab7c7",
+      "sha512": "3ec6f2186ad9f2cbd7916cc1749b61433137c78c13e13b7583507051733318423505fa61908242f4d02e0d90f7db6eecdb6d573a966773d274bf2c78d976573b",
+      "published_checksum_algorithm": "sha1",
+      "published_checksum": "81b840fbfe0a6c0b7aa14c6bd4856108d36ed780",
+      "checksum_source": "https://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.7.8/postgresql-42.7.8.jar.sha1",
+      "verified_at": "2026-10-13T16:51:48.088265+00:00"
+    },
+    {
+      "coordinate": "com.oracle.database.jdbc:ojdbc11:23.9.0.25.07",
+      "file": "/analytics/jars/ojdbc11-23.9.0.25.07.jar",
+      "url": "https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc11/23.9.0.25.07/ojdbc11-23.9.0.25.07.jar",
+      "bytes": 7493107,
+      "sha256": "f52e9335276cd3999c23bb5a364fa01a628f3468945444d03cb7f92271bca1da",
+      "sha512": "0c0fd97fd054da6b582d948840796ce45fbec3b768fb25ce11c41e6a59d47ac482793b8cee2a48188bf412e8bd495eb1e51b165e77b7088f9efa14ba1fdba577",
+      "published_checksum_algorithm": "sha1",
+      "published_checksum": "4fe3479be8322eaac43f1cd0fb5818e93048201d",
+      "checksum_source": "https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc11/23.9.0.25.07/ojdbc11-23.9.0.25.07.jar.sha1",
+      "verified_at": "2026-10-13T16:51:50.243361+00:00"
+    }
+  ]
+}

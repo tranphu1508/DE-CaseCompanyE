@@ -1,0 +1,832 @@
+{
+  "dimension_columns": {
+    "D01": [
+      "date_key",
+      "calendar_date",
+      "day, day_of_week",
+      "month, quarter, year"
+    ],
+    "D02": [
+      "site_key",
+      "site_id (BK)",
+      "site_name",
+      "climate_region"
+    ],
+    "D03": [
+      "hotel_key",
+      "hotel_id (BK), hotel_name",
+      "stars, site_id (thuộc tính)",
+      "website_channel"
+    ],
+    "D04": [
+      "room_key",
+      "room_id (BK), hotel_id",
+      "room_type, capacity",
+      "base_rate_vnd"
+    ],
+    "D05": [
+      "channel_key",
+      "source_namespace, channel_code (BK)",
+      "channel_name, channel_type",
+      "commission_bps (nếu có)"
+    ],
+    "D06": [
+      "promotion_key",
+      "promotion_id (BK), promotion_name",
+      "sale_from/to, stay_from/to",
+      "discount_bps, partner_share_bps",
+      "cap_vnd, channel_id, site_id"
+    ],
+    "D07": [
+      "customer_profile_key",
+      "source_system + source_customer_id (BK)",
+      "full_name, phone, email",
+      "member_card_ref (nếu có)"
+    ],
+    "D08": [
+      "rate_plan_key",
+      "rate_plan_id (BK), plan_name",
+      "breakfast_included, refundable",
+      "hotel_id, channel_id (thuộc tính)"
+    ],
+    "D09": [
+      "outlet_key",
+      "outlet_id (BK), hotel_id",
+      "outlet_type, capacity",
+      "quality_profile"
+    ],
+    "D10": [
+      "meal_key",
+      "meal_code (BK)",
+      "BREAKFAST / LUNCH",
+      "DINNER / BAR"
+    ],
+    "D11": [
+      "centre_key",
+      "centre_id (BK), centre_name",
+      "site_code (thuộc tính)"
+    ],
+    "D12": [
+      "activity_key",
+      "activity_id (BK), activity_name",
+      "outdoor, capacity_per_day",
+      "centre_id (thuộc tính)"
+    ],
+    "D13": [
+      "vehicle_key",
+      "vehicle_id (BK), vehicle_type",
+      "daily_rate_vnd",
+      "centre_id (thuộc tính)"
+    ],
+    "D14": [
+      "supplier_key",
+      "supplier_id (BK), supplier_name",
+      "category, delivery_format",
+      "site_id (thuộc tính)"
+    ],
+    "D15": [
+      "item_key",
+      "item_id (BK), item_name",
+      "specification, base_unit",
+      "shelf_life_days"
+    ],
+    "D16": [
+      "asset_key",
+      "asset_id (BK), asset_type",
+      "hotel_id, room_id (có thể thiếu)",
+      "supplier_id (bên bán tài sản)"
+    ]
+  },
+  "foreign_key_roles": [
+    {
+      "fact": "F01",
+      "dimension": "D01",
+      "fk": "booked_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D01",
+      "fk": "arrival_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D01",
+      "fk": "departure_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D05",
+      "fk": "channel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F01",
+      "dimension": "D06",
+      "fk": "promotion_key",
+      "conditional": true
+    },
+    {
+      "fact": "F01",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F02",
+      "dimension": "D01",
+      "fk": "date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F02",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F02",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F02",
+      "dimension": "D04",
+      "fk": "room_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D01",
+      "fk": "service_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D04",
+      "fk": "room_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D05",
+      "fk": "channel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F03",
+      "dimension": "D08",
+      "fk": "rate_plan_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D01",
+      "fk": "ordered_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D01",
+      "fk": "cohort_departure_date_key",
+      "conditional": true
+    },
+    {
+      "fact": "F04",
+      "dimension": "D02",
+      "fk": "service_site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D02",
+      "fk": "booking_site_key",
+      "conditional": true
+    },
+    {
+      "fact": "F04",
+      "dimension": "D03",
+      "fk": "referral_hotel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F04",
+      "dimension": "D05",
+      "fk": "ticket_channel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D05",
+      "fk": "booking_channel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F04",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F04",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D01",
+      "fk": "pickup_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D01",
+      "fk": "return_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D01",
+      "fk": "cohort_departure_date_key",
+      "conditional": true
+    },
+    {
+      "fact": "F05",
+      "dimension": "D02",
+      "fk": "service_site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D02",
+      "fk": "booking_site_key",
+      "conditional": true
+    },
+    {
+      "fact": "F05",
+      "dimension": "D03",
+      "fk": "referral_hotel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F05",
+      "dimension": "D05",
+      "fk": "booking_channel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F05",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F05",
+      "dimension": "D13",
+      "fk": "vehicle_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D01",
+      "fk": "service_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D04",
+      "fk": "room_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D08",
+      "fk": "rate_plan_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D09",
+      "fk": "outlet_key",
+      "conditional": false
+    },
+    {
+      "fact": "F06",
+      "dimension": "D10",
+      "fk": "meal_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D01",
+      "fk": "service_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D03",
+      "fk": "service_hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D03",
+      "fk": "booking_hotel_key",
+      "conditional": true
+    },
+    {
+      "fact": "F07",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": true
+    },
+    {
+      "fact": "F07",
+      "dimension": "D09",
+      "fk": "outlet_key",
+      "conditional": false
+    },
+    {
+      "fact": "F07",
+      "dimension": "D10",
+      "fk": "meal_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D01",
+      "fk": "service_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D09",
+      "fk": "outlet_key",
+      "conditional": false
+    },
+    {
+      "fact": "F08",
+      "dimension": "D10",
+      "fk": "meal_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D01",
+      "fk": "admission_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D07",
+      "fk": "customer_profile_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F09",
+      "dimension": "D12",
+      "fk": "activity_key",
+      "conditional": false
+    },
+    {
+      "fact": "F10",
+      "dimension": "D01",
+      "fk": "date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F10",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F10",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F10",
+      "dimension": "D12",
+      "fk": "activity_key",
+      "conditional": false
+    },
+    {
+      "fact": "F11",
+      "dimension": "D01",
+      "fk": "date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F11",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F11",
+      "dimension": "D11",
+      "fk": "centre_key",
+      "conditional": false
+    },
+    {
+      "fact": "F11",
+      "dimension": "D13",
+      "fk": "vehicle_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D01",
+      "fk": "ordered_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D01",
+      "fk": "expected_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D14",
+      "fk": "supplier_key",
+      "conditional": false
+    },
+    {
+      "fact": "F12",
+      "dimension": "D15",
+      "fk": "item_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D01",
+      "fk": "received_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D01",
+      "fk": "expected_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D01",
+      "fk": "expires_date_key",
+      "conditional": true
+    },
+    {
+      "fact": "F13",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D14",
+      "fk": "supplier_key",
+      "conditional": false
+    },
+    {
+      "fact": "F13",
+      "dimension": "D15",
+      "fk": "item_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D01",
+      "fk": "movement_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D14",
+      "fk": "supplier_key",
+      "conditional": false
+    },
+    {
+      "fact": "F14",
+      "dimension": "D15",
+      "fk": "item_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D01",
+      "fk": "snapshot_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D14",
+      "fk": "supplier_key",
+      "conditional": false
+    },
+    {
+      "fact": "F15",
+      "dimension": "D15",
+      "fk": "item_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D01",
+      "fk": "start_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D01",
+      "fk": "end_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D03",
+      "fk": "hotel_key",
+      "conditional": false
+    },
+    {
+      "fact": "F16",
+      "dimension": "D04",
+      "fk": "room_key",
+      "conditional": true
+    },
+    {
+      "fact": "F16",
+      "dimension": "D16",
+      "fk": "asset_key",
+      "conditional": false
+    },
+    {
+      "fact": "F17",
+      "dimension": "D01",
+      "fk": "weather_date_key",
+      "conditional": false
+    },
+    {
+      "fact": "F17",
+      "dimension": "D02",
+      "fk": "site_key",
+      "conditional": false
+    }
+  ],
+  "fact_measures": {
+    "F01": [
+      "booking_count = 1",
+      "gross_vnd, discount_vnd",
+      "customer_due_vnd, commission_vnd",
+      "company_share_vnd, partner_share_vnd"
+    ],
+    "F02": [
+      "inventory_day = 1",
+      "blocked_day (0/1)",
+      "available_day = 1 - blocked_day"
+    ],
+    "F03": [
+      "occupied_night = 1"
+    ],
+    "F04": [
+      "gross_vnd, refunded_vnd",
+      "net_ticket_vnd = gross - refunded"
+    ],
+    "F05": [
+      "agreed_vnd"
+    ],
+    "F06": [
+      "eligible_covers",
+      "redeemed_covers"
+    ],
+    "F07": [
+      "net_vnd, covers",
+      "rating_sum, rating_count"
+    ],
+    "F08": [
+      "actual_covers",
+      "ingredient_cost_vnd"
+    ],
+    "F09": [
+      "admission_count = 1"
+    ],
+    "F10": [
+      "nominal_capacity",
+      "is_closed, available_capacity"
+    ],
+    "F11": [
+      "inventory_day, maintenance_day",
+      "available_day, rented_day"
+    ],
+    "F12": [
+      "ordered_qty",
+      "unit_price_vnd"
+    ],
+    "F13": [
+      "accepted_qty, rejected_qty",
+      "late_accepted_qty"
+    ],
+    "F14": [
+      "quantity, signed_qty",
+      "in_qty, use_qty, waste_qty",
+      "movement_value_vnd = quantity × giá lô"
+    ],
+    "F15": [
+      "closing_qty, closing_value_vnd",
+      "in_qty, use_qty, waste_qty trong ngày"
+    ],
+    "F16": [
+      "cost_vnd"
+    ],
+    "F17": [
+      "temperature_c, rain_mm",
+      "severe_weather"
+    ]
+  },
+  "fact_trace_attributes": {
+    "F01": [
+      "booking_id (DD), status"
+    ],
+    "F02": [],
+    "F03": [
+      "booking_id, booking_room_id, stay_id (DD)"
+    ],
+    "F04": [
+      "ticket_order_id, hotel_booking_ref* (DD)"
+    ],
+    "F05": [
+      "rental_id, hotel_booking_ref* (DD), status"
+    ],
+    "F06": [
+      "entitlement_id, booking_room_id (DD)"
+    ],
+    "F07": [
+      "dining_order_id, booking_id* (DD)"
+    ],
+    "F08": [
+      "session_id (DD)"
+    ],
+    "F09": [
+      "admission_id, ticket_id (DD)"
+    ],
+    "F10": [],
+    "F11": [],
+    "F12": [
+      "purchase_line_id, purchase_order_id (DD)"
+    ],
+    "F13": [
+      "receipt_id, purchase_line_id (DD)"
+    ],
+    "F14": [
+      "movement_id, receipt_id, session_id* (DD)",
+      "movement_type, usage_area"
+    ],
+    "F15": [
+      "receipt_id (DD)"
+    ],
+    "F16": [
+      "maintenance_id (DD), work_type, status"
+    ],
+    "F17": [
+      "provenance"
+    ]
+  }
+}

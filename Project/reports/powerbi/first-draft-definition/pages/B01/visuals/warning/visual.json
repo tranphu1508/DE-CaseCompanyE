@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "warning",
+  "position": {
+    "x": 20,
+    "y": 570,
+    "z": 1,
+    "width": 1240,
+    "height": 100
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPI"
+                    }
+                  },
+                  "Property": "Cảnh báo báo cáo"
+                }
+              },
+              "queryRef": "KPI.Cảnh báo báo cáo",
+              "displayName": "Cảnh báo báo cáo"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

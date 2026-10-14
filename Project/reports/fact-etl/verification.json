@@ -1,0 +1,58 @@
+{
+  "status": "PASSED_FACT_ETL",
+  "checked_at": "2026-10-13T18:17:30.287598+00:00",
+  "run_id": "facts_v2_20261012T092023738754Z_8a65e73962da",
+  "source_tables": 41,
+  "source_rows": 591242,
+  "source_files_unchanged": 267,
+  "entities_loaded": 20,
+  "facts_loaded": 16,
+  "bridges_loaded": 2,
+  "validation_helpers_loaded": 2,
+  "new_logical_rows_per_branch": 745138,
+  "existing_dimension_rows": 26426,
+  "total_logical_rows_per_branch": 771564,
+  "fixtures_passed": 16,
+  "independent_controls": 48,
+  "replay_unchanged": true,
+  "all_columns_equal_between_engines": true,
+  "dimensions_unchanged": 16,
+  "metric_input_readiness": {
+    "COMPLETE": 47
+  },
+  "external_mismatches": 0,
+  "external_latest_invalid": 12,
+  "optional_disabled": [
+    "F15"
+  ],
+  "published": false,
+  "oracle_candidate_slot": "CE_DWH_A",
+  "canonical_path": "/analytics/canonical/facts_v2_20261012T092023738754Z_8a65e73962da",
+  "next_step": "Publication coordinator and reader leases; semantic KPI queries and controlled fault tests; then Power BI/web and comparative benchmarks.",
+  "limitations": [
+    "Initial pinned snapshot and replay only; not production incremental or CDC.",
+    "Driver transformations are bounded to 100000 rows per source table; not a distributed scale benchmark.",
+    "47 quality records describe input readiness; filter/lot-specific quality and KPI formulas still need semantic-layer acceptance.",
+    "External receipt feed has quarantined events; these are reconciliation warnings, not extra DB receipts.",
+    "No active publication, BI connection, stress test or recovery drill claimed."
+  ],
+  "evidence_sha256": {
+    "reports\\fact-etl\\canonical-external-reconciliation.json": "778c3a8a2abbec116585e1e318cd328cef5422e76c6877a23eb7a46adfd38dc0",
+    "reports\\fact-etl\\canonical-manifest.json": "8574b4894792ea75ee75a5402cbbc57789aa6bea1078c0781834bc7924e4686d",
+    "reports\\fact-etl\\canonical-metric-readiness.json": "43a1a2a3d1405b1d5ac02e7de143dc3b2b6f10db6c0eca84600f833d7c211337",
+    "reports\\fact-etl\\canonical-quarantine.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "reports\\fact-etl\\canonical-reconciliation.json": "a70f057c32e3f664e724e384267d467684aef348da04fbe3b2f8e7c09aa9ceac",
+    "reports\\fact-etl\\canonical-registry.json": "cfa95827d9af014857e103cb81772d86a5151a4ff97d9c35750b42a9aa4acbbf",
+    "reports\\fact-etl\\canonical-scope-quality.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "reports\\fact-etl\\canonical-source-quality.json": "21d49c1b883c4331df65f881dabc6fd7dde991ae1d55613df7f8af08ec87f9aa",
+    "reports\\fact-etl\\control-verification.json": "e0bd4894cbbd6177e62e0c3cde067c77124b072b54ae65bbba5c9e4309033d8c",
+    "reports\\fact-etl\\course-extracts.json": "5c1f0744b26bea8f6deedfac1fed322285bd4909bc64712387cb2f0b33a7ca30",
+    "reports\\fact-etl\\first-load.json": "6258c45a5e663456fde0b9484450da0a63bc105fb70cfe81284e7c5dd61a1b9a",
+    "reports\\fact-etl\\fixtures.json": "0469916c9819c5ab1ad07a57a75c44254e184fc11bf56e933640f9c5c77fe5d1",
+    "reports\\fact-etl\\frozen-code.json": "cc5e0648d6100b00f95178af84886ea79216e5d12a4a530c7e59dc163c605aff",
+    "reports\\fact-etl\\independent-validation.json": "9482a3127597428465ffe2a6296f5f7d08f53264603e9adc6026d56b167c098f",
+    "reports\\fact-etl\\registry-backup.json": "179973755431f828388df1d62df239497873f478ecb1d0826c11828f0d00685b",
+    "reports\\fact-etl\\run.json": "3c12a2e837a0204f03fc98abebb9fa5234c076e2661e3d28f463b58e26e3d8d6",
+    "reports\\fact-etl\\verify.json": "2fda274fcf82cb98785c5598e990ecb68d0b10fcdf9b72c0fcdf47bd3bd8f3b9"
+  }
+}

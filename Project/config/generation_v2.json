@@ -1,0 +1,23 @@
+{
+  "dataset_version":"v2",
+  "seed":20261012,
+  "date_from":"2024-01-01",
+  "date_to":"2025-12-31",
+  "customers":12000,
+  "bookings":32000,
+  "walkin_tickets":6000,
+  "five_star_rooms":36,
+  "three_star_rooms":24,
+  "currency":"VND",
+  "timezone":"Asia/Ho_Chi_Minh",
+  "procurement_seed":2026101201,
+  "identity_seed":2026101202,
+  "delivery_seed":2026101203,
+  "adjustment_seed":2026101204,
+  "split_receipt_probability":0.25,
+  "duplicate_guest_profiles":120,
+  "price_adjustments":160,
+  "external_receipts":240,
+  "external_corrections":24,
+  "external_unknown_units":12
+}

@@ -1,0 +1,7 @@
+{
+  "status": "PASSED",
+  "count": 16,
+  "test_sha256": "d6096131827f12bc5c7b7a081d130bc1e7f52c80748ca31ab24b47506522db7b",
+  "log_sha256": "c5e992cb9628acd8c48a274da816f961418ed7c7ad5fdcd7e90e3d45fc87e508",
+  "mutated_source_or_business_target": false
+}

@@ -1,0 +1,15 @@
+{
+  "authoring": "Hand-authored independent examples; no generator code used to calculate expected values.",
+  "rows": [
+    ["S1","SP-5","D1","29/02/2024","2.500","18k","cà chua","kg"],
+    ["S1","SP-5","D2","31/02/2024","1","18000","ca chua","kg"],
+    ["S1","SP-5","D3","01/03/2024","1","18000","ca chua",null],
+    ["S1","SP-5","D4","01/03/2024","1","-10","ca chua","kg"],
+    ["S1","SP-5","D5","01/03/2024","0","18000","ca chua","kg"],
+    ["S1","SP-5","D6","01/03/2024","1","18000","unknown","kg"],
+    ["S1","SP-5","D7","01/03/2024","1","18000","ca chua","bao"],
+    ["S1","SP-5",null,"01/03/2024","1","18000","ca chua","kg"]
+  ],
+  "expected_reasons": ["","INVALID_DATE","UNKNOWN_UNIT_CONVERSION","INVALID_PRICE","INVALID_QUANTITY","UNKNOWN_ITEM","UNKNOWN_UNIT_CONVERSION","MISSING_BUSINESS_KEY"],
+  "expected_first": {"service_date":"2024-02-29","quantity":"2.500","unit_price_vnd":18000,"item_id":"TOMATO"}
+}

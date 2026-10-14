@@ -1,0 +1,2403 @@
+{
+  "status": "PASSED_IMPORT_INPUT_CHECKS",
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "original_import_rows": 1490574,
+  "csv_hashes": 32,
+  "relationships": 69,
+  "enrichment_metric_checks": 298,
+  "checks": [
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "17281",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "17281",
+      "denominator": "26820"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "6078050000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "4436100000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "122998392500",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "17281",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "17281",
+      "denominator": "26820"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "6078050000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "4436100000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "122998392500",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "96083.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "93993.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "2090.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "13438.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "93993.000",
+      "denominator": "96083.000"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "2090.000",
+      "denominator": "96083.000"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "15441",
+      "denominator": "23680"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "96083.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "93993.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "2090.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "13438.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "93993.000",
+      "denominator": "96083.000"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "2090.000",
+      "denominator": "96083.000"
+    },
+    {
+      "phase": "baseline",
+      "case": "baseline",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "15441",
+      "denominator": "23680"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "623",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "623",
+      "denominator": "941"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "221430000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "145080000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "4083507200",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "623",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "623",
+      "denominator": "941"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "221430000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "145080000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "4083507200",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "3840.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "3768.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "72.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "532.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "3768.000",
+      "denominator": "3840.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "72.000",
+      "denominator": "3840.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "660",
+      "denominator": "1008"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "3840.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "3768.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "72.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "532.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "3768.000",
+      "denominator": "3840.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "72.000",
+      "denominator": "3840.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-01-01",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "660",
+      "denominator": "1008"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "585",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "585",
+      "denominator": "929"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "197620000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "130140000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "3908769400",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "585",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "585",
+      "denominator": "929"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "197620000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "130140000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "3908769400",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "3520.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "3437.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "83.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "511.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "3437.000",
+      "denominator": "3520.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "83.000",
+      "denominator": "3520.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "608",
+      "denominator": "944"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "3520.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "3437.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "83.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "511.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "3437.000",
+      "denominator": "3520.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "83.000",
+      "denominator": "3520.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2024-02-01",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "608",
+      "denominator": "944"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "664",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "664",
+      "denominator": "1026"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "237340000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "186660000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "5441379000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "664",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "664",
+      "denominator": "1026"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "237340000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "186660000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "5441379000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "3319.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "3225.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "94.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "480.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "3225.000",
+      "denominator": "3319.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "94.000",
+      "denominator": "3319.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "561",
+      "denominator": "896"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "3319.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "3225.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "94.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "480.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "3225.000",
+      "denominator": "3319.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "94.000",
+      "denominator": "3319.000"
+    },
+    {
+      "phase": "slices",
+      "case": "2025-12-01",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "561",
+      "denominator": "896"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "4374",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "4374",
+      "denominator": "6683"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "1543550000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "1836900000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "31475987100",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "4374",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "4374",
+      "denominator": "6683"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "1543550000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "1836900000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "31475987100",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "24137.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "23626.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "511.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "3364.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "23626.000",
+      "denominator": "24137.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "511.000",
+      "denominator": "24137.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "3895",
+      "denominator": "5920"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "24137.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "23626.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "511.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "3364.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "23626.000",
+      "denominator": "24137.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "511.000",
+      "denominator": "24137.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_SP",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "3895",
+      "denominator": "5920"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "4281",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "4281",
+      "denominator": "6680"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "1480550000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "872460000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "30485050600",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "4281",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "4281",
+      "denominator": "6680"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "1480550000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "872460000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "30485050600",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "23963.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "23461.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "502.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "3239.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "23461.000",
+      "denominator": "23963.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "502.000",
+      "denominator": "23963.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "3900",
+      "denominator": "5920"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "23963.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "23461.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "502.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "3239.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "23461.000",
+      "denominator": "23963.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "502.000",
+      "denominator": "23963.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DN",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "3900",
+      "denominator": "5920"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "4225",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "4225",
+      "denominator": "6693"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "1508390000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "844380000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "30499163300",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "4225",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "4225",
+      "denominator": "6693"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "1508390000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "844380000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "30499163300",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "23868.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "23336.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "532.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "3382.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "23336.000",
+      "denominator": "23868.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "532.000",
+      "denominator": "23868.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "3811",
+      "denominator": "5920"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "23868.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "23336.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "532.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "3382.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "23336.000",
+      "denominator": "23868.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "532.000",
+      "denominator": "23868.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_DL",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "3811",
+      "denominator": "5920"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "4401",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "4401",
+      "denominator": "6764"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "1545560000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "882360000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "30538191500",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "4401",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "4401",
+      "denominator": "6764"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "1545560000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "882360000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "30538191500",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "24115.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "23570.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "545.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "3453.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "23570.000",
+      "denominator": "24115.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "545.000",
+      "denominator": "24115.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "3835",
+      "denominator": "5920"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "24115.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "23570.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "545.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "3453.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "23570.000",
+      "denominator": "24115.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "545.000",
+      "denominator": "24115.000"
+    },
+    {
+      "phase": "slices",
+      "case": "site_PQ",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "3835",
+      "denominator": "5920"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "18740.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "18273.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "467.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "2461.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "18273.000",
+      "denominator": "18740.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "467.000",
+      "denominator": "18740.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "3827",
+      "denominator": "5824"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "18740.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "18273.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "467.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "2461.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "18273.000",
+      "denominator": "18740.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "467.000",
+      "denominator": "18740.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_FISH",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "3827",
+      "denominator": "5824"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "3667.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "3647.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "20.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "456.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "3647.000",
+      "denominator": "3667.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "20.000",
+      "denominator": "3667.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "124",
+      "denominator": "192"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "3667.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "3647.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "20.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "456.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "3647.000",
+      "denominator": "3667.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "20.000",
+      "denominator": "3667.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_LINEN",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "124",
+      "denominator": "192"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "24728.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "24212.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "516.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "3441.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "24212.000",
+      "denominator": "24728.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "516.000",
+      "denominator": "24728.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "3841",
+      "denominator": "5824"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "24728.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "24212.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "516.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "3441.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "24212.000",
+      "denominator": "24728.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "516.000",
+      "denominator": "24728.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_MILK",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "3841",
+      "denominator": "5824"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "3721.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "3704.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "17.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "624.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "3704.000",
+      "denominator": "3721.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "17.000",
+      "denominator": "3721.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "125",
+      "denominator": "192"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "3721.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "3704.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "17.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "624.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "3704.000",
+      "denominator": "3721.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "17.000",
+      "denominator": "3721.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_PLATE",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "125",
+      "denominator": "192"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "24728.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "24164.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "564.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "3589.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "24164.000",
+      "denominator": "24728.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "564.000",
+      "denominator": "24728.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "3745",
+      "denominator": "5824"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "24728.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "24164.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "564.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "3589.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "24164.000",
+      "denominator": "24728.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "564.000",
+      "denominator": "24728.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_RICE",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "3745",
+      "denominator": "5824"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "oracle",
+      "metric": "B06.01",
+      "numerator": "20499.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "oracle",
+      "metric": "B06.02",
+      "numerator": "19993.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "oracle",
+      "metric": "B06.03",
+      "numerator": "506.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "oracle",
+      "metric": "B06.04",
+      "numerator": "2867.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "oracle",
+      "metric": "B06.05",
+      "numerator": "19993.000",
+      "denominator": "20499.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "oracle",
+      "metric": "B06.06",
+      "numerator": "506.000",
+      "denominator": "20499.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "3779",
+      "denominator": "5824"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "iceberg",
+      "metric": "B06.01",
+      "numerator": "20499.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "iceberg",
+      "metric": "B06.02",
+      "numerator": "19993.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "iceberg",
+      "metric": "B06.03",
+      "numerator": "506.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "iceberg",
+      "metric": "B06.04",
+      "numerator": "2867.000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "iceberg",
+      "metric": "B06.05",
+      "numerator": "19993.000",
+      "denominator": "20499.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "iceberg",
+      "metric": "B06.06",
+      "numerator": "506.000",
+      "denominator": "20499.000"
+    },
+    {
+      "phase": "slices",
+      "case": "item_TOMATO",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "3779",
+      "denominator": "5824"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "4124",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "4124",
+      "denominator": "6402"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "1454550000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "1029240000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "29671136900",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "4124",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "4124",
+      "denominator": "6402"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "1454550000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "1029240000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_AGODA",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "29671136900",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "oracle",
+      "metric": "B03.01",
+      "numerator": "3478",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "oracle",
+      "metric": "B03.02",
+      "numerator": "3478",
+      "denominator": "5408"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "oracle",
+      "metric": "B03.03",
+      "numerator": "1228880000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "oracle",
+      "metric": "B03.04",
+      "numerator": "871560000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "oracle",
+      "metric": "B03.05",
+      "numerator": "24563510200",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "iceberg",
+      "metric": "B03.01",
+      "numerator": "3478",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "iceberg",
+      "metric": "B03.02",
+      "numerator": "3478",
+      "denominator": "5408"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "iceberg",
+      "metric": "B03.03",
+      "numerator": "1228880000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "iceberg",
+      "metric": "B03.04",
+      "numerator": "871560000",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "channel_BOOKING",
+      "engine": "iceberg",
+      "metric": "B03.05",
+      "numerator": "24563510200",
+      "denominator": "1"
+    },
+    {
+      "phase": "slices",
+      "case": "supplier",
+      "engine": "oracle",
+      "metric": "B06.07",
+      "numerator": "684",
+      "denominator": "1094"
+    },
+    {
+      "phase": "slices",
+      "case": "supplier",
+      "engine": "iceberg",
+      "metric": "B06.07",
+      "numerator": "684",
+      "denominator": "1094"
+    }
+  ],
+  "excluded_contexts": [
+    {
+      "case": "early_assessment",
+      "reason": "The first report fixes assessment at 2025-12-31; no assessment slicer is exposed."
+    }
+  ],
+  "desktop_refresh": "NOT_RUN",
+  "dax_execution": "NOT_RUN",
+  "ui_tests": "NOT_RUN"
+}

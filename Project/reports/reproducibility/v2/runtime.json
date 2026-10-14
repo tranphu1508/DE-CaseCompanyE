@@ -1,0 +1,57 @@
+{
+  "dataset_version": "v2",
+  "captured_at": "2026-10-12T09:27:12.589587+00:00",
+  "host_python": "3.11.9",
+  "containers": {
+    "postgres": {
+      "container_id": "bd089b7705667625fcf1e49af8d46243fc5365941e895f81972933cc2a78f824",
+      "image_id": "sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+      "repo_digests": [
+        "postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3"
+      ]
+    },
+    "spark": {
+      "container_id": "228ff70d49a753723d923c6cbf853decff3bdba9c4f1c2d7cdcfd61052106115",
+      "image_id": "sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba",
+      "repo_digests": [
+        "apache/spark@sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba"
+      ]
+    }
+  },
+  "files": {
+    "src/audit_generation.py": "7a0cb1001c695d864e959622c427957c606242813e76d5b7e261b09e8f3413c5",
+    "src/capture_provenance.py": "89f1d7b90462b1b80c0691dcee218dd34961acd025f43334dd2dc9b53caf7bcc",
+    "src/generate.py": "3d747b15fd5702bdedf5e77a72135b75e24b7d9824e54d0736821dac82a5381d",
+    "src/generate_v2.py": "702dd3564f3fda61a579a8877fdc02ebaa2b4a0bbf8ac6c0595e09cf5143cbd3",
+    "src/lake_job.py": "2d30075d5f34c2391beda735f9a401150095f795f03bd9a7846964374ca5621d",
+    "src/lake_v2.py": "abb3f6bfc908abd27b4aa26bab2fbb416cc24718ce4449fc2d8ec7ba2972ee08",
+    "src/manage.py": "3bfdf7ae5e62e331e41712097d9bae5242b8c88e40bc95d9182b160be346ce06",
+    "src/manage_v2.py": "044f407d77aa5c4a88d694b8506493905aecedd3dcbccbbd88bfa25908ae9211",
+    "src/model.py": "c4f6bdcab5f1fbccd56872e827ac8e9d4c2f92eeac784d83a821b85b3d76d03c",
+    "src/model_v2.py": "47716876e9b312f4a994c7b1b8865ea96929643874f1e7f08a31499e6e3c9405",
+    "config/generation.json": "9c474ea16a7090773d974e597d5cc14d8de54e031c95530187a4295c3c67f3b0",
+    "config/generation_v2.json": "fcc7825cfe6e8eadcf6387bf7d95515eef0e953dab4c912b2e8bddf1d042ea7d",
+    "config/source_contracts.json": "0ce87668e18b69005b97a9a7afcdd6158078e1d1b08187c84e9e831cc7f51692",
+    "scripts/run-v2.ps1": "73cf43047969a75e3fa5e2f35b01fe946b8a34bdb4ee653cdbe363c6dca30ac9",
+    "scripts/run.ps1": "472bb4f2b1311c77947ddb19a0cc695a5bc26bc9f98a8b2860561a267069bf4e",
+    "scripts/test.ps1": "6c5adfc04f377718903bca40991200f79724fa675df92fa8789e3661f6d4590a",
+    "compose.yaml": "34b20ee051eabe00d4e41419f1c30b94f2ca18a37aea324df689cf38769ca238",
+    "compose.test.yaml": "ebccbd43c2119d9e5f6ab3a909e8e42d4ac8bfc24080be1ba13977f4df440cd8",
+    "README.md": "6e6e601adc4a4c9b2b5556f1031c08302ea8e7bad2aa69825042e5a4599a93ae",
+    "generated/v2/manifest.json": "a25fec472ab1849ba1c592fa3fed2f2c54c24b708ea59d77fbf71c5acc27bca6",
+    "reports/reproducibility/v2/source_aggregates.json": "964832f37ab44612f82dc997792f3d4ff228d44c7a3ff8e36975c2968e3d01c3"
+  },
+  "credentials_exported": false,
+  "postgres_version": "PostgreSQL 17.11 (Debian 17.11-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+  "spark_runtime": {
+    "spark": "3.5.7",
+    "python": "3.8.10"
+  },
+  "backups_sha256": {
+    "entertainment_ops_v2.dump": "04747683136e04a945f378e7e9c16280d345bc6189546910ab897509e418055f",
+    "hotel_ops_v2.dump": "6696f9d08093d56c1a8a10259b09ffd0fd1ce989eb21e54df2e37ef3384560e0"
+  },
+  "test_evidence": "reports/testing/20261012T092133914051Z",
+  "processing_evidence": "reports/processing/v2_20261012T092023738754Z",
+  "batch": "v2_20261012T092023738754Z"
+}

@@ -1,0 +1,10 @@
+{
+  "gx_version": "1.24.0",
+  "postgres_bookings_passed": true,
+  "spark_bookings_passed": true,
+  "intentional_bad_funding_detected": true,
+  "data_docs": [
+    "gx/gx/uncommitted/data_docs/local_site/index.html"
+  ],
+  "scope": "Compatibility proof on one PostgreSQL table and one Spark dataset; not all 39 tables."
+}

@@ -1,0 +1,348 @@
+{
+  "B01.01": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F03"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B01.02": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F02"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B01.03": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F03",
+      "F02"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B01.04": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B01.05": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B02.01": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B02.02": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B02.03": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B02.04": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B02.05": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B02.06": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B03.01": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F04",
+      "F05",
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B03.02": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F04",
+      "F05",
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B03.03": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F04",
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B03.04": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F05",
+      "F01"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B03.05": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F01",
+      "F04",
+      "F05"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B04.01": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F06"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B04.02": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F06"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B04.03": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F06"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B04.04": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F07"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B04.05": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F06",
+      "F07"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B04.06": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F08"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B04.07": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F08"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B04.08": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F07"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B05.01": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F09"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B05.02": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F10"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B05.03": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F09",
+      "F10"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B05.04": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F11"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B05.05": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F11"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B05.06": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F11"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B06.01": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F12"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B06.02": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F13",
+      "F12"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B06.03": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F13",
+      "F12"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B06.04": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F13",
+      "F12"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B06.05": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F12",
+      "F13"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B06.06": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F13",
+      "F12"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B06.07": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F12",
+      "F13"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B07.01": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F14"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B07.02": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F14"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B07.03": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F14"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B07.04": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F14"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B07.05": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F14"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B07.06": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F14"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B08.01": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F16"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B08.02": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F02"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B08.03": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F02"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  },
+  "B08.04": {
+    "status": "COMPLETE",
+    "dependencies": [
+      "F02"
+    ],
+    "reason": "Input readiness only; query/filter coverage must be propagated by the semantic layer. Weather-filtered requests additionally depend on F17."
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "Q01",
+    "topic": "Lịch sử dimension",
+    "status": "USER_CONFIRMED",
+    "default": "SCD Type 2 cho các dimension có thuộc tính thay đổi; lịch và mã bữa cố định.",
+    "decision": "Dùng SCD Type 2 để sẵn sàng cho thay đổi trong thực tế. Nguồn v2 giản lược không có lịch sử thay đổi nên mỗi business key chỉ có phiên bản đầu tiên, gắn giả định khởi tạo rõ ràng; không cần sinh thêm dữ liệu nghiệp vụ.",
+    "confirmed_on": "2026-10-13"
+  },
+  {
+    "id": "Q02",
+    "topic": "Công bố batch có lỗi",
+    "status": "USER_CONFIRMED",
+    "default": "Công bố dữ liệu hợp lệ và báo rõ phần thiếu.",
+    "decision": "Vẫn xuất report từ phần dữ liệu hợp lệ khi có lỗi dữ liệu; hiển thị trạng thái thiếu, phạm vi và số lượng bị loại, thời điểm cập nhật và ảnh hưởng tới KPI. Không giả missing thành 0 hoặc tự trộn batch cũ với mới.",
+    "confirmed_on": "2026-10-13"
+  }
+]

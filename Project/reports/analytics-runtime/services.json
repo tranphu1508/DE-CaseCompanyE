@@ -1,0 +1,142 @@
+{
+  "captured_at": "2026-10-13T16:54:22.836602+00:00",
+  "services": [
+    {
+      "service": "oracle",
+      "container_id": "6977e9a2e2e1eb824d65d2d410cb77474a08e2474717a5d3e35cacd69dbe695a",
+      "image": "sha256:f988b0c04c4c386cd306a2a914c0d7a9702d83acc31b064a28ad8eb6278a8fba",
+      "configured_image": "container-registry.oracle.com/database/free@sha256:f988b0c04c4c386cd306a2a914c0d7a9702d83acc31b064a28ad8eb6278a8fba",
+      "state": "running",
+      "health": "healthy",
+      "started_at": "2026-10-13T16:53:18.096148537Z",
+      "ports": {
+        "1521/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "11521"
+          }
+        ]
+      },
+      "memory_bytes": 4294967296,
+      "cpu_quota_nano": 2000000000,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "companye-analytics_oracle_data",
+          "Source": "/var/lib/docker/volumes/companye-analytics_oracle_data/_data",
+          "Destination": "/opt/oracle/oradata",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ]
+    },
+    {
+      "service": "metadata",
+      "container_id": "b7d0e86097f532ebdf2fcc2e0cd713ad614b7b1092806c5a06e2d890614d808b",
+      "image": "sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+      "configured_image": "postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+      "state": "running",
+      "health": "healthy",
+      "started_at": "2026-10-13T16:53:13.994704115Z",
+      "ports": {
+        "5432/tcp": null
+      },
+      "memory_bytes": 536870912,
+      "cpu_quota_nano": 1000000000,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "companye-analytics_metadata_data",
+          "Source": "/var/lib/docker/volumes/companye-analytics_metadata_data/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ]
+    },
+    {
+      "service": "spark",
+      "container_id": "72f8fe2798ada2c516d44de1ef8a4e5e5fe630d104183c0a3b6bb53638ff32b0",
+      "image": "sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba",
+      "configured_image": "apache/spark@sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba",
+      "state": "running",
+      "health": null,
+      "started_at": "2026-10-13T16:53:14.961310911Z",
+      "ports": {},
+      "memory_bytes": 4294967296,
+      "cpu_quota_nano": 2000000000,
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "D:\\Study\\Bách Khoa University\\Kỹ Thuật Dữ Liệu CO5173\\Project\\.secrets\\analytics\\oracle_probe_password",
+          "Destination": "/run/secrets/oracle_probe_password",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "D:\\Study\\Bách Khoa University\\Kỹ Thuật Dữ Liệu CO5173\\Project\\reports",
+          "Destination": "/workspace/reports",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "volume",
+          "Name": "companye-analytics_analytics_data",
+          "Source": "/var/lib/docker/volumes/companye-analytics_analytics_data/_data",
+          "Destination": "/analytics",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        },
+        {
+          "Type": "bind",
+          "Source": "/run/desktop/mnt/host/d/Study/Bách Khoa University/Kỹ Thuật Dữ Liệu CO5173/Project/src",
+          "Destination": "/workspace/src",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/run/desktop/mnt/host/d/Study/Bách Khoa University/Kỹ Thuật Dữ Liệu CO5173/Project/config",
+          "Destination": "/workspace/config",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/run/desktop/mnt/host/d/Study/Bách Khoa University/Kỹ Thuật Dữ Liệu CO5173/Project/config/analytics",
+          "Destination": "/workspace/analytics_conf",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/run/desktop/mnt/host/d/Study/Bách Khoa University/Kỹ Thuật Dữ Liệu CO5173/Project/lake/v2",
+          "Destination": "/workspace/lake/v2",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "D:\\Study\\Bách Khoa University\\Kỹ Thuật Dữ Liệu CO5173\\Project\\.secrets\\analytics\\catalog_password",
+          "Destination": "/run/secrets/catalog_password",
+          "Mode": "",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ]
+    }
+  ]
+}

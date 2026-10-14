@@ -1,0 +1,336 @@
+{
+  "status": "PASSED",
+  "batch_id": "v1_test_export",
+  "started_at": "2026-10-14T12:49:34.201006+00:00",
+  "finished_at": "2026-10-14T12:49:58.117859+00:00",
+  "structured_tables": 39,
+  "row_count": 577400,
+  "checks": [
+    {
+      "dataset_id": "hotel_ops.sites",
+      "rows": 4,
+      "distinct_pk": 4,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.hotels",
+      "rows": 8,
+      "distinct_pk": 8,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.rooms",
+      "rows": 240,
+      "distinct_pk": 240,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.channels",
+      "rows": 13,
+      "distinct_pk": 13,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.guests",
+      "rows": 12000,
+      "distinct_pk": 12000,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.membership_plans",
+      "rows": 3,
+      "distinct_pk": 3,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.memberships",
+      "rows": 4099,
+      "distinct_pk": 4099,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.member_cards",
+      "rows": 4099,
+      "distinct_pk": 4099,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.promotions",
+      "rows": 40,
+      "distinct_pk": 40,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.rate_plans",
+      "rows": 72,
+      "distinct_pk": 72,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.bookings",
+      "rows": 32000,
+      "distinct_pk": 32000,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.booking_rooms",
+      "rows": 36711,
+      "distinct_pk": 36711,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.stays",
+      "rows": 30736,
+      "distinct_pk": 30736,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.breakfast_entitlements",
+      "rows": 52979,
+      "distinct_pk": 52979,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.outlets",
+      "rows": 16,
+      "distinct_pk": 16,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.dining_orders",
+      "rows": 31357,
+      "distinct_pk": 31357,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.meal_sessions",
+      "rows": 11696,
+      "distinct_pk": 11696,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.payments",
+      "rows": 36239,
+      "distinct_pk": 36239,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.settlements",
+      "rows": 19223,
+      "distinct_pk": 19223,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.suppliers",
+      "rows": 16,
+      "distinct_pk": 16,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.items",
+      "rows": 6,
+      "distinct_pk": 6,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.purchase_orders",
+      "rows": 23680,
+      "distinct_pk": 23680,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.purchase_lines",
+      "rows": 23680,
+      "distinct_pk": 23680,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.receipts",
+      "rows": 23680,
+      "distinct_pk": 23680,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.stock_movements",
+      "rows": 76474,
+      "distinct_pk": 76474,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.assets",
+      "rows": 256,
+      "distinct_pk": 256,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.maintenance",
+      "rows": 512,
+      "distinct_pk": 512,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "hotel_ops.weather_daily",
+      "rows": 2924,
+      "distinct_pk": 2924,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.centres",
+      "rows": 4,
+      "distinct_pk": 4,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.customers",
+      "rows": 12000,
+      "distinct_pk": 12000,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.activities",
+      "rows": 12,
+      "distinct_pk": 12,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.closures",
+      "rows": 272,
+      "distinct_pk": 272,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.ticket_orders",
+      "rows": 20690,
+      "distinct_pk": 20690,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.tickets",
+      "rows": 44478,
+      "distinct_pk": 44478,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.admissions",
+      "rows": 39827,
+      "distinct_pk": 39827,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.vehicles",
+      "rows": 120,
+      "distinct_pk": 120,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.vehicle_maintenance",
+      "rows": 240,
+      "distinct_pk": 240,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.rentals",
+      "rows": 7723,
+      "distinct_pk": 7723,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    },
+    {
+      "dataset_id": "entertainment_ops.cash_events",
+      "rows": 29271,
+      "distinct_pk": 29271,
+      "invalid_required": {},
+      "invalid_casts": {},
+      "passed": true
+    }
+  ],
+  "external_quality": {
+    "dataset_id": "external.supplier_mixed",
+    "input_rows": 121,
+    "accepted_rows": 77,
+    "quarantined_rows": 44,
+    "reasons": {
+      "INVALID_DATE": 13,
+      "UNKNOWN_UNIT_CONVERSION": 25,
+      "INVALID_DATE|UNKNOWN_UNIT_CONVERSION": 5,
+      "DUPLICATE_DOCUMENT": 1
+    },
+    "passed": true
+  },
+  "raw_manifest_sha256": "013faa98903728b4828bf15a236c1582dac3b721eb804467bf5c154793cc3333"
+}

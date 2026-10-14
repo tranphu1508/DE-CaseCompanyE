@@ -1,0 +1,23 @@
+{
+  "id": "B03",
+  "name": "Bán chéo khách sạn và giải trí",
+  "scope": "REFERENCE_ONLY_NOT_WAREHOUSE",
+  "definition": "Liên kết theo booking reference rõ ràng; cộng doanh số con trước khi nối, không suy danh tính từ ID tổng hợp.",
+  "expected": [
+    {
+      "hotel_amount": 3000000,
+      "ticket_amount": 300000,
+      "rental_amount": 400000,
+      "cross_sold_bookings": 1
+    }
+  ],
+  "actual": [
+    {
+      "hotel_amount": 3000000,
+      "ticket_amount": 300000,
+      "rental_amount": 400000,
+      "cross_sold_bookings": 1
+    }
+  ],
+  "passed": true
+}

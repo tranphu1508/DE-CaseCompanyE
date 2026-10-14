@@ -1,0 +1,38 @@
+name: companye
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: companye
+      POSTGRES_PASSWORD: ${COMPANYE_DB_PASSWORD:?Run scripts/run.ps1 first}
+      POSTGRES_DB: postgres
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - companye_postgres:/var/lib/postgresql/data
+      - ./generated:/seed:ro
+      - ./lake:/lake
+      - ./databases:/backups
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U companye -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    mem_limit: 1g
+  spark:
+    image: apache/spark:3.5.7-python3
+    user: "0:0"
+    working_dir: /workspace
+    entrypoint: ["/bin/bash", "-c"]
+    command: ["sleep infinity"]
+    environment:
+      SPARK_LOCAL_IP: 127.0.0.1
+      PYTHONPATH: /workspace/src
+    volumes:
+      - ./src:/workspace/src:ro
+      - ./lake:/workspace/lake
+      - ./reports:/workspace/reports
+      - ./config:/workspace/config:ro
+    mem_limit: 3g
+volumes:
+  companye_postgres:

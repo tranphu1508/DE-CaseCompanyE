@@ -1,0 +1,53 @@
+{
+  "inputs": [
+    {
+      "dataset": "hotel_ops.sites",
+      "status": "VERIFIED",
+      "sha256": "b9dee3dc20e8244c8b51c4df691d78e714c2b4ed6699f8a07f56f90368008fdd",
+      "rows": 4
+    }
+  ],
+  "source_status": {
+    "hotel_ops.sites": "PARTIAL"
+  },
+  "quarantine": [
+    {
+      "source": "hotel_ops.sites",
+      "line": 3,
+      "code": "PARSE_OR_REQUIRED",
+      "reason": "Required field site_name",
+      "payload": {
+        "site_id": "BAD",
+        "site_name": "\\N",
+        "climate_region": "TEST"
+      }
+    },
+    {
+      "source": "hotel_ops.sites",
+      "code": "DUPLICATE_KEY",
+      "key": [
+        "site_id"
+      ],
+      "payload": {
+        "site_id": "DUP",
+        "site_name": "one",
+        "climate_region": "TEST"
+      }
+    },
+    {
+      "source": "hotel_ops.sites",
+      "code": "DUPLICATE_KEY",
+      "key": [
+        "site_id"
+      ],
+      "payload": {
+        "site_id": "DUP",
+        "site_name": "two",
+        "climate_region": "TEST"
+      }
+    }
+  ],
+  "calendar_start": "2023-01-01",
+  "calendar_end": "2023-12-31",
+  "date_errors": []
+}

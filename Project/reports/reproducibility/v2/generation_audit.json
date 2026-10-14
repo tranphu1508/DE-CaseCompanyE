@@ -1,0 +1,54 @@
+{
+  "base_rules": "Inherited v1 assumptions except overridden procurement/identity/adjustments; all synthetic.",
+  "configuration": {
+    "dataset_version": "v2",
+    "seed": 20261012,
+    "date_from": "2024-01-01",
+    "date_to": "2025-12-31",
+    "customers": 12000,
+    "bookings": 32000,
+    "walkin_tickets": 6000,
+    "five_star_rooms": 36,
+    "three_star_rooms": 24,
+    "currency": "VND",
+    "timezone": "Asia/Ho_Chi_Minh",
+    "procurement_seed": 2026101201,
+    "identity_seed": 2026101202,
+    "delivery_seed": 2026101203,
+    "adjustment_seed": 2026101204,
+    "split_receipt_probability": 0.25,
+    "duplicate_guest_profiles": 120,
+    "price_adjustments": 160,
+    "external_receipts": 240,
+    "external_corrections": 24,
+    "external_unknown_units": 12
+  },
+  "generator_sha256": {
+    "generate.py": "3d747b15fd5702bdedf5e77a72135b75e24b7d9824e54d0736821dac82a5381d",
+    "model.py": "c4f6bdcab5f1fbccd56872e827ac8e9d4c2f92eeac784d83a821b85b3d76d03c",
+    "generate_v2.py": "702dd3564f3fda61a579a8877fdc02ebaa2b4a0bbf8ac6c0595e09cf5143cbd3",
+    "model_v2.py": "47716876e9b312f4a994c7b1b8865ea96929643874f1e7f08a31499e6e3c9405"
+  },
+  "changes": [
+    "PO grouped by hotel/supplier/date; multi-item orders",
+    "Split deliveries preserve ordered=accepted+rejected and lot-specific stock",
+    "Opaque independent customer IDs, contact changes/missingness/shared phones, duplicate profiles",
+    "Selected completed bookings have two price revisions and an additional charge",
+    "Receipt file replays, late arrivals, out-of-order revisions and unknown units"
+  ],
+  "limitations": [
+    "No causal business inference from artificial distributions",
+    "No full CDC or partial booking cancellation",
+    "Receipt exports are representations of source receipts, never extra purchases",
+    "Identity resolution is not implemented; ambiguous profiles must remain unresolved",
+    "Meal costs still use allocation by covers; family loyalty/combo ERP remain out of scope"
+  ],
+  "identity_case_counts": {
+    "SHARED_HOUSEHOLD_PHONE": 1200,
+    "MISSING_CONTACTS": 1200,
+    "CHANGED_PHONE": 1200,
+    "NAME_TYPO": 1200,
+    "EMAIL_FORMAT": 1200,
+    "DUPLICATE_LOCAL_PROFILE": 120
+  }
+}

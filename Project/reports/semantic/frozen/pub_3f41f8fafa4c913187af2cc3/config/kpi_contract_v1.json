@@ -1,0 +1,1008 @@
+{
+  "version": "companye-kpi-1.0",
+  "created_on": "2026-10-12",
+  "business_requirements_status": "USER_CONFIRMED",
+  "metric_definition_status": "IMPLEMENTATION_SPECIFICATION",
+  "dataset_version": "v2",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "period": "[start_date,end_date_exclusive)",
+  "source_state": "final snapshot; no full historical as-known reconstruction",
+  "document": "docs/CompanyE_KPI_Specification.md",
+  "formula_language": "business notation; not executable SQL",
+  "ratio_representation": "0..1; display as percent; zero denominator is BLANK",
+  "requirements": [
+    {
+      "owner": "Hotel and revenue management",
+      "grain": [
+        "room_id, service_date",
+        "booking_id"
+      ],
+      "date_roles": {
+        "B01.01": "stay_date",
+        "B01.02": "calendar_date",
+        "B01.03": "stay_date/calendar_date",
+        "B01.04": "bookings.arrival cohort",
+        "B01.05": "bookings.arrival cohort"
+      },
+      "source_columns": {
+        "hotel_ops.bookings": [
+          "booking_id",
+          "hotel_id",
+          "arrival",
+          "status"
+        ],
+        "hotel_ops.booking_rooms": [
+          "booking_room_id",
+          "booking_id",
+          "room_id"
+        ],
+        "hotel_ops.stays": [
+          "stay_id",
+          "booking_room_id",
+          "checkin_date",
+          "checkout_date"
+        ],
+        "hotel_ops.rooms": [
+          "room_id",
+          "hotel_id",
+          "room_type"
+        ],
+        "hotel_ops.hotels": [
+          "hotel_id",
+          "site_id",
+          "stars"
+        ],
+        "hotel_ops.sites": [
+          "site_id",
+          "site_name"
+        ],
+        "hotel_ops.assets": [
+          "asset_id",
+          "room_id"
+        ],
+        "hotel_ops.maintenance": [
+          "maintenance_id",
+          "asset_id",
+          "starts_on",
+          "ends_on"
+        ]
+      },
+      "filters": [
+        "site",
+        "hotel",
+        "stars",
+        "service_date",
+        "arrival_cohort",
+        "room_type where applicable"
+      ],
+      "restrictions": [
+        "No channel-specific capacity without allocation",
+        "Overlapping stays must fail validation"
+      ],
+      "id": "B01",
+      "name": "Đánh giá hoạt động lưu trú",
+      "metrics": [
+        {
+          "id": "B01.01",
+          "name": "Đêm phòng thực ở",
+          "formula": "COUNTD(room_id, stay_date) trong kỳ từ stay của booking COMPLETED",
+          "unit": "Đêm phòng; cộng theo ngày/cơ sở không chồng",
+          "aggregation": "distinct_count",
+          "date_role": "stay_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B01.02",
+          "name": "Đêm phòng khả dụng",
+          "formula": "COUNTD(room_id, date) trong kỳ không ngừng bán",
+          "unit": "Đêm phòng; cộng theo ngày/cơ sở",
+          "aggregation": "distinct_count",
+          "date_role": "calendar_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B01.03",
+          "name": "Công suất phòng",
+          "formula": "DIV(B01.01, B01.02)",
+          "unit": "%; tính lại từ tổng",
+          "aggregation": "ratio_of_totals",
+          "date_role": "stay_date/calendar_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B01.04",
+          "name": "Tỷ lệ booking hủy",
+          "formula": "COUNTD(booking_id có status CANCELLED)/COUNTD(booking_id) trong cohort ngày arrival thuộc kỳ",
+          "unit": "%; cả ba trạng thái đều vào mẫu số",
+          "aggregation": "ratio_of_totals",
+          "date_role": "bookings.arrival cohort",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B01.05",
+          "name": "Tỷ lệ booking no-show",
+          "formula": "COUNTD(booking_id có status NO_SHOW)/COUNTD(booking_id) trong cùng cohort arrival",
+          "unit": "%; không cộng no-show vào hủy",
+          "aggregation": "ratio_of_totals",
+          "date_role": "bookings.arrival cohort",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "owner": "Distribution and marketing",
+      "grain": [
+        "booking_id"
+      ],
+      "date_role": "bookings.departure",
+      "population": "COMPLETED bookings in departure cohort; final snapshot values",
+      "source_columns": {
+        "hotel_ops.bookings": [
+          "booking_id",
+          "hotel_id",
+          "channel_id",
+          "promotion_id",
+          "departure",
+          "status",
+          "gross_vnd",
+          "discount_vnd",
+          "company_share_vnd",
+          "partner_share_vnd",
+          "customer_due_vnd",
+          "commission_vnd"
+        ],
+        "hotel_ops.channels": [
+          "channel_id",
+          "channel_type",
+          "channel_name"
+        ],
+        "hotel_ops.promotions": [
+          "promotion_id",
+          "promotion_name"
+        ],
+        "hotel_ops.settlements": [
+          "booking_id",
+          "sponsor_due_vnd",
+          "sponsor_received_vnd",
+          "commission_vnd",
+          "status"
+        ],
+        "hotel_ops.booking_revisions": [
+          "revision_id",
+          "booking_id",
+          "revision_no",
+          "occurred_at",
+          "gross_vnd"
+        ],
+        "hotel_ops.booking_room_revisions": [
+          "revision_id",
+          "booking_room_id",
+          "nightly_rate_vnd"
+        ]
+      },
+      "filters": [
+        "departure_date",
+        "hotel",
+        "site",
+        "stars",
+        "channel",
+        "promotion"
+      ],
+      "restrictions": [
+        "Not cash flow or profit",
+        "No room-type allocation in v1"
+      ],
+      "id": "B02",
+      "name": "Đánh giá kênh bán và khuyến mãi",
+      "metrics": [
+        {
+          "id": "B02.01",
+          "name": "Giá trị gói phòng trước giảm",
+          "formula": "SUM(gross_vnd)",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "bookings.departure",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B02.02",
+          "name": "Giá trị khách phải trả",
+          "formula": "SUM(customer_due_vnd) = SUM(gross_vnd − discount_vnd)",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "bookings.departure",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B02.03",
+          "name": "Chi phí giảm giá CompanyE chịu",
+          "formula": "SUM(company_share_vnd)",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "bookings.departure",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B02.04",
+          "name": "Phần giảm giá đối tác tài trợ",
+          "formula": "SUM(partner_share_vnd)",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "bookings.departure",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B02.05",
+          "name": "Hoa hồng phân phối",
+          "formula": "SUM(commission_vnd)",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "bookings.departure",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B02.06",
+          "name": "Giá trị giữ lại trước chi phí vận hành",
+          "formula": "B02.01 − B02.03 − B02.05 = B02.02 + B02.04 − B02.05",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "bookings.departure",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "owner": "Site management and sales",
+      "grain": [
+        "booking_id",
+        "ticket_order_id before aggregation",
+        "rental_id before aggregation"
+      ],
+      "date_role": "hotel bookings.departure cohort",
+      "population": "COMPLETED hotel bookings; net-positive ticket order or COMPLETED positive rental qualifies cross-sell",
+      "source_columns": {
+        "hotel_ops.bookings": [
+          "booking_id",
+          "hotel_id",
+          "channel_id",
+          "departure",
+          "status",
+          "customer_due_vnd"
+        ],
+        "entertainment_ops.ticket_orders": [
+          "ticket_order_id",
+          "centre_id",
+          "hotel_booking_ref",
+          "gross_vnd",
+          "refunded_vnd"
+        ],
+        "entertainment_ops.rentals": [
+          "rental_id",
+          "vehicle_id",
+          "hotel_booking_ref",
+          "status",
+          "agreed_vnd"
+        ],
+        "entertainment_ops.vehicles": [
+          "vehicle_id",
+          "centre_id"
+        ],
+        "entertainment_ops.centres": [
+          "centre_id",
+          "site_code"
+        ]
+      },
+      "filters": [
+        "departure_date",
+        "booking_hotel",
+        "booking_site",
+        "booking_stars",
+        "booking_channel"
+      ],
+      "restrictions": [
+        "Explicit booking references only",
+        "Preaggregate ticket and rental child tables separately",
+        "No arbitrary customer matching or causal uplift"
+      ],
+      "id": "B03",
+      "name": "Phân tích bán chéo khách sạn và giải trí",
+      "metrics": [
+        {
+          "id": "B03.01",
+          "name": "Booking có mua chéo",
+          "formula": "COUNTD(booking_id trong cohort thỏa điều kiện mua chéo)",
+          "unit": "Booking; DISTINCT",
+          "aggregation": "distinct_count",
+          "date_role": "hotel bookings.departure cohort",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B03.02",
+          "name": "Tỷ lệ booking có mua chéo",
+          "formula": "DIV(B03.01, COUNTD(booking_id COMPLETED trong cohort))",
+          "unit": "%",
+          "aggregation": "ratio_of_totals",
+          "date_role": "hotel bookings.departure cohort",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B03.03",
+          "name": "Giá trị vé sau hoàn gắn booking",
+          "formula": "SUM(gross_vnd − refunded_vnd) của các ticket_order liên kết cohort",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "hotel bookings.departure cohort",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B03.04",
+          "name": "Giá trị thuê xe hoàn thành gắn booking",
+          "formula": "SUM(agreed_vnd) của rental COMPLETED liên kết cohort",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "hotel bookings.departure cohort",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B03.05",
+          "name": "Giá trị dịch vụ kết hợp của cohort",
+          "formula": "SUM(bookings.customer_due_vnd) trong cohort + B03.03 + B03.04",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "hotel bookings.departure cohort",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "owner": "Food and beverage management",
+      "grain": [
+        "booking_room_id, service_date entitlement",
+        "dining_order_id",
+        "outlet_id, service_date, meal session"
+      ],
+      "date_role": "service_date",
+      "source_columns": {
+        "hotel_ops.breakfast_entitlements": [
+          "entitlement_id",
+          "booking_room_id",
+          "service_date",
+          "eligible_covers",
+          "redeemed_covers"
+        ],
+        "hotel_ops.booking_rooms": [
+          "booking_room_id",
+          "booking_id"
+        ],
+        "hotel_ops.bookings": [
+          "booking_id",
+          "hotel_id",
+          "status"
+        ],
+        "hotel_ops.outlets": [
+          "outlet_id",
+          "hotel_id",
+          "outlet_type"
+        ],
+        "hotel_ops.dining_orders": [
+          "dining_order_id",
+          "outlet_id",
+          "service_date",
+          "meal",
+          "covers",
+          "net_vnd",
+          "rating"
+        ],
+        "hotel_ops.meal_sessions": [
+          "session_id",
+          "outlet_id",
+          "service_date",
+          "meal",
+          "actual_covers",
+          "ingredient_cost_vnd"
+        ]
+      },
+      "filters": [
+        "service_date",
+        "serving_hotel",
+        "serving_site",
+        "serving_stars",
+        "outlet",
+        "meal"
+      ],
+      "restrictions": [
+        "Breakfast benefits only for BREAKFAST",
+        "Ingredient cost only BREAKFAST and DINNER",
+        "Session counts are reconciliation totals, not additional covers",
+        "Rating average is invoice-weighted"
+      ],
+      "id": "B04",
+      "name": "Đánh giá buffet và nhà hàng",
+      "metrics": [
+        {
+          "id": "B04.01",
+          "name": "Suất sáng được hưởng",
+          "formula": "SUM(eligible_covers) từ entitlement của booking COMPLETED",
+          "unit": "Suất",
+          "aggregation": "sum",
+          "date_role": "service_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B04.02",
+          "name": "Suất sáng quyền lợi thực dùng",
+          "formula": "SUM(redeemed_covers) trên cùng tập entitlement",
+          "unit": "Suất",
+          "aggregation": "sum",
+          "date_role": "service_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B04.03",
+          "name": "Tỷ lệ sử dụng quyền lợi sáng",
+          "formula": "DIV(B04.02, B04.01)",
+          "unit": "%",
+          "aggregation": "ratio_of_totals",
+          "date_role": "service_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B04.04",
+          "name": "Giá trị ăn uống bán riêng sau giảm",
+          "formula": "SUM(dining_orders.net_vnd)",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "service_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B04.05",
+          "name": "Lượt phục vụ ăn uống",
+          "formula": "SUM(dining_orders.covers) + SUM(redeemed_covers) áp đúng bữa/outlet",
+          "unit": "Lượt; không phải số khách duy nhất",
+          "aggregation": "sum",
+          "date_role": "service_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B04.06",
+          "name": "Chi phí nguyên liệu buffet",
+          "formula": "SUM(meal_sessions.ingredient_cost_vnd) cho BREAKFAST/DINNER",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "service_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B04.07",
+          "name": "Chi phí nguyên liệu mỗi lượt buffet",
+          "formula": "DIV(B04.06, SUM(meal_sessions.actual_covers) cùng phiên)",
+          "unit": "VND/lượt",
+          "aggregation": "weighted_mean",
+          "date_role": "service_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B04.08",
+          "name": "Điểm đánh giá trung bình theo hóa đơn",
+          "formula": "DIV(SUM(rating hợp lệ), COUNT(dining_order_id có rating hợp lệ))",
+          "unit": "Điểm trên 5; mỗi hóa đơn một trọng số",
+          "aggregation": "weighted_mean",
+          "date_role": "service_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "owner": "Entertainment and fleet operations",
+      "grain": [
+        "activity_id, date",
+        "vehicle_id, date",
+        "admission_id"
+      ],
+      "date_roles": {
+        "B05.01": "local date of admissions.entered_at",
+        "B05.02": "calendar_date",
+        "B05.03": "admission_date/calendar_date",
+        "B05.04": "expanded pickup_date to return_date exclusive",
+        "B05.05": "calendar_date",
+        "B05.06": "rental_date/calendar_date"
+      },
+      "source_columns": {
+        "entertainment_ops.activities": [
+          "activity_id",
+          "centre_id",
+          "outdoor",
+          "capacity_per_day"
+        ],
+        "entertainment_ops.centres": [
+          "centre_id",
+          "site_code"
+        ],
+        "entertainment_ops.closures": [
+          "closure_id",
+          "activity_id",
+          "closed_on",
+          "reason"
+        ],
+        "entertainment_ops.admissions": [
+          "admission_id",
+          "ticket_id",
+          "entered_at"
+        ],
+        "entertainment_ops.tickets": [
+          "ticket_id",
+          "activity_id",
+          "status"
+        ],
+        "entertainment_ops.vehicles": [
+          "vehicle_id",
+          "centre_id",
+          "vehicle_type"
+        ],
+        "entertainment_ops.vehicle_maintenance": [
+          "vehicle_work_id",
+          "vehicle_id",
+          "starts_on",
+          "ends_on"
+        ],
+        "entertainment_ops.rentals": [
+          "rental_id",
+          "vehicle_id",
+          "pickup_date",
+          "return_date",
+          "status"
+        ],
+        "hotel_ops.weather_daily": [
+          "site_id",
+          "weather_date",
+          "temperature_c",
+          "rain_mm",
+          "severe_weather"
+        ]
+      },
+      "filters": [
+        "service_date",
+        "centre",
+        "site",
+        "activity or vehicle_type",
+        "weather_on_service_date"
+      ],
+      "restrictions": [
+        "Admissions are activity visits, not unique people",
+        "RESCHEDULED admissions count",
+        "Capacity constant across v2 horizon"
+      ],
+      "id": "B05",
+      "name": "Đánh giá giải trí và phương tiện",
+      "metrics": [
+        {
+          "id": "B05.01",
+          "name": "Lượt sử dụng hoạt động thực tế",
+          "formula": "COUNTD(admission_id) có ngày vào trong kỳ",
+          "unit": "Lượt hoạt động",
+          "aggregation": "distinct_count",
+          "date_role": "local date of admissions.entered_at",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B05.02",
+          "name": "Công suất hoạt động khả dụng",
+          "formula": "SUM(capacity_per_day) trên activity × date trong kỳ không có closure",
+          "unit": "Lượt công suất",
+          "aggregation": "sum",
+          "date_role": "calendar_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B05.03",
+          "name": "Tỷ lệ sử dụng hoạt động",
+          "formula": "DIV(B05.01, B05.02)",
+          "unit": "%",
+          "aggregation": "ratio_of_totals",
+          "date_role": "admission_date/calendar_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B05.04",
+          "name": "Ngày xe được thuê",
+          "formula": "COUNTD(vehicle_id, date) mở rộng `[pickup_date,return_date)` của rental COMPLETED trong kỳ",
+          "unit": "Ngày xe",
+          "aggregation": "distinct_count",
+          "date_role": "expanded pickup_date to return_date exclusive",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B05.05",
+          "name": "Ngày xe sẵn sàng",
+          "formula": "COUNTD(vehicle_id, date) toàn kỳ trừ hợp DISTINCT ngày bảo trì xe",
+          "unit": "Ngày xe",
+          "aggregation": "distinct_count",
+          "date_role": "calendar_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B05.06",
+          "name": "Tỷ lệ sử dụng đội xe",
+          "formula": "DIV(B05.04, B05.05)",
+          "unit": "%",
+          "aggregation": "ratio_of_totals",
+          "date_role": "rental_date/calendar_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "owner": "Procurement and receiving",
+      "grain": [
+        "purchase_line_id",
+        "receipt_id before aggregation"
+      ],
+      "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+      "assessment_date_default": "2025-12-31",
+      "source_columns": {
+        "hotel_ops.purchase_orders": [
+          "purchase_order_id",
+          "hotel_id",
+          "supplier_id",
+          "expected_on"
+        ],
+        "hotel_ops.purchase_lines": [
+          "purchase_line_id",
+          "purchase_order_id",
+          "item_id",
+          "ordered_qty",
+          "unit_price_vnd"
+        ],
+        "hotel_ops.receipts": [
+          "receipt_id",
+          "purchase_line_id",
+          "received_on",
+          "accepted_qty",
+          "rejected_qty"
+        ],
+        "hotel_ops.items": [
+          "item_id",
+          "specification",
+          "base_unit"
+        ],
+        "hotel_ops.suppliers": [
+          "supplier_id",
+          "supplier_name"
+        ]
+      },
+      "filters": [
+        "expected_date",
+        "assessment_date",
+        "supplier",
+        "hotel",
+        "site",
+        "item",
+        "base_unit"
+      ],
+      "restrictions": [
+        "Keep due lines without receipts",
+        "Quantity aggregates require compatible items/units",
+        "OTIF is line-based, not order-based",
+        "External exports do not add source receipts"
+      ],
+      "id": "B06",
+      "name": "Đánh giá giao hàng nhà cung cấp",
+      "metrics": [
+        {
+          "id": "B06.01",
+          "name": "Lượng đặt đến hạn",
+          "formula": "SUM(O), mỗi purchase_line đúng một lần",
+          "unit": "Đơn vị chuẩn của mặt hàng",
+          "aggregation": "sum",
+          "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B06.02",
+          "name": "Lượng nhận đạt",
+          "formula": "SUM(G)",
+          "unit": "Như trên",
+          "aggregation": "sum",
+          "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B06.03",
+          "name": "Lượng bị từ chối",
+          "formula": "SUM(R)",
+          "unit": "Như trên",
+          "aggregation": "sum",
+          "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B06.04",
+          "name": "Lượng nhận đạt nhưng trễ",
+          "formula": "SUM(L)",
+          "unit": "Như trên",
+          "aggregation": "sum",
+          "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B06.05",
+          "name": "Tỷ lệ đáp ứng lượng đạt",
+          "formula": "DIV(SUM(G), SUM(O))",
+          "unit": "%; chỉ tổng hợp mặt hàng tương thích",
+          "aggregation": "ratio_of_totals",
+          "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B06.06",
+          "name": "Tỷ lệ từ chối lượng giao",
+          "formula": "DIV(SUM(R), SUM(G + R))",
+          "unit": "%; chỉ tổng hợp mặt hàng tương thích",
+          "aggregation": "ratio_of_totals",
+          "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B06.07",
+          "name": "Tỷ lệ dòng được nhận đủ đạt đúng hạn",
+          "formula": "COUNTD(line_id có T ≥ O)/COUNTD(line_id đến hạn)",
+          "unit": "% dòng; dùng được khi có nhiều đơn vị",
+          "aggregation": "ratio_of_totals",
+          "date_role": "purchase_orders.expected_on cohort, receipt received_on <= assessment_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "owner": "Inventory and procurement",
+      "grain": [
+        "receipt_id, hotel_id, item_id",
+        "movement_id"
+      ],
+      "date_role": "movement_date; opening before S, closing before E",
+      "source_columns": {
+        "hotel_ops.stock_movements": [
+          "movement_id",
+          "receipt_id",
+          "hotel_id",
+          "item_id",
+          "movement_date",
+          "movement_type",
+          "usage_area",
+          "quantity"
+        ],
+        "hotel_ops.receipts": [
+          "receipt_id",
+          "purchase_line_id",
+          "expires_on"
+        ],
+        "hotel_ops.purchase_lines": [
+          "purchase_line_id",
+          "purchase_order_id",
+          "unit_price_vnd"
+        ],
+        "hotel_ops.purchase_orders": [
+          "purchase_order_id",
+          "supplier_id"
+        ],
+        "hotel_ops.items": [
+          "item_id",
+          "base_unit",
+          "specification"
+        ]
+      },
+      "filters": [
+        "period",
+        "hotel",
+        "site",
+        "item",
+        "lot_supplier"
+      ],
+      "restrictions": [
+        "Balances are not additive over time",
+        "Opening stock is derived from prior movements",
+        "Only synthetic initial zero stock assumed",
+        "No movement-area filter on balances",
+        "WASTE is distinct from rejected receipts"
+      ],
+      "id": "B07",
+      "name": "Kiểm soát tồn kho và hao hụt",
+      "metrics": [
+        {
+          "id": "B07.01",
+          "name": "Tồn đầu kỳ",
+          "formula": "SUM(Q0)",
+          "unit": "Đơn vị chuẩn; không cộng qua thời gian",
+          "aggregation": "period_balance",
+          "date_role": "movement_date; opening before S, closing before E",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B07.02",
+          "name": "Tồn cuối kỳ",
+          "formula": "SUM(Q1)",
+          "unit": "Đơn vị chuẩn; không cộng các tồn cuối ngày",
+          "aggregation": "period_balance",
+          "date_role": "movement_date; opening before S, closing before E",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B07.03",
+          "name": "Lượng sử dụng trong kỳ",
+          "formula": "SUM(U)",
+          "unit": "Đơn vị chuẩn",
+          "aggregation": "sum",
+          "date_role": "movement_date; opening before S, closing before E",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B07.04",
+          "name": "Lượng hủy trong kỳ",
+          "formula": "SUM(W)",
+          "unit": "Đơn vị chuẩn",
+          "aggregation": "sum",
+          "date_role": "movement_date; opening before S, closing before E",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B07.05",
+          "name": "Giá trị hao hụt trong kỳ",
+          "formula": "SUM(quantity × unit_price_vnd) của WASTE trong kỳ theo từng lô",
+          "unit": "VND; cộng được giữa mặt hàng",
+          "aggregation": "sum",
+          "date_role": "movement_date; opening before S, closing before E",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B07.06",
+          "name": "Tỷ lệ hao hụt theo giá trị sẵn có",
+          "formula": "DIV(giá trị WASTE trong kỳ, giá trị tồn đầu kỳ + giá trị IN trong kỳ), định giá từng lô",
+          "unit": "%; tính lại từ tổng giá trị",
+          "aggregation": "ratio_of_totals",
+          "date_role": "movement_date; opening before S, closing before E",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        }
+      ]
+    },
+    {
+      "owner": "Engineering and hotel management",
+      "grain": [
+        "maintenance_id",
+        "room_id, date"
+      ],
+      "date_roles": {
+        "B08.01": "maintenance.ends_on",
+        "B08.02": "maintenance interval intersection with calendar_date",
+        "B08.03": "calendar_date",
+        "B08.04": "calendar_date"
+      },
+      "source_columns": {
+        "hotel_ops.maintenance": [
+          "maintenance_id",
+          "asset_id",
+          "starts_on",
+          "ends_on",
+          "work_type",
+          "cost_vnd",
+          "status"
+        ],
+        "hotel_ops.assets": [
+          "asset_id",
+          "hotel_id",
+          "room_id",
+          "asset_type"
+        ],
+        "hotel_ops.rooms": [
+          "room_id",
+          "hotel_id"
+        ],
+        "hotel_ops.hotels": [
+          "hotel_id",
+          "site_id",
+          "stars"
+        ]
+      },
+      "filters": [
+        "period",
+        "hotel",
+        "site",
+        "stars",
+        "asset_type/work_type for costs only"
+      ],
+      "restrictions": [
+        "Common assets do not imply all rooms closed",
+        "Distinct room-days across overlapping work",
+        "Completion-date cost attribution",
+        "Exclude vehicle maintenance from hotel cost"
+      ],
+      "id": "B08",
+      "name": "Đánh giá bảo trì và khả năng cung cấp phòng",
+      "metrics": [
+        {
+          "id": "B08.01",
+          "name": "Chi phí bảo trì tài sản khách sạn hoàn tất",
+          "formula": "SUM(cost_vnd) mỗi maintenance_id COMPLETED có ends_on trong kỳ",
+          "unit": "VND",
+          "aggregation": "sum",
+          "date_role": "maintenance.ends_on",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B08.02",
+          "name": "Ngày phòng ngừng bán do bảo trì",
+          "formula": "COUNTD(room_id, date) thuộc hợp các khoảng bảo trì trong kỳ",
+          "unit": "Ngày phòng",
+          "aggregation": "distinct_count",
+          "date_role": "maintenance interval intersection with calendar_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B08.03",
+          "name": "Ngày phòng khả dụng",
+          "formula": "COUNTD(room_id,date) danh mục trong kỳ − B08.02",
+          "unit": "Ngày phòng; bằng B01.02 với cùng bộ lọc",
+          "aggregation": "distinct_count",
+          "date_role": "calendar_date",
+          "zero_denominator": "not_applicable",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        },
+        {
+          "id": "B08.04",
+          "name": "Tỷ trọng ngày phòng ngừng bán",
+          "formula": "DIV(B08.02, COUNTD(room_id,date) danh mục trong kỳ)",
+          "unit": "%",
+          "aggregation": "ratio_of_totals",
+          "date_role": "calendar_date",
+          "zero_denominator": "BLANK",
+          "implementation_status": "SPECIFIED_NOT_IMPLEMENTED"
+        }
+      ]
+    }
+  ]
+}

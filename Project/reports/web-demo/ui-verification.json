@@ -1,0 +1,23 @@
+{
+  "status": "PASSED_OBSERVED_LOCAL_UI",
+  "date": "2026-10-14",
+  "checks": [
+    "Overview rendered with four destinations and neutral copy; repository link hidden.",
+    "B01-B08 each rendered the expected number of KPI rows: 5,6,5,8,6,7,6,4.",
+    "Full-period B01,B02,B03,B04,B05,B08 and B07 RICE rendered 24 monthly points.",
+    "B06 default RICE correctly reports that a matching monthly series has not been exported; no unrelated global trend is shown.",
+    "January 2024 B01: 2682 occupied nights, 7440 available, 36.05% occupancy, one monthly point.",
+    "Changing January 2024 source to Iceberg preserved the verified result and single point.",
+    "Selecting Sa Pa showed explicit missing-series notice instead of an unfiltered trend.",
+    "B07 RICE closing stock 1790; selecting all items returned quantity dashes with select-one-item messages.",
+    "At 390x844, document width did not exceed viewport; navigation scrolls horizontally within its own container.",
+    "Reset returned B01, full period, Oracle.",
+    "CSV downloaded successfully; inspected header, publication, source, context, 73275 occupied and 174478 available values.",
+    "DOM robots directive is noindex,nofollow,noarchive; repository anchor hidden."
+  ],
+  "limitations": [
+    "Not every one of the 104 selectable contexts was clicked; all exported component values were separately compared to saved evidence.",
+    "Search-engine exclusion is requested, not guaranteed. No authentication is implemented.",
+    "Static snapshot demonstration; no live engine queries or arbitrary cross-filter combinations."
+  ]
+}

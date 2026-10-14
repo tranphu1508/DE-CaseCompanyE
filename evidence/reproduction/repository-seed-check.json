@@ -1,0 +1,32 @@
+{
+  "status": "PASSED",
+  "versions": {
+    "v1": {
+      "files": 50,
+      "tables": 39,
+      "rows": 577400,
+      "all_business_payload_sha256_equal": true,
+      "all_file_sha256_equal": false,
+      "metadata_differences": [
+        {
+          "file": "audit_only/generation_audit.json",
+          "field": "python_version",
+          "baseline": "3.11.9",
+          "current": "3.12.14"
+        }
+      ],
+      "baseline_python": "3.11.9",
+      "current_python": "3.12.14"
+    },
+    "v2": {
+      "files": 275,
+      "tables": 41,
+      "rows": 591242,
+      "all_business_payload_sha256_equal": true,
+      "all_file_sha256_equal": true,
+      "metadata_differences": [],
+      "baseline_python": "3.11.9",
+      "current_python": "3.12.14"
+    }
+  }
+}

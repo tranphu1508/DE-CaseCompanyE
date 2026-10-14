@@ -1,0 +1,7687 @@
+{
+  "status": "FAILED_DAX",
+  "queries": 202,
+  "metric_checks": 1148,
+  "failures": [
+    {
+      "case": "baseline/baseline/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34812.125176710247877281867113893596284035930352016",
+          "actual": 34812.1252
+        }
+      ]
+    },
+    {
+      "case": "baseline/baseline/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34812.125176710247877281867113893596284035930352016",
+          "actual": 34812.1252
+        }
+      ]
+    },
+    {
+      "case": "slices/2024-01-01/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "39324.888888888888888888888888888888888888888888889",
+          "actual": 39324.8889
+        }
+      ]
+    },
+    {
+      "case": "slices/2024-01-01/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "39324.888888888888888888888888888888888888888888889",
+          "actual": 39324.8889
+        }
+      ]
+    },
+    {
+      "case": "slices/2024-02-01/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "37074.582278481012658227848101265822784810126582278",
+          "actual": 37074.5823
+        }
+      ]
+    },
+    {
+      "case": "slices/2024-02-01/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "37074.582278481012658227848101265822784810126582278",
+          "actual": 37074.5823
+        }
+      ]
+    },
+    {
+      "case": "slices/2025-12-01/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34727.294627800529992772825825102384967477716212961",
+          "actual": 34727.2946
+        }
+      ]
+    },
+    {
+      "case": "slices/2025-12-01/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34727.294627800529992772825825102384967477716212961",
+          "actual": 34727.2946
+        }
+      ]
+    },
+    {
+      "case": "slices/site_SP/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "35073.566076055746200714335737796764479305273478535",
+          "actual": 35073.5661
+        }
+      ]
+    },
+    {
+      "case": "slices/site_SP/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "35073.566076055746200714335737796764479305273478535",
+          "actual": 35073.5661
+        }
+      ]
+    },
+    {
+      "case": "slices/site_DN/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34919.854609929078014184397163120567375886524822695",
+          "actual": 34919.8546
+        }
+      ]
+    },
+    {
+      "case": "slices/site_DN/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34919.854609929078014184397163120567375886524822695",
+          "actual": 34919.8546
+        }
+      ]
+    },
+    {
+      "case": "slices/site_DL/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34975.200367192740881968718003036401511139356706564",
+          "actual": 34975.2004
+        }
+      ]
+    },
+    {
+      "case": "slices/site_DL/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34975.200367192740881968718003036401511139356706564",
+          "actual": 34975.2004
+        }
+      ]
+    },
+    {
+      "case": "slices/site_PQ/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34287.131153231965562729986808303825591890578351732",
+          "actual": 34287.1312
+        }
+      ]
+    },
+    {
+      "case": "slices/site_PQ/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34287.131153231965562729986808303825591890578351732",
+          "actual": 34287.1312
+        }
+      ]
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "36740.205790762594858254305783708063329537323510738",
+          "actual": 36740.2058
+        }
+      ]
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "36740.205790762594858254305783708063329537323510738",
+          "actual": 36740.2058
+        }
+      ]
+    },
+    {
+      "case": "slices/meal_DINNER/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "21761.807639836289222373806275579809004092769440655",
+          "actual": 21761.8076
+        }
+      ]
+    },
+    {
+      "case": "slices/meal_DINNER/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "21761.807639836289222373806275579809004092769440655",
+          "actual": 21761.8076
+        }
+      ]
+    },
+    {
+      "case": "slices/hotel/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "37155.316999242232887092700176812326345036625410457",
+          "actual": 37155.317
+        }
+      ]
+    },
+    {
+      "case": "slices/hotel/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "37155.316999242232887092700176812326345036625410457",
+          "actual": 37155.317
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.01",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "309",
+          "actual": 0
+        },
+        {
+          "field": "value",
+          "expected": "309",
+          "actual": 0
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.02",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "320",
+          "actual": 1790
+        },
+        {
+          "field": "value",
+          "expected": "320",
+          "actual": 1790
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.03",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "16",
+          "actual": 16516
+        },
+        {
+          "field": "value",
+          "expected": "16",
+          "actual": 16516
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.04",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "2",
+          "actual": 5858
+        },
+        {
+          "field": "value",
+          "expected": "2",
+          "actual": 5858
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.05",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "40900",
+          "actual": 119725000
+        },
+        {
+          "field": "value",
+          "expected": "40900",
+          "actual": 119725000
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.06",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "40900",
+          "actual": 119725000
+        },
+        {
+          "field": "diagnostic_accepted_denominator",
+          "expected": "6883400",
+          "actual": 493507700
+        },
+        {
+          "field": "value",
+          "expected": "0.0059418310718540256268704419327657843507568933957056",
+          "actual": 0.24260006480142052
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.01",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "309",
+          "actual": 0
+        },
+        {
+          "field": "value",
+          "expected": "309",
+          "actual": 0
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.02",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "320",
+          "actual": 1790
+        },
+        {
+          "field": "value",
+          "expected": "320",
+          "actual": 1790
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.03",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "16",
+          "actual": 16516
+        },
+        {
+          "field": "value",
+          "expected": "16",
+          "actual": 16516
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.04",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "2",
+          "actual": 5858
+        },
+        {
+          "field": "value",
+          "expected": "2",
+          "actual": 5858
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.05",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "40900",
+          "actual": 119725000
+        },
+        {
+          "field": "value",
+          "expected": "40900",
+          "actual": 119725000
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.06",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "40900",
+          "actual": 119725000
+        },
+        {
+          "field": "diagnostic_accepted_denominator",
+          "expected": "6883400",
+          "actual": 493507700
+        },
+        {
+          "field": "value",
+          "expected": "0.0059418310718540256268704419327657843507568933957056",
+          "actual": 0.24260006480142052
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "phase": "slices",
+      "case": "weather_0",
+      "group": "B05",
+      "context": {
+        "filters": {
+          "severe_weather": 0
+        }
+      },
+      "reason": "Weather filtering / variable assessment not implemented in first Desktop model."
+    },
+    {
+      "phase": "slices",
+      "case": "weather_1",
+      "group": "B05",
+      "context": {
+        "filters": {
+          "severe_weather": 1
+        }
+      },
+      "reason": "Weather filtering / variable assessment not implemented in first Desktop model."
+    },
+    {
+      "phase": "slices",
+      "case": "early_assessment",
+      "group": "B06",
+      "context": {
+        "start": "2024-01-01",
+        "end": "2024-02-01",
+        "assessment": "2024-01-01",
+        "filters": {
+          "item": "RICE"
+        }
+      },
+      "reason": "Weather filtering / variable assessment not implemented in first Desktop model."
+    }
+  ],
+  "checks": [
+    {
+      "case": "baseline/baseline/B01/oracle",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B01/oracle",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B01/oracle",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B01/iceberg",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B01/iceberg",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B01/iceberg",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34812.125176710247877281867113893596284035930352016",
+          "actual": 34812.1252
+        }
+      ]
+    },
+    {
+      "case": "baseline/baseline/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34812.125176710247877281867113893596284035930352016",
+          "actual": 34812.1252
+        }
+      ]
+    },
+    {
+      "case": "baseline/baseline/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B08/oracle",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B08/oracle",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B08/oracle",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B08/oracle",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B08/iceberg",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B08/iceberg",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B08/iceberg",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "baseline/baseline/B08/iceberg",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/oracle",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/oracle",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/oracle",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/iceberg",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/iceberg",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/iceberg",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "39324.888888888888888888888888888888888888888888889",
+          "actual": 39324.8889
+        }
+      ]
+    },
+    {
+      "case": "slices/2024-01-01/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "39324.888888888888888888888888888888888888888888889",
+          "actual": 39324.8889
+        }
+      ]
+    },
+    {
+      "case": "slices/2024-01-01/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B08/oracle",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B08/oracle",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B08/oracle",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B08/oracle",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B08/iceberg",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B08/iceberg",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B08/iceberg",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-01-01/B08/iceberg",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/oracle",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/oracle",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/oracle",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/iceberg",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/iceberg",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/iceberg",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "37074.582278481012658227848101265822784810126582278",
+          "actual": 37074.5823
+        }
+      ]
+    },
+    {
+      "case": "slices/2024-02-01/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "37074.582278481012658227848101265822784810126582278",
+          "actual": 37074.5823
+        }
+      ]
+    },
+    {
+      "case": "slices/2024-02-01/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B08/oracle",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B08/oracle",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B08/oracle",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B08/oracle",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B08/iceberg",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B08/iceberg",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B08/iceberg",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2024-02-01/B08/iceberg",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/oracle",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/oracle",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/oracle",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/iceberg",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/iceberg",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/iceberg",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34727.294627800529992772825825102384967477716212961",
+          "actual": 34727.2946
+        }
+      ]
+    },
+    {
+      "case": "slices/2025-12-01/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34727.294627800529992772825825102384967477716212961",
+          "actual": 34727.2946
+        }
+      ]
+    },
+    {
+      "case": "slices/2025-12-01/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B08/oracle",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B08/oracle",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B08/oracle",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B08/oracle",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B08/iceberg",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B08/iceberg",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B08/iceberg",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/2025-12-01/B08/iceberg",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/oracle",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/oracle",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/oracle",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/iceberg",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/iceberg",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/iceberg",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "35073.566076055746200714335737796764479305273478535",
+          "actual": 35073.5661
+        }
+      ]
+    },
+    {
+      "case": "slices/site_SP/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "35073.566076055746200714335737796764479305273478535",
+          "actual": 35073.5661
+        }
+      ]
+    },
+    {
+      "case": "slices/site_SP/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B08/oracle",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B08/oracle",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B08/oracle",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B08/oracle",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B08/iceberg",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B08/iceberg",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B08/iceberg",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_SP/B08/iceberg",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/oracle",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/oracle",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/oracle",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/iceberg",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/iceberg",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/iceberg",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34919.854609929078014184397163120567375886524822695",
+          "actual": 34919.8546
+        }
+      ]
+    },
+    {
+      "case": "slices/site_DN/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34919.854609929078014184397163120567375886524822695",
+          "actual": 34919.8546
+        }
+      ]
+    },
+    {
+      "case": "slices/site_DN/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B08/oracle",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B08/oracle",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B08/oracle",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B08/oracle",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B08/iceberg",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B08/iceberg",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B08/iceberg",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DN/B08/iceberg",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/oracle",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/oracle",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/oracle",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/iceberg",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/iceberg",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/iceberg",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34975.200367192740881968718003036401511139356706564",
+          "actual": 34975.2004
+        }
+      ]
+    },
+    {
+      "case": "slices/site_DL/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34975.200367192740881968718003036401511139356706564",
+          "actual": 34975.2004
+        }
+      ]
+    },
+    {
+      "case": "slices/site_DL/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B08/oracle",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B08/oracle",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B08/oracle",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B08/oracle",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B08/iceberg",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B08/iceberg",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B08/iceberg",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_DL/B08/iceberg",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/oracle",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/oracle",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/oracle",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/iceberg",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/iceberg",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/iceberg",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34287.131153231965562729986808303825591890578351732",
+          "actual": 34287.1312
+        }
+      ]
+    },
+    {
+      "case": "slices/site_PQ/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "34287.131153231965562729986808303825591890578351732",
+          "actual": 34287.1312
+        }
+      ]
+    },
+    {
+      "case": "slices/site_PQ/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B08/oracle",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B08/oracle",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B08/oracle",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B08/oracle",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B08/iceberg",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B08/iceberg",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B08/iceberg",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/site_PQ/B08/iceberg",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_FISH/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_LINEN/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_MILK/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_PLATE/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_RICE/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/oracle",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/oracle",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/oracle",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/oracle",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/oracle",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/oracle",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/iceberg",
+      "metric": "B06.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/iceberg",
+      "metric": "B06.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/iceberg",
+      "metric": "B06.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/iceberg",
+      "metric": "B06.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/iceberg",
+      "metric": "B06.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/iceberg",
+      "metric": "B06.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/oracle",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/oracle",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/oracle",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/iceberg",
+      "metric": "B07.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/iceberg",
+      "metric": "B07.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/iceberg",
+      "metric": "B07.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/item_TOMATO/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_AGODA/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/oracle",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/oracle",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/oracle",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/oracle",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/oracle",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/iceberg",
+      "metric": "B03.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/iceberg",
+      "metric": "B03.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/iceberg",
+      "metric": "B03.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/iceberg",
+      "metric": "B03.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/channel_BOOKING/B03/iceberg",
+      "metric": "B03.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "36740.205790762594858254305783708063329537323510738",
+          "actual": 36740.2058
+        }
+      ]
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "36740.205790762594858254305783708063329537323510738",
+          "actual": 36740.2058
+        }
+      ]
+    },
+    {
+      "case": "slices/meal_BREAKFAST/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/oracle",
+      "metric": "B04.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/iceberg",
+      "metric": "B04.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_LUNCH/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "21761.807639836289222373806275579809004092769440655",
+          "actual": 21761.8076
+        }
+      ]
+    },
+    {
+      "case": "slices/meal_DINNER/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_DINNER/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "21761.807639836289222373806275579809004092769440655",
+          "actual": 21761.8076
+        }
+      ]
+    },
+    {
+      "case": "slices/meal_DINNER/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/oracle",
+      "metric": "B04.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/iceberg",
+      "metric": "B04.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/meal_BAR/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/oracle",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "37155.316999242232887092700176812326345036625410457",
+          "actual": 37155.317
+        }
+      ]
+    },
+    {
+      "case": "slices/hotel/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/hotel/B04/iceberg",
+      "metric": "B04.07",
+      "passed": false,
+      "errors": [
+        {
+          "field": "value",
+          "expected": "37155.316999242232887092700176812326345036625410457",
+          "actual": 37155.317
+        }
+      ]
+    },
+    {
+      "case": "slices/hotel/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/stars/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/oracle",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/oracle",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/oracle",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/oracle",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/oracle",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/iceberg",
+      "metric": "B01.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/iceberg",
+      "metric": "B01.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/iceberg",
+      "metric": "B01.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/iceberg",
+      "metric": "B01.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B01/iceberg",
+      "metric": "B01.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B08/oracle",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B08/oracle",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B08/oracle",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B08/iceberg",
+      "metric": "B08.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B08/iceberg",
+      "metric": "B08.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/roomtype/B08/iceberg",
+      "metric": "B08.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.01",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "309",
+          "actual": 0
+        },
+        {
+          "field": "value",
+          "expected": "309",
+          "actual": 0
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.02",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "320",
+          "actual": 1790
+        },
+        {
+          "field": "value",
+          "expected": "320",
+          "actual": 1790
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.03",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "16",
+          "actual": 16516
+        },
+        {
+          "field": "value",
+          "expected": "16",
+          "actual": 16516
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.04",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "2",
+          "actual": 5858
+        },
+        {
+          "field": "value",
+          "expected": "2",
+          "actual": 5858
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.05",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "40900",
+          "actual": 119725000
+        },
+        {
+          "field": "value",
+          "expected": "40900",
+          "actual": 119725000
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/oracle",
+      "metric": "B07.06",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "40900",
+          "actual": 119725000
+        },
+        {
+          "field": "diagnostic_accepted_denominator",
+          "expected": "6883400",
+          "actual": 493507700
+        },
+        {
+          "field": "value",
+          "expected": "0.0059418310718540256268704419327657843507568933957056",
+          "actual": 0.24260006480142052
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.01",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "309",
+          "actual": 0
+        },
+        {
+          "field": "value",
+          "expected": "309",
+          "actual": 0
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.02",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "320",
+          "actual": 1790
+        },
+        {
+          "field": "value",
+          "expected": "320",
+          "actual": 1790
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.03",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "16",
+          "actual": 16516
+        },
+        {
+          "field": "value",
+          "expected": "16",
+          "actual": 16516
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.04",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "2",
+          "actual": 5858
+        },
+        {
+          "field": "value",
+          "expected": "2",
+          "actual": 5858
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.05",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "40900",
+          "actual": 119725000
+        },
+        {
+          "field": "value",
+          "expected": "40900",
+          "actual": 119725000
+        }
+      ]
+    },
+    {
+      "case": "slices/carry_in/B07/iceberg",
+      "metric": "B07.06",
+      "passed": false,
+      "errors": [
+        {
+          "field": "diagnostic_accepted_numerator",
+          "expected": "40900",
+          "actual": 119725000
+        },
+        {
+          "field": "diagnostic_accepted_denominator",
+          "expected": "6883400",
+          "actual": 493507700
+        },
+        {
+          "field": "value",
+          "expected": "0.0059418310718540256268704419327657843507568933957056",
+          "actual": 0.24260006480142052
+        }
+      ]
+    },
+    {
+      "case": "slices/asset/B08/oracle",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/asset/B08/iceberg",
+      "metric": "B08.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outdoor/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outdoor/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outdoor/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outdoor/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outdoor/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outdoor/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/oracle",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/oracle",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/oracle",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/oracle",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/oracle",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/oracle",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/iceberg",
+      "metric": "B02.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/iceberg",
+      "metric": "B02.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/iceberg",
+      "metric": "B02.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/iceberg",
+      "metric": "B02.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/iceberg",
+      "metric": "B02.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/promotion/B02/iceberg",
+      "metric": "B02.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/oracle",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/oracle",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/oracle",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/oracle",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/oracle",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/oracle",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/oracle",
+      "metric": "B04.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/oracle",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/iceberg",
+      "metric": "B04.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/iceberg",
+      "metric": "B04.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/iceberg",
+      "metric": "B04.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/iceberg",
+      "metric": "B04.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/iceberg",
+      "metric": "B04.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/iceberg",
+      "metric": "B04.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/iceberg",
+      "metric": "B04.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/outlet/B04/iceberg",
+      "metric": "B04.08",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/centre/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/activity/B05/oracle",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/activity/B05/oracle",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/activity/B05/oracle",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/activity/B05/iceberg",
+      "metric": "B05.01",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/activity/B05/iceberg",
+      "metric": "B05.02",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/activity/B05/iceberg",
+      "metric": "B05.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/vehicle/B05/oracle",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/vehicle/B05/oracle",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/vehicle/B05/oracle",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/vehicle/B05/iceberg",
+      "metric": "B05.04",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/vehicle/B05/iceberg",
+      "metric": "B05.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/vehicle/B05/iceberg",
+      "metric": "B05.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/supplier/B06/oracle",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/supplier/B06/iceberg",
+      "metric": "B06.07",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/supplier/B07/oracle",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/supplier/B07/oracle",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/supplier/B07/iceberg",
+      "metric": "B07.05",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/supplier/B07/iceberg",
+      "metric": "B07.06",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/usage_area/B07/oracle",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "slices/usage_area/B07/iceberg",
+      "metric": "B07.03",
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

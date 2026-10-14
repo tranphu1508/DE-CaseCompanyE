@@ -1,0 +1,35 @@
+{
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "measures": 196,
+  "kpis": 47,
+  "tables": 36,
+  "relationships": 69,
+  "assessment": "2025-12-31",
+  "project": "D:\\Study\\Bách Khoa University\\Kỹ Thuật Dữ Liệu CO5173\\Project\\powerbi\\CompanyE.pbip",
+  "files": [
+    {
+      "path": "powerbi\\data\\pub_3f41f8fafa4c913187af2cc3\\Engine.csv",
+      "sha256": "5461cec73144d1346e76947e2194041de6c8c2fde07bdf95787e24e6379087e2"
+    },
+    {
+      "path": "powerbi\\data\\pub_3f41f8fafa4c913187af2cc3\\F01.csv",
+      "sha256": "0a9fc43117e44d2e455b973cf8fcb2f6257735ff3cd22e5c7725af95deed518d"
+    },
+    {
+      "path": "powerbi\\data\\pub_3f41f8fafa4c913187af2cc3\\F12.csv",
+      "sha256": "54eff4f169146747d4b50731698a13d325263b11161e6f4b2feac09c25e7f633"
+    },
+    {
+      "path": "powerbi\\data\\pub_3f41f8fafa4c913187af2cc3\\KPI.csv",
+      "sha256": "d79532cb95f4d6a942c3a098fa49817354f451749319c4021bb8aab4528029b5"
+    },
+    {
+      "path": "powerbi\\data\\pub_3f41f8fafa4c913187af2cc3\\Period.csv",
+      "sha256": "0ee96b1920f903316edb3476ef3acc2ce0e830f5fdd4a6ca768807bd8bf2c567"
+    },
+    {
+      "path": "powerbi\\data\\pub_3f41f8fafa4c913187af2cc3\\QA.csv",
+      "sha256": "bfce77f63e2b1d106bd9a92423f5897cbe1ef1f63dcd16b97d3269695649632f"
+    }
+  ]
+}

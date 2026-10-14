@@ -1,0 +1,2224 @@
+Window: "CompanyE", App: PBIDesktop.exe.
+	0 window CompanyE Secondary Actions: Raise ID: MainWindow
+		2 pane ID: 265624
+		3 pane ID: webViewBrowserControl
+			4 pane ms-pbi.pbi.microsoft.com/minerva/reportView.html
+				5 pane (disabled)
+				6 region ms-pbi.pbi.microsoft.com/minerva/reportView.html - Web content
+					7 region
+						8 region
+						9 region
+							10 region
+								11 region
+								12 region
+									13 region
+										14 region
+											15 region
+												16 region
+												17 document Value: https://ms-pbi.pbi.microsoft.com/minerva/reportView.html ID: RootWebArea
+													18 group
+														39 group
+															40 tool bar CompanyE
+																41 group
+																42 group
+																	43 group
+																		115 group
+																			44 button Save ID: save
+																			45 button (disabled) Undo ID: undo
+																			46 button (disabled) Redo ID: redo
+																215 button CompanyE · Last saved: Today at 4:21 PM (Power BI Project)
+																	216 heading CompanyE Description: CompanyE
+																116 group
+																	117 edit (settable, string) Search Description: Search ID: TellMe-SearchBox
+																	118 marquee
+																		119 text 0 Suggestions available,
+																47 button Settings ID: titlebar-settings-button
+																48 group
+																	49 button Using light theme ID: titlebar-theme-button
+																50 group
+																	51 button Sign in
+																		53 graphic
+																54 group
+																	55 button Minimize Description: Minimize
+																	56 button Maximize Description: Maximize
+																	57 button Close Description: Close
+														120 group
+															121 group
+																122 tab item (selectable) File ID: Ribbon-file
+																123 group Ribbon tabs ID: tablist
+																	124 tab
+																		125 tab item (selectable) Home ID: home
+																		126 tab item (selectable) Insert ID: insert
+																		127 tab item (selectable) Modeling ID: modeling
+																		128 tab item (selectable) Design ID: design
+																		129 tab item (selectable) View ID: view
+																		130 tab item (selectable) Optimize ID: optimize
+																		131 tab item (selectable) Help ID: help
+																132 group
+																133 button (disabled) Share ID: odspShareFlyout
+																	134 text Share
+																	135 text Share this document, and see who it's shared with.
+																136 tool bar
+																	137 tab panel
+																		138 group Clipboard ID: clipboardGroupMlr-group
+																			139 button (disabled) Paste ID: paste
+																			140 button (disabled) Cut ID: cut
+																			141 button (disabled) Copy ID: copy
+																			142 toggle button (disabled) Format painter ID: formatPainter
+																				143 text Format painter
+																				144 text Like the formatting of something in your document? Use Format painter to apply that look to other content. 1. Select content with formatting you like. 2. On the Home tab, choose Format painter. 3. Select something else to apply the formatting.
+																			145 text Clipboard
+																		146 group Data ID: dataGroup-group
+																			147 button Get data
+																				148 button Get data
+																				149 button Get data
+																					150 text Get
+																					151 text data
+																			152 button Excel workbook ID: getDataExcel
+																			153 button OneLake ​​catalog
+																				154 button OneLake ​​catalog
+																				155 button OneLake catalog
+																					156 text OneLake
+																					157 text catalog
+																			158 button SQL Server ID: getDataSQL
+																			159 button Enter data ID: enterData
+																			160 button Dataverse ID: getDataDataverse
+																			161 button Recent sources ID: getDataRecent
+																				162 text Recent
+																				163 text sources
+																				164 text Manage and connect to recent sources.
+																			165 text Data
+																		166 group Queries ID: queriesGroup-group
+																			167 button Transform data
+																				168 button Transform data
+																				169 button Transform data
+																					170 text Transform
+																					171 text data
+																			211 button Refresh
+																				212 button Refresh
+																				213 button Refresh
+																					214 text Refresh
+																			173 text Queries
+																		174 group Insert ID: insertGroup-group
+																			175 button New visual ID: insertVisual
+																			176 button Text box ID: insertTextbox
+																			177 button More visuals
+																				178 button More visuals
+																				179 button More visuals
+																					180 text More
+																					181 text visuals
+																			182 text Insert
+																		183 group Calculations ID: homeCalculationsGroup-group
+																			184 button (disabled) New visual calculation
+																				185 button (disabled) New visual calculation
+																				186 button (disabled) New visual calculation
+																					187 text New visual
+																					188 text calculation
+																			189 button New measure ID: newMeasure
+																			190 button Quick measure ID: newQuickMeasure
+																			191 text Calculations
+																		192 group Sensitivity ID: informationProtectionGroup-group
+																			193 button (disabled) Sensitivity ID: classifyFlyout
+																				194 text Sensitivity
+																				195 text Apply a label to classify the sensitivity of your report and protect its content.
+																			196 text Sensitivity
+																		197 group Share ID: shareGroup-group
+																			198 button Publish ID: publish
+																			199 text Share
+																		200 group Copilot ID: copilotGroup-group
+																			201 button Prep data for AI ID: copilotToolingDialog
+																			202 toggle button Copilot ID: copilotPane
+																			203 text Copilot
+																		204 button Switch ribbons ID: RibbonModeToggle
+														58 tab
+															59 tab item (selectable) Report view
+																60 graphic
+															217 tab item (selectable) Table view
+																218 graphic
+															63 tab item (selectable) Model view
+																64 graphic
+															219 tab item (selectable) DAX query view
+																220 graphic
+															221 tab item (selectable) TMDL View
+																222 graphic
+														231 application
+															232 list
+																233 list item Show keyboard shortcuts
+																	234 button Show keyboard shortcuts
+																235 list item Show screen reader tips
+																	236 link Show screen reader tips (opens in new tab) Value: https://go.microsoft.com/fwlink/?linkid=852575
+																	237 graphic
+																238 list item Skip to main content
+																	239 button Skip to main content
+															240 group
+																241 region Power BI Report
+																	242 heading Power BI Report ID: defaultTitle
+																	2873 group
+																		2874 Card
+																			2875 group Description: Visuals are loading...
+																			2876 graphic Nguồn và kỳ CompanyE | oracle (mặc định) | Toàn kỳ 2024–2025.
+																				2877 text CompanyE | oracle (mặc định) | Toàn kỳ 2024–2025
+																	2878 group
+																		2879 Slicer
+																			2880 group Description: Visuals are loading...
+																			2881 heading Nguồn dữ liệu Description: Nguồn dữ liệu
+																			2882 combo box (settable, string) Nguồn dữ liệu Value: All 
+																				2883 text All
+																				2884 text 
+																	2885 group
+																		2886 Slicer
+																			2887 group Description: Visuals are loading...
+																			2888 heading Kỳ báo cáo Description: Kỳ báo cáo
+																			2889 combo box (settable, string) Kỳ báo cáo Value: All 
+																				2890 text All
+																				2891 text 
+																	2892 group
+																		2893 Slicer
+																			2894 group Description: Visuals are loading...
+																			2895 heading Địa điểm Description: Địa điểm
+																			2896 combo box (settable, string) Địa điểm Value: All 
+																				2897 text All
+																				2898 text 
+																	2899 group
+																		2900 Slicer
+																			2901 group Description: Visuals are loading...
+																			2902 heading Khách sạn Description: Khách sạn
+																			2903 combo box (settable, string) Khách sạn Value: All 
+																				2904 text All
+																				2905 text 
+																	2906 group
+																		2907 Slicer
+																			2908 group Description: Visuals are loading...
+																			2909 heading Mặt hàng Description: Mặt hàng
+																			2910 combo box (settable, string) Mặt hàng Value: All 
+																				2911 text All
+																				2912 text 
+																	2913 group
+																		2914 group Kiểm soát tồn kho và hao hụt
+																			2915 group Description: Visuals are loading...
+																			2916 group Description: Kiểm soát tồn kho và hao hụt
+																				2917 heading Kiểm soát tồn kho và hao hụt
+																			2969 document
+																				2970 button Scroll up
+																				2971 button Scroll down
+																				2972 button Scroll left
+																				2973 button Scroll right
+																				2974 data grid (settable, string)
+																					2975 row Row Selection KPI Giá trị Đơn vị Trạng thái
+																						2976 column header Row Selection
+																						2977 column header KPI
+																						2978 column header Giá trị
+																						2979 column header Đơn vị
+																						2980 column header Trạng thái
+																					2981 row Select Row B07.01 | Tồn đầu kỳ — Đơn vị chuẩn; không cộng qua thời gian CHỌN MỘT MẶT HÀNG
+																						2982 item (selectable) Select Row
+																							2983 check box (settable, string) Select Row
+																						2984 item (selectable) B07.01 | Tồn đầu kỳ
+																						2985 item (selectable) —
+																						2986 item (selectable) Đơn vị chuẩn; không cộng qua thời gian
+																						2987 item (selectable) CHỌN MỘT MẶT HÀNG
+																					2988 row Select Row B07.02 | Tồn cuối kỳ — Đơn vị chuẩn; không cộng các tồn cuối ngày CHỌN MỘT MẶT HÀNG
+																						2989 item (selectable) Select Row
+																							2990 check box (settable, string) Select Row
+																						2991 item (selectable) B07.02 | Tồn cuối kỳ
+																						2992 item (selectable) —
+																						2993 item (selectable) Đơn vị chuẩn; không cộng các tồn cuối ngày
+																						2994 item (selectable) CHỌN MỘT MẶT HÀNG
+																					2995 row Select Row B07.03 | Lượng sử dụng trong kỳ — Đơn vị chuẩn CHỌN MỘT MẶT HÀNG
+																						2996 item (selectable) Select Row
+																							2997 check box (settable, string) Select Row
+																						2998 item (selectable) B07.03 | Lượng sử dụng trong kỳ
+																						2999 item (selectable) —
+																						3000 item (selectable) Đơn vị chuẩn
+																						3001 item (selectable) CHỌN MỘT MẶT HÀNG
+																					3002 row Select Row B07.04 | Lượng hủy trong kỳ — Đơn vị chuẩn CHỌN MỘT MẶT HÀNG
+																						3003 item (selectable) Select Row
+																							3004 check box (settable, string) Select Row
+																						3005 item (selectable) B07.04 | Lượng hủy trong kỳ
+																						3006 item (selectable) —
+																						3007 item (selectable) Đơn vị chuẩn
+																						3008 item (selectable) CHỌN MỘT MẶT HÀNG
+																					3009 row Select Row B07.05 | Giá trị hao hụt trong kỳ 2,461,968,600.00 VND; cộng được giữa mặt hàng COMPLETE
+																						3010 item (selectable) Select Row
+																							3011 check box (settable, string) Select Row
+																						3012 item (selectable) B07.05 | Giá trị hao hụt trong kỳ
+																						3013 item (selectable) 2,461,968,600.00
+																						3014 item (selectable) VND; cộng được giữa mặt hàng
+																						3015 item (selectable) COMPLETE
+																					3016 row Select Row B07.06 | Tỷ lệ hao hụt theo giá trị sẵn có 30.81% %; tính lại từ tổng giá trị COMPLETE
+																						3017 item (selectable) Select Row
+																							3018 check box (settable, string) Select Row
+																						3019 item (selectable) B07.06 | Tỷ lệ hao hụt theo giá trị sẵn có
+																						3020 item (selectable) 30.81%
+																						3021 item (selectable) %; tính lại từ tổng giá trị
+																						3022 item (selectable) COMPLETE
+																					3023 row Total Không cộng KPI khác đơn vị
+																						3024 row header
+																						3025 item (selectable) Total
+																						3026 item (selectable) 
+																						3027 item (selectable) 
+																						3028 item (selectable) Không cộng KPI khác đơn vị
+																	2918 group
+																		2919 group
+																			2920 group Description: Visuals are loading...
+																			2921 document
+																				2922 button Scroll up
+																				2923 button Scroll down
+																				2924 button Scroll left
+																				2925 button Scroll right
+																				2926 data grid (settable, string)
+																					2927 row Row Selection Cảnh báo báo cáo
+																						2928 column header Row Selection
+																						2929 column header Cảnh báo báo cáo
+																					2930 row Select Row 12 cảnh báo đối soát nguồn bên ngoài • Dữ liệu tổng hợp đang COMPLETE. B06: ngày đánh giá cố định 31/12/2025. Dấu —: xem cột trạng thái; không thay bằng 0.
+																						2931 item (selectable) Select Row
+																							2932 check box (settable, string) Select Row
+																						2933 item (selectable) 12 cảnh báo đối soát nguồn bên ngoài • Dữ liệu tổng hợp đang COMPLETE. B06: ngày đánh giá cố định 31/12/2025. Dấu —: xem cột trạng thái; không thay bằng 0.
+																	2934 group
+																		2935 group
+																			2936 group Description: Visuals are loading...
+																			2937 tool bar Visual container header
+																				2938 text 
+																				2939 group
+																				2940 group
+																					2941 button Filters on Visual
+																						2942 text 
+																				2943 group
+																				2944 button Focus mode
+																				2945 button More options
+																					2946 text 
+																			2947 document
+																				2948 button Scroll up
+																				2949 button Scroll down
+																				2950 button Scroll left
+																				2951 button Scroll right
+																				2952 data grid (settable, string)
+																					2953 row Row Selection Publication Can be sorted
+																						2954 column header Row Selection
+																						2955 column header Publication Can be sorted
+																							2956 group Can be sorted
+																					2957 row Select Row pub_3f41f8fafa4c913187af2cc3 | Import cố định; không phải dữ liệu trực tiếp
+																						2958 item (selectable) Select Row
+																							2959 check box (settable, string) Select Row
+																						2960 item (selectable) pub_3f41f8fafa4c913187af2cc3 | Import cố định; không phải dữ liệu trực tiếp
+															243 group
+															244 group
+																2961 text 
+																246 heading Filters ID: outspace-pane-title
+															247 button Show or hide the filter pane from report readers
+															248 button Collapse or expand the filter pane while editing. This also determines how report readers see it
+															249 group
+																250 edit (settable, string) Search Filters on this page Description: Search ID: mat-input-0
+															251 separator
+															252 group ID: pageFilterContainer
+																253 heading Filters on this page Description: Applies to the currently selected visual ID: filterPanePageHeader
+																254 button More options
+																2962 group
+																	2963 group
+																		2964 group
+																			2965 button group is B07 Description: 'KPI'[group]
+																				2966 text group
+																		2967 text is B07
+																255 group Description: Add data fields here
+																	256 text Add data fields here
+															257 group ID: exploreFilterContainer
+																258 heading Filters on all pages Description: Applies to the currently selected visual ID: filterPaneReportHeader
+																259 button More options
+																260 group Description: Add data fields here
+																	261 text Add data fields here
+														264 group
+															265 button (disabled) Desktop layout
+																266 graphic (disabled) Desktop layout
+															267 button Mobile layout
+																268 graphic Mobile layout
+															269 tool bar
+																270 button (disabled) Previous pages
+																271 button Next pages
+															272 tab
+																273 tab item (selectable) 00 | Tổng quan
+																274 tab item (selectable) B01 | Đánh giá hoạt động lưu trú
+																275 tab item (selectable) B02 | Đánh giá kênh bán và khuyến mãi
+																276 tab item (selectable) B03 | Phân tích bán chéo khách sạn và giải trí
+																277 tab item (selectable) B04 | Đánh giá buffet và nhà hàng
+																278 tab item (selectable) B05 | Đánh giá giải trí và phương tiện
+																279 tab item (selectable) B06 | Đánh giá giao hàng nhà cung cấp
+																280 tab item (selectable) B07 | Kiểm soát tồn kho và hao hụt
+																281 tab item (selectable) B08 | Đánh giá bảo trì và khả năng cung cấp phòng
+																282 tab item (selectable) QA | Kiểm thử cảnh báo
+															283 button New page
+																284 graphic
+														285 group
+														286 button Visualizations
+															287 heading Visualizations
+														288 text Build visual
+														289 tab
+															290 tab item (selectable) Build visual
+																291 group
+																	292 graphic
+															293 tab item (selectable) Format page
+																294 group
+																	295 graphic
+															296 tab item (selectable) Theme
+																297 group
+																	298 graphic
+														299 graphic
+														300 list (settable, string) All visual types
+															320 option (selectable) Stacked bar chart
+																321 graphic
+															322 option (selectable) Stacked column chart
+																323 graphic
+															324 option (selectable) Clustered bar chart
+																325 graphic
+															326 option (selectable) Clustered column chart
+																327 graphic
+															328 option (selectable) 100% Stacked bar chart
+																329 graphic
+															330 option (selectable) 100% Stacked column chart
+																331 graphic
+															332 option (selectable) Line chart
+																333 graphic
+															334 option (selectable) Area chart
+																335 graphic
+															336 option (selectable) Stacked area chart
+																337 graphic
+															338 option (selectable) 100% Stacked area chart
+																339 graphic
+															340 option (selectable) Line and stacked column chart
+																341 graphic
+															342 option (selectable) Line and clustered column chart
+																343 graphic
+															344 option (selectable) Ribbon chart
+																345 graphic
+															346 option (selectable) Waterfall chart
+																347 graphic
+															348 option (selectable) Funnel
+																349 graphic
+															350 option (selectable) Scatter chart
+																351 graphic
+															352 option (selectable) Pie chart
+																353 graphic
+															354 option (selectable) Donut chart
+																355 graphic
+															356 option (selectable) Treemap
+																357 graphic
+															358 option (selectable) Map
+																359 graphic
+															360 option (selectable) Filled map
+																361 graphic
+															362 option (selectable) Shape map
+																363 graphic
+															364 option (selectable) Azure Maps
+																365 graphic
+															366 option (selectable) Gauge
+																367 graphic
+															368 option (selectable) Card
+																369 graphic
+															370 option (selectable) KPI
+																371 graphic
+															372 option (selectable) Slicer
+																373 graphic
+															374 option (selectable) Table
+																375 graphic
+															376 option (selectable) Matrix
+																377 graphic
+															378 option (selectable) R script visual
+																379 graphic
+															380 option (selectable) Python visual
+																381 graphic
+															382 option (selectable) Key influencers
+																383 graphic
+															384 option (selectable) Decomposition tree
+																385 graphic
+															386 option (selectable) Narrative
+																387 graphic
+															388 option (selectable) Goals (Preview)
+																389 graphic
+															390 option (selectable) Paginated report
+																391 graphic
+															392 option (selectable) Button slicer
+																393 graphic
+															394 option (selectable) Input slicer
+																395 graphic
+															396 option (selectable) List slicer (Preview)
+																397 graphic
+															398 option (selectable) Image
+																399 graphic
+															400 option (selectable) ArcGIS for Power BI
+																401 graphic
+															402 option (selectable) Power Apps for Power BI
+																403 graphic
+															404 option (selectable) Power Automate for Power BI
+																405 graphic
+															301 option Get more visuals
+														302 list
+															303 list item ValuesAdd data fields here
+																304 heading Values
+																305 list
+																	306 list item No data fields added. Add data fields here Description: Add data fields here
+														307 heading Drill through
+														406 text Cross-report
+														407 group ID: pbi-toggle-button-2
+															408 switch (settable, string) Cross-report ID: pbi-toggle-button-2-input
+															409 text Off
+														308 text Keep all filters
+														309 group ID: pbi-toggle-button-1
+															310 switch (settable, string) Keep all filters ID: pbi-toggle-button-1-input
+															311 text On
+														312 list
+														313 list
+														314 group
+															315 text Add drill-through fields here
+														316 group
+														82 group
+														83 application
+															84 button Data
+																85 heading Data
+															223 group
+																224 group Search
+																	225 edit (settable, string) Search Description: Search
+																	226 group
+																317 group
+																	318 tree
+																		410 tree item (selectable) Table D02
+																			411 button D02
+																			412 graphic
+																			413 button More options
+																		414 tree item (selectable) Table D03
+																			415 button D03
+																			416 graphic
+																			417 button More options
+																		418 tree item (selectable) Table D04
+																			419 button D04
+																			420 graphic
+																			421 button More options
+																		422 tree item (selectable) Table D05
+																			423 button D05
+																			424 graphic
+																			425 button More options
+																		426 tree item (selectable) Table D06
+																			427 button D06
+																			428 graphic
+																			429 button More options
+																		430 tree item (selectable) Table D09
+																			431 button D09
+																			432 graphic
+																			433 button More options
+																		434 tree item (selectable) Table D10
+																			435 button D10
+																			436 graphic
+																			437 button More options
+																		438 tree item (selectable) Table D11
+																			439 button D11
+																			440 graphic
+																			441 button More options
+																		442 tree item (selectable) Table D12
+																			443 button D12
+																			444 graphic
+																			445 button More options
+																		446 tree item (selectable) Table D13
+																			447 button D13
+																			448 graphic
+																			449 button More options
+																		450 tree item (selectable) Table D14
+																			451 button D14
+																			452 graphic
+																			453 button More options
+																		454 tree item (selectable) Table D15
+																			455 button D15
+																			456 graphic
+																			457 button More options
+																		458 tree item (selectable) Table D16
+																			459 button D16
+																			460 graphic
+																			461 button More options
+																		462 tree item (selectable) Table Engine
+																			463 button Engine
+																			464 graphic
+																			465 button More options
+																		466 tree item (selectable) Table KPI
+																			467 button KPI
+																			468 graphic
+																			469 button More options
+																		470 tree item (selectable) Table Period
+																			471 button Period
+																			472 graphic
+																			473 button More options
+																		474 tree item (selectable) Table QA
+																			475 button QA
+																			476 graphic
+																			477 button More options
+															90 group
+														319 text Page 8 of 10
+														91 button Zoom Out ID: zoomOutButton
+														92 group
+															93 group ID: zoomHandle
+														94 button Zoom In ID: zoomInButton
+														95 button Zoom level. Click to open the Zoom dialog box ID: zoomValueButton
+														96 button Fit to page ID: fitToPageButton
+														97 text Power BI Desktop
+														2968 tool tip Next pages ID: pbi-tooltip-id-22
+														98 group ID: cdk-live-announcer-0
+														99 alert
+														100 alert
+														101 group
+														102 group
+														205 group
+														206 group
+														207 group
+														208 group
+														227 group
+														228 group
+														229 group
+														209 alert ID: screen_reader_alert_assertive
+															523 text 17 results. Report Zoomed To 72%
+														504 graphic
+								103 region
+						104 region
+		105 pane ID: webViewBrowserControl
+			610 pane ms-pbi.pbi.microsoft.com/minerva/dataExploreView.html
+				611 pane (disabled)
+				612 region ms-pbi.pbi.microsoft.com/minerva/dataExploreView.html - Web content
+					613 region
+						614 region
+						615 region
+							616 region
+								617 region
+								618 region
+									619 region
+										620 region
+											621 region
+												622 region
+												625 document Value: https://ms-pbi.pbi.microsoft.com/minerva/dataExploreView.html ID: RootWebArea
+													939 group
+														626 group
+															627 tool bar CompanyE
+																628 group
+																629 group
+																	630 group
+																		631 group
+																			632 button Save ID: save
+																			633 button (disabled) Undo ID: undo
+																			634 button (disabled) Redo ID: redo
+																635 button CompanyE · Last saved: Today at 4:21 PM (Power BI Project)
+																	636 heading CompanyE Description: CompanyE
+																637 group
+																	638 edit (settable, string) Search Description: Search ID: TellMe-SearchBox
+																	639 marquee
+																		640 text 0 Suggestions available,
+																641 button Settings ID: titlebar-settings-button
+																642 group
+																	643 button Using light theme ID: titlebar-theme-button
+																644 group
+																	645 button Sign in
+																		646 graphic
+																647 group
+																	648 button Minimize Description: Minimize
+																	649 button Maximize Description: Maximize
+																	650 button Close Description: Close
+														651 group
+															652 group
+																653 tab item (selectable) File ID: Ribbon-file
+																654 group Ribbon tabs ID: tablist
+																	655 tab
+																		656 tab item (selectable) Home ID: home
+																		657 tab item (selectable) Help ID: help
+																659 group
+																660 button (disabled) Share ID: odspShareFlyout
+																	661 text Share
+																	662 text Share this document, and see who it's shared with.
+																663 tool bar
+																	664 tab panel
+																		665 group Clipboard ID: clipboardGroupMlr-group
+																			666 button (disabled) Paste ID: paste
+																			667 button (disabled) Cut ID: cut
+																			668 button (disabled) Copy ID: copy
+																			669 text Clipboard
+																		670 group Data ID: dataGroup-group
+																			671 button Get data
+																				672 button Get data
+																				673 button Get data
+																					674 text Get
+																					675 text data
+																			676 button Excel workbook ID: getDataExcel
+																			677 button OneLake ​​catalog
+																				678 button OneLake ​​catalog
+																				679 button OneLake catalog
+																					680 text OneLake
+																					681 text catalog
+																			682 button SQL Server ID: getDataSQL
+																			683 button Enter data ID: enterData
+																			684 button Dataverse ID: getDataDataverse
+																			685 button Recent sources ID: getDataRecent
+																				686 text Recent
+																				687 text sources
+																				688 text Manage and connect to recent sources.
+																			689 text Data
+																		690 group Queries ID: queriesGroup-group
+																			691 button Transform data
+																				692 button Transform data
+																				693 button Transform data
+																					694 text Transform
+																					695 text data
+																			696 button Refresh
+																				697 button Refresh
+																				698 button Refresh
+																					699 text Refresh
+																			700 text Queries
+																		701 group Relationships ID: relationshipsSection-group
+																			702 button Manage relationships ID: manageRelationships
+																			703 text Relationships
+																		704 group Calculations ID: calculationsSection-group
+																			705 button New measure ID: newMeasure
+																			706 button Quick measure ID: newQuickMeasure
+																			707 button New column ID: newCalcColumn
+																			708 button New table ID: newCalcTable
+																			709 text Calculations
+																		710 group Security ID: securitySection-group
+																			711 button Manage roles ID: manageRoles
+																			712 button View as ID: viewAsRole
+																			713 text Security
+																		714 group Sensitivity ID: informationProtectionGroup-group
+																			715 button (disabled) Sensitivity ID: classifyFlyout
+																				716 text Sensitivity
+																				717 text Apply a label to classify the sensitivity of your report and protect its content.
+																			718 text Sensitivity
+																		940 group Share ID: shareGroup-group
+																			941 button Publish ID: publish
+																			942 text Share
+																		719 button Switch ribbons ID: RibbonModeToggle
+														720 tab
+															721 tab item (selectable) Report view
+																722 graphic
+															723 tab item (selectable) Table view
+																724 graphic
+															725 tab item (selectable) Model view
+																726 graphic
+															727 tab item (selectable) DAX query view
+																728 graphic
+															729 tab item (selectable) TMDL View
+																730 graphic
+														943 group Formula bar
+															944 group
+															945 button (disabled) Expand to full page
+																946 graphic
+															947 button (disabled) Cancel
+																948 graphic
+															949 button (disabled) Commit
+																950 graphic
+														731 group
+														732 application
+															733 button Data
+																734 heading Data
+															735 group
+																736 group Search
+																	737 edit (settable, string) Search Description: Search
+																	738 group
+																739 group
+																	740 tree
+																		741 tree item (selectable) Table D01
+																			742 button D01
+																			743 graphic
+																			744 button This field or table is hidden in report view. Select to make it visible.
+																			745 button More options
+																		746 tree item (selectable) Table D02
+																			747 button D02
+																			748 graphic
+																			749 button This field or table is visible in report view. Select to hide it.
+																			750 button More options
+																		751 tree item (selectable) Table D03
+																			752 button D03
+																			753 graphic
+																			754 button This field or table is visible in report view. Select to hide it.
+																			755 button More options
+																		756 tree item (selectable) Table D04
+																			757 button D04
+																			758 graphic
+																			759 button This field or table is visible in report view. Select to hide it.
+																			760 button More options
+																		761 tree item (selectable) Table D05
+																			762 button D05
+																			763 graphic
+																			764 button This field or table is visible in report view. Select to hide it.
+																			765 button More options
+																		766 tree item (selectable) Table D06
+																			767 button D06
+																			768 graphic
+																			769 button This field or table is visible in report view. Select to hide it.
+																			770 button More options
+																		771 tree item (selectable) Table D09
+																			772 button D09
+																			773 graphic
+																			774 button This field or table is visible in report view. Select to hide it.
+																			775 button More options
+																		776 tree item (selectable) Table D10
+																			777 button D10
+																			778 graphic
+																			779 button This field or table is visible in report view. Select to hide it.
+																			780 button More options
+																		781 tree item (selectable) Table D11
+																			782 button D11
+																			783 graphic
+																			784 button This field or table is visible in report view. Select to hide it.
+																			785 button More options
+																		786 tree item (selectable) Table D12
+																			787 button D12
+																			788 graphic
+																			789 button This field or table is visible in report view. Select to hide it.
+																			790 button More options
+																		791 tree item (selectable) Table D13
+																			792 button D13
+																			793 graphic
+																			794 button This field or table is visible in report view. Select to hide it.
+																			795 button More options
+																		796 tree item (selectable) Table D14
+																			797 button D14
+																			798 graphic
+																			799 button This field or table is visible in report view. Select to hide it.
+																			800 button More options
+																		801 tree item (selectable) Table D15
+																			802 button D15
+																			803 graphic
+																			804 button This field or table is visible in report view. Select to hide it.
+																			805 button More options
+																		806 tree item (selectable) Table D16
+																			807 button D16
+																			808 graphic
+																			809 button This field or table is visible in report view. Select to hide it.
+																			810 button More options
+																		811 tree item (selectable) Table Engine
+																			812 button Engine
+																			813 graphic
+																			814 button This field or table is visible in report view. Select to hide it.
+																			815 button More options
+																		816 tree item (selectable) Table F01
+																			817 button F01
+																			818 graphic
+																			819 button This field or table is hidden in report view. Select to make it visible.
+																			820 button More options
+																		821 tree item (selectable) Table F02
+																			822 button F02
+																			823 graphic
+																			824 button This field or table is hidden in report view. Select to make it visible.
+																			825 button More options
+																		826 tree item (selectable) Table F03
+																			827 button F03
+																			828 graphic
+																			829 button This field or table is hidden in report view. Select to make it visible.
+																			830 button More options
+																		831 tree item (selectable) Table F04
+																			832 button F04
+																			833 graphic
+																			834 button This field or table is hidden in report view. Select to make it visible.
+																			835 button More options
+																		836 tree item (selectable) Table F05
+																			837 button F05
+																			838 graphic
+																			839 button This field or table is hidden in report view. Select to make it visible.
+																			840 button More options
+																		841 tree item (selectable) Table F06
+																			842 button F06
+																			843 graphic
+																			844 button This field or table is hidden in report view. Select to make it visible.
+																			845 button More options
+																		846 tree item (selectable) Table F07
+																			847 button F07
+																			848 graphic
+																			849 button This field or table is hidden in report view. Select to make it visible.
+																			850 button More options
+																		851 tree item (selectable) Table F08
+																			852 button F08
+																			853 graphic
+																			854 button This field or table is hidden in report view. Select to make it visible.
+																			855 button More options
+																		856 tree item (selectable) Table F09
+																			857 button F09
+																			858 graphic
+																			859 button This field or table is hidden in report view. Select to make it visible.
+																			860 button More options
+																		861 tree item (selectable) Table F10
+																			862 button F10
+																			863 graphic
+																			864 button This field or table is hidden in report view. Select to make it visible.
+																			865 button More options
+																		866 tree item (selectable) Table F11
+																			867 button F11
+																			868 graphic
+																			869 button This field or table is hidden in report view. Select to make it visible.
+																			870 button More options
+																		871 tree item (selectable) Table F12
+																			872 button F12
+																			873 graphic
+																			874 button This field or table is hidden in report view. Select to make it visible.
+																			875 button More options
+																		876 tree item (selectable) Table F13
+																			877 button F13
+																			878 graphic
+																			879 button This field or table is hidden in report view. Select to make it visible.
+																			880 button More options
+																		881 tree item (selectable) Table F14
+																			882 button F14
+																			883 graphic
+																			884 button This field or table is hidden in report view. Select to make it visible.
+																			885 button More options
+																		886 tree item (selectable) Table F16
+																			887 button F16
+																			888 graphic
+																			889 button This field or table is hidden in report view. Select to make it visible.
+																			890 button More options
+																		891 tree item (selectable) Table F17
+																			892 button F17
+																			893 graphic
+																			894 button This field or table is hidden in report view. Select to make it visible.
+																			895 button More options
+																		896 tree item (selectable) Table KPI
+																			897 button KPI
+																			898 graphic
+																			899 button This field or table is visible in report view. Select to hide it.
+																			900 button More options
+																		901 tree item (selectable) Table L01
+																			902 button L01
+																			903 graphic
+																			904 button This field or table is hidden in report view. Select to make it visible.
+																			905 button More options
+																		906 tree item (selectable) Table L03
+																			907 button L03
+																			908 graphic
+																			909 button This field or table is hidden in report view. Select to make it visible.
+																			910 button More options
+																		911 tree item (selectable) Table Period
+																			912 button Period
+																			913 graphic
+																			914 button This field or table is visible in report view. Select to hide it.
+																			915 button More options
+																		916 tree item (selectable) Table QA
+																			917 button QA
+																			918 graphic
+																			919 button This field or table is visible in report view. Select to hide it.
+																			920 button More options
+															921 group
+														922 group ID: cdk-live-announcer-0
+														923 group
+														951 group
+														952 group
+														953 group
+														954 group
+														955 group
+														956 alert
+														957 alert
+														958 group
+														959 group
+														1125 alert ID: screen_reader_alert_assertive
+															1126 text 36 results
+								623 region
+						624 region
+		106 pane ID: webViewBrowserControl
+			924 pane ms-pbi.pbi.microsoft.com/minerva/modelView.html
+				925 pane (disabled)
+				926 region ms-pbi.pbi.microsoft.com/minerva/modelView.html - Web content
+					927 region
+						928 region
+						929 region
+							930 region
+								931 region
+								932 region
+									933 region
+										934 region
+											935 region
+												936 region
+												960 document Value: https://ms-pbi.pbi.microsoft.com/minerva/modelView.html ID: RootWebArea
+													1127 group
+														961 group
+															962 tool bar CompanyE
+																963 group
+																964 group
+																	965 group
+																		966 group
+																			967 button Save ID: save
+																			968 button (disabled) Undo ID: undo
+																			969 button (disabled) Redo ID: redo
+																970 button CompanyE · Last saved: Today at 4:21 PM (Power BI Project)
+																	971 heading CompanyE Description: CompanyE
+																972 group
+																	973 edit (settable, string) Search Description: Search ID: TellMe-SearchBox
+																	974 marquee
+																		975 text 0 Suggestions available,
+																976 button Settings ID: titlebar-settings-button
+																977 group
+																	978 button Using light theme ID: titlebar-theme-button
+																979 group
+																	980 button Sign in
+																		981 graphic
+																982 group
+																	983 button Minimize Description: Minimize
+																	984 button Maximize Description: Maximize
+																	985 button Close Description: Close
+														986 group
+															987 group
+																988 tab item (selectable) File ID: Ribbon-file
+																989 group Ribbon tabs ID: tablist
+																	990 tab
+																		991 tab item (selectable) Home ID: home
+																		992 tab item (selectable) Help ID: help
+																994 group
+																995 button (disabled) Share ID: odspShareFlyout
+																	996 text Share
+																	997 text Share this document, and see who it's shared with.
+																998 tool bar
+																	999 tab panel
+																		1000 group Clipboard ID: clipboardGroupMlr-group
+																			1001 button (disabled) Paste ID: paste
+																			1002 button (disabled) Cut ID: cut
+																			1003 button (disabled) Copy ID: copy
+																			1004 text Clipboard
+																		1005 group Data ID: dataGroup-group
+																			1006 button Get data
+																				1007 button Get data
+																				1008 button Get data
+																					1009 text Get
+																					1010 text data
+																			1011 button Excel workbook ID: getDataExcel
+																			1012 button OneLake ​​catalog
+																				1013 button OneLake ​​catalog
+																				1014 button OneLake catalog
+																					1015 text OneLake
+																					1016 text catalog
+																			1017 button SQL Server ID: getDataSQL
+																			1018 button Enter data ID: enterData
+																			1019 button Dataverse ID: getDataDataverse
+																			1020 button Recent sources ID: getDataRecent
+																				1021 text Recent
+																				1022 text sources
+																				1023 text Manage and connect to recent sources.
+																			1024 text Data
+																		1025 group Queries ID: queriesGroup-group
+																			1026 button Transform data
+																				1027 button Transform data
+																				1028 button Transform data
+																					1029 text Transform
+																					1030 text data
+																			1031 button Refresh
+																				1032 button Refresh
+																				1033 button Refresh
+																					1034 text Refresh
+																			1035 text Queries
+																		1036 group Relationships ID: relationshipsSection-group
+																			1037 button Manage relationships ID: manageRelationships
+																			1038 text Relationships
+																		1039 group Calculations ID: calculationsSubSection-group
+																			1040 button New measure ID: newMeasure
+																			1041 button New column ID: newCalcColumn
+																			1042 button New table ID: newCalcTable
+																			1043 button Calculation group ID: newCalculationGroup
+																			1044 text Calculations
+																		1045 group Parameters ID: parameterSection-group
+																			1046 button New parameter ID: parameters
+																				1047 text New
+																				1048 text parameter
+																				1049 text Add parameters to visuals and DAX expressions to act as variables. Report readers can use slicers to adjust the inputs and see different outcomes.
+																			1050 text Parameters
+																		1051 group Security ID: securitySection-group
+																			1052 button Manage roles ID: manageRoles
+																			1053 button View as ID: viewAsRole
+																			1054 text Security
+																		1055 group Q&A ID: qnaGroup-group
+																			1056 button (disabled) Q&A setup ID: qnaTooling
+																			1057 button Language ID: qnaLanguageFlyout
+																				1058 text Language
+																				1059 text Change the language used to ask questions in Q&A.
+																			1060 button Linguistic schema ID: qnaLinguisticSchemaFlyout
+																				1061 text Linguistic
+																				1062 text schema
+																				1063 text Import or export a file containing important information Q&A uses to understand your dataset and the custom terms you've taught Q&A to understand.
+																			1064 text Q&A
+																		1068 group Sensitivity ID: informationProtectionGroup-group
+																			1069 button (disabled) Sensitivity ID: classifyFlyout
+																				1070 text Sensitivity
+																				1071 text Apply a label to classify the sensitivity of your report and protect its content.
+																			1072 text Sensitivity
+																		1128 group Share ID: shareGroup-group
+																			1129 button Publish ID: publish
+																			1130 text Share
+																		1073 button Switch ribbons ID: RibbonModeToggle
+														1074 tab
+															1075 tab item (selectable) Report view
+																1076 graphic
+															1077 tab item (selectable) Table view
+																1078 graphic
+															1079 tab item (selectable) Model view
+																1080 graphic
+															1081 tab item (selectable) DAX query view
+																1082 graphic
+															1083 tab item (selectable) TMDL View
+																1084 graphic
+														1179 group
+															1180 group
+																1181 graphic
+																	1182 group
+																		1183 graphic Many to one relationship from F01 to D02
+																		1184 graphic Many to one relationship from F02 to D02
+																		1185 graphic Many to one relationship from F03 to D02
+																		1186 graphic Many to one relationship from F06 to D02
+																		1187 graphic Many to one relationship from F07 to D02
+																		1188 graphic Many to one relationship from F08 to D02
+																		1189 graphic Many to one relationship from F09 to D02
+																		1190 graphic Many to one relationship from F10 to D02
+																		1191 graphic Many to one relationship from F11 to D02
+																		1192 graphic Many to one relationship from F12 to D02
+																		1193 graphic Many to one relationship from F13 to D02
+																		1194 graphic Many to one relationship from F14 to D02
+																		1195 graphic Many to one relationship from F16 to D02
+																		1196 graphic Many to one relationship from F17 to D02
+																		1197 graphic Many to one relationship from F01 to D03
+																		1198 graphic Many to one relationship from F02 to D03
+																		1199 graphic Many to one relationship from F03 to D03
+																		1200 graphic Many to one relationship from F06 to D03
+																		1201 graphic Many to one relationship from F07 to D03
+																		1202 graphic Many to one relationship from F08 to D03
+																		1203 graphic Many to one relationship from F12 to D03
+																		1204 graphic Many to one relationship from F13 to D03
+																		1205 graphic Many to one relationship from F14 to D03
+																		1206 graphic Many to one relationship from F16 to D03
+																		1207 graphic Many to one relationship from F02 to D04
+																		1208 graphic Many to one relationship from F03 to D04
+																		1209 graphic Many to one relationship from F06 to D04
+																		1210 graphic Many to one relationship from F16 to D04
+																		1211 graphic Many to one relationship from L01 to D04
+																		1212 graphic Many to one relationship from F01 to D05
+																		1213 graphic Many to one relationship from F03 to D05
+																		1214 graphic Many to one relationship from F01 to D06
+																		1215 graphic Many to one relationship from F06 to D09
+																		1216 graphic Many to one relationship from F07 to D09
+																		1217 graphic Many to one relationship from F08 to D09
+																		1218 graphic Many to one relationship from F06 to D10
+																		1219 graphic Many to one relationship from F07 to D10
+																		1220 graphic Many to one relationship from F08 to D10
+																		1221 graphic Many to one relationship from F09 to D11
+																		1222 graphic Many to one relationship from F10 to D11
+																		1223 graphic Many to one relationship from F11 to D11
+																		1224 graphic Many to one relationship from F09 to D12
+																		1225 graphic Many to one relationship from F10 to D12
+																		1226 graphic Many to one relationship from F11 to D13
+																		1227 graphic Many to one relationship from F12 to D14
+																		1228 graphic Many to one relationship from F13 to D14
+																		1229 graphic Many to one relationship from F14 to D14
+																		1230 graphic Many to one relationship from F12 to D15
+																		1231 graphic Many to one relationship from F13 to D15
+																		1232 graphic Many to one relationship from F14 to D15
+																		1233 graphic Many to one relationship from F16 to D16
+																		1234 graphic Many to one relationship from F01 to Engine
+																		1235 graphic Many to one relationship from F02 to Engine
+																		1236 graphic Many to one relationship from F03 to Engine
+																		1237 graphic Many to one relationship from F04 to Engine
+																		1238 graphic Many to one relationship from F05 to Engine
+																		1239 graphic Many to one relationship from F06 to Engine
+																		1240 graphic Many to one relationship from F07 to Engine
+																		1241 graphic Many to one relationship from F08 to Engine
+																		1242 graphic Many to one relationship from F09 to Engine
+																		1243 graphic Many to one relationship from F10 to Engine
+																		1244 graphic Many to one relationship from F11 to Engine
+																		1245 graphic Many to one relationship from F12 to Engine
+																		1246 graphic Many to one relationship from F13 to Engine
+																		1247 graphic Many to one relationship from F14 to Engine
+																		1248 graphic Many to one relationship from F16 to Engine
+																		1249 graphic Many to one relationship from F17 to Engine
+																		1250 graphic Many to one relationship from L01 to Engine
+																		1251 graphic Many to one relationship from L03 to Engine
+																1252 group
+																	1253 group D01 table 1 of 36 Unselected hidden 9 Columns ID: w_D01
+																		1254 group
+																			1255 graphic
+																			1256 text D01
+																			1257 button This field or table is hidden in report view. Select to make it visible.
+																				1258 graphic
+																			1259 button More options
+																				1260 graphic
+																		1261 list (settable, string) table content Description: table content
+																		1262 button Collapse
+																1263 group
+																	1264 group D02 table 2 of 36 Unselected 6 Columns ID: w_D02
+																		1265 group
+																			1266 graphic
+																			1267 text D02
+																			1268 button More options
+																				1269 graphic
+																		1270 list (settable, string) table content Description: table content
+																		1271 button Collapse
+																1272 group
+																	1273 group D03 table 3 of 36 Unselected 8 Columns ID: w_D03
+																		1274 group
+																			1275 graphic
+																			1276 text D03
+																			1277 button More options
+																				1278 graphic
+																		1279 list (settable, string) table content Description: table content
+																		1280 button Collapse
+																1281 group
+																	1282 group D04 table 4 of 36 Unselected 8 Columns ID: w_D04
+																		1283 group
+																			1284 graphic
+																			1285 text D04
+																			1286 button More options
+																				1287 graphic
+																		1288 list (settable, string) table content Description: table content
+																		1289 button Collapse
+																1290 group
+																	1291 group D05 table 5 of 36 Unselected 7 Columns ID: w_D05
+																		1292 group
+																			1293 graphic
+																			1294 text D05
+																			1295 button More options
+																				1296 graphic
+																		1297 list (settable, string) table content Description: table content
+																		1298 button Collapse
+																1299 group
+																	1300 group D06 table 6 of 36 Unselected 14 Columns ID: w_D06
+																		1301 group
+																			1302 graphic
+																			1303 text D06
+																			1304 button More options
+																				1305 graphic
+																		1306 list (settable, string) table content Description: table content
+																		1307 button Collapse
+																1308 group
+																	1309 group D09 table 7 of 36 Unselected 8 Columns ID: w_D09
+																		1310 group
+																			1311 graphic
+																			1312 text D09
+																			1313 button More options
+																				1314 graphic
+																		1315 list (settable, string) table content Description: table content
+																		1316 button Collapse
+																1317 group
+																	1318 group D10 table 8 of 36 Unselected 5 Columns ID: w_D10
+																		1319 group
+																			1320 graphic
+																			1321 text D10
+																			1322 button More options
+																				1323 graphic
+																		1324 list (settable, string) table content Description: table content
+																		1325 button Collapse
+																1326 group
+																	1327 group D11 table 9 of 36 Unselected 6 Columns ID: w_D11
+																		1328 group
+																			1329 graphic
+																			1330 text D11
+																			1331 button More options
+																				1332 graphic
+																		1333 list (settable, string) table content Description: table content
+																		1334 button Collapse
+																1335 group
+																	1336 group D12 table 10 of 36 Unselected 8 Columns ID: w_D12
+																		1337 group
+																			1338 graphic
+																			1339 text D12
+																			1340 button More options
+																				1341 graphic
+																		1342 list (settable, string) table content Description: table content
+																		1343 button Collapse
+																1344 group
+																	1345 group D13 table 11 of 36 Unselected 7 Columns ID: w_D13
+																		1346 group
+																			1347 graphic
+																			1348 text D13
+																			1349 button More options
+																				1350 graphic
+																		1351 list (settable, string) table content Description: table content
+																		1352 button Collapse
+																1353 group
+																	1354 group D14 table 12 of 36 Unselected 8 Columns ID: w_D14
+																		1355 group
+																			1356 graphic
+																			1357 text D14
+																			1358 button More options
+																				1359 graphic
+																		1360 list (settable, string) table content Description: table content
+																		1361 button Collapse
+																1362 group
+																	1363 group D15 table 13 of 36 Unselected 8 Columns ID: w_D15
+																		1364 group
+																			1365 graphic
+																			1366 text D15
+																			1367 button More options
+																				1368 graphic
+																		1369 list (settable, string) table content Description: table content
+																		1370 button Collapse
+																1371 group
+																	1372 group D16 table 14 of 36 Unselected 8 Columns ID: w_D16
+																		1373 group
+																			1374 graphic
+																			1375 text D16
+																			1376 button More options
+																				1377 graphic
+																		1378 list (settable, string) table content Description: table content
+																		1379 button Collapse
+																1380 group
+																	1381 group Engine table 15 of 36 Unselected 1 Columns ID: w_Engine
+																		1382 group
+																			1383 graphic
+																			1384 text Engine
+																			1385 button More options
+																				1386 graphic
+																		1387 list (settable, string) table content Description: table content
+																		1388 button Collapse
+																1389 group
+																	1390 group F01 table 16 of 36 Unselected hidden 23 Columns ID: w_F01
+																		1391 group
+																			1392 graphic
+																			1393 text F01
+																			1394 button This field or table is hidden in report view. Select to make it visible.
+																				1395 graphic
+																			1396 button More options
+																				1397 graphic
+																		1398 list (settable, string) table content Description: table content
+																		1399 button Collapse
+																1400 group
+																	1401 group F02 table 17 of 36 Unselected hidden 11 Columns ID: w_F02
+																		1402 group
+																			1403 graphic
+																			1404 text F02
+																			1405 button This field or table is hidden in report view. Select to make it visible.
+																				1406 graphic
+																			1407 button More options
+																				1408 graphic
+																		1409 list (settable, string) table content Description: table content
+																		1410 button Collapse
+																1411 group
+																	1412 group F03 table 18 of 36 Unselected hidden 15 Columns ID: w_F03
+																		1413 group
+																			1414 graphic
+																			1415 text F03
+																			1416 button This field or table is hidden in report view. Select to make it visible.
+																				1417 graphic
+																			1418 button More options
+																				1419 graphic
+																		1420 list (settable, string) table content Description: table content
+																		1421 button Collapse
+																1422 group
+																	1423 group F04 table 19 of 36 Unselected hidden 17 Columns ID: w_F04
+																		1424 group
+																			1425 graphic
+																			1426 text F04
+																			1427 button This field or table is hidden in report view. Select to make it visible.
+																				1428 graphic
+																			1429 button More options
+																				1430 graphic
+																		1431 list (settable, string) table content Description: table content
+																		1432 button Collapse
+																1433 group
+																	1434 group F05 table 20 of 36 Unselected hidden 17 Columns ID: w_F05
+																		1435 group
+																			1436 graphic
+																			1437 text F05
+																			1438 button This field or table is hidden in report view. Select to make it visible.
+																				1439 graphic
+																			1440 button More options
+																				1441 graphic
+																		1442 list (settable, string) table content Description: table content
+																		1443 button Collapse
+																1444 group
+																	1445 group F06 table 21 of 36 Unselected hidden 15 Columns ID: w_F06
+																		1446 group
+																			1447 graphic
+																			1448 text F06
+																			1449 button This field or table is hidden in report view. Select to make it visible.
+																				1450 graphic
+																			1451 button More options
+																				1452 graphic
+																		1453 list (settable, string) table content Description: table content
+																		1454 button Collapse
+																1455 group
+																	1456 group F07 table 22 of 36 Unselected hidden 16 Columns ID: w_F07
+																		1457 group
+																			1458 graphic
+																			1459 text F07
+																			1460 button This field or table is hidden in report view. Select to make it visible.
+																				1461 graphic
+																			1462 button More options
+																				1463 graphic
+																		1464 list (settable, string) table content Description: table content
+																		1465 button Collapse
+																1466 group
+																	1467 group F08 table 23 of 36 Unselected hidden 12 Columns ID: w_F08
+																		1468 group
+																			1469 graphic
+																			1470 text F08
+																			1471 button This field or table is hidden in report view. Select to make it visible.
+																				1472 graphic
+																			1473 button More options
+																				1474 graphic
+																		1475 list (settable, string) table content Description: table content
+																		1476 button Collapse
+																1477 group
+																	1478 group F09 table 24 of 36 Unselected hidden 11 Columns ID: w_F09
+																		1479 group
+																			1480 graphic
+																			1481 text F09
+																			1482 button This field or table is hidden in report view. Select to make it visible.
+																				1483 graphic
+																			1484 button More options
+																				1485 graphic
+																		1486 list (settable, string) table content Description: table content
+																		1487 button Collapse
+																1488 group
+																	1489 group F10 table 25 of 36 Unselected hidden 11 Columns ID: w_F10
+																		1490 group
+																			1491 graphic
+																			1492 text F10
+																			1493 button This field or table is hidden in report view. Select to make it visible.
+																				1494 graphic
+																			1495 button More options
+																				1496 graphic
+																		1497 list (settable, string) table content Description: table content
+																		1498 button Collapse
+																1499 group
+																	1500 group F11 table 26 of 36 Unselected hidden 12 Columns ID: w_F11
+																		1501 group
+																			1502 graphic
+																			1503 text F11
+																			1504 button This field or table is hidden in report view. Select to make it visible.
+																				1505 graphic
+																			1506 button More options
+																				1507 graphic
+																		1508 list (settable, string) table content Description: table content
+																		1509 button Collapse
+																1510 group
+																	1511 group F12 table 27 of 36 Unselected hidden 17 Columns ID: w_F12
+																		1512 group
+																			1513 graphic
+																			1514 text F12
+																			1515 button This field or table is hidden in report view. Select to make it visible.
+																				1516 graphic
+																			1517 button More options
+																				1518 graphic
+																		1519 list (settable, string) table content Description: table content
+																		1520 button Collapse
+																1521 group
+																	1522 group F13 table 28 of 36 Unselected hidden 15 Columns ID: w_F13
+																		1523 group
+																			1524 graphic
+																			1525 text F13
+																			1526 button This field or table is hidden in report view. Select to make it visible.
+																				1527 graphic
+																			1528 button More options
+																				1529 graphic
+																		1530 list (settable, string) table content Description: table content
+																		1531 button Collapse
+																1532 group
+																	1533 group F14 table 29 of 36 Unselected hidden 20 Columns ID: w_F14
+																		1534 group
+																			1535 graphic
+																			1536 text F14
+																			1537 button This field or table is hidden in report view. Select to make it visible.
+																				1538 graphic
+																			1539 button More options
+																				1540 graphic
+																		1541 list (settable, string) table content Description: table content
+																		1542 button Collapse
+																1543 group
+																	1544 group F16 table 30 of 36 Unselected hidden 13 Columns ID: w_F16
+																		1545 group
+																			1546 graphic
+																			1547 text F16
+																			1548 button This field or table is hidden in report view. Select to make it visible.
+																				1549 graphic
+																			1550 button More options
+																				1551 graphic
+																		1552 list (settable, string) table content Description: table content
+																		1553 button Collapse
+																1554 group
+																	1555 group F17 table 31 of 36 Unselected hidden 11 Columns ID: w_F17
+																		1556 group
+																			1557 graphic
+																			1558 text F17
+																			1559 button This field or table is hidden in report view. Select to make it visible.
+																				1560 graphic
+																			1561 button More options
+																				1562 graphic
+																		1563 list (settable, string) table content Description: table content
+																		1564 button Collapse
+																1565 group
+																	1566 group KPI table 32 of 36 Unselected 200 Columns ID: w_KPI
+																		1567 group
+																			1568 graphic
+																			1569 text KPI
+																			1570 button More options
+																				1571 graphic
+																		1572 list (settable, string) table content Description: table content
+																		1573 button Collapse
+																1574 group
+																	1575 group L01 table 33 of 36 Unselected hidden 6 Columns ID: w_L01
+																		1576 group
+																			1577 graphic
+																			1578 text L01
+																			1579 button This field or table is hidden in report view. Select to make it visible.
+																				1580 graphic
+																			1581 button More options
+																				1582 graphic
+																		1583 list (settable, string) table content Description: table content
+																		1584 button Collapse
+																1585 group
+																	1586 group L03 table 34 of 36 Unselected hidden 6 Columns ID: w_L03
+																		1587 group
+																			1588 graphic
+																			1589 text L03
+																			1590 button This field or table is hidden in report view. Select to make it visible.
+																				1591 graphic
+																			1592 button More options
+																				1593 graphic
+																		1594 list (settable, string) table content Description: table content
+																		1595 button Collapse
+																1596 group
+																	1597 group Period table 35 of 36 Unselected 3 Columns ID: w_Period
+																		1598 group
+																			1599 graphic
+																			1600 text Period
+																			1601 button More options
+																				1602 graphic
+																		1603 list (settable, string) table content Description: table content
+																		1604 button Collapse
+																1605 group
+																	1606 group QA table 36 of 36 Unselected 1 Columns ID: w_QA
+																		1607 group
+																			1608 graphic
+																			1609 text QA
+																			1610 button More options
+																				1611 graphic
+																		1612 list (settable, string) table content Description: table content
+																		1613 button Collapse
+														1085 button (disabled) Previous pages
+														1086 button (disabled) Next pages
+														1087 tab
+															1614 tab item (selectable) All tables
+																1615 tab item (selectable) All tables Description: All tables
+														1088 button New Layout
+															1089 graphic
+														1090 button Properties
+															1091 heading Properties
+														1092 button Cards
+															1093 graphic
+														1094 group Cards
+															1095 text Show the database in the header when applicable
+															1096 group ID: tri-switch-1
+																1097 check box (settable, string) Show the database in the header when applicable ID: tri-switch-1-input
+															1098 text Show related fields when card is collapsed
+															1099 group ID: tri-switch-2
+																1100 check box (settable, string) Show related fields when card is collapsed ID: tri-switch-2-input
+															1101 text Pin related fields to top of card
+															1102 group ID: tri-switch-3
+																1103 check box (settable, string) Pin related fields to top of card ID: tri-switch-3-input
+														1104 group
+														1105 group
+														1106 button Data
+															1107 heading Data
+														1108 tab
+															1109 tab item (selectable) Tables
+															1110 tab item (selectable) Model
+														1111 group Search
+															1112 edit (settable, string) Search Description: Search
+															1113 group
+														1131 group
+															1132 tree
+																1616 tree item (selectable) Table D01
+																	1617 button D01
+																	1618 graphic
+																	1619 button This field or table is hidden in report view. Select to make it visible.
+																	1620 button More options
+																1621 tree item (selectable) Table D02
+																	1622 button D02
+																	1623 graphic
+																	1624 button This field or table is visible in report view. Select to hide it.
+																	1625 button More options
+																1626 tree item (selectable) Table D03
+																	1627 button D03
+																	1628 graphic
+																	1629 button This field or table is visible in report view. Select to hide it.
+																	1630 button More options
+																1631 tree item (selectable) Table D04
+																	1632 button D04
+																	1633 graphic
+																	1634 button This field or table is visible in report view. Select to hide it.
+																	1635 button More options
+																1636 tree item (selectable) Table D05
+																	1637 button D05
+																	1638 graphic
+																	1639 button This field or table is visible in report view. Select to hide it.
+																	1640 button More options
+																1641 tree item (selectable) Table D06
+																	1642 button D06
+																	1643 graphic
+																	1644 button This field or table is visible in report view. Select to hide it.
+																	1645 button More options
+																1646 tree item (selectable) Table D09
+																	1647 button D09
+																	1648 graphic
+																	1649 button This field or table is visible in report view. Select to hide it.
+																	1650 button More options
+																1651 tree item (selectable) Table D10
+																	1652 button D10
+																	1653 graphic
+																	1654 button This field or table is visible in report view. Select to hide it.
+																	1655 button More options
+																1656 tree item (selectable) Table D11
+																	1657 button D11
+																	1658 graphic
+																	1659 button This field or table is visible in report view. Select to hide it.
+																	1660 button More options
+																1661 tree item (selectable) Table D12
+																	1662 button D12
+																	1663 graphic
+																	1664 button This field or table is visible in report view. Select to hide it.
+																	1665 button More options
+																1666 tree item (selectable) Table D13
+																	1667 button D13
+																	1668 graphic
+																	1669 button This field or table is visible in report view. Select to hide it.
+																	1670 button More options
+																1671 tree item (selectable) Table D14
+																	1672 button D14
+																	1673 graphic
+																	1674 button This field or table is visible in report view. Select to hide it.
+																	1675 button More options
+																1676 tree item (selectable) Table D15
+																	1677 button D15
+																	1678 graphic
+																	1679 button This field or table is visible in report view. Select to hide it.
+																	1680 button More options
+																1681 tree item (selectable) Table D16
+																	1682 button D16
+																	1683 graphic
+																	1684 button This field or table is visible in report view. Select to hide it.
+																	1685 button More options
+																1686 tree item (selectable) Table Engine
+																	1687 button Engine
+																	1688 graphic
+																	1689 button This field or table is visible in report view. Select to hide it.
+																	1690 button More options
+																1691 tree item (selectable) Table F01
+																	1692 button F01
+																	1693 graphic
+																	1694 button This field or table is hidden in report view. Select to make it visible.
+																	1695 button More options
+																1696 tree item (selectable) Table F02
+																	1697 button F02
+																	1698 graphic
+																	1699 button This field or table is hidden in report view. Select to make it visible.
+																	1700 button More options
+																1701 tree item (selectable) Table F03
+																	1702 button F03
+																	1703 graphic
+																	1704 button This field or table is hidden in report view. Select to make it visible.
+																	1705 button More options
+																1706 tree item (selectable) Table F04
+																	1707 button F04
+																	1708 graphic
+																	1709 button This field or table is hidden in report view. Select to make it visible.
+																	1710 button More options
+																1711 tree item (selectable) Table F05
+																	1712 button F05
+																	1713 graphic
+																	1714 button This field or table is hidden in report view. Select to make it visible.
+																	1715 button More options
+																1716 tree item (selectable) Table F06
+																	1717 button F06
+																	1718 graphic
+																	1719 button This field or table is hidden in report view. Select to make it visible.
+																	1720 button More options
+																1721 tree item (selectable) Table F07
+																	1722 button F07
+																	1723 graphic
+																	1724 button This field or table is hidden in report view. Select to make it visible.
+																	1725 button More options
+																1726 tree item (selectable) Table F08
+																	1727 button F08
+																	1728 graphic
+																	1729 button This field or table is hidden in report view. Select to make it visible.
+																	1730 button More options
+																1731 tree item (selectable) Table F09
+																	1732 button F09
+																	1733 graphic
+																	1734 button This field or table is hidden in report view. Select to make it visible.
+																	1735 button More options
+																1736 tree item (selectable) Table F10
+																	1737 button F10
+																	1738 graphic
+																	1739 button This field or table is hidden in report view. Select to make it visible.
+																	1740 button More options
+																1741 tree item (selectable) Table F11
+																	1742 button F11
+																	1743 graphic
+																	1744 button This field or table is hidden in report view. Select to make it visible.
+																	1745 button More options
+																1746 tree item (selectable) Table F12
+																	1747 button F12
+																	1748 graphic
+																	1749 button This field or table is hidden in report view. Select to make it visible.
+																	1750 button More options
+																1751 tree item (selectable) Table F13
+																	1752 button F13
+																	1753 graphic
+																	1754 button This field or table is hidden in report view. Select to make it visible.
+																	1755 button More options
+																1756 tree item (selectable) Table F14
+																	1757 button F14
+																	1758 graphic
+																	1759 button This field or table is hidden in report view. Select to make it visible.
+																	1760 button More options
+																1761 tree item (selectable) Table F16
+																	1762 button F16
+																	1763 graphic
+																	1764 button This field or table is hidden in report view. Select to make it visible.
+																	1765 button More options
+																1766 tree item (selectable) Table F17
+																	1767 button F17
+																	1768 graphic
+																	1769 button This field or table is hidden in report view. Select to make it visible.
+																	1770 button More options
+																1771 tree item (selectable) Table KPI
+																	1772 button KPI
+																	1773 graphic
+																	1774 button This field or table is visible in report view. Select to hide it.
+																	1775 button More options
+																1776 tree item (selectable) Table L01
+																	1777 button L01
+																	1778 graphic
+																	1779 button This field or table is hidden in report view. Select to make it visible.
+																	1780 button More options
+																1781 tree item (selectable) Table L03
+																	1782 button L03
+																	1783 graphic
+																	1784 button This field or table is hidden in report view. Select to make it visible.
+																	1785 button More options
+																1786 tree item (selectable) Table Period
+																	1787 button Period
+																	1788 graphic
+																	1789 button This field or table is visible in report view. Select to hide it.
+																	1790 button More options
+																1791 tree item (selectable) Table QA
+																	1792 button QA
+																	1793 graphic
+																	1794 button This field or table is visible in report view. Select to hide it.
+																	1795 button More options
+														1114 group
+														1115 group
+														1116 button Zoom Out ID: zoomOutButton
+														1117 group
+															1118 group ID: zoomHandle
+														1119 button Zoom In ID: zoomInButton
+														1120 text 100%
+														1121 button Reset layout ID: resetLayoutButton
+														1122 button Fit to page ID: fitToPageButton
+														1123 group ID: cdk-live-announcer-0
+														1124 group
+														1133 group
+														1134 group
+														1135 group
+														1136 group
+														1137 group
+														1138 group
+														1139 group
+														1140 group
+														1141 alert
+														1142 alert
+														1143 group
+														1144 group
+														1796 alert ID: screen_reader_alert_assertive
+															1797 text Report Zoomed To 100%. No results found
+								937 region
+						938 region
+		107 pane ID: webViewBrowserControl
+			1145 pane ms-pbi.pbi.microsoft.com/minerva/daxQueryView.html
+				1146 pane (disabled)
+				1147 region ms-pbi.pbi.microsoft.com/minerva/daxQueryView.html - Web content
+					1148 region
+						1149 region
+						1150 region
+							1151 region
+								1152 region
+								1153 region
+									1154 region
+										1155 region
+											1156 region
+												1157 region
+												1160 document Value: https://ms-pbi.pbi.microsoft.com/minerva/daxQueryView.html ID: RootWebArea
+													1161 group
+														1798 group
+															1799 group
+																1800 tool bar CompanyE
+																	1801 group
+																	1802 group
+																		1803 group
+																			1804 group
+																				1805 button Save ID: save
+																				1806 button (disabled) Undo ID: undo
+																				1807 button (disabled) Redo ID: redo
+																	1808 button CompanyE · Last saved: Today at 4:21 PM (Power BI Project)
+																		1809 heading CompanyE Description: CompanyE
+																	1810 group
+																		1811 edit (settable, string) Search Description: Search ID: TellMe-SearchBox
+																		1812 marquee
+																			1813 text 0 Suggestions available,
+																	1814 button Settings ID: titlebar-settings-button
+																	1815 group
+																		1816 button Using light theme ID: titlebar-theme-button
+																	1817 group
+																		1818 button Sign in
+																			1819 graphic
+																	1820 group
+																		1821 button Minimize Description: Minimize
+																		1822 button Maximize Description: Maximize
+																		1823 button Close Description: Close
+															1824 group
+																1825 group
+																	1826 tab item (selectable) File ID: Ribbon-file
+																	1827 group Ribbon tabs ID: tablist
+																		1828 tab
+																			1829 tab item (selectable) Home ID: home
+																			1830 tab item (selectable) Help ID: help
+																	1831 group
+																	1832 button (disabled) Share ID: odspShareFlyout
+																		1833 text Share
+																		1834 text Share this document, and see who it's shared with.
+																	1835 tool bar
+																		1836 tab panel
+																			1837 group Clipboard ID: clipboardGroupMlr-group
+																				1838 button Paste ID: paste
+																				1839 button (disabled) Cut ID: cut
+																				1840 button (disabled) Copy ID: copy
+																				1841 text Clipboard
+																			1842 group Editing ID: editingSection-group
+																				1843 button Format ID: daxFormatQuery
+																				1844 button Comment ID: daxComment
+																				1845 button Uncomment ID: daxUncomment
+																				1846 button Find ID: daxFind
+																				1847 button Replace ID: daxReplace
+																				1848 button Command palette ID: daxCommandPalette
+																				1849 text Editing
+																			1850 group Copilot ID: copilotSection-group
+																				1851 button Copilot ID: daxCopilot
+																				1852 text Copilot
+																			1853 button Switch ribbons ID: RibbonModeToggle
+															1854 tab
+																1855 tab item (selectable) Report view
+																	1856 graphic
+																1857 tab item (selectable) Table view
+																	1858 graphic
+																1859 tab item (selectable) Model view
+																	1860 graphic
+																1861 tab item (selectable) DAX query view
+																	1862 graphic
+																1863 tab item (selectable) TMDL View
+																	1864 graphic
+															1865 group
+															1866 text DAX queries will be saved to your model
+															1867 text They won't be visible when published in the Power BI service.
+															1868 group https://go.microsoft.com/fwlink/?linkid=2247952
+																1869 link Learn more Opens in new window Value: https://go.microsoft.com/fwlink/?linkid=2247952
+																	1870 graphic
+															1871 button Expand
+															1872 button Run the selected portion of the DAX query or the whole thing if nothing is selected (F5 or CTRL + SHIFT + E)
+																1873 graphic
+															1874 button (disabled) Update model with changes (0)
+																1875 graphic
+															1876 group
+																1877 code
+																	1878 editor (settable, string) Editor content;Press Alt+F1 for Accessibility Options. Value: // Welcome to DAX query view! Learn more about DAX queries at https://aka.ms/dax-queries. // Right-click on tables, columns, or measures in the data pane to access quick queries, or ask Copilot for help writing DAX. // Select "Run" to try this sample DAX query. EVALUATE TOPN(100, 'D01')
+															1881 group
+															1882 button Toggle results container
+																1883 graphic
+															1884 heading Results
+															1885 text Your query results will show up here
+															1886 button (disabled) Previous pages
+															1887 button (disabled) Next pages
+															1888 tab
+																1889 tab item (selectable) Query 1
+																	1890 tab item (selectable) Query 1 Description: Query 1
+															1891 button New query
+																1892 graphic
+															1893 button Data
+																1894 heading Data
+															1895 tab
+																1896 tab item (selectable) Tables
+																1897 tab item (selectable) Model
+															1898 group Search
+																1899 edit (settable, string) Search Description: Search
+																1900 group
+															1901 group
+																1902 tree
+																	1903 tree item (selectable) Table D01
+																		1904 button D01
+																		1905 graphic
+																		1906 button This field or table is hidden in report view. Select to make it visible.
+																		1907 button More options
+																	1908 tree item (selectable) Table D02
+																		1909 button D02
+																		1910 graphic
+																		2105 button This field or table is visible in report view. Select to hide it.
+																		1912 button More options
+																	1913 tree item (selectable) Table D03
+																		1914 button D03
+																		1915 graphic
+																		2106 button This field or table is visible in report view. Select to hide it.
+																		1917 button More options
+																	1918 tree item (selectable) Table D04
+																		1919 button D04
+																		1920 graphic
+																		2107 button This field or table is visible in report view. Select to hide it.
+																		1922 button More options
+																	1923 tree item (selectable) Table D05
+																		1924 button D05
+																		1925 graphic
+																		2108 button This field or table is visible in report view. Select to hide it.
+																		1927 button More options
+																	1928 tree item (selectable) Table D06
+																		1929 button D06
+																		1930 graphic
+																		2109 button This field or table is visible in report view. Select to hide it.
+																		1932 button More options
+																	1933 tree item (selectable) Table D09
+																		1934 button D09
+																		1935 graphic
+																		2110 button This field or table is visible in report view. Select to hide it.
+																		1937 button More options
+																	1938 tree item (selectable) Table D10
+																		1939 button D10
+																		1940 graphic
+																		2111 button This field or table is visible in report view. Select to hide it.
+																		1942 button More options
+																	1943 tree item (selectable) Table D11
+																		1944 button D11
+																		1945 graphic
+																		2112 button This field or table is visible in report view. Select to hide it.
+																		1947 button More options
+																	1948 tree item (selectable) Table D12
+																		1949 button D12
+																		1950 graphic
+																		2113 button This field or table is visible in report view. Select to hide it.
+																		1952 button More options
+																	1953 tree item (selectable) Table D13
+																		1954 button D13
+																		1955 graphic
+																		2114 button This field or table is visible in report view. Select to hide it.
+																		1957 button More options
+																	1958 tree item (selectable) Table D14
+																		1959 button D14
+																		1960 graphic
+																		2115 button This field or table is visible in report view. Select to hide it.
+																		1962 button More options
+																	1963 tree item (selectable) Table D15
+																		1964 button D15
+																		1965 graphic
+																		2116 button This field or table is visible in report view. Select to hide it.
+																		1967 button More options
+																	1968 tree item (selectable) Table D16
+																		1969 button D16
+																		1970 graphic
+																		2117 button This field or table is visible in report view. Select to hide it.
+																		1972 button More options
+																	1973 tree item (selectable) Table Engine
+																		1974 button Engine
+																		1975 graphic
+																		2118 button This field or table is visible in report view. Select to hide it.
+																		1977 button More options
+																	1978 tree item (selectable) Table F01
+																		1979 button F01
+																		1980 graphic
+																		1981 button This field or table is hidden in report view. Select to make it visible.
+																		1982 button More options
+																	1983 tree item (selectable) Table F02
+																		1984 button F02
+																		1985 graphic
+																		1986 button This field or table is hidden in report view. Select to make it visible.
+																		1987 button More options
+																	1988 tree item (selectable) Table F03
+																		1989 button F03
+																		1990 graphic
+																		1991 button This field or table is hidden in report view. Select to make it visible.
+																		1992 button More options
+																	1993 tree item (selectable) Table F04
+																		1994 button F04
+																		1995 graphic
+																		1996 button This field or table is hidden in report view. Select to make it visible.
+																		1997 button More options
+																	1998 tree item (selectable) Table F05
+																		1999 button F05
+																		2000 graphic
+																		2001 button This field or table is hidden in report view. Select to make it visible.
+																		2002 button More options
+																	2003 tree item (selectable) Table F06
+																		2004 button F06
+																		2005 graphic
+																		2006 button This field or table is hidden in report view. Select to make it visible.
+																		2007 button More options
+																	2008 tree item (selectable) Table F07
+																		2009 button F07
+																		2010 graphic
+																		2011 button This field or table is hidden in report view. Select to make it visible.
+																		2012 button More options
+																	2013 tree item (selectable) Table F08
+																		2014 button F08
+																		2015 graphic
+																		2016 button This field or table is hidden in report view. Select to make it visible.
+																		2017 button More options
+																	2018 tree item (selectable) Table F09
+																		2019 button F09
+																		2020 graphic
+																		2021 button This field or table is hidden in report view. Select to make it visible.
+																		2022 button More options
+																	2023 tree item (selectable) Table F10
+																		2024 button F10
+																		2025 graphic
+																		2026 button This field or table is hidden in report view. Select to make it visible.
+																		2027 button More options
+																	2028 tree item (selectable) Table F11
+																		2029 button F11
+																		2030 graphic
+																		2031 button This field or table is hidden in report view. Select to make it visible.
+																		2032 button More options
+																	2033 tree item (selectable) Table F12
+																		2034 button F12
+																		2035 graphic
+																		2036 button This field or table is hidden in report view. Select to make it visible.
+																		2037 button More options
+																	2038 tree item (selectable) Table F13
+																		2039 button F13
+																		2040 graphic
+																		2041 button This field or table is hidden in report view. Select to make it visible.
+																		2042 button More options
+																	2043 tree item (selectable) Table F14
+																		2044 button F14
+																		2045 graphic
+																		2046 button This field or table is hidden in report view. Select to make it visible.
+																		2047 button More options
+																	2048 tree item (selectable) Table F16
+																		2049 button F16
+																		2050 graphic
+																		2051 button This field or table is hidden in report view. Select to make it visible.
+																		2052 button More options
+																	2053 tree item (selectable) Table F17
+																		2054 button F17
+																		2055 graphic
+																		2056 button This field or table is hidden in report view. Select to make it visible.
+																		2057 button More options
+																	2058 tree item (selectable) Table KPI
+																		2059 button KPI
+																		2060 graphic
+																		2119 button This field or table is visible in report view. Select to hide it.
+																		2062 button More options
+																	2063 tree item (selectable) Table L01
+																		2064 button L01
+																		2065 graphic
+																		2066 button This field or table is hidden in report view. Select to make it visible.
+																		2067 button More options
+																	2068 tree item (selectable) Table L03
+																		2069 button L03
+																		2070 graphic
+																		2071 button This field or table is hidden in report view. Select to make it visible.
+																		2072 button More options
+																	2073 tree item (selectable) Table Period
+																		2074 button Period
+																		2075 graphic
+																		2120 button This field or table is visible in report view. Select to hide it.
+																		2077 button More options
+																	2078 tree item (selectable) Table QA
+																		2079 button QA
+																		2080 graphic
+																		2121 button This field or table is visible in report view. Select to hide it.
+																		2082 button More options
+															2083 group
+															2084 group
+															2085 text Query 1 of 1
+															2086 button Zoom Out ID: zoomOutButton
+															2087 group
+																2088 group ID: zoomHandle
+															2089 button Zoom In ID: zoomInButton
+															2090 button Zoom level. Click to open the Zoom dialog box ID: zoomValueButton
+														1162 group ID: cdk-live-announcer-0
+															2091 text Copilot isn't available because you're not signed in.
+														1163 group
+														2092 dialog Run DAX queries on your model Secondary Actions: Raise ID: mat-mdc-dialog-0
+															2093 heading Run DAX queries on your model Description: Run DAX queries on your model ID: mat-mdc-dialog-title-0
+															2094 button Close Dialog Description: Close Dialog ID: closeButton
+																2095 graphic
+															2096 text DAX queries are here to help you quickly explore and gain insights from your semantic data model. Let's get started by right-clicking items in the Data pane to generate DAX queries such as top 100 rows and showing the values in a data column.
+															2097 text Once you get going, turn on Copilot with CTRL-I to also help you write the DAX query you need!
+															2098 status
+															2099 button Take a tour ID: okButton
+														2100 alert
+														2101 alert
+														2102 group
+														2103 group
+														2266 alert ID: screen_reader_alert_assertive
+															2267 text Report Zoomed To 100%. 36 results
+								1158 region
+						1159 region
+		108 pane ID: webViewBrowserControl
+			1164 pane ms-pbi.pbi.microsoft.com/minerva/tmdlView.html
+				1165 pane (disabled)
+				1166 region ms-pbi.pbi.microsoft.com/minerva/tmdlView.html - Web content
+					1167 region
+						1168 region
+						1169 region
+							1170 region
+								1171 region
+								1172 region
+									1173 region
+										1174 region
+											1175 region
+												1176 region
+												2104 document Value: https://ms-pbi.pbi.microsoft.com/minerva/tmdlView.html ID: RootWebArea
+													2122 group
+														2123 group
+															2124 group
+																2125 tool bar CompanyE
+																	2126 group
+																	2127 group
+																		2128 group
+																			2129 group
+																				2130 button Save ID: save
+																				2131 button (disabled) Undo ID: undo
+																				2132 button (disabled) Redo ID: redo
+																	2133 button CompanyE · Last saved: Today at 4:21 PM (Power BI Project)
+																		2134 heading CompanyE Description: CompanyE
+																	2135 group
+																		2136 edit (settable, string) Search Description: Search ID: TellMe-SearchBox
+																		2137 marquee
+																			2138 text 0 Suggestions available,
+																	2139 button Settings ID: titlebar-settings-button
+																	2140 group
+																		2141 button Using light theme ID: titlebar-theme-button
+																	2142 group
+																		2143 button Sign in
+																			2144 graphic
+																	2145 group
+																		2146 button Minimize Description: Minimize
+																		2147 button Maximize Description: Maximize
+																		2148 button Close Description: Close
+															2149 group
+																2150 group
+																	2151 tab item (selectable) File ID: Ribbon-file
+																	2152 group Ribbon tabs ID: tablist
+																		2153 tab
+																			2154 tab item (selectable) Home ID: home
+																			2155 tab item (selectable) Help ID: help
+																	2156 group
+																	2157 button (disabled) Share ID: odspShareFlyout
+																		2158 text Share
+																		2159 text Share this document, and see who it's shared with.
+																	2160 tool bar
+																		2161 tab panel
+																			2162 group Clipboard ID: clipboardGroupMlr-group
+																				2163 button Paste ID: paste
+																				2164 button (disabled) Cut ID: cut
+																				2165 button (disabled) Copy ID: copy
+																				2166 text Clipboard
+																			2167 group Editing ID: editingSection-group
+																				2168 button Format ID: tmdlFormat
+																				2169 button Find ID: tmdlFind
+																				2170 button Replace ID: tmdlReplace
+																				2171 button Command palette ID: tmdlCommandPalette
+																				2172 text Editing
+																			2173 button Switch ribbons ID: RibbonModeToggle
+															2174 tab
+																2175 tab item (selectable) Report view
+																	2176 graphic
+																2177 tab item (selectable) Table view
+																	2178 graphic
+																2179 tab item (selectable) Model view
+																	2180 graphic
+																2181 tab item (selectable) DAX query view
+																	2182 graphic
+																2183 tab item (selectable) TMDL View
+																	2184 graphic
+															2185 button (disabled) Switch to editing mode to apply your changes. ID: tmdl-apply-button
+																2186 graphic
+															2187 button (disabled) Preview how the script would change the semantic model. ID: tmdl-preview-button
+															2188 group
+																2189 code
+																	2190 editor (settable, string) Editor content;Press Alt+F1 for Accessibility Options.
+															2193 group
+															2194 tab
+																2195 tab item (selectable) Problems 0 Description: Problems
+																2196 tab item (selectable) Output 0 Description: Output
+															2197 button Expand/Collapse toggle bottom
+																2198 graphic
+															2199 button (disabled) Previous pages
+															2200 button (disabled) Next pages
+															2201 tab
+																2202 tab item (selectable) Script 1
+																	2203 tab item (selectable) Script 1 Description: Script 1
+															2204 button New script
+																2205 graphic
+															2206 button Data
+																2207 heading Data
+															2208 tab
+																2209 tab item (selectable) Tables
+																2210 tab item (selectable) Model
+															2211 graphic
+															2212 group Description: View and organize all of the items in your semantic model. {0}
+																2213 text View and organize all of the items in your semantic model.
+																2214 link Learn how Description: Learn how Value: https://go.microsoft.com/fwlink/?linkid=2245192
+															2215 graphic
+															2216 button Close
+																2217 graphic
+															2218 group Search
+																2219 edit (settable, string) Search Description: Search
+																2220 group
+															2221 group
+																2222 tree
+																	2223 tree item (selectable) Semantic model
+																		2224 button Semantic model
+																		2225 button More options
+																	2226 tree item (selectable) Calculation groups (0)
+																		2227 button More options
+																	2228 tree item (selectable) Cultures (1)
+																		2229 button Cultures (1)
+																		2230 button More options
+																	2231 tree item (selectable) Expressions (0)
+																		2232 button More options
+																	2233 tree item (selectable) Functions (0)
+																		2234 button More options
+																	2235 tree item (selectable) Measures (0)
+																		2236 button Measures (196)
+																		2237 button More options
+																	2238 tree item (selectable) Perspectives (0)
+																		2239 button More options
+																	2240 tree item (selectable) Relationships (69)
+																		2241 button Relationships (69)
+																		2242 button More options
+																	2243 tree item (selectable) Roles (0)
+																		2244 button More options
+																	2245 tree item (selectable) Tables (36)
+																		2246 button Tables (36)
+																		2247 button More options
+															2248 group
+															2249 group
+															2250 button Zoom Out ID: zoomOutButton
+															2251 group
+																2252 group ID: zoomHandle
+															2253 button Zoom In ID: zoomInButton
+															2254 button Zoom level. Click to open the Zoom dialog box ID: zoomValueButton
+														2255 group ID: cdk-live-announcer-0
+														2256 group
+														2257 dialog Edit your model with TMDL Secondary Actions: Raise ID: mat-mdc-dialog-0
+															2258 heading Edit your model with TMDL Description: Edit your model with TMDL ID: mat-mdc-dialog-title-0
+															2259 button Close Dialog Description: Close Dialog ID: closeButton
+																2260 graphic
+															2261 text TMDL view is a feature-rich code editor that allows you to edit models quickly.
+															2262 text Get started by dragging and dropping objects from the Data pane.
+															2263 link Learn more about TMDL view Value: https://go.microsoft.com/fwlink/?linkid=2273000
+															2264 status
+															2265 button Try it now ID: okButton
+														2268 alert ID: screen_reader_alert_assertive
+															2269 text Report Zoomed To 100%. 10 results
+								1177 region
+						1178 region
+		109 title bar (settable, string) Value: CompanyE
+			110 menu bar System ID: MenuBar
+				111 menu item System
+			112 button Minimize
+			113 button Maximize
+			114 button Close
+
+Document text: ```
+Search
+```

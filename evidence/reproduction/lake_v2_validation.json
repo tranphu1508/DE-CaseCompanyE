@@ -1,0 +1,18 @@
+{
+  "status": "PASSED",
+  "batch_id": "v2_20261014T124040450684Z",
+  "structured_tables": 41,
+  "external_source_mismatches": 0,
+  "external_quality": {
+    "input_rows": 267,
+    "valid_versions": 252,
+    "quarantined": 12,
+    "replayed_rows": 3,
+    "latest_receipts": 228,
+    "superseded_versions": 24,
+    "late_unique_events": 69,
+    "out_of_order_receipts": 24
+  },
+  "numeric_aggregate_tables": 30,
+  "checked_at": "2026-10-14T12:42:57.512465+00:00"
+}

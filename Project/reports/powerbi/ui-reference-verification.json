@@ -1,0 +1,118 @@
+{
+  "status": "PASSED",
+  "source": "Immutable CSV independently aggregated; UI values manually transcribed from evidence.",
+  "checks": [
+    {
+      "evidence": "reports\\powerbi\\ui-evidence\\01-overview-total.png",
+      "observed": [
+        73275,
+        174478,
+        "42.00%",
+        105545873007
+      ],
+      "reference": [
+        73275,
+        174478,
+        "42.00%",
+        105545873007
+      ],
+      "passed": true
+    },
+    {
+      "evidence": "reports\\powerbi\\ui-evidence\\02-site-SP.png",
+      "observed": [
+        18313,
+        43621,
+        "41.98%",
+        26282805889
+      ],
+      "reference": [
+        18313,
+        43621,
+        "41.98%",
+        26282805889
+      ],
+      "passed": true
+    },
+    {
+      "evidence": "reports\\powerbi\\ui-evidence\\03-iceberg-SP.png",
+      "observed": [
+        18313,
+        43621,
+        "41.98%",
+        26282805889
+      ],
+      "reference": [
+        18313,
+        43621,
+        "41.98%",
+        26282805889
+      ],
+      "passed": true
+    },
+    {
+      "evidence": "reports\\powerbi\\ui-evidence\\10-overview-January-2024.png",
+      "observed": [
+        2682,
+        7440,
+        "36.05%",
+        3495785045
+      ],
+      "reference": [
+        2682,
+        7440,
+        "36.05%",
+        3495785045
+      ],
+      "passed": true
+    },
+    {
+      "evidence": "reports\\powerbi\\ui-evidence\\11-overview-hotel-DL3.png",
+      "observed": [
+        9079,
+        17445,
+        "52.04%",
+        7626417211
+      ],
+      "reference": [
+        9079,
+        17445,
+        "52.04%",
+        7626417211
+      ],
+      "passed": true
+    },
+    {
+      "evidence": "reports\\powerbi\\ui-evidence\\12-overview-filters-cleared.png",
+      "observed": [
+        73275,
+        174478,
+        "42.00%",
+        105545873007
+      ],
+      "reference": [
+        73275,
+        174478,
+        "42.00%",
+        105545873007
+      ],
+      "passed": true
+    },
+    {
+      "evidence": "reports\\powerbi\\ui-evidence\\13-reopened-overview.png",
+      "observed": [
+        73275,
+        174478,
+        "42.00%",
+        105545873007
+      ],
+      "reference": [
+        73275,
+        174478,
+        "42.00%",
+        105545873007
+      ],
+      "passed": true
+    }
+  ]
+}

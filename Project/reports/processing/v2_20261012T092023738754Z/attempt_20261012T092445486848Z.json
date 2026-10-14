@@ -1,0 +1,10 @@
+{
+  "action": "verify",
+  "files": {
+    "manage_v2.py": "044f407d77aa5c4a88d694b8506493905aecedd3dcbccbbd88bfa25908ae9211",
+    "lake_v2.py": "abb3f6bfc908abd27b4aa26bab2fbb416cc24718ce4449fc2d8ec7ba2972ee08",
+    "lake_job.py": "2d30075d5f34c2391beda735f9a401150095f795f03bd9a7846964374ca5621d",
+    "model_v2.py": "47716876e9b312f4a994c7b1b8865ea96929643874f1e7f08a31499e6e3c9405",
+    "model.py": "c4f6bdcab5f1fbccd56872e827ac8e9d4c2f92eeac784d83a821b85b3d76d03c"
+  }
+}

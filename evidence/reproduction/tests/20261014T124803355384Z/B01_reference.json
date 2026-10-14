@@ -1,0 +1,21 @@
+{
+  "id": "B01",
+  "name": "Phòng thực ở và booking hủy",
+  "scope": "REFERENCE_ONLY_NOT_WAREHOUSE",
+  "definition": "Số đêm phòng thực ở chỉ tính COMPLETED; tỷ lệ hủy có mẫu số là số booking, không phải số phòng.",
+  "expected": [
+    {
+      "occupied_room_nights": 4,
+      "bookings": 3,
+      "cancelled_bookings": 1
+    }
+  ],
+  "actual": [
+    {
+      "occupied_room_nights": 4,
+      "bookings": 3,
+      "cancelled_bookings": 1
+    }
+  ],
+  "passed": true
+}

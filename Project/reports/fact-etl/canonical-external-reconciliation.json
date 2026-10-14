@@ -1,0 +1,202 @@
+{
+  "inputs": {
+    "companye_v2_external.receipt_versions": {
+      "rows": 252,
+      "sha256": {
+        "._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+        ".part-00000-e6472f54-8022-4f3b-91bf-54722bba8c54-c000.snappy.parquet.crc": "caf819167e88752c76a7e554dd721600bd5cdfeaf37243f6e2f500e598dca882",
+        "_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "part-00000-e6472f54-8022-4f3b-91bf-54722bba8c54-c000.snappy.parquet": "1d2d5b7f3ef4c9567d90270013283b7ab916e3ec7d99c4b1215e9a5a9d08c2a5"
+      },
+      "columns": [
+        "event_id",
+        "receipt_ref",
+        "revision",
+        "occurred_at",
+        "source_recorded_at",
+        "supplier_id",
+        "hotel_id",
+        "purchase_line_ref",
+        "accepted_qty",
+        "unit",
+        "unit_price_vnd",
+        "_source_path",
+        "delivery_id",
+        "received_at",
+        "_payload_hash",
+        "_delivery_rank",
+        "accepted_qty_kg",
+        "quality_reason",
+        "_ingestion_batch",
+        "_source_system"
+      ]
+    },
+    "companye_v2_external.receipt_quarantine": {
+      "rows": 12,
+      "sha256": {
+        "._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+        ".part-00000-0a015236-d76e-4643-b755-d02f6d3f001d-c000.snappy.parquet.crc": "ee71cba9b9c2053b004a310c67e0585ebad7c7cc0a18223749f9bcdb423ffff9",
+        "_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "part-00000-0a015236-d76e-4643-b755-d02f6d3f001d-c000.snappy.parquet": "cc722a99b205e49f36069c33d9d0c3aa9e88fb4955676066782569f0c6997e43"
+      },
+      "columns": [
+        "event_id",
+        "receipt_ref",
+        "revision",
+        "occurred_at",
+        "source_recorded_at",
+        "supplier_id",
+        "hotel_id",
+        "purchase_line_ref",
+        "accepted_qty",
+        "unit",
+        "unit_price_vnd",
+        "_source_path",
+        "delivery_id",
+        "received_at",
+        "_payload_hash",
+        "_delivery_rank",
+        "accepted_qty_kg",
+        "quality_reason",
+        "_ingestion_batch",
+        "_source_system"
+      ]
+    },
+    "companye_v2_external.receipt_replays": {
+      "rows": 3,
+      "sha256": {
+        "._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+        ".part-00000-eb94ba02-9831-489e-88c0-2213897a37e5-c000.snappy.parquet.crc": "ce59670254e20b5efac3574a411aa0ccafab549de6326aafd001d2066e3a4122",
+        "_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "part-00000-eb94ba02-9831-489e-88c0-2213897a37e5-c000.snappy.parquet": "d8694f822a30c9c27f6f938cd384b343ac39500107363070903bd99ad4d97ca8"
+      },
+      "columns": [
+        "event_id",
+        "receipt_ref",
+        "revision",
+        "occurred_at",
+        "source_recorded_at",
+        "supplier_id",
+        "hotel_id",
+        "purchase_line_ref",
+        "accepted_qty",
+        "unit",
+        "unit_price_vnd",
+        "_source_path",
+        "delivery_id",
+        "received_at",
+        "_payload_hash",
+        "_delivery_rank",
+        "_ingestion_batch",
+        "_source_system"
+      ]
+    },
+    "companye_v2_external.receipt_latest": {
+      "rows": 228,
+      "sha256": {
+        "._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+        ".part-00000-e2549fba-7f0c-49c5-9cc3-d8a8d65dc1ed-c000.snappy.parquet.crc": "5b5ce9bb5314506c60c332e3edad61c9cc2d1ed3ed3480b478d4a58b71294aa5",
+        "_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "part-00000-e2549fba-7f0c-49c5-9cc3-d8a8d65dc1ed-c000.snappy.parquet": "8d62ac2389d61f3ed710846138872f4c4319d6faf2970ff08823726af1f380dd"
+      },
+      "columns": [
+        "event_id",
+        "receipt_ref",
+        "revision",
+        "occurred_at",
+        "source_recorded_at",
+        "supplier_id",
+        "hotel_id",
+        "purchase_line_ref",
+        "accepted_qty",
+        "unit",
+        "unit_price_vnd",
+        "_source_path",
+        "delivery_id",
+        "received_at",
+        "_payload_hash",
+        "_delivery_rank",
+        "accepted_qty_kg",
+        "quality_reason",
+        "_ingestion_batch",
+        "_source_system"
+      ]
+    }
+  },
+  "mismatches": [],
+  "newest_invalid": [
+    {
+      "receipt_ref": "RECEIPTS-0024695",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0027378",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0024135",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0001934",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0023078",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0025496",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0011604",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0021166",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0013274",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0019011",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0007065",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    },
+    {
+      "receipt_ref": "RECEIPTS-0021248",
+      "revision": 1,
+      "reason": "UNKNOWN_UNIT|INVALID_QUANTITY",
+      "older_valid_revision": null
+    }
+  ],
+  "policy": "DB receipts alone feed F13; external latest/revisions/replays/quarantine remain reconciliation evidence, never additive facts. A bad newest revision does not certify the older valid one as complete."
+}

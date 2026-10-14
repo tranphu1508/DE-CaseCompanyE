@@ -1,0 +1,98 @@
+{
+  "seed": 20261012,
+  "rng": "Python random.Random / MT19937; single stream; preserve code and Python version",
+  "python_version": "3.11.9",
+  "generator_sha256": {
+    "generate.py": "3d747b15fd5702bdedf5e77a72135b75e24b7d9824e54d0736821dac82a5381d",
+    "model.py": "c4f6bdcab5f1fbccd56872e827ac8e9d4c2f92eeac784d83a821b85b3d76d03c"
+  },
+  "configuration": {
+    "dataset_version": "v1",
+    "seed": 20261012,
+    "date_from": "2024-01-01",
+    "date_to": "2025-12-31",
+    "customers": 12000,
+    "bookings": 32000,
+    "walkin_tickets": 6000,
+    "five_star_rooms": 36,
+    "three_star_rooms": 24,
+    "currency": "VND",
+    "timezone": "Asia/Ho_Chi_Minh"
+  },
+  "rules": [
+    {
+      "id": "G01",
+      "rule": "Date sampling weights: destination peak=1.7, off-peak=.85; Fri-Sun=1.35 multiplier",
+      "bias": "Seasonal demand is imposed, not discovered from real observations."
+    },
+    {
+      "id": "G02",
+      "rule": "Booking status weights completed=.84, cancelled=.13, no_show=.03",
+      "bias": "Cancellation rate is synthetic and not causal evidence for channel quality."
+    },
+    {
+      "id": "G03",
+      "rule": "Breakfast included for all 5-star rate plans; 3-star inclusion depends on selected channel-specific plan",
+      "bias": "Any star-breakfast relationship is a business rule, not model accuracy."
+    },
+    {
+      "id": "G04",
+      "rule": "Promotion eligibility uses sale/stay/site/channel; eligible bookings use it with probability .65",
+      "bias": "No randomized control design; incremental campaign revenue cannot be identified."
+    },
+    {
+      "id": "G05",
+      "rule": "Cross-sell ticket=.55, rental=.24; customer identifiers differ; legitimate contacts may be missing",
+      "bias": "Identity truth is excluded from ingestion; no free enterprise customer key."
+    },
+    {
+      "id": "G06",
+      "rule": "Weather is synthetic with destination seasonality; affects outdoor closures",
+      "bias": "Not real weather; weather is not a direct demand model in v1."
+    },
+    {
+      "id": "G07",
+      "rule": "No completed room/vehicle interval may overlap occupancy or maintenance",
+      "bias": "Capacity censoring affects realized booking distribution; report actual generated counts."
+    },
+    {
+      "id": "G08",
+      "rule": "Ingredient costs come from linked USE movements times purchase unit price; breakfast/dinner split proportional to covers",
+      "bias": "Allocation is synthetic; correlation between covers and cost is partly imposed."
+    },
+    {
+      "id": "G09",
+      "rule": "Supplier price multipliers .9-1.15, delay .05, rejected unit .08, random waste .08; residual perishable unit expires",
+      "bias": "Artificial supplier performance; no claim about named real brands."
+    },
+    {
+      "id": "G10",
+      "rule": "Outlet quality baseline randomly 2-5 independent of hotel stars; ratings clipped to 1-5",
+      "bias": "Ratings and wait times do not represent observed service."
+    }
+  ],
+  "external_quality_scenarios": {
+    "rows": 121,
+    "invalid_dates": 18,
+    "unknown_unit_rows": 30,
+    "duplicate_document_rows": 1,
+    "known_currency_tokens": [
+      "25k",
+      "1,2tr"
+    ],
+    "unstructured_files_require_review": true
+  },
+  "limitations": [
+    "Annual paid membership not automatically renewed; E Family initially records owner only. No detailed point ledger or voucher redemption in v1.",
+    "Linked hotel/entertainment sales exist, but full composite package allocation and partial hotel cancellation histories are not yet modeled.",
+    "Meal ingredient cost uses an explicit allocation rule; it is not per-customer observed consumption.",
+    "Source loading and lake ingestion are full snapshots, not CDC. Original source update histories are not synthesized.",
+    "Procurement covers purchase, receipt and stock; full supplier invoice/payment workflows and transfers are reserved for a later version."
+  ],
+  "evaluation_guidance": [
+    "Use exact aggregates and integrity invariants for warehouse correctness; do not treat synthetic correlations as business evidence.",
+    "Benchmark on multiple versioned seeds/scales; keep data generation outside timed ETL measurements.",
+    "Do not tune ETL identity resolution using audit_only truth; use it only in separate evaluation.",
+    "Store an untouched holdout scenario/version if evaluating predictive models later."
+  ]
+}

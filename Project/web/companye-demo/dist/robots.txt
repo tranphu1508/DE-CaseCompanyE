@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# Crawlers must be able to read noindex on HTML pages. No sitemap.
+

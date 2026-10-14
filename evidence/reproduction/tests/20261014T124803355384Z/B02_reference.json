@@ -1,0 +1,23 @@
+{
+  "id": "B02",
+  "name": "Chi phí khuyến mãi và kênh",
+  "scope": "REFERENCE_ONLY_NOT_WAREHOUSE",
+  "definition": "Giá trị giữ lại trước chi phí vận hành = gross - company_discount - commission, chỉ giao dịch hoàn thành. Đây chưa phải lợi nhuận hay tiền thực thu.",
+  "expected": [
+    {
+      "customer_due": 2700000,
+      "company_promotion_cost": 80000,
+      "partner_funding": 220000,
+      "retained_before_operating_cost": 2720000
+    }
+  ],
+  "actual": [
+    {
+      "customer_due": 2700000,
+      "company_promotion_cost": 80000,
+      "partner_funding": 220000,
+      "retained_before_operating_cost": 2720000
+    }
+  ],
+  "passed": true
+}

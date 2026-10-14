@@ -1,0 +1,19 @@
+{
+  "status": "PASSED",
+  "checked_on": "2026-10-14",
+  "scope": "Fresh isolated source/lake reproduction and unchanged source/lake test suite; not full analytics cold start",
+  "v2_batch": "v2_20261014T124040450684Z",
+  "test_run": "20261014T124803355384Z",
+  "test_call_outcomes": {
+    "passed": 106
+  },
+  "test_stages": 8,
+  "v1_lake_precondition": "Rebuilt locally by original manage.py",
+  "initial_packaging_failure_retained": "initial-test-attempt",
+  "business_expectations_modified": false,
+  "original_operational_project_modified": false,
+  "commands": [
+    "python -X utf8 scripts/platform.py all",
+    "python -X utf8 scripts/platform.py test"
+  ]
+}

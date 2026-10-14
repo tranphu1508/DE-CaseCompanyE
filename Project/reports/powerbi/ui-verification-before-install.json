@@ -1,0 +1,17 @@
+{
+  "status": "PREPARED_WAITING_FOR_DESKTOP_INSTALL",
+  "publication_id": "pub_3f41f8fafa4c913187af2cc3",
+  "installation": "UAC_CANCELLED_OR_TIMED_OUT",
+  "installer_version": "2.158.1304.0",
+  "error_codes": [
+    "0x800704c7",
+    "0x80070642"
+  ],
+  "power_query_refresh": "NOT_RUN",
+  "dax_verification": "NOT_RUN",
+  "ui_filter_tests": "NOT_RUN",
+  "ui_total_tests": "NOT_RUN",
+  "ui_warning_tests": "NOT_RUN",
+  "report_project": "powerbi/CompanyE.pbip",
+  "prerequisite": "User confirms Microsoft installer UAC on retry"
+}

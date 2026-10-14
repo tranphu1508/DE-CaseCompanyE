@@ -1,0 +1,69 @@
+{
+  "captured_at": "2026-10-13T04:56:59.4908239+07:00",
+  "purpose": "Read-only local development and benchmark capacity assessment; not a stress test",
+  "cpu": [
+    {
+      "Name": "Intel(R) Core(TM) i7-14700F",
+      "NumberOfCores": 20,
+      "NumberOfLogicalProcessors": 28,
+      "LoadPercentage": 63
+    }
+  ],
+  "memory": {
+    "total_visible_kib": 66935272,
+    "free_physical_kib": 31481940
+  },
+  "os": {
+    "version": "10.0.26200",
+    "caption": "Microsoft Windows 11 Home"
+  },
+  "volumes": [
+    {
+      "DriveLetter": "D",
+      "Size": 157285347328,
+      "SizeRemaining": 9192738816
+    },
+    {
+      "DriveLetter": "E",
+      "Size": 524286947328,
+      "SizeRemaining": 38661230592
+    },
+    {
+      "DriveLetter": "C",
+      "Size": 316871274496,
+      "SizeRemaining": 88323059712
+    }
+  ],
+  "disks": [
+    {
+      "FriendlyName": "Samsung SSD 990 PRO 1TB",
+      "MediaType": "SSD",
+      "BusType": "NVMe",
+      "Size": 1000204886016
+    }
+  ],
+  "gpu_nvidia_csv": [
+    "NVIDIA GeForce RTX 4070 SUPER, 12282 MiB, 4605 MiB, 591.86"
+  ],
+  "docker_resources": {
+    "cpus": 28,
+    "memory_bytes": 33561436160
+  },
+  "companye_containers": [
+    "/companye-postgres-1 memory_bytes=1073741824 nano_cpus=0 image=postgres:17",
+    "/companye-spark-1 memory_bytes=3221225472 nano_cpus=0 image=apache/spark:3.5.7-python3"
+  ],
+  "container_usage": [
+    "companye-postgres-1 CPU=0.00% MEM=178.2MiB / 1GiB",
+    "companye-spark-1 CPU=0.00% MEM=4.246MiB / 3GiB"
+  ],
+  "wsl_version": [
+    "WSL version: 2.7.8.0",
+    "Kernel version: 6.18.33.1-1",
+    "WSLg version: 1.0.73.2",
+    "MSRDC version: 1.2.6676",
+    "Direct3D version: 1.611.1-81528511",
+    "DXCore version: 10.0.26100.1-240331-1435.ge-release",
+    "Windows version: 10.0.26200.9457"
+  ]
+}

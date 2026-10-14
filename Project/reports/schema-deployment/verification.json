@@ -1,0 +1,68 @@
+{
+  "status": "PASSED_SCHEMA_DEPLOYMENT",
+  "completed_at": "2026-10-13T17:24:39.939287+00:00",
+  "business_data_loaded": false,
+  "business_tables_per_branch": 35,
+  "dimensions": 16,
+  "facts_and_optional_aggregate": 17,
+  "bridges": 2,
+  "logical_views_per_branch": 2,
+  "logical_columns_per_branch": 631,
+  "oracle": {
+    "owners": [
+      "CE_DWH_A",
+      "CE_DWH_B"
+    ],
+    "tables_per_owner": 35,
+    "views_per_owner": 2,
+    "helper_tables_in_ce_stage": 4,
+    "foreign_keys_per_owner": 106,
+    "unique_indexes_per_owner": 99,
+    "helper_primary_key_indexes": 4,
+    "all_objects_valid": true,
+    "all_declared_constraints_enabled_validated": true,
+    "checks_compared_with_metadata": true,
+    "native_rejection_fixtures_passed": 12
+  },
+  "iceberg": {
+    "namespace": "ce.gold",
+    "tables": 35,
+    "required_fields_verified": true,
+    "partitioned": false,
+    "format_version": 2,
+    "session_view_registration_verified": 2,
+    "missing_helper_rejected": true,
+    "native_primary_foreign_unique_check_constraints": false
+  },
+  "source_contracts_and_catalog_unchanged": true,
+  "physical_model_sha256": "7b03a9e56386105935747236c0dd662b738a75e58f5e59700271fe01ed1b2c74",
+  "logical_model_sha256": "c53a238e363d391fb0f27fc88ca582deb873e3da8d91d5eb928aaacef4e987a5",
+  "manifest_sha256": "871b11d92f16e1915c487f679b25cf8f114408e7b701c3330fa9b61e0f9d4e71",
+  "ddl_sha256": {
+    "oracle_schema.sql": "f2918218655850ce01791fd72d6328c153d6805c6c17da0b12b2d1e3e911c2cd",
+    "iceberg_schema.sql": "b35387e9665a60d6daaba4f5bbcf0c5fb2616ff1df4682b62ee7549268cb8244"
+  },
+  "evidence_sha256": {
+    "oracle-verification.json": "2b587a5b3f6f87cd044dda41072eff63be88f4fab942bed7a30d49d8ff9b4d3e",
+    "iceberg-verification.json": "9fc2a9b9703e3b6555aadd0b775b475b1b73ff59c760d4d0b2f6c82c95dd808d",
+    "oracle-constraint-fixtures.json": "d39a5e465ef7492e81d1c3bb08fe983b3ff39a43ef19ae97b26f32d5861c1d94",
+    "oracle-constraint-fixtures.sql": "9c83004be43481944dd0813d0d077f67e55c1ecec6d88d34b71536d525e7260c",
+    "helper-fixture-manifest.json": "e02d845ffe58939474f7cdca470b91c946b86e497bdb39b0f2a24a648b87d255"
+  },
+  "code_sha256": {
+    "scripts/build-analytics-schema.py": "2d8698f3a3944b4b76210732085eadd830b6f563e205efdc379a0b6134c7372d",
+    "scripts/deploy-analytics-schema.py": "fa0e7cf360be66deaf190971b3d2325250e038fb566080ff16238a13d6894c23",
+    "scripts/test-analytics-schema.py": "cc651e6b930c6c2dddb06215b2e6338e0cfce856312a0b8bf35bd66665739fa0",
+    "scripts/finalize-schema-deployment.py": "77dff3faa5aac71ac05c0f35fa9c31c6de2203838c4651c0627f46895a125aa9",
+    "src/analytics_runtime/deploy_schema.py": "d90218b7befeee4cf86e4fc4ed3352c762cf2a073b8d68b34c546e9df014a5c1",
+    "src/analytics_runtime/validation_views.py": "743d1f12291a53b2a84aef808ee0393045b0db83b8e7459e17bfa13d27ac5a53"
+  },
+  "next_step": "ETL/control schemas and roles, canonical key registry, dimension SCD2 loading, fact/bridge loading, quality and publication; validate before KPI or benchmark.",
+  "limitations": [
+    "Iceberg PK/UK/FK/checks and cross-source rules must be enforced by ETL; generated predicates are a specification, not a running pipeline.",
+    "SCD interval overlap is not prevented by Oracle row constraints or current-row unique indexes; this is demonstrated and requires ETL validation.",
+    "Two Spark helper views are session scoped; only explicit empty schema-validation Parquet was tested. No business helper publication exists.",
+    "Oracle owners are schema-only accounts; application ETL/BI logins and grants are a subsequent step.",
+    "No source data loaded, default dimension members seeded, KPI evaluated or benchmark run."
+  ]
+}

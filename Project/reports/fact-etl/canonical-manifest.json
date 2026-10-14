@@ -1,0 +1,565 @@
+{
+  "run_id": "facts_v2_20261012T092023738754Z_8a65e73962da",
+  "started_at": "2026-10-13T18:09:51.823645Z",
+  "source_batch_id": "v2_20261012T092023738754Z",
+  "transform_version": "8a65e73962da34597b5260968bbf06ee363ece410aef13c12ee9be355c69a315",
+  "input_sha256": {
+    "config/warehouse_design_v1.json": "7b6d76ca44a9039e61b9b29c3a175770642651171dbb9d91dd7299c7eed36def",
+    "config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332",
+    "config/analytics/ddl/manifest.json": "871b11d92f16e1915c487f679b25cf8f114408e7b701c3330fa9b61e0f9d4e71",
+    "config/physical_design_v1.json": "7b03a9e56386105935747236c0dd662b738a75e58f5e59700271fe01ed1b2c74",
+    "config/logical_model_v1_1.json": "c53a238e363d391fb0f27fc88ca582deb873e3da8d91d5eb928aaacef4e987a5",
+    "config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "lake/v2/catalog/catalog.json": "301f47ffd0714c26bf62cf957a09c1ca231afdb927d6ecad807030717034c9e7",
+    "reports/dimension-etl/verification.json": "57d0553d110c5e74eb55ac0e437059aac63789c43ab671a4a1bfffcbd4ecd08d"
+  },
+  "code_sha256": {
+    "src/fact_etl/__init__.py": "d386397ec735abe1a492d8f2e19581cf6a85693a50698a9608a28b0d5a941526",
+    "src/fact_etl/pipeline.py": "4aaca8c0e5f325442f430deb30703c3878f00295c1f5ad53c53cce7b7c15c0ed",
+    "src/fact_etl/transform.py": "53b2dd3f8a8f4561ef929bdc2a70b67f85f3ece79a80bd9afdf77c1ab80e3e3b",
+    "src/analytics_runtime/deploy_schema.py": "d90218b7befeee4cf86e4fc4ed3352c762cf2a073b8d68b34c546e9df014a5c1",
+    "src/analytics_runtime/dimensions.py": "96a11dae2196b515fd51c41e54777472a0b58ea8341a638ce7b1c3ec4bec8c26",
+    "src/analytics_runtime/dimension_fixtures.py": "c7776b8a70584e9066fbb00a512f464a6286df682a43772d6e95eceaf194db6d",
+    "src/analytics_runtime/dimension_transform.py": "829261510ec5b2e37d27eda2827f3e9c61aab571e5f9b713720f0de7ca3b8474",
+    "src/analytics_runtime/etl_io.py": "e901c06545f981fb9f5656385491036029ab7826c58ad82cb24517df6787e250",
+    "src/analytics_runtime/install_jars.py": "22a7d2aba30117163b7fc67ce62f026bee093f2bcfd3226a680321c81e6e332c",
+    "src/analytics_runtime/probe.py": "176e6e953c394a9513be5e75b9d9c2cd959376127ab155cec72dd78d156fbe24",
+    "src/analytics_runtime/scd2.py": "e866ab80efb619adf742ff3e2f5a842a6429b64a520c37db05931d2e97f91167",
+    "src/analytics_runtime/session.py": "99f246a2b25598b055661d13fa398a43305e54be7307953d364fe988e3e93ccb",
+    "src/analytics_runtime/validation_views.py": "743d1f12291a53b2a84aef808ee0393045b0db83b8e7459e17bfa13d27ac5a53",
+    "src/analytics_runtime/__init__.py": "916eac3c089b1c75c32ab87e25c6f059d1cb7392f5364b0c495c21494f5b8ded"
+  },
+  "dimension_run_id": "dim_v2_20261012T092023738754Z_43f097c2b062",
+  "quality": {
+    "L04": {
+      "status": "COMPLETE",
+      "accepted": 4,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "hotel_ops.sites"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "L03": {
+      "status": "COMPLETE",
+      "accepted": 21213,
+      "rejected": 0,
+      "business_filtered": 7200,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.rentals",
+        "entertainment_ops.ticket_orders",
+        "hotel_ops.bookings"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F01": {
+      "status": "COMPLETE",
+      "accepted": 32000,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.bookings",
+        "hotel_ops.hotels"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F08": {
+      "status": "COMPLETE",
+      "accepted": 11696,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.meal_sessions",
+        "hotel_ops.outlets"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F10": {
+      "status": "COMPLETE",
+      "accepted": 8772,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.activities",
+        "entertainment_ops.centres",
+        "entertainment_ops.closures"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F11": {
+      "status": "COMPLETE",
+      "accepted": 87720,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "entertainment_ops.rentals",
+        "entertainment_ops.vehicle_maintenance",
+        "entertainment_ops.vehicles"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F12": {
+      "status": "COMPLETE",
+      "accepted": 23680,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.purchase_lines",
+        "hotel_ops.purchase_orders"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F16": {
+      "status": "COMPLETE",
+      "accepted": 512,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.assets",
+        "hotel_ops.hotels",
+        "hotel_ops.maintenance"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F17": {
+      "status": "COMPLETE",
+      "accepted": 2924,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.weather_daily"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "L02": {
+      "status": "COMPLETE",
+      "accepted": 962,
+      "rejected": 0,
+      "business_filtered": 64,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.assets",
+        "hotel_ops.maintenance",
+        "hotel_ops.rooms"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F02": {
+      "status": "COMPLETE",
+      "accepted": 175440,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.assets",
+        "hotel_ops.hotels",
+        "hotel_ops.maintenance",
+        "hotel_ops.rooms"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F04": {
+      "status": "COMPLETE",
+      "accepted": 20690,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "entertainment_ops.ticket_orders",
+        "hotel_ops.bookings",
+        "hotel_ops.hotels"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F05": {
+      "status": "COMPLETE",
+      "accepted": 7723,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.centres",
+        "entertainment_ops.rentals",
+        "entertainment_ops.vehicles",
+        "hotel_ops.bookings",
+        "hotel_ops.hotels"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F07": {
+      "status": "COMPLETE",
+      "accepted": 31357,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.bookings",
+        "hotel_ops.dining_orders",
+        "hotel_ops.hotels",
+        "hotel_ops.outlets"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F09": {
+      "status": "COMPLETE",
+      "accepted": 39827,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "entertainment_ops.activities",
+        "entertainment_ops.admissions",
+        "entertainment_ops.centres",
+        "entertainment_ops.ticket_orders",
+        "entertainment_ops.tickets"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F13": {
+      "status": "COMPLETE",
+      "accepted": 29621,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.purchase_lines",
+        "hotel_ops.purchase_orders",
+        "hotel_ops.receipts"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "L01": {
+      "status": "COMPLETE",
+      "accepted": 36711,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.booking_rooms",
+        "hotel_ops.bookings",
+        "hotel_ops.rate_plans",
+        "hotel_ops.rooms"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F03": {
+      "status": "COMPLETE",
+      "accepted": 73275,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.booking_rooms",
+        "hotel_ops.bookings",
+        "hotel_ops.hotels",
+        "hotel_ops.rate_plans",
+        "hotel_ops.rooms",
+        "hotel_ops.stays"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F14": {
+      "status": "COMPLETE",
+      "accepted": 88032,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.hotels",
+        "hotel_ops.purchase_lines",
+        "hotel_ops.purchase_orders",
+        "hotel_ops.receipts",
+        "hotel_ops.stock_movements"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    },
+    "F06": {
+      "status": "COMPLETE",
+      "accepted": 52979,
+      "rejected": 0,
+      "business_filtered": 0,
+      "coverage": 1.0,
+      "source_tables": [
+        "hotel_ops.booking_rooms",
+        "hotel_ops.bookings",
+        "hotel_ops.breakfast_entitlements",
+        "hotel_ops.hotels",
+        "hotel_ops.outlets",
+        "hotel_ops.rate_plans",
+        "hotel_ops.rooms",
+        "hotel_ops.stays"
+      ],
+      "unit": "target grain; source record accounting is separate"
+    }
+  },
+  "tables": [
+    {
+      "entity": "L04",
+      "rows": 4,
+      "content_sha256": "9ee7957e4d31e8230b404f7e1e66422fd300baf5b6396cece5e386008da805b5",
+      "transform_seconds": 0.6842709740012651
+    },
+    {
+      "entity": "L03",
+      "rows": 21213,
+      "content_sha256": "ea0975d96870646986ca9b4d4a0f41cf70305487b9edb746f74c5baf2953004e",
+      "transform_seconds": 1.5775806500023464
+    },
+    {
+      "entity": "F01",
+      "rows": 32000,
+      "content_sha256": "61ac22488c0f65085672f8d4b814584205df823ba35525bfd057977766b3acc3",
+      "transform_seconds": 6.956204237998463
+    },
+    {
+      "entity": "F08",
+      "rows": 11696,
+      "content_sha256": "7849ac462add6bcfe7b968e3f7f425144d2321eb5994763d321774f4f93a09d2",
+      "transform_seconds": 1.9793556249933317
+    },
+    {
+      "entity": "F10",
+      "rows": 8772,
+      "content_sha256": "7677814f46e69077f891044b47a99cb8de351222f88faade939e2fafc73f6c2b",
+      "transform_seconds": 1.5720795469969744
+    },
+    {
+      "entity": "F11",
+      "rows": 87720,
+      "content_sha256": "abc03517f121688693206a2ebb20db960028c536e4bee0466e12e52e6643116b",
+      "transform_seconds": 10.767042968000169
+    },
+    {
+      "entity": "F12",
+      "rows": 23680,
+      "content_sha256": "143234eb517df000e54dfa1cca6da34a7bbaffcc6be413593c8463617dad4816",
+      "transform_seconds": 3.775907842995366
+    },
+    {
+      "entity": "F16",
+      "rows": 512,
+      "content_sha256": "521453586223e95f52dd0fcceed80945abd5bf3b1075517122acaa7123c150f2",
+      "transform_seconds": 0.8115719429915771
+    },
+    {
+      "entity": "F17",
+      "rows": 2924,
+      "content_sha256": "ac3f0783c39742967cd24bda46fbf7592a17c70d94a2a99d2d50470fd1b6777b",
+      "transform_seconds": 0.7454800020059338
+    },
+    {
+      "entity": "L02",
+      "rows": 962,
+      "content_sha256": "f474800491f505eec4d7ec02fe72ba4bceb8611b66343455fdacdefe0ebf60a8",
+      "transform_seconds": 0.42494567499670666
+    },
+    {
+      "entity": "F02",
+      "rows": 175440,
+      "content_sha256": "8cdd8cc24293eb4e23fb6f70ee30a68089047064aad577a76311e3457f9135aa",
+      "transform_seconds": 21.12471417800407
+    },
+    {
+      "entity": "F04",
+      "rows": 20690,
+      "content_sha256": "4fd33e6034ca8b71818ece5fe7c807b8a176fc8ba458c0e426216a289fcad34c",
+      "transform_seconds": 3.8013892349990783
+    },
+    {
+      "entity": "F05",
+      "rows": 7723,
+      "content_sha256": "b315beb8e229810fbf3ab08e9d6d4bfae958b85c23f9a49a3a324069c41e2e56",
+      "transform_seconds": 1.6792803309945157
+    },
+    {
+      "entity": "F07",
+      "rows": 31357,
+      "content_sha256": "0bd8118facfe0891925f37e808e71f1843e9d163b29c60152db1e3563a64db39",
+      "transform_seconds": 5.086844816993107
+    },
+    {
+      "entity": "F09",
+      "rows": 39827,
+      "content_sha256": "7c176d0c0e60b9216336e3c8f65e375d8bbbe38944e932c355fbafd73f03191e",
+      "transform_seconds": 5.922231627002475
+    },
+    {
+      "entity": "F13",
+      "rows": 29621,
+      "content_sha256": "33cab5def469fd9876c617b47d77ee37cc6453bb3885a795cf0163ca289c9e1a",
+      "transform_seconds": 4.863694628002122
+    },
+    {
+      "entity": "L01",
+      "rows": 36711,
+      "content_sha256": "26e0f3c44f4703bb70ce493765f5dec2293ae8782a60b34238789a7bb8c1851d",
+      "transform_seconds": 1.7892370960034896
+    },
+    {
+      "entity": "F03",
+      "rows": 73275,
+      "content_sha256": "6e711608c80aa01a7e73071953dff6711fa5c1fb1aa1b32b87a167f5a231ba9e",
+      "transform_seconds": 10.834971620992292
+    },
+    {
+      "entity": "F14",
+      "rows": 88032,
+      "content_sha256": "5c53409da37397b2ed68f391b92bd3e24f38072105682a35ed56c292240a9004",
+      "transform_seconds": 16.08256403300038
+    },
+    {
+      "entity": "F06",
+      "rows": 52979,
+      "content_sha256": "912fff845b8a6d0cb62ac37d91c65093804e279e308810761da189fc0dc85085",
+      "transform_seconds": 8.478147172005265
+    }
+  ],
+  "optional_disabled": [
+    "F15"
+  ],
+  "files": {
+    "bridge_booking_room/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "bridge_booking_room/.part-00000-e7b4d3f3-8cf8-488b-8bc8-545127d93e72-c000.snappy.parquet.crc": "188117fa188b64651ef0d1ef501924097c0430706e79bc846ab3cbc3a19e99e8",
+    "bridge_booking_room/.part-00001-e7b4d3f3-8cf8-488b-8bc8-545127d93e72-c000.snappy.parquet.crc": "a828190433a581ac7d82758690d1dea9838f736cf8837efaa3ca13c1fc10052b",
+    "bridge_booking_room/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bridge_booking_room/part-00000-e7b4d3f3-8cf8-488b-8bc8-545127d93e72-c000.snappy.parquet": "3c6364096c6ce9744493e8f49e15f68b2367f7b6e4e5abec9240bd5c9c3b5c3d",
+    "bridge_booking_room/part-00001-e7b4d3f3-8cf8-488b-8bc8-545127d93e72-c000.snappy.parquet": "676d08c3a3884e81ca32ecb9bc32f047bae755f218a0c59caaf3ab0f263ed6fe",
+    "bridge_room_day_maintenance/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "bridge_room_day_maintenance/.part-00000-1aaa68d1-eb0b-45b6-9b50-6891dd2d5a4e-c000.snappy.parquet.crc": "54050a2f56a4581ac493662e839a0d8ac4b56b7cf71c403df7caef30c6d51d1c",
+    "bridge_room_day_maintenance/.part-00001-1aaa68d1-eb0b-45b6-9b50-6891dd2d5a4e-c000.snappy.parquet.crc": "45a8fd8ec351cdef88f0be5fcff964083e6e6159e1f051c331d4f25178c20ad0",
+    "bridge_room_day_maintenance/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bridge_room_day_maintenance/part-00000-1aaa68d1-eb0b-45b6-9b50-6891dd2d5a4e-c000.snappy.parquet": "5a11c5d5433939753ddd7704cbcd6c63fb5e9e1fdd47f748c10e5673a0a3b8c9",
+    "bridge_room_day_maintenance/part-00001-1aaa68d1-eb0b-45b6-9b50-6891dd2d5a4e-c000.snappy.parquet": "ca1695731e84e8da01b388bc751a2c9fe7e10ff7f4732f46ba524c5519889ac3",
+    "external-reconciliation.json": "778c3a8a2abbec116585e1e318cd328cef5422e76c6877a23eb7a46adfd38dc0",
+    "fact_activity_day/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_activity_day/.part-00000-a2882874-e1a9-43f0-a602-762874d584a9-c000.snappy.parquet.crc": "f79cdaa4bbd65af66a5155f42e846f073d4f7098fe4f8850685060d82dda7007",
+    "fact_activity_day/.part-00001-a2882874-e1a9-43f0-a602-762874d584a9-c000.snappy.parquet.crc": "22fa75f1f7ceab8a9acca67fa24736e62bf8a731c26a7bc43a550104e2eaaea7",
+    "fact_activity_day/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_activity_day/part-00000-a2882874-e1a9-43f0-a602-762874d584a9-c000.snappy.parquet": "aca8c35e4d67b2d85bfe05e408a83a84eaf34bfa32ac0db877d2d280e3c058ad",
+    "fact_activity_day/part-00001-a2882874-e1a9-43f0-a602-762874d584a9-c000.snappy.parquet": "34bebeaf40ce97619de66415c08cf84afca1a522b0e4961c305fa0e6b5b5a3c3",
+    "fact_admission/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_admission/.part-00000-fec931e5-ba6a-43be-8481-80e96b0e09fd-c000.snappy.parquet.crc": "e360df59c703ce30e8e36c9384f60fb2393fbc46e642f9048c0b229bc8a02105",
+    "fact_admission/.part-00001-fec931e5-ba6a-43be-8481-80e96b0e09fd-c000.snappy.parquet.crc": "eaf0d07c024ba483a853c0818f891649fcc9db787991b11329e59ecd2a53fea4",
+    "fact_admission/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_admission/part-00000-fec931e5-ba6a-43be-8481-80e96b0e09fd-c000.snappy.parquet": "5e672b028fcc21097027343d89f6759f0594e00d6684a9198510a287cbaddb55",
+    "fact_admission/part-00001-fec931e5-ba6a-43be-8481-80e96b0e09fd-c000.snappy.parquet": "122738e9f9cdbb7d1bb8a0ceaf7dd56504184aaf84300a29fdb7912cc26d59bd",
+    "fact_booking/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_booking/.part-00000-739a86a9-5466-471b-a590-5830959306af-c000.snappy.parquet.crc": "7385ac37cd889ecf4abfecb53d190c2933bbf9ab0e425ee5e424478f273c817f",
+    "fact_booking/.part-00001-739a86a9-5466-471b-a590-5830959306af-c000.snappy.parquet.crc": "4c147da4b116870e304025817a742b6d956a0948719c6adf43962a695f93c92f",
+    "fact_booking/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_booking/part-00000-739a86a9-5466-471b-a590-5830959306af-c000.snappy.parquet": "d44090335d01fec2d6f40412b4bf2fed7ccd2b7d0fa939f204001e0492f8a195",
+    "fact_booking/part-00001-739a86a9-5466-471b-a590-5830959306af-c000.snappy.parquet": "66d962f34ce29324568b7be7b3ab61b4e068bc1a0945dec9f61f829fc5dc02dd",
+    "fact_breakfast_entitlement/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_breakfast_entitlement/.part-00000-df00e28a-84db-47f7-bd23-4f94c12124d9-c000.snappy.parquet.crc": "8a6b085d5693205dbc398a8769a8582409155f9d43b9408df43ffcf6a6a38157",
+    "fact_breakfast_entitlement/.part-00001-df00e28a-84db-47f7-bd23-4f94c12124d9-c000.snappy.parquet.crc": "5d2a2d76288406aa104ca9e430df8a63fe3d384158a82c7d2d7a7838b22132e8",
+    "fact_breakfast_entitlement/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_breakfast_entitlement/part-00000-df00e28a-84db-47f7-bd23-4f94c12124d9-c000.snappy.parquet": "2cadd1ac749b264f8498ff50cecd99e59587f1dd08bb3aa2a4dde3434369e54d",
+    "fact_breakfast_entitlement/part-00001-df00e28a-84db-47f7-bd23-4f94c12124d9-c000.snappy.parquet": "665d52344a707f360a59cc7ace1d5a1c9b9ffd760a1a07c5d2099e9353c0fe1a",
+    "fact_dining_order/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_dining_order/.part-00000-4c5f0f85-bd77-4d83-b710-9852b2209ccc-c000.snappy.parquet.crc": "439e40a0eb4243904b4a27560732ddedb40521130e732ad8cd5998709f453862",
+    "fact_dining_order/.part-00001-4c5f0f85-bd77-4d83-b710-9852b2209ccc-c000.snappy.parquet.crc": "6460b1a0cce855b6b0435b318e85a292d0b913acd8383a1d741483cb24cc3cd9",
+    "fact_dining_order/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_dining_order/part-00000-4c5f0f85-bd77-4d83-b710-9852b2209ccc-c000.snappy.parquet": "728115ce2d3b52a1d71c559b63b5c25429ab04f9757113b15aca8b038911e839",
+    "fact_dining_order/part-00001-4c5f0f85-bd77-4d83-b710-9852b2209ccc-c000.snappy.parquet": "18bd4342e47e9a6b1dec72186af719eac461125057013f3572356c9a26e08df8",
+    "fact_maintenance_work/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_maintenance_work/.part-00000-6867bfee-b745-45b5-8add-6ecd27beecd1-c000.snappy.parquet.crc": "932b18db10b299d040811d6c328fb2269121c250471ab294b4c570d9bd4fd9a1",
+    "fact_maintenance_work/.part-00001-6867bfee-b745-45b5-8add-6ecd27beecd1-c000.snappy.parquet.crc": "eaa25de5710c931fcd5dc97e3d910af6958da1eecf32cbfa4838d40ca61d6b31",
+    "fact_maintenance_work/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_maintenance_work/part-00000-6867bfee-b745-45b5-8add-6ecd27beecd1-c000.snappy.parquet": "9d938dfc2dcac6b10da3d2a82c33eb4c9e575348901fef4e711ed2c985158b28",
+    "fact_maintenance_work/part-00001-6867bfee-b745-45b5-8add-6ecd27beecd1-c000.snappy.parquet": "613806e7fe05a214ff2f2929d49ec9f7b574ebe1303ea6ae7ba571f173dca5d1",
+    "fact_meal_session/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_meal_session/.part-00000-443185f2-dc75-4501-a2be-3a9ad0ab1098-c000.snappy.parquet.crc": "e749e1fa05abe45a1e392f420733ce2309d1405923d204b85aa9574f9b274dbb",
+    "fact_meal_session/.part-00001-443185f2-dc75-4501-a2be-3a9ad0ab1098-c000.snappy.parquet.crc": "6b8d8a221edffb8ae63c9aa4596e1f09ded4f45e0053acf9c707342d14fc4738",
+    "fact_meal_session/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_meal_session/part-00000-443185f2-dc75-4501-a2be-3a9ad0ab1098-c000.snappy.parquet": "33e27b461cdc9dcfaaf0c31922592868362f9e6ced9cf42ebce82d9ba3d33190",
+    "fact_meal_session/part-00001-443185f2-dc75-4501-a2be-3a9ad0ab1098-c000.snappy.parquet": "726569dadea8814fe01d386ddebaee72e048ad8aa65ca4430db84a463e9992c8",
+    "fact_purchase_line/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_purchase_line/.part-00000-935d5872-7eec-4386-be62-a2941b3c6c6a-c000.snappy.parquet.crc": "e3f50f72a2674738520c30250d58cf469d8423e1cd7332debbdc034255d6c26f",
+    "fact_purchase_line/.part-00001-935d5872-7eec-4386-be62-a2941b3c6c6a-c000.snappy.parquet.crc": "87d45b954410a4852b596e5230a282dd1ef23e24af5ef7d64c45448d83c81584",
+    "fact_purchase_line/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_purchase_line/part-00000-935d5872-7eec-4386-be62-a2941b3c6c6a-c000.snappy.parquet": "9628175a037bd629425f59c46db8fb98691d13dc6f9b1ee6f008ad269b9afddd",
+    "fact_purchase_line/part-00001-935d5872-7eec-4386-be62-a2941b3c6c6a-c000.snappy.parquet": "8fb046212bb545f02a9f52c85ec56e5463d588d438d294455c4af4f11423ba0e",
+    "fact_receipt/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_receipt/.part-00000-ee6854e5-7438-4af6-9940-1b2dffebabcd-c000.snappy.parquet.crc": "3469bc36c48ff693f21707511db935313930e36ca410ce8c140ffc51d374a112",
+    "fact_receipt/.part-00001-ee6854e5-7438-4af6-9940-1b2dffebabcd-c000.snappy.parquet.crc": "d498526955113f41c3f81e621bae89892622c6bcec7406900c25c1a8b4665083",
+    "fact_receipt/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_receipt/part-00000-ee6854e5-7438-4af6-9940-1b2dffebabcd-c000.snappy.parquet": "25dba609fdccf97ebd0e596a106b5e2d2fa809d416e74dee498f4ccc1cc41e96",
+    "fact_receipt/part-00001-ee6854e5-7438-4af6-9940-1b2dffebabcd-c000.snappy.parquet": "f8bdadff15662c5ef28e483ec8a98a5d46d1e936b1daf37a22aa4e2a9a667255",
+    "fact_rental/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_rental/.part-00000-7d00a7db-c001-46d8-982a-1c48a6fcb3d2-c000.snappy.parquet.crc": "cffd0a979b4a2ef524ca2fa1224460fa7b50154a9a1693f553bf8aa06264dbdb",
+    "fact_rental/.part-00001-7d00a7db-c001-46d8-982a-1c48a6fcb3d2-c000.snappy.parquet.crc": "52b314d9a2496d342edda241d0532f2e86e111ba46cdb3366eabf2ab780c35d3",
+    "fact_rental/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_rental/part-00000-7d00a7db-c001-46d8-982a-1c48a6fcb3d2-c000.snappy.parquet": "7e9302f1ffe97b81739a50972dc02056c03013faf6281664f82ce3603a1b2951",
+    "fact_rental/part-00001-7d00a7db-c001-46d8-982a-1c48a6fcb3d2-c000.snappy.parquet": "5ee3c2dd39669a1964d7c2b9fe6730ecd085adf7a61d1dcbb8e6f419960f112d",
+    "fact_room_day/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_room_day/.part-00000-ac95a3d9-02e0-45c6-9aba-be9151d858ed-c000.snappy.parquet.crc": "590ad7057520212af745c37e9eb186867fd0550a0b7086b5df7c50b389b02d77",
+    "fact_room_day/.part-00001-ac95a3d9-02e0-45c6-9aba-be9151d858ed-c000.snappy.parquet.crc": "8bb4812e102dec65c14016b9f97c21d9cabf3ef41a72e94428f98d0b7517c1a6",
+    "fact_room_day/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_room_day/part-00000-ac95a3d9-02e0-45c6-9aba-be9151d858ed-c000.snappy.parquet": "512b066f9cb3378b27bab068fa5b153cfc15c47d4c5a41473bfc23140c170362",
+    "fact_room_day/part-00001-ac95a3d9-02e0-45c6-9aba-be9151d858ed-c000.snappy.parquet": "13803ecb1066440ac5477f222f353df62de7056e63155bc9193f23b807311331",
+    "fact_stay_night/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_stay_night/.part-00000-f98b1b1e-e803-4dbf-8a0b-06d2607df2d9-c000.snappy.parquet.crc": "2539910dd23288d6f81cdb84889d042e0377942b7e4a6527ea596d2a087d892d",
+    "fact_stay_night/.part-00001-f98b1b1e-e803-4dbf-8a0b-06d2607df2d9-c000.snappy.parquet.crc": "39ba8ee921abed9b10f76222f26468f8fadf9bf4e6d4d13d936baa6502b69637",
+    "fact_stay_night/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_stay_night/part-00000-f98b1b1e-e803-4dbf-8a0b-06d2607df2d9-c000.snappy.parquet": "23e528a1620a2cc18dd823c07f690fded9d04ecbb0ff0c377e0ddefea1b1a768",
+    "fact_stay_night/part-00001-f98b1b1e-e803-4dbf-8a0b-06d2607df2d9-c000.snappy.parquet": "3ff7c0caf645007c74ff00f22076c9487032462ece940e2d2a2c3bb2e2f588ff",
+    "fact_stock_movement/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_stock_movement/.part-00000-5eb0de20-fd99-47e5-9d1f-f340d5708558-c000.snappy.parquet.crc": "715fed00b888b9efcd5e9bdee021fe5a6509728097a79c2605bbcc26937fc8f1",
+    "fact_stock_movement/.part-00001-5eb0de20-fd99-47e5-9d1f-f340d5708558-c000.snappy.parquet.crc": "efd18a63bb92d8e1e15440d8134862ba2194d8a22f7959129b5e2526d5117d5b",
+    "fact_stock_movement/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_stock_movement/part-00000-5eb0de20-fd99-47e5-9d1f-f340d5708558-c000.snappy.parquet": "f31479243c694c51697405fe125bed65c8f570d8a4f860ad722db9143498893b",
+    "fact_stock_movement/part-00001-5eb0de20-fd99-47e5-9d1f-f340d5708558-c000.snappy.parquet": "24e524b8c921f1d15b99eeaf07e208228af5b2b5a4641e2203af4aa3b9404d35",
+    "fact_ticket_order/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_ticket_order/.part-00000-c63d4c13-a1fd-40ee-a056-8f4965d4bb72-c000.snappy.parquet.crc": "2cb6a75e339da73e2e4f42416c3dfa56fb5405125eee330ca030cc9acba30aa1",
+    "fact_ticket_order/.part-00001-c63d4c13-a1fd-40ee-a056-8f4965d4bb72-c000.snappy.parquet.crc": "5aaf077a2997fd3152f7ce952601b5dfbae521ae062c251ff8fdfda0bc70b451",
+    "fact_ticket_order/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_ticket_order/part-00000-c63d4c13-a1fd-40ee-a056-8f4965d4bb72-c000.snappy.parquet": "60e672a592d24606a269863a35f6c0c1294e2deaf9539996ad0e04b7d06a6522",
+    "fact_ticket_order/part-00001-c63d4c13-a1fd-40ee-a056-8f4965d4bb72-c000.snappy.parquet": "2f99abb72aa87cff64f764d2aecb8d7fbd28e7c080be9c7b8648837910fc95e0",
+    "fact_vehicle_day/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_vehicle_day/.part-00000-ed5ec53d-be3d-442e-b372-2b884d0c46d9-c000.snappy.parquet.crc": "c3066f871b0bace2b5e026fa721b6440401835376811f10f6a06801e98c36847",
+    "fact_vehicle_day/.part-00001-ed5ec53d-be3d-442e-b372-2b884d0c46d9-c000.snappy.parquet.crc": "35b6625153c9a5272f1b79bc4b35c8253fe053b7eb6c4fc0b162568542faf30d",
+    "fact_vehicle_day/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_vehicle_day/part-00000-ed5ec53d-be3d-442e-b372-2b884d0c46d9-c000.snappy.parquet": "7d822db9c573be295eab5d1d92379e2d68cb4d49cea1890b8c536ca927a4b218",
+    "fact_vehicle_day/part-00001-ed5ec53d-be3d-442e-b372-2b884d0c46d9-c000.snappy.parquet": "090b4b5533b1171556ca2bd8b177ea58e71813fa403266620bf1c1ed85b87ccc",
+    "fact_weather_day/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "fact_weather_day/.part-00000-32c869d7-a28b-47c1-a13e-a9383d4c780d-c000.snappy.parquet.crc": "5c41b398d044efef311288da146876e529e561ba0bc591dfc2c952728cdb5453",
+    "fact_weather_day/.part-00001-32c869d7-a28b-47c1-a13e-a9383d4c780d-c000.snappy.parquet.crc": "c804d58ba4cbc84a3f14ffa7ec1d74e9c94d5f8fc1b2dd4a84714f6d7a6110ad",
+    "fact_weather_day/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "fact_weather_day/part-00000-32c869d7-a28b-47c1-a13e-a9383d4c780d-c000.snappy.parquet": "cffdf63eeb7a1a1942f272b95dfdb4dc9d81c6dd795bf4c2bc65c3fef4a15133",
+    "fact_weather_day/part-00001-32c869d7-a28b-47c1-a13e-a9383d4c780d-c000.snappy.parquet": "618304917a423581200370bdbfc21eebcfe2ad4489edf5ada32f177f6ecace8c",
+    "metric-readiness.json": "43a1a2a3d1405b1d5ac02e7de143dc3b2b6f10db6c0eca84600f833d7c211337",
+    "quarantine.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "reconciliation.json": "a70f057c32e3f664e724e384267d467684aef348da04fbe3b2f8e7c09aa9ceac",
+    "registry.json": "cfa95827d9af014857e103cb81772d86a5151a4ff97d9c35750b42a9aa4acbbf",
+    "scope-quality.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "site_crosswalk/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "site_crosswalk/.part-00000-3ed7019f-d8a0-4027-b529-d011953d183c-c000.snappy.parquet.crc": "8d7689e77d2e97a6324c5bef5c546ace3e45a19162be9540db8079ee8c988609",
+    "site_crosswalk/.part-00001-3ed7019f-d8a0-4027-b529-d011953d183c-c000.snappy.parquet.crc": "3335babb9f1e0cba884a47a8c5ad97e3e169f4c3277a733baf1c06f09d52f7af",
+    "site_crosswalk/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "site_crosswalk/part-00000-3ed7019f-d8a0-4027-b529-d011953d183c-c000.snappy.parquet": "a06804f89a1a8ce0d06305677068aa3eebaf9082d3b031ab09b5f608dd7f2b1e",
+    "site_crosswalk/part-00001-3ed7019f-d8a0-4027-b529-d011953d183c-c000.snappy.parquet": "6adaab711f9148e46bab32ddcd8e083bb7416980d45dadaeb3edbd8f2cf7e61e",
+    "source-quality.json": "21d49c1b883c4331df65f881dabc6fd7dde991ae1d55613df7f8af08ec87f9aa",
+    "validated_booking_service_link/._SUCCESS.crc": "1d44f510ec2ed7595badbec80583316defc14e8dd89130d719724149adfaa07d",
+    "validated_booking_service_link/.part-00000-dae5bacc-6579-4265-8a8c-a8c20cb83ef6-c000.snappy.parquet.crc": "eaa6f4d24916ea83ca81e0031b175e30ecd18d5be8fc17d7a146f76fc9929105",
+    "validated_booking_service_link/.part-00001-dae5bacc-6579-4265-8a8c-a8c20cb83ef6-c000.snappy.parquet.crc": "6f700339d5dabbb3eeb575234df2d73fd0a0463f59002c5d6816a86d368c760c",
+    "validated_booking_service_link/_SUCCESS": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "validated_booking_service_link/part-00000-dae5bacc-6579-4265-8a8c-a8c20cb83ef6-c000.snappy.parquet": "b795a4e80df5a2ea8674787b57baf00a560d864c127ade46c3ab286c2d1a4927",
+    "validated_booking_service_link/part-00001-dae5bacc-6579-4265-8a8c-a8c20cb83ef6-c000.snappy.parquet": "77a2a8e2dd2096e4d7bf4501d2ae2817e00bb6ffbc2c4c3dbb14cd92027c2b17"
+  }
+}

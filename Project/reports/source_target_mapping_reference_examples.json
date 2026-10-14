@@ -1,0 +1,180 @@
+[
+  {
+    "id": "E01",
+    "description": "Khoảng lưu trú loại ngày trả phòng",
+    "expected": [
+      "2024-01-30",
+      "2024-01-31",
+      "2024-02-01"
+    ],
+    "actual": [
+      "2024-01-30",
+      "2024-01-31",
+      "2024-02-01"
+    ],
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E02",
+    "description": "Timestamp UTC sang ngày Việt Nam",
+    "expected": "2024-01-02",
+    "actual": "2024-01-02",
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E03",
+    "description": "Union bảo trì không nhân room-day",
+    "expected": {
+      "blocked": 3,
+      "inventory": 6,
+      "available": 3
+    },
+    "actual": {
+      "blocked": 3,
+      "inventory": 6,
+      "available": 3
+    },
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E04",
+    "description": "Ranh giới SCD chọn phiên bản mới",
+    "expected": [
+      102
+    ],
+    "actual": [
+      102
+    ],
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E05",
+    "description": "SCD A rồi B rồi A cần ba identity",
+    "expected": 3,
+    "actual": 3,
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E06",
+    "description": "Replay cùng BK và effective time không thêm identity",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E07",
+    "description": "Không fan-out tiền booking",
+    "expected": 2700000,
+    "actual": 2700000,
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E08",
+    "description": "Tỷ lệ từ tổng thay vì trung bình tỷ lệ phiên",
+    "expected": "60000",
+    "actual": "60000",
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E09",
+    "description": "Covers không cộng phiên lần ba",
+    "expected": 5,
+    "actual": 5,
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E10",
+    "description": "B06 giao nhiều đợt",
+    "expected": {
+      "O": 10,
+      "G": 9,
+      "R": 1,
+      "L": 3,
+      "T": 6,
+      "otif": 0
+    },
+    "actual": {
+      "O": 10,
+      "G": 9,
+      "R": 1,
+      "L": 3,
+      "T": 6,
+      "otif": 0
+    },
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E11",
+    "description": "Tồn theo lô và giá trị hao hụt",
+    "expected": {
+      "closing": 2,
+      "waste_value": 20000
+    },
+    "actual": {
+      "closing": 2,
+      "waste_value": 20000
+    },
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E12",
+    "description": "Không cộng tồn cuối qua hai ngày",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E13",
+    "description": "Đơn vị feed g sang kg",
+    "expected": "1.5",
+    "actual": "1.5",
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E14",
+    "description": "PARTIAL còn 980 trên 1000",
+    "expected": {
+      "accepted": 980,
+      "status": "PARTIAL"
+    },
+    "actual": {
+      "accepted": 980,
+      "status": "PARTIAL"
+    },
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E15",
+    "description": "Mẫu số 0 không gán 0 phần trăm",
+    "expected": null,
+    "actual": null,
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E16",
+    "description": "Tử số thiếu không cho tỷ lệ COMPLETE",
+    "expected": "PARTIAL",
+    "actual": "PARTIAL",
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E17",
+    "description": "Thiếu toàn nguồn không phải số 0",
+    "expected": "UNAVAILABLE",
+    "actual": "UNAVAILABLE",
+    "status": "PASS_REFERENCE_CALCULATION"
+  },
+  {
+    "id": "E18",
+    "description": "Nhận 01/01 trả 03/01: quyền lợi sáng 02/01 và 03/01, gồm ngày checkout",
+    "expected": [
+      "2024-01-02",
+      "2024-01-03"
+    ],
+    "actual": [
+      "2024-01-02",
+      "2024-01-03"
+    ],
+    "status": "PASS_REFERENCE_CALCULATION"
+  }
+]

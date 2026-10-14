@@ -1,0 +1,15 @@
+{
+  "status": "PASSED",
+  "batch_id": "v2_20261012T092023738754Z",
+  "tables": 41,
+  "external_quality": {
+    "input_rows": 267,
+    "valid_versions": 252,
+    "quarantined": 12,
+    "replayed_rows": 3,
+    "latest_receipts": 228,
+    "superseded_versions": 24,
+    "late_unique_events": 69,
+    "out_of_order_receipts": 24
+  }
+}

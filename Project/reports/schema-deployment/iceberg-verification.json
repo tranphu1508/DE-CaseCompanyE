@@ -1,0 +1,3356 @@
+{
+  "status": "PASSED",
+  "checked_at": "2026-10-13T17:08:19.473940+00:00",
+  "tables": [
+    {
+      "name": "dim_date",
+      "columns": [
+        {
+          "name": "date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "calendar_date",
+          "type": "date",
+          "required": false
+        },
+        {
+          "name": "day",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "day_of_week",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "month",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "quarter",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "year",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_site",
+      "columns": [
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "site_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "site_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "climate_region",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_hotel",
+      "columns": [
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "hotel_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "hotel_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "stars",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "site_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "website_channel",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_room",
+      "columns": [
+        {
+          "name": "room_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "room_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "hotel_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "room_type",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "capacity",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "base_rate_vnd",
+          "type": "decimal(19,0)",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_channel",
+      "columns": [
+        {
+          "name": "channel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "channel_code",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "channel_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "channel_type",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "commission_bps",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_promotion",
+      "columns": [
+        {
+          "name": "promotion_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "promotion_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "promotion_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "channel_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "site_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "sale_from",
+          "type": "date",
+          "required": false
+        },
+        {
+          "name": "sale_to",
+          "type": "date",
+          "required": false
+        },
+        {
+          "name": "stay_from",
+          "type": "date",
+          "required": false
+        },
+        {
+          "name": "stay_to",
+          "type": "date",
+          "required": false
+        },
+        {
+          "name": "discount_bps",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "partner_share_bps",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "cap_vnd",
+          "type": "decimal(19,0)",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_customer_profile",
+      "columns": [
+        {
+          "name": "customer_profile_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_customer_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "full_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "phone",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "email",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "member_card_ref",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_rate_plan",
+      "columns": [
+        {
+          "name": "rate_plan_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "rate_plan_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "hotel_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "channel_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "plan_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "breakfast_included",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "refundable",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_outlet",
+      "columns": [
+        {
+          "name": "outlet_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "outlet_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "hotel_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "outlet_type",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "capacity",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "quality_profile",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_meal",
+      "columns": [
+        {
+          "name": "meal_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "meal_code",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "meal_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_centre",
+      "columns": [
+        {
+          "name": "centre_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "centre_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "centre_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "site_code",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_activity",
+      "columns": [
+        {
+          "name": "activity_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "activity_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "centre_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "activity_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "outdoor",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "capacity_per_day",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_vehicle",
+      "columns": [
+        {
+          "name": "vehicle_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "vehicle_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "centre_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "vehicle_type",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "daily_rate_vnd",
+          "type": "decimal(19,0)",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_supplier",
+      "columns": [
+        {
+          "name": "supplier_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "supplier_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "supplier_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "site_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "delivery_format",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_item",
+      "columns": [
+        {
+          "name": "item_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "item_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "item_name",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "specification",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "base_unit",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "shelf_life_days",
+          "type": "int",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "dim_asset",
+      "columns": [
+        {
+          "name": "asset_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "member_kind",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "asset_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "hotel_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "room_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "asset_type",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "supplier_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "valid_from_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "valid_to_utc",
+          "type": "timestamp",
+          "required": false
+        },
+        {
+          "name": "is_current",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "version_no",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "effective_time_basis",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_booking",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "booked_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "arrival_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "departure_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "channel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "promotion_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "customer_profile_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "booking_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "source_updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "gross_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "discount_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "customer_due_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "company_share_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "partner_share_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "commission_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "booking_count",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_room_day",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "room_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "room_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "inventory_day",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "blocked_day",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "available_day",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_stay_night",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "room_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "service_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "room_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "channel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "customer_profile_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "rate_plan_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "stay_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "booking_room_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "booking_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "occupied_night",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_ticket_order",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "ordered_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "cohort_departure_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "service_site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "booking_site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "referral_hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "ticket_channel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "booking_channel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "customer_profile_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "centre_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "ticket_order_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "hotel_booking_ref",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "gross_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "refunded_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "net_ticket_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_rental",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "pickup_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "return_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "cohort_departure_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "service_site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "booking_site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "referral_hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "booking_channel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "customer_profile_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "centre_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "vehicle_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "rental_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "hotel_booking_ref",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "agreed_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_breakfast_entitlement",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "service_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "room_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "customer_profile_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "rate_plan_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "outlet_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "meal_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "entitlement_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "booking_room_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "eligible_covers",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "redeemed_covers",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_dining_order",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "service_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "service_hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "booking_hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "customer_profile_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "outlet_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "meal_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "dining_order_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "booking_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "net_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "covers",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "rating_sum",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "rating_count",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_meal_session",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "outlet_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "service_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "outlet_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "meal_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "session_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "actual_covers",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "ingredient_cost_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_admission",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "admission_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "customer_profile_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "centre_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "activity_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "admission_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "ticket_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "entered_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "admission_count",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_activity_day",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "activity_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "centre_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "activity_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "nominal_capacity",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "is_closed",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "available_capacity",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_vehicle_day",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "vehicle_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "centre_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "vehicle_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "inventory_day",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "maintenance_day",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "available_day",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "rented_day",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_purchase_line",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "ordered_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "expected_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "supplier_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "item_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "purchase_line_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "purchase_order_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "ordered_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "unit_price_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_receipt",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "received_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "expected_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "expires_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "supplier_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "item_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "receipt_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "purchase_line_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "accepted_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "rejected_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "late_accepted_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_stock_movement",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "movement_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "supplier_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "item_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "movement_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "receipt_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "session_id",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "movement_type",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "usage_area",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "quantity",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "signed_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "in_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "use_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "waste_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "unit_price_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "movement_value_vnd",
+          "type": "decimal(38,3)",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "agg_inventory_lot_day",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "hotel_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "item_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "snapshot_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "supplier_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "item_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "receipt_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "closing_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "closing_value_vnd",
+          "type": "decimal(38,3)",
+          "required": true
+        },
+        {
+          "name": "in_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "use_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "waste_qty",
+          "type": "decimal(18,3)",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_maintenance_work",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "start_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "end_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "hotel_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "room_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "asset_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "maintenance_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "work_type",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "cost_vnd",
+          "type": "decimal(19,0)",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "fact_weather_day",
+      "columns": [
+        {
+          "name": "fact_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "site_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "weather_date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "site_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "weather_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "provenance",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "temperature_c",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "rain_mm",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "severe_weather",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "bridge_booking_room",
+      "columns": [
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "booking_room_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "booking_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "room_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "rate_plan_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    },
+    {
+      "name": "bridge_room_day_maintenance",
+      "columns": [
+        {
+          "name": "source_system",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "maintenance_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "room_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "room_key",
+          "type": "long",
+          "required": true
+        },
+        {
+          "name": "date_key",
+          "type": "int",
+          "required": true
+        },
+        {
+          "name": "source_batch_id",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "transform_version",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "row_hash",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "created_at_utc",
+          "type": "timestamp",
+          "required": true
+        },
+        {
+          "name": "updated_at_utc",
+          "type": "timestamp",
+          "required": true
+        }
+      ],
+      "row_count": 0,
+      "partitioned": false,
+      "format_version": 2
+    }
+  ],
+  "manifest_sha256": "871b11d92f16e1915c487f679b25cf8f114408e7b701c3330fa9b61e0f9d4e71",
+  "logical_columns": 631,
+  "session_views_verified": 2,
+  "missing_helper_rejected": true,
+  "all_tables_empty": true,
+  "limits": [
+    "No native Iceberg PK/UK/FK/CHECK enforcement claimed.",
+    "Helper views must be registered in every Spark session using actual pinned publication files.",
+    "No business publication or ETL has been created."
+  ]
+}

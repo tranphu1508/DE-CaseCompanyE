@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "warning",
+  "position": {
+    "x": 30,
+    "y": 290,
+    "z": 1,
+    "width": 1190,
+    "height": 160
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "KPI"
+                    }
+                  },
+                  "Property": "QA cảnh báo"
+                }
+              },
+              "queryRef": "KPI.QA cảnh báo",
+              "displayName": "QA cảnh báo"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

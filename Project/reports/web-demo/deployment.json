@@ -1,0 +1,20 @@
+{
+  "deployment": {
+    "id": "appgdep_6acf735e263c81919f429178e87daaec",
+    "project_id": "appgprj_6acf6f5148c88191ba9718daf9ce6f83",
+    "title": "CompanyE | Data Observatory",
+    "version_id": "appgprj_6acf6f5148c88191ba9718daf9ce6f83~appgver_31172a9e35608191a7ebf7318d81bbf8",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://companye-data-observatory.giaphuwork1508.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acf6f5148c88191ba9718daf9ce6f83",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-14T12:19:58.396783+00:00"
+  },
+  "source_commit": "511396969b8d2ea89a8fec7a51b10354303c6f19",
+  "access_mode": "public",
+  "main_repository_url": null
+}

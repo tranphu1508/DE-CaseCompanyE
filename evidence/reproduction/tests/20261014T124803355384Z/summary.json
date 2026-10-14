@@ -1,0 +1,62 @@
+{
+  "stages": [
+    {
+      "stage": "01_baseline_sources",
+      "selector": "baseline or source",
+      "exit_code": 0,
+      "status": "PASSED",
+      "seconds": 12.973
+    },
+    {
+      "stage": "02_scenario_coverage",
+      "selector": "coverage",
+      "exit_code": 0,
+      "status": "PASSED",
+      "seconds": 3.788
+    },
+    {
+      "stage": "03_properties",
+      "selector": "property",
+      "exit_code": 0,
+      "status": "PASSED",
+      "seconds": 4.641
+    },
+    {
+      "stage": "04a_spark",
+      "selector": "spark",
+      "exit_code": 0,
+      "status": "PASSED",
+      "seconds": 14.938
+    },
+    {
+      "stage": "04b_lake",
+      "selector": "lake",
+      "exit_code": 0,
+      "status": "PASSED",
+      "seconds": 89.565
+    },
+    {
+      "stage": "05_great_expectations",
+      "selector": "gx",
+      "exit_code": 0,
+      "status": "PASSED",
+      "seconds": 11.991
+    },
+    {
+      "stage": "06_acceptance_reference",
+      "selector": "acceptance",
+      "exit_code": 0,
+      "status": "PASSED",
+      "seconds": 11.378
+    },
+    {
+      "stage": "07_v2_extensions",
+      "selector": "v2",
+      "exit_code": 0,
+      "status": "PASSED",
+      "seconds": 18.121
+    }
+  ],
+  "status": "PASSED",
+  "warehouse_acceptance": "NOT_EXECUTED: no warehouse deployed; stage 06 tests independent reference queries only"
+}

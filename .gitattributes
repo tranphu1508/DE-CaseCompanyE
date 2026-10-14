@@ -1,0 +1,7 @@
+# Preserve frozen generator/evidence bytes across Windows and Linux clones.
+# Existing generator manifests hash the source bytes, including line endings.
+* -text
+*.pdf binary
+*.png binary
+*.xlsx binary
+
