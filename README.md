@@ -22,29 +22,26 @@ Project đi từ hai cơ sở dữ liệu nghiệp vụ và chứng từ nhà cu
 | 6 | SQL KPI và đối chiếu Oracle/Iceberg/nguồn | [Kết quả 47 KPI](Project/reports/semantic/KPI_Results.md) |
 | 7 | Power BI, kiểm chứng DAX/UI, web snapshot | [Ứng dụng và kiểm thử](docs/03-analytics-and-validation.md) |
 
-## Kiến trúc
+## Kiến trúc hai phương án
+
+Hướng thiết kế được điều chỉnh ngày 14/10/2026: A giữ lake → Oracle warehouse; B quản lý dữ liệu chi tiết bằng Iceberg trong lakehouse, có thể truy vấn trước khi xây Gold. **Sơ đồ dưới là thiết kế đích; runtime hiện tại chưa được chuyển đổi sang Silver Iceberg và B chưa chạy độc lập với Oracle.** Xem [đặc tả hai phương án và lộ trình chuyển đổi](docs/05-architecture-alternatives.md).
 
 ```mermaid
 flowchart LR
-    S[Seed và mã sinh có phiên bản] --> H[PostgreSQL hotel_ops_v2]
-    S --> E[PostgreSQL entertainment_ops_v2]
-    S --> F[File nhà cung cấp mô phỏng]
-    H --> R[Raw bất biến và checksum]
-    E --> R
-    F --> R
-    R --> L[Spark lake: Parquet, quarantine, Hive catalog, metadata]
-    L --> T[ETL theo grain và SCD2]
-    T --> O[Oracle warehouse]
-    T --> I[Iceberg lakehouse và JDBC catalog]
-    O --> P[Publication nhất quán và reader lease]
-    I --> P
-    P --> K[47 KPI và đối chứng độc lập từ raw]
-    K --> B[Power BI Import]
-    K --> W[Web snapshot tĩnh]
-    B --> W
+    S[Cùng nguồn CompanyE và seed] --> A1[A: raw và Parquet chuẩn hóa trong lake]
+    A1 --> A2[ETL sang Oracle dimensional mart]
+    A2 --> A3[Publication A và Oracle SQL]
+    S --> B1[B: raw trong nền lakehouse]
+    B1 --> B2[Silver Iceberg chi tiết và manifest snapshot]
+    B2 --> B3[Khám phá trực tiếp bằng Spark SQL]
+    B2 --> B4[Gold Iceberg dimensional mart]
+    B4 --> B5[Publication B và Spark SQL]
+    A3 --> K[Đối chiếu 47 KPI với raw độc lập]
+    B5 --> K
+    K --> V[Power BI và web snapshot]
 ```
 
-Hai database nguồn đang mô phỏng hai miền nghiệp vụ trên cùng một PostgreSQL local. Chúng chưa được triển khai tại các địa điểm vật lý khác nhau. Lake ban đầu dùng Hive/Derby; catalog của nhánh Iceberg là JDBC catalog trên PostgreSQL metadata riêng.
+Hai database nguồn đang mô phỏng hai miền nghiệp vụ trên cùng một PostgreSQL local. Chúng chưa được triển khai tại các địa điểm vật lý khác nhau. Runtime đã kiểm chứng trước thay đổi dùng lake Parquet/Hive và Gold Iceberg trong vùng analytics riêng; catalog Iceberg là JDBC trên PostgreSQL metadata. Hai phương án đích là các lựa chọn thay thế, được dựng song song chỉ để kiểm chứng và so sánh.
 
 ## Chạy nhanh
 

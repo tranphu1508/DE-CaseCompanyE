@@ -1,5 +1,7 @@
 # ETL, công bố batch, 47 KPI và ứng dụng
 
+**Trạng thái kiến trúc:** [thiết kế A/B mới](05-architecture-alternatives.md) bổ sung Silver Iceberg và yêu cầu B chạy độc lập với Oracle. Các launcher và lệnh bên dưới mô tả runtime đã triển khai trước thay đổi; chưa phải runbook cho B mới. Migration cần tách reader/adapter, catalog và publication theo đặc tả, rồi kiểm chứng lại trước khi thay nguồn BI.
+
 ## Mã nguồn được bàn giao
 
 | Giai đoạn | Mã chính | Bằng chứng lịch sử |

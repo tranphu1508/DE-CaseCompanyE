@@ -21,6 +21,7 @@ Tên KPI, công thức, ngày đo và bộ lọc chuẩn nằm trong [đặc t�
 
 | Tầng thiết kế | Tài liệu / sơ đồ |
 |---|---|
+| Kiến trúc A/B đã điều chỉnh | [Lake + Oracle và lakehouse thống nhất](05-architecture-alternatives.md); thiết kế đích, chưa migration runtime |
 | Tổng quan quy trình và dimension dùng chung | [Bus matrix PDF](../Project/docs/CompanyE_Bus_Matrix.pdf), [ma trận chi tiết](../Project/docs/CompanyE_Dimensional_Matrices.md) |
 | Nguồn nghiệp vụ | [Enterprise/source ERD PDF](../Project/docs/CompanyE_Enterprise_Source_ERD.pdf), [draw.io](../Project/docs/CompanyE_Enterprise_Source_ERD.drawio) |
 | Ý niệm warehouse | [Conceptual PDF](../Project/docs/CompanyE_Conceptual_Warehouse_Model.pdf), [draw.io](../Project/docs/CompanyE_Conceptual_Warehouse_Model.drawio) |
@@ -30,7 +31,7 @@ Tên KPI, công thức, ngày đo và bộ lọc chuẩn nằm trong [đặc t�
 | Biến đổi nguồn → đích | [Source-target mapping](../Project/docs/CompanyE_Source_Target_Mapping.md), [JSON](../Project/config/source_target_mapping_v1.json) |
 | Vật lý | [Physical design](../Project/docs/CompanyE_Physical_Design.md), [DDL](../Project/config/analytics/ddl/) |
 
-Các file PDF là bản trình bày; draw.io là bản có thể sửa; JSON được dùng cho validation và triển khai. File XLSX ma trận cũ được giữ để truy vết, còn bản trình bày chính là PDF.
+Các file PDF là bản trình bày; draw.io là bản có thể sửa; JSON được dùng cho validation và triển khai. File XLSX ma trận cũ được giữ để truy vết, còn bản trình bày chính là PDF. Các sơ đồ/DDL vật lý trước ngày điều chỉnh kiến trúc vẫn mô tả runtime cũ. Dimensional model tiếp tục áp dụng cho Oracle mart và Gold B; không đại diện toàn bộ Silver của lakehouse mới.
 
 ## Quyết định cần giữ khi phát triển tiếp
 
