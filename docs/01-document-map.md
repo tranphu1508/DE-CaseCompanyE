@@ -35,6 +35,8 @@ Các file PDF là bản trình bày; draw.io là bản có thể sửa; JSON đ�
 
 ## Quyết định cần giữ khi phát triển tiếp
 
+Runtime lakehouse B độc lập được mô tả trong [runbook B](06-independent-lakehouse.md), với mã `Project/src/lakehouse_b`, launcher `scripts/lakehouse.py` và bằng chứng `Project/reports/lakehouse-b`. Các sơ đồ Gold và contract KPI hiện có vẫn áp dụng; Silver giữ chi tiết nguồn theo catalog và mapping.
+
 - Cùng dữ liệu, grain, KPI và phạm vi lọc khi so Oracle warehouse với Iceberg lakehouse.
 - Dimension có chính sách SCD Type 2 dù bản nguồn hiện tại chủ yếu là danh mục hiện hành. Fixture riêng kiểm tra phiên bản, hiệu lực, replay; không tự bịa lịch sử thay đổi vào dữ liệu gốc.
 - Có thể công bố tập dữ liệu hợp lệ khi một phần bị lỗi, nhưng phải báo PARTIAL/thiếu và ảnh hưởng KPI. Không âm thầm lấy dữ liệu cũ lấp chỗ thiếu của batch mới.

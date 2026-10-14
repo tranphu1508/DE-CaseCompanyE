@@ -24,7 +24,7 @@ Project đi từ hai cơ sở dữ liệu nghiệp vụ và chứng từ nhà cu
 
 ## Kiến trúc hai phương án
 
-Hướng thiết kế được điều chỉnh ngày 14/10/2026: A giữ lake → Oracle warehouse; B quản lý dữ liệu chi tiết bằng Iceberg trong lakehouse, có thể truy vấn trước khi xây Gold. **Sơ đồ dưới là thiết kế đích; runtime hiện tại chưa được chuyển đổi sang Silver Iceberg và B chưa chạy độc lập với Oracle.** Xem [đặc tả hai phương án và lộ trình chuyển đổi](docs/05-architecture-alternatives.md).
+Hướng thiết kế được điều chỉnh ngày 14/10/2026: A giữ lake → Oracle warehouse; B quản lý raw, Silver và Gold trong một storage root lakehouse. **B đã có runtime, ETL, publication và reader độc lập với Oracle**, có thể truy vấn Silver trước khi công bố Gold. Xem [cấu trúc hai phương án](docs/05-architecture-alternatives.md), [runbook B](docs/06-independent-lakehouse.md) và [bằng chứng nghiệm thu mới](Project/reports/lakehouse-b/summary.json).
 
 ```mermaid
 flowchart LR
@@ -41,7 +41,7 @@ flowchart LR
     K --> V[Power BI và web snapshot]
 ```
 
-Hai database nguồn đang mô phỏng hai miền nghiệp vụ trên cùng một PostgreSQL local. Chúng chưa được triển khai tại các địa điểm vật lý khác nhau. Runtime đã kiểm chứng trước thay đổi dùng lake Parquet/Hive và Gold Iceberg trong vùng analytics riêng; catalog Iceberg là JDBC trên PostgreSQL metadata. Hai phương án đích là các lựa chọn thay thế, được dựng song song chỉ để kiểm chứng và so sánh.
+Hai database nguồn đang mô phỏng hai miền nghiệp vụ trên cùng một PostgreSQL local. Chúng chưa được triển khai tại các địa điểm vật lý khác nhau. Runtime lịch sử được giữ để đối chiếu; B mới dùng Spark và PostgreSQL JDBC catalog/control riêng, không có kết nối Oracle. Hai phương án là các lựa chọn thay thế, được dựng song song chỉ để kiểm chứng và so sánh. Power BI/web snapshot hiện vẫn gắn publication lịch sử, chưa đổi nhãn thành kết quả B mới.
 
 ## Chạy nhanh
 
@@ -64,6 +64,14 @@ python -X utf8 scripts/platform.py stop
 ```
 
 `all` dựng hai DB nguồn v2, ingest batch mới, xây lake và kiểm tra. `test` dựng môi trường kiểm thử riêng có cả nguồn v1/v2. Đọc [runbook](docs/02-reproduce-platform.md) trước khi chạy để biết dung lượng, cổng, đầu ra và cách chạy từng bước. Không cần Oracle hoặc Power BI để kiểm tra gói nền tảng này.
+
+Sau khi đã có raw/catalog v2, chạy lakehouse B độc lập:
+
+```powershell
+python -X utf8 scripts/lakehouse.py all
+```
+
+Lệnh dựng runtime B → ingest raw → Silver → truy vấn Silver → Gold → công bố → kiểm KPI/fixtures, dừng ngay nếu lỗi. Đầu ra local nằm trong `.work/lakehouse-b`; xem [runbook](docs/06-independent-lakehouse.md) về retry, storage, tài nguyên và giới hạn một batch ban đầu.
 
 Xem web snapshot không cần Docker:
 

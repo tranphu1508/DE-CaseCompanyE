@@ -1,6 +1,6 @@
 # ETL, công bố batch, 47 KPI và ứng dụng
 
-**Trạng thái kiến trúc:** [thiết kế A/B mới](05-architecture-alternatives.md) bổ sung Silver Iceberg và yêu cầu B chạy độc lập với Oracle. Các launcher và lệnh bên dưới mô tả runtime đã triển khai trước thay đổi; chưa phải runbook cho B mới. Migration cần tách reader/adapter, catalog và publication theo đặc tả, rồi kiểm chứng lại trước khi thay nguồn BI.
+**Trạng thái kiến trúc:** [thiết kế A/B mới](05-architecture-alternatives.md) đã có runtime B độc lập, Silver Iceberg và publication riêng. Chạy B bằng [runbook mới](06-independent-lakehouse.md). Các launcher và lệnh bên dưới mô tả runtime lịch sử; không dùng chúng để dựng B mới. Power BI/web vẫn giữ publication lịch sử cho tới khi xuất và kiểm DAX/UI lại.
 
 ## Mã nguồn được bàn giao
 

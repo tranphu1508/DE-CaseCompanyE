@@ -1,0 +1,188 @@
+{
+  "status": "PASSED_INDEPENDENT_B",
+  "packaged_at": "2026-10-14T14:47:49.105840+00:00",
+  "publication_id": "b_5531e032ac7d45b6eb0b",
+  "source_batch_id": "v2_20261014T124040450684Z",
+  "verification": {
+    "status": "PASSED",
+    "checked_at": "2026-10-14T14:46:00.591452+00:00",
+    "publication_id": "b_5531e032ac7d45b6eb0b",
+    "source_batch_id": "v2_20261014T124040450684Z",
+    "baseline_metrics": 47,
+    "slice_metrics": 546,
+    "contexts": 104,
+    "raw_reference_equal": true,
+    "historical_oracle_equal": true,
+    "oracle_hostname_unresolvable": true,
+    "oracle_connections": 0,
+    "external_warnings": 12,
+    "gold_tables": 36,
+    "gold_rows": 771564,
+    "silver_tables": 45,
+    "limitations": [
+      "Oracle comparison uses immutable previously certified results; no new Oracle query was executed.",
+      "Power BI and public web remain on their earlier certified publication until a separate UI migration is accepted.",
+      "No performance benchmark or distributed scale claim."
+    ]
+  },
+  "fault_injection": [
+    {
+      "file": "silver-injected-failure.log",
+      "sha256": "da54d01aab313f112a601fdf5f8012e22da5df14f346bf450ec7cfd588e41567",
+      "expected_error": "INJECTED_FAILURE_AFTER_SILVER_TABLE",
+      "tail": [
+        "26/10/14 14:19:15 WARN TaskSetManager: Stage 19 contains a task of very large size (1004 KiB). The maximum recommended task size is 1000 KiB.",
+        "26/10/14 14:19:15 WARN JdbcCatalog: JDBC catalog is initialized without view support. To auto-migrate the database's schema and enable view support, set jdbc.schema-version=V1",
+        "Silver hotel_ops.sites 4",
+        "Silver hotel_ops.hotels 8",
+        "Traceback (most recent call last):",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 26, in <module>",
+        "    if __name__=='__main__':main()",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 11, in main",
+        "    build(spark,a.fail_after)",
+        "  File \"/workspace/src/lakehouse_b/silver.py\", line 36, in build",
+        "    if fail_after and len(specs)==fail_after:raise RuntimeError('INJECTED_FAILURE_AFTER_SILVER_TABLE')",
+        "RuntimeError: INJECTED_FAILURE_AFTER_SILVER_TABLE"
+      ]
+    },
+    {
+      "file": "gold-injected-failure.log",
+      "sha256": "64543de882e9aa71d3b2136f27d268af449c90dcf4da94d90804258079aaf7b9",
+      "expected_error": "INJECTED_FAILURE_AFTER_GOLD_TABLE",
+      "tail": [
+        "Gold D01 1463",
+        "Gold D02 6",
+        "Traceback (most recent call last):",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 34, in <module>",
+        "    if __name__=='__main__':main()",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 19, in main",
+        "    build(spark,db,a.fail_after)",
+        "  File \"/workspace/src/lakehouse_b/gold.py\", line 87, in build",
+        "    dimensions[eid]=rows;write(e,rows)",
+        "  File \"/workspace/src/lakehouse_b/gold.py\", line 55, in write",
+        "    if fail_after and len(tables)==fail_after:raise RuntimeError('INJECTED_FAILURE_AFTER_GOLD_TABLE')",
+        "RuntimeError: INJECTED_FAILURE_AFTER_GOLD_TABLE"
+      ]
+    },
+    {
+      "file": "publish-injected-failure.log",
+      "sha256": "d606fc8d2ffd5b82444c66ba89a8e000de83c72e1773053c2cf79e0a2bfdc28e",
+      "expected_error": "INJECTED_FAILURE_BEFORE_POINTER_COMMIT",
+      "tail": [
+        "26/10/14 14:43:19 INFO BlockManagerMasterEndpoint: Registering block manager localhost:37287 with 1048.8 MiB RAM, BlockManagerId(driver, localhost, 37287, None)",
+        "26/10/14 14:43:19 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, localhost, 37287, None)",
+        "26/10/14 14:43:19 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, localhost, 37287, None)",
+        "26/10/14 14:43:20 WARN JdbcCatalog: JDBC catalog is initialized without view support. To auto-migrate the database's schema and enable view support, set jdbc.schema-version=V1",
+        "Traceback (most recent call last):",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 34, in <module>",
+        "    if __name__=='__main__':main()",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 25, in main",
+        "    publish(spark,db,a.fail_after)",
+        "  File \"/workspace/src/lakehouse_b/publication.py\", line 36, in publish",
+        "    if fail_after:raise RuntimeError('INJECTED_FAILURE_BEFORE_POINTER_COMMIT')",
+        "RuntimeError: INJECTED_FAILURE_BEFORE_POINTER_COMMIT"
+      ]
+    }
+  ],
+  "development_failures": [
+    {
+      "file": "gold-key-bound-failure.log",
+      "sha256": "cb565c2e82077221727dfe2ceefd2012e4681b8e0c00db6eba32d3cddd9f4135",
+      "tail": [
+        "Traceback (most recent call last):",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 34, in <module>",
+        "    if __name__=='__main__':main()",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 19, in main",
+        "    build(spark,db,a.fail_after)",
+        "  File \"/workspace/src/lakehouse_b/gold.py\", line 73, in build",
+        "    validate_dimension(spark,e,rows,ddl['row_checks'][eid])",
+        "  File \"/workspace/src/analytics_runtime/dimensions.py\", line 41, in validate",
+        "    assert not any(failures.values()),'Row predicates failed: '+str({k:v for k,v in failures.items() if v})",
+        "AssertionError: Row predicates failed: {'ck_d04_01': 20}"
+      ]
+    },
+    {
+      "file": "publication-code-drift-rejected.log",
+      "sha256": "63a84321ac670b17cf313c9a0ee8dc5bde0b8c8f7766ba7d95017e36ba5ac282",
+      "tail": [
+        "26/10/14 14:38:26 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, localhost, 36511, None)",
+        "26/10/14 14:38:26 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, localhost, 36511, None)",
+        "Traceback (most recent call last):",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 34, in <module>",
+        "    if __name__=='__main__':main()",
+        "  File \"/workspace/src/lakehouse_b/job.py\", line 25, in main",
+        "    publish(spark,db,a.fail_after)",
+        "  File \"/workspace/src/lakehouse_b/publication.py\", line 34, in publish",
+        "    assert m['transform_version']==code_version(),'Candidate code changed; rerun Silver and Gold before publication'",
+        "AssertionError: Candidate code changed; rerun Silver and Gold before publication"
+      ]
+    }
+  ],
+  "code_sha256": {
+    "Project/src/lakehouse_b/__init__.py": "781d4e304dfa1f7c77388cf8b9a538a77eabe45f6c1df7fd6c6baa4bb4d4a06e",
+    "Project/src/lakehouse_b/common.py": "e5ce70a2c98ddba0a2ade0acc6b63966a4d73094712e32ee09b3d19f12a0c75a",
+    "Project/src/lakehouse_b/gold.py": "ce6f6ac40908569e3eeca6d93472ff5170d14c403f4a11c7ec100fb33abb2b35",
+    "Project/src/lakehouse_b/ingest.py": "74bcaff68fa640325ba88b5b6e8d667e88fe3a754676d31a9497d852be445729",
+    "Project/src/lakehouse_b/job.py": "9437b321c96f6826443773abd5fb246e8cd7c57824d06f41ea6e58f7c1930496",
+    "Project/src/lakehouse_b/publication.py": "cd2cbd303935b2cc77d07062878a3fe9a53e2ceeb274f71d4d4e25af633b7920",
+    "Project/src/lakehouse_b/silver.py": "cc2094812f12690375134c2a30fbd3bada06e660937ec7e2468919f821faa219",
+    "Project/src/lakehouse_b/verification.py": "cb4ac6e88277c5e275339dbdba09e1269e52b2798454a2938323ff91946f7d13",
+    "Project/src/analytics_runtime/__init__.py": "916eac3c089b1c75c32ab87e25c6f059d1cb7392f5364b0c495c21494f5b8ded",
+    "Project/src/analytics_runtime/deploy_schema.py": "d90218b7befeee4cf86e4fc4ed3352c762cf2a073b8d68b34c546e9df014a5c1",
+    "Project/src/analytics_runtime/dimension_fixtures.py": "c7776b8a70584e9066fbb00a512f464a6286df682a43772d6e95eceaf194db6d",
+    "Project/src/analytics_runtime/dimension_transform.py": "829261510ec5b2e37d27eda2827f3e9c61aab571e5f9b713720f0de7ca3b8474",
+    "Project/src/analytics_runtime/dimensions.py": "96a11dae2196b515fd51c41e54777472a0b58ea8341a638ce7b1c3ec4bec8c26",
+    "Project/src/analytics_runtime/etl_io.py": "e901c06545f981fb9f5656385491036029ab7826c58ad82cb24517df6787e250",
+    "Project/src/analytics_runtime/install_jars.py": "22a7d2aba30117163b7fc67ce62f026bee093f2bcfd3226a680321c81e6e332c",
+    "Project/src/analytics_runtime/probe.py": "176e6e953c394a9513be5e75b9d9c2cd959376127ab155cec72dd78d156fbe24",
+    "Project/src/analytics_runtime/scd2.py": "e866ab80efb619adf742ff3e2f5a842a6429b64a520c37db05931d2e97f91167",
+    "Project/src/analytics_runtime/session.py": "99f246a2b25598b055661d13fa398a43305e54be7307953d364fe988e3e93ccb",
+    "Project/src/analytics_runtime/validation_views.py": "743d1f12291a53b2a84aef808ee0393045b0db83b8e7459e17bfa13d27ac5a53",
+    "Project/src/fact_etl/__init__.py": "d386397ec735abe1a492d8f2e19581cf6a85693a50698a9608a28b0d5a941526",
+    "Project/src/fact_etl/pipeline.py": "4aaca8c0e5f325442f430deb30703c3878f00295c1f5ad53c53cce7b7c15c0ed",
+    "Project/src/fact_etl/transform.py": "53b2dd3f8a8f4561ef929bdc2a70b67f85f3ece79a80bd9afdf77c1ab80e3e3b",
+    "Project/src/semantic/__init__.py": "5f929a72364d46654477a953c74caf2691fff4e35aa6aa86933379361f1c7b78",
+    "Project/src/semantic/fixtures.py": "a7b8e375c142e53e597fdcf6d489bf056d23915ed27710de5cadc6e3973b91fb",
+    "Project/src/semantic/main.py": "da1a74ac6f516d6fd2a74cba33d4972ec7c8ddf34a74419284e5b270ae37d5e8",
+    "Project/src/semantic/queries.py": "74ac2e8df98e070fe27b4f7651a9135aaef35ff50725330395bef65233ad946e",
+    "Project/src/semantic/reference.py": "c5a07a9b5706614c2f0ae95abfde8c7572be99900fbbcbfe1cf34a5e27cc97c1",
+    "Project/src/semantic/service.py": "861aedc9fde9f0afaf89cc245c5f4eec7d1601916f0db57f99955604774a3e9a",
+    "Project/src/lake_v2.py": "abb3f6bfc908abd27b4aa26bab2fbb416cc24718ce4449fc2d8ec7ba2972ee08",
+    "Project/src/lake_job.py": "2d30075d5f34c2391beda735f9a401150095f795f03bd9a7846964374ca5621d",
+    "scripts/lakehouse.py": "796c051a921ecad366cef4f71e6748647e79484fd53281ea3a7afd46ed5ba1a4",
+    "scripts/lakehouse-state.py": "b7ecefbb5e2ce0d3c5275c00ecd9ec01d60b9d0848d37cb9455ebed6ada16b19",
+    "scripts/finalize-lakehouse.py": "ccd68ad02b1f47789b170539c567e8fced2372967602ac742700960f7564a8cf"
+  },
+  "config_sha256": {
+    "Project/config/source_target_mapping_v1.json": "678de0ca37dbf1f6ea1373993c9606ba166031ea7a29ecb9016cefcb2fc16332",
+    "Project/config/warehouse_design_v1.json": "7b6d76ca44a9039e61b9b29c3a175770642651171dbb9d91dd7299c7eed36def",
+    "Project/config/kpi_contract_v1.json": "05fef82dc67de87e709208640790af6101dfee7c9ab08bb060e081c0bec2a3ab",
+    "Project/config/analytics/ddl/manifest.json": "871b11d92f16e1915c487f679b25cf8f114408e7b701c3330fa9b61e0f9d4e71",
+    "Project/config/analytics_runtime_lock_v1.json": "ccb498654bb5287f294383a84724bc922069d141e12fd303c69cc92ef7781b1e"
+  },
+  "reports_sha256": {
+    "silver.json": "3415cd002e5161a665eca874ae82afc34b5b96f54aaeeb4a44e52345da1c3e32",
+    "gold.json": "e2acd2a084c63aa62bca33e8f6242fbf852192a872f81b9a43199c9f17d69bf0",
+    "publication.json": "ebee26be96b75afe69a0a6b33623d5449e1ccae5e9f1142e54c8ebdbdd189f8c",
+    "verification.json": "0e388c68ee5811761b6fe42f814f3aeafcf09563ed7ac6082cda61820a95ef1e",
+    "fixtures.json": "ab7b677178259456755f3abbcc85849019ee9718ba7b006c30a0e1bd9d7e086f",
+    "baseline.json": "af64ef41bc86d94e933077c7e418f37d6b0a5c5bb3176762425e83a543fec02e",
+    "slices.json": "94796b4790a9d7f7a00293fbaa94c968bc9c08303eee288ff6ad68e6ba94e870",
+    "silver-before-gold.json": "41c0acb886b7e1a13fa66a1109d5e83ef3c95164c8631436e02e8f65aa8c28e1",
+    "silver-exploration.json": "aafe2396a23d6bbeb6f1df60e4d3c57c5770889e99bd368f1dd0d46fe657e342",
+    "state-before-publish.json": "887f21dc9e82150c9a6f1e4364cb84feb6a55d96da679000e11c65fd0cb735c1",
+    "state-publish-interrupted.json": "0c6df460e294988d53241a49095cfb946bc1be97cd9ac9b0683994b4dee8e3a2",
+    "state-published.json": "2f2b7cd3fe98a4ea8e3fa356c1d2ff477029f5fdcea420f645ce5088218b8855",
+    "raw-catalog.json": "f15b691e79eecc144231c6ae3285d0d79756aa28f206dc50fdc4c29d0b53b411",
+    "silver-initial-before-gold.json": "2bde7b0c3e2a97827ea5792de4ba317044c28c3c452f07df15693b01a63bad94",
+    "state-restarted.json": "72558d37ddef61370ca3c1603e00ad15c798f3a0930640a90918ffc59e1dd83f",
+    "restart-verification.json": "ac6463452be4c7e4bc3924282f609db770a6e6e4de06ddd05a00e2d1a5b76680"
+  },
+  "notes": [
+    "Initial Silver failure was followed by full content verification and final Silver manifest under the accepted code.",
+    "Gold failure and recovery use the same final transform revision.",
+    "Early key-range bug and worker interruption produced unpublished candidates, retained locally.",
+    "Oracle was isolated from B by network/configuration; original Oracle runtime was not stopped.",
+    "Historical Power BI and web KPI payloads retain their original publication identity."
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "checked_at": "2026-10-14T14:43:57.042649+00:00",
+  "label": "publish-interrupted",
+  "services": {
+    "spark": {
+      "image": "apache/spark@sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba",
+      "image_id": "sha256:936ff39fd63e2bb5ed064f0fbe1518198473f1cdbfa2f863d087a9a8e58116ba",
+      "running": true,
+      "restart_count": 0,
+      "memory_limit_bytes": 4294967296,
+      "nano_cpus": 2000000000,
+      "networks": [
+        "ce-lakehouse-b_default"
+      ],
+      "published_ports": {},
+      "mounts": [
+        {
+          "type": "bind",
+          "destination": "/run/secrets/catalog_password",
+          "read_write": false,
+          "volume": null
+        },
+        {
+          "type": "bind",
+          "destination": "/workspace/src",
+          "read_write": false,
+          "volume": null
+        },
+        {
+          "type": "bind",
+          "destination": "/workspace/config",
+          "read_write": false,
+          "volume": null
+        },
+        {
+          "type": "bind",
+          "destination": "/baseline",
+          "read_write": false,
+          "volume": null
+        },
+        {
+          "type": "bind",
+          "destination": "/workspace/reports",
+          "read_write": true,
+          "volume": null
+        },
+        {
+          "type": "bind",
+          "destination": "/jars",
+          "read_write": false,
+          "volume": null
+        },
+        {
+          "type": "bind",
+          "destination": "/conf/spark-defaults.conf",
+          "read_write": false,
+          "volume": null
+        },
+        {
+          "type": "volume",
+          "destination": "/companye-lakehouse",
+          "read_write": true,
+          "volume": "ce-lakehouse-b_lakehouse"
+        }
+      ]
+    },
+    "metadata": {
+      "image": "postgres@sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+      "image_id": "sha256:2d2b8998d31037bf721cfdf764d76ba74171b4fab3431b7f72c27c56ddbdf9e3",
+      "running": true,
+      "restart_count": 0,
+      "memory_limit_bytes": 536870912,
+      "nano_cpus": 0,
+      "networks": [
+        "ce-lakehouse-b_default"
+      ],
+      "published_ports": {},
+      "mounts": [
+        {
+          "type": "volume",
+          "destination": "/var/lib/postgresql/data",
+          "read_write": true,
+          "volume": "ce-lakehouse-b_metadata"
+        },
+        {
+          "type": "bind",
+          "destination": "/run/secrets/catalog_password",
+          "read_write": false,
+          "volume": null
+        }
+      ]
+    }
+  },
+  "control": {
+    "active": null,
+    "publications": [
+      {
+        "id": "b_5531e032ac7d45b6eb0b",
+        "state": "PREPARED",
+        "sha256": "c5dfd3c04bef3480c1213c92ced3a6d62806c4438175abd1c8a81b47195970c6"
+      }
+    ],
+    "registered_keys": 711429,
+    "active_reader_leases": 0
+  }
+}

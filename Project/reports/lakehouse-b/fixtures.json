@@ -1,0 +1,119 @@
+{
+  "status": "PASSED",
+  "checked_at": "2026-10-14T14:46:27.965799+00:00",
+  "sql_fixture_cases": 20,
+  "metric_checks": 117,
+  "policy_checks": [
+    "mixed_units",
+    "mixed_inventory",
+    "breakfast_not_lunch",
+    "no_bar_cost",
+    "out_of_coverage",
+    "partial_cross_sell",
+    "missing_weather",
+    "negative_lot",
+    "opening_before_invalid_day",
+    "channel_capacity",
+    "usage_balance",
+    "asset_capacity",
+    "date_order",
+    "sql_injection",
+    "unknown_member"
+  ],
+  "publication_and_scd_checks": [
+    "prepare_does_not_publish",
+    "stale_pointer_rejected",
+    "reader_remains_on_old_snapshot_after_publish",
+    "schema_addition_preserves_pinned_read",
+    "partial_publication_exposes_quality",
+    "immutable_manifest_rejected",
+    "expired_reader_rejected",
+    "business_publication_unchanged",
+    "scd2_out_of_order_and_noop",
+    "scd2_conflict_rejected"
+  ],
+  "checks": [
+    {
+      "name": "hand_B01",
+      "metrics": 5
+    },
+    {
+      "name": "empty_B01",
+      "metrics": 5
+    },
+    {
+      "name": "hand_B02",
+      "metrics": 6
+    },
+    {
+      "name": "empty_B02",
+      "metrics": 6
+    },
+    {
+      "name": "hand_B03",
+      "metrics": 5
+    },
+    {
+      "name": "empty_B03",
+      "metrics": 5
+    },
+    {
+      "name": "hand_B04",
+      "metrics": 8
+    },
+    {
+      "name": "empty_B04",
+      "metrics": 8
+    },
+    {
+      "name": "hand_B05",
+      "metrics": 6
+    },
+    {
+      "name": "empty_B05",
+      "metrics": 6
+    },
+    {
+      "name": "hand_B06",
+      "metrics": 7
+    },
+    {
+      "name": "empty_B06",
+      "metrics": 7
+    },
+    {
+      "name": "hand_B07",
+      "metrics": 6
+    },
+    {
+      "name": "empty_B07",
+      "metrics": 6
+    },
+    {
+      "name": "hand_B08",
+      "metrics": 4
+    },
+    {
+      "name": "empty_B08",
+      "metrics": 4
+    },
+    {
+      "name": "inventory_carry_in",
+      "metrics": 6
+    },
+    {
+      "name": "inventory_no_movement",
+      "metrics": 6
+    },
+    {
+      "name": "receipt_asof_cutoff",
+      "metrics": 7
+    },
+    {
+      "name": "maintenance_end_exclusive",
+      "metrics": 4
+    }
+  ],
+  "business_tables_mutated": false,
+  "scope": "SQL/policy/SCD and isolated publication faults; actual crash-resume evidence recorded separately."
+}

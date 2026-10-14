@@ -1,0 +1,24 @@
+{
+  "status": "PASSED_RESTART_AND_GOLD_REPLAY",
+  "checked_at": "2026-10-14T14:47:24.592251+00:00",
+  "publication_id": "b_5531e032ac7d45b6eb0b",
+  "steps": [
+    {
+      "phase": "stop",
+      "exit_code": 0
+    },
+    {
+      "phase": "up",
+      "exit_code": 0
+    },
+    {
+      "phase": "gold",
+      "exit_code": 0
+    }
+  ],
+  "gold_manifest_sha256": "e2acd2a084c63aa62bca33e8f6242fbf852192a872f81b9a43199c9f17d69bf0",
+  "gold_manifest_unchanged": true,
+  "gold_snapshot_content_revalidated_by_replay": true,
+  "active_pointer_preserved": true,
+  "note": "Gold replay validates all 36 pinned table content hashes; KPI suite passed before restart."
+}

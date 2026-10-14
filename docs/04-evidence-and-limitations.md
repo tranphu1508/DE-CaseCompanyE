@@ -1,5 +1,9 @@
 # Bằng chứng kiểm chứng và giới hạn
 
+## Lakehouse B độc lập
+
+Bằng chứng mới được lưu riêng tại [reports/lakehouse-b/summary.json](../Project/reports/lakehouse-b/summary.json): Silver/Gold manifest và snapshot, 47 KPI baseline, 96 slices, SQL/policy/SCD/publication fixtures, cùng trạng thái trước/ngắt/sau công bố. Đáp án KPI đọc raw độc lập; Oracle được đối chiếu bằng kết quả lịch sử, không có truy vấn Oracle mới trong runtime B. [Runbook B](06-independent-lakehouse.md) mô tả cách tái lập và giới hạn. Không dùng kết quả này để thay thế nghiệm thu Power BI hoặc benchmark.
+
 ## Kết quả lịch sử được giữ nguyên
 
 | Lớp | Kết quả đã lưu | File kiểm tra chính |

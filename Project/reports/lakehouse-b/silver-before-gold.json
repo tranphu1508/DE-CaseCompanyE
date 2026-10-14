@@ -1,0 +1,24 @@
+{
+  "status": "PASSED",
+  "checked_at": "2026-10-14T14:40:11.785442+00:00",
+  "active_gold_publication": null,
+  "gold_report_exists": true,
+  "input_table": "ce.silver_hotel.bookings",
+  "input_snapshot": 2122033513995463760,
+  "sql": "SELECT status,COUNT(*) AS bookings FROM b_silver_booking_exploration GROUP BY status ORDER BY status",
+  "rows": [
+    {
+      "status": "CANCELLED",
+      "bookings": 4239
+    },
+    {
+      "status": "COMPLETED",
+      "bookings": 26820
+    },
+    {
+      "status": "NO_SHOW",
+      "bookings": 941
+    }
+  ],
+  "gold_tables_used": false
+}

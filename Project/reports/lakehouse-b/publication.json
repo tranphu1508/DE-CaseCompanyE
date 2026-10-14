@@ -1,0 +1,1597 @@
+{
+  "status": "PUBLISHED",
+  "publication_id": "b_5531e032ac7d45b6eb0b",
+  "previous": null,
+  "manifest_sha256": "c5dfd3c04bef3480c1213c92ced3a6d62806c4438175abd1c8a81b47195970c6",
+  "manifest": {
+    "publication_id": "b_5531e032ac7d45b6eb0b",
+    "source_batch_id": "v2_20261014T124040450684Z",
+    "source_catalog_sha256": "f15b691e79eecc144231c6ae3285d0d79756aa28f206dc50fdc4c29d0b53b411",
+    "silver_manifest": {
+      "path": "/companye-lakehouse/manifests/silver/silver_896d153512eacd805289.json",
+      "sha256": "3415cd002e5161a665eca874ae82afc34b5b96f54aaeeb4a44e52345da1c3e32"
+    },
+    "transform_version": "9d41828048304c0fb13ecc085bfdb354ac465447c6ccc15269db8e17f3a2827d",
+    "tables": {
+      "D01": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_date",
+        "snapshot_id": 1332242676274021041,
+        "rows": 1463,
+        "columns": [
+          "date_key",
+          "source_system",
+          "member_kind",
+          "calendar_date",
+          "day",
+          "day_of_week",
+          "month",
+          "quarter",
+          "year",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<date_key:int,source_system:string,member_kind:string,calendar_date:date,day:int,day_of_week:int,month:int,quarter:int,year:int,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "16c95f7c965b003b84fe519731cf2f5411813ead091f19f01e52228bead6684b"
+      },
+      "D02": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_site",
+        "snapshot_id": 2532942739381623653,
+        "rows": 6,
+        "columns": [
+          "site_key",
+          "source_system",
+          "member_kind",
+          "site_id",
+          "site_name",
+          "climate_region",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<site_key:bigint,source_system:string,member_kind:string,site_id:string,site_name:string,climate_region:string,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "31dd3b5914d520666a7e40ed0ce7205bf26100eeb22e30969e7e91381a86340d"
+      },
+      "D03": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_hotel",
+        "snapshot_id": 8568934897359344862,
+        "rows": 10,
+        "columns": [
+          "hotel_key",
+          "source_system",
+          "member_kind",
+          "hotel_id",
+          "hotel_name",
+          "stars",
+          "site_id",
+          "website_channel",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<hotel_key:bigint,source_system:string,member_kind:string,hotel_id:string,hotel_name:string,stars:int,site_id:string,website_channel:string,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "b525189df788ca088e1b6499b0297435b4600fb97977b9b964b7586c83aa5420"
+      },
+      "D04": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_room",
+        "snapshot_id": 4596532767033412202,
+        "rows": 242,
+        "columns": [
+          "room_key",
+          "source_system",
+          "member_kind",
+          "room_id",
+          "hotel_id",
+          "room_type",
+          "capacity",
+          "base_rate_vnd",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<room_key:bigint,source_system:string,member_kind:string,room_id:string,hotel_id:string,room_type:string,capacity:int,base_rate_vnd:decimal(19,0),valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "1fad180014f4c2c6bafa30c616bc476d495aa178ca7aa31ec9acc2accad89620"
+      },
+      "D05": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_channel",
+        "snapshot_id": 3315380877980159166,
+        "rows": 17,
+        "columns": [
+          "channel_key",
+          "source_system",
+          "member_kind",
+          "channel_code",
+          "channel_name",
+          "channel_type",
+          "commission_bps",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<channel_key:bigint,source_system:string,member_kind:string,channel_code:string,channel_name:string,channel_type:string,commission_bps:int,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "e92ecc7fc54230aab9ebb903380f8c7083b0a307ca28bbbf483ce5d3b43c7734"
+      },
+      "D06": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_promotion",
+        "snapshot_id": 6267611730185720150,
+        "rows": 42,
+        "columns": [
+          "promotion_key",
+          "source_system",
+          "member_kind",
+          "promotion_id",
+          "promotion_name",
+          "channel_id",
+          "site_id",
+          "sale_from",
+          "sale_to",
+          "stay_from",
+          "stay_to",
+          "discount_bps",
+          "partner_share_bps",
+          "cap_vnd",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<promotion_key:bigint,source_system:string,member_kind:string,promotion_id:string,promotion_name:string,channel_id:string,site_id:string,sale_from:date,sale_to:date,stay_from:date,stay_to:date,discount_bps:int,partner_share_bps:int,cap_vnd:decimal(19,0),valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "e838f62e6d2e5acafab85a41b104612f659aa8c34c0b75ed1f2469678ed63d69"
+      },
+      "D07": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_customer_profile",
+        "snapshot_id": 9075278434289415102,
+        "rows": 24122,
+        "columns": [
+          "customer_profile_key",
+          "source_system",
+          "member_kind",
+          "source_customer_id",
+          "full_name",
+          "phone",
+          "email",
+          "member_card_ref",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<customer_profile_key:bigint,source_system:string,member_kind:string,source_customer_id:string,full_name:string,phone:string,email:string,member_card_ref:string,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "2435f6b76928ecdbd97f931ec7b55ca0995a2c5df0f550ec9e20c98f28ccfc5b"
+      },
+      "D08": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_rate_plan",
+        "snapshot_id": 1403034618585111433,
+        "rows": 74,
+        "columns": [
+          "rate_plan_key",
+          "source_system",
+          "member_kind",
+          "rate_plan_id",
+          "hotel_id",
+          "channel_id",
+          "plan_name",
+          "breakfast_included",
+          "refundable",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<rate_plan_key:bigint,source_system:string,member_kind:string,rate_plan_id:string,hotel_id:string,channel_id:string,plan_name:string,breakfast_included:int,refundable:int,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "e247b62ae1949f6e339556aa145b44b35a113ade6cf6d608e2bcc94b95ecd056"
+      },
+      "D09": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_outlet",
+        "snapshot_id": 2021421356024235727,
+        "rows": 18,
+        "columns": [
+          "outlet_key",
+          "source_system",
+          "member_kind",
+          "outlet_id",
+          "hotel_id",
+          "outlet_type",
+          "capacity",
+          "quality_profile",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<outlet_key:bigint,source_system:string,member_kind:string,outlet_id:string,hotel_id:string,outlet_type:string,capacity:int,quality_profile:int,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "b0f75020f27ce21862769b5ea72bd5de8caea735090c8f650bf93ad5191b8c2d"
+      },
+      "D10": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_meal",
+        "snapshot_id": 7546115136232630283,
+        "rows": 6,
+        "columns": [
+          "meal_key",
+          "source_system",
+          "member_kind",
+          "meal_code",
+          "meal_name",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<meal_key:bigint,source_system:string,member_kind:string,meal_code:string,meal_name:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "b8dcd67f0a5b87f8227b5c56d02e2099fedd791d4fc212e510a237de086a6365"
+      },
+      "D11": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_centre",
+        "snapshot_id": 7971026931742394842,
+        "rows": 6,
+        "columns": [
+          "centre_key",
+          "source_system",
+          "member_kind",
+          "centre_id",
+          "centre_name",
+          "site_code",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<centre_key:bigint,source_system:string,member_kind:string,centre_id:string,centre_name:string,site_code:string,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "b06ee688cb611228ad2fd7514707dab0f423fa4c303c0ca00422d14275eddea0"
+      },
+      "D12": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_activity",
+        "snapshot_id": 1998018124688411506,
+        "rows": 14,
+        "columns": [
+          "activity_key",
+          "source_system",
+          "member_kind",
+          "activity_id",
+          "centre_id",
+          "activity_name",
+          "outdoor",
+          "capacity_per_day",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<activity_key:bigint,source_system:string,member_kind:string,activity_id:string,centre_id:string,activity_name:string,outdoor:int,capacity_per_day:int,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "0087cc65efc74bc9db63ccb877b3edf88efef08d03beefa24c22d48a2f0af4ba"
+      },
+      "D13": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_vehicle",
+        "snapshot_id": 4272118821581199307,
+        "rows": 122,
+        "columns": [
+          "vehicle_key",
+          "source_system",
+          "member_kind",
+          "vehicle_id",
+          "centre_id",
+          "vehicle_type",
+          "daily_rate_vnd",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<vehicle_key:bigint,source_system:string,member_kind:string,vehicle_id:string,centre_id:string,vehicle_type:string,daily_rate_vnd:decimal(19,0),valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "53700133fd0cabe223bea3cc0c41896534f6945ffe021e47966b279affff3647"
+      },
+      "D14": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_supplier",
+        "snapshot_id": 6940126124051899615,
+        "rows": 18,
+        "columns": [
+          "supplier_key",
+          "source_system",
+          "member_kind",
+          "supplier_id",
+          "supplier_name",
+          "category",
+          "site_id",
+          "delivery_format",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<supplier_key:bigint,source_system:string,member_kind:string,supplier_id:string,supplier_name:string,category:string,site_id:string,delivery_format:string,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "f3536a08dbd073ccf11de273d355cf1406ffca4858617e3f37190f8f59e52e68"
+      },
+      "D15": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_item",
+        "snapshot_id": 2922194723941470834,
+        "rows": 8,
+        "columns": [
+          "item_key",
+          "source_system",
+          "member_kind",
+          "item_id",
+          "item_name",
+          "specification",
+          "base_unit",
+          "shelf_life_days",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<item_key:bigint,source_system:string,member_kind:string,item_id:string,item_name:string,specification:string,base_unit:string,shelf_life_days:int,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "782aab146032d41783c589c85e39576b044d8cff29d2a2d700992102c82c48b8"
+      },
+      "D16": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.dim_asset",
+        "snapshot_id": 3896035582387312089,
+        "rows": 258,
+        "columns": [
+          "asset_key",
+          "source_system",
+          "member_kind",
+          "asset_id",
+          "hotel_id",
+          "room_id",
+          "asset_type",
+          "supplier_id",
+          "valid_from_utc",
+          "valid_to_utc",
+          "is_current",
+          "version_no",
+          "effective_time_basis",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<asset_key:bigint,source_system:string,member_kind:string,asset_id:string,hotel_id:string,room_id:string,asset_type:string,supplier_id:string,valid_from_utc:timestamp_ntz,valid_to_utc:timestamp_ntz,is_current:int,version_no:bigint,effective_time_basis:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "bcf4c019dab5fdd8d8d8bd0dbb65ca72853d93bdaf79970bfa32f985da946b3b"
+      },
+      "L04": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.site_crosswalk",
+        "snapshot_id": 8830066160656230055,
+        "rows": 4,
+        "columns": [
+          "centre_source_system",
+          "centre_id",
+          "site_source_system",
+          "site_id",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<centre_source_system:string,centre_id:string,site_source_system:string,site_id:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "f7d51554b67e0c2e3d4bd29d328ad8dbc4603d365bd66d1ffa82a1a607076d63"
+      },
+      "L03": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.validated_booking_service_link",
+        "snapshot_id": 2602957489807753226,
+        "rows": 21213,
+        "columns": [
+          "service_source_system",
+          "service_type",
+          "service_id",
+          "booking_source_system",
+          "booking_id",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<service_source_system:string,service_type:string,service_id:string,booking_source_system:string,booking_id:string,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "7fb46b32f9ac8a2296bd48071de93878b5cee2caadec28b08e1938d68842fda8"
+      },
+      "F01": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_booking",
+        "snapshot_id": 2740872739830814230,
+        "rows": 32000,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "booked_date_key",
+          "arrival_date_key",
+          "departure_date_key",
+          "site_key",
+          "hotel_key",
+          "channel_key",
+          "promotion_key",
+          "customer_profile_key",
+          "booking_id",
+          "status",
+          "source_updated_at_utc",
+          "gross_vnd",
+          "discount_vnd",
+          "customer_due_vnd",
+          "company_share_vnd",
+          "partner_share_vnd",
+          "commission_vnd",
+          "booking_count",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,booked_date_key:int,arrival_date_key:int,departure_date_key:int,site_key:bigint,hotel_key:bigint,channel_key:bigint,promotion_key:bigint,customer_profile_key:bigint,booking_id:string,status:string,source_updated_at_utc:timestamp_ntz,gross_vnd:decimal(19,0),discount_vnd:decimal(19,0),customer_due_vnd:decimal(19,0),company_share_vnd:decimal(19,0),partner_share_vnd:decimal(19,0),commission_vnd:decimal(19,0),booking_count:bigint,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "f9c84a523a2366166a693ecdb3f25fcbdb77e96dfa69c03f90e1f36ed7131ada"
+      },
+      "F08": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_meal_session",
+        "snapshot_id": 9130201777026660452,
+        "rows": 11696,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "outlet_id",
+          "service_date_key",
+          "site_key",
+          "hotel_key",
+          "outlet_key",
+          "meal_key",
+          "session_id",
+          "actual_covers",
+          "ingredient_cost_vnd",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,outlet_id:string,service_date_key:int,site_key:bigint,hotel_key:bigint,outlet_key:bigint,meal_key:bigint,session_id:string,actual_covers:bigint,ingredient_cost_vnd:decimal(19,0),source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "b5ab24bc34535e9e5e9f80c524f04f5ed0b301e263e641fb0edd4d99a4124352"
+      },
+      "F10": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_activity_day",
+        "snapshot_id": 5656236255569083309,
+        "rows": 8772,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "activity_id",
+          "date_key",
+          "site_key",
+          "centre_key",
+          "activity_key",
+          "nominal_capacity",
+          "is_closed",
+          "available_capacity",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,activity_id:string,date_key:int,site_key:bigint,centre_key:bigint,activity_key:bigint,nominal_capacity:bigint,is_closed:int,available_capacity:bigint,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "fe9cfd51b2ebb9f99d543b9459a9ceeec74d688fa1bb16ca69718694110528ff"
+      },
+      "F11": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_vehicle_day",
+        "snapshot_id": 856269432417247253,
+        "rows": 87720,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "vehicle_id",
+          "date_key",
+          "site_key",
+          "centre_key",
+          "vehicle_key",
+          "inventory_day",
+          "maintenance_day",
+          "available_day",
+          "rented_day",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,vehicle_id:string,date_key:int,site_key:bigint,centre_key:bigint,vehicle_key:bigint,inventory_day:int,maintenance_day:int,available_day:int,rented_day:int,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "38708e318631e9536b1012e306ec099f96869dd2d1b2ee66fbbe00b78de62dd8"
+      },
+      "F12": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_purchase_line",
+        "snapshot_id": 273037874484894239,
+        "rows": 23680,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "ordered_date_key",
+          "expected_date_key",
+          "site_key",
+          "hotel_key",
+          "supplier_key",
+          "item_key",
+          "purchase_line_id",
+          "purchase_order_id",
+          "ordered_qty",
+          "unit_price_vnd",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,ordered_date_key:int,expected_date_key:int,site_key:bigint,hotel_key:bigint,supplier_key:bigint,item_key:bigint,purchase_line_id:string,purchase_order_id:string,ordered_qty:decimal(18,3),unit_price_vnd:decimal(19,0),source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "03919e8ced9715878ecc17e7aa9c33438762f3b1afcf68daaa64ab8bcfd47965"
+      },
+      "F16": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_maintenance_work",
+        "snapshot_id": 7357921529437195309,
+        "rows": 512,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "start_date_key",
+          "end_date_key",
+          "site_key",
+          "hotel_key",
+          "room_key",
+          "asset_key",
+          "maintenance_id",
+          "work_type",
+          "status",
+          "cost_vnd",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,start_date_key:int,end_date_key:int,site_key:bigint,hotel_key:bigint,room_key:bigint,asset_key:bigint,maintenance_id:string,work_type:string,status:string,cost_vnd:decimal(19,0),source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "e93b51e2945fcbffa65ab870dec53bf95b95d5ba64f8382ed069ca98cbb75fcf"
+      },
+      "F17": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_weather_day",
+        "snapshot_id": 3128060306605415965,
+        "rows": 2924,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "site_id",
+          "weather_date_key",
+          "site_key",
+          "weather_id",
+          "provenance",
+          "temperature_c",
+          "rain_mm",
+          "severe_weather",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,site_id:string,weather_date_key:int,site_key:bigint,weather_id:string,provenance:string,temperature_c:int,rain_mm:int,severe_weather:int,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "e76b085e06dd61ee1a77aba46429bdda1c8547309679cd88d19fc9f9508855c9"
+      },
+      "L02": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.bridge_room_day_maintenance",
+        "snapshot_id": 8704539388694666848,
+        "rows": 962,
+        "columns": [
+          "source_system",
+          "maintenance_id",
+          "room_id",
+          "room_key",
+          "date_key",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<source_system:string,maintenance_id:string,room_id:string,room_key:bigint,date_key:int,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "294c4ff40e76ebad6a9b446a4bcd6d39d3f38863b8fe03bc56ec69b3b972cda8"
+      },
+      "F02": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_room_day",
+        "snapshot_id": 3243657172422560373,
+        "rows": 175440,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "room_id",
+          "date_key",
+          "site_key",
+          "hotel_key",
+          "room_key",
+          "inventory_day",
+          "blocked_day",
+          "available_day",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,room_id:string,date_key:int,site_key:bigint,hotel_key:bigint,room_key:bigint,inventory_day:int,blocked_day:int,available_day:int,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "f893938cd396bb441b48feb2f5a878fcc6f1b27ab52e751d90e08b4960b18017"
+      },
+      "F04": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_ticket_order",
+        "snapshot_id": 8011558112060304122,
+        "rows": 20690,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "ordered_date_key",
+          "cohort_departure_date_key",
+          "service_site_key",
+          "booking_site_key",
+          "referral_hotel_key",
+          "ticket_channel_key",
+          "booking_channel_key",
+          "customer_profile_key",
+          "centre_key",
+          "ticket_order_id",
+          "hotel_booking_ref",
+          "gross_vnd",
+          "refunded_vnd",
+          "net_ticket_vnd",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,ordered_date_key:int,cohort_departure_date_key:int,service_site_key:bigint,booking_site_key:bigint,referral_hotel_key:bigint,ticket_channel_key:bigint,booking_channel_key:bigint,customer_profile_key:bigint,centre_key:bigint,ticket_order_id:string,hotel_booking_ref:string,gross_vnd:decimal(19,0),refunded_vnd:decimal(19,0),net_ticket_vnd:decimal(19,0),source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "318bd19c0dc975da2e6e65dd328b4a5609e6ef96c6061ee37f5b1f586720bba9"
+      },
+      "F05": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_rental",
+        "snapshot_id": 6202133664467466637,
+        "rows": 7723,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "pickup_date_key",
+          "return_date_key",
+          "cohort_departure_date_key",
+          "service_site_key",
+          "booking_site_key",
+          "referral_hotel_key",
+          "booking_channel_key",
+          "customer_profile_key",
+          "centre_key",
+          "vehicle_key",
+          "rental_id",
+          "hotel_booking_ref",
+          "status",
+          "agreed_vnd",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,pickup_date_key:int,return_date_key:int,cohort_departure_date_key:int,service_site_key:bigint,booking_site_key:bigint,referral_hotel_key:bigint,booking_channel_key:bigint,customer_profile_key:bigint,centre_key:bigint,vehicle_key:bigint,rental_id:string,hotel_booking_ref:string,status:string,agreed_vnd:decimal(19,0),source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "57b3cf0ba3b4132e5a19da742a1d5a27cbc5d9895b690bc64013bb44826a0ee8"
+      },
+      "F07": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_dining_order",
+        "snapshot_id": 3121854914923258841,
+        "rows": 31357,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "service_date_key",
+          "site_key",
+          "service_hotel_key",
+          "booking_hotel_key",
+          "customer_profile_key",
+          "outlet_key",
+          "meal_key",
+          "dining_order_id",
+          "booking_id",
+          "net_vnd",
+          "covers",
+          "rating_sum",
+          "rating_count",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,service_date_key:int,site_key:bigint,service_hotel_key:bigint,booking_hotel_key:bigint,customer_profile_key:bigint,outlet_key:bigint,meal_key:bigint,dining_order_id:string,booking_id:string,net_vnd:decimal(19,0),covers:bigint,rating_sum:bigint,rating_count:bigint,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "c99c27eba86ae41005f3fef5caa7a44b1f2a706fb093f82e12ac078c5045128e"
+      },
+      "F09": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_admission",
+        "snapshot_id": 853211936778213349,
+        "rows": 39827,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "admission_date_key",
+          "site_key",
+          "customer_profile_key",
+          "centre_key",
+          "activity_key",
+          "admission_id",
+          "ticket_id",
+          "entered_at_utc",
+          "admission_count",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,admission_date_key:int,site_key:bigint,customer_profile_key:bigint,centre_key:bigint,activity_key:bigint,admission_id:string,ticket_id:string,entered_at_utc:timestamp_ntz,admission_count:bigint,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "0fb46b68071076e31f7314c1fc5f8232d2fbd669b875eeded2b8b7701f57dc40"
+      },
+      "F13": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_receipt",
+        "snapshot_id": 8796722961845783147,
+        "rows": 29621,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "received_date_key",
+          "expected_date_key",
+          "expires_date_key",
+          "site_key",
+          "hotel_key",
+          "supplier_key",
+          "item_key",
+          "receipt_id",
+          "purchase_line_id",
+          "accepted_qty",
+          "rejected_qty",
+          "late_accepted_qty",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,received_date_key:int,expected_date_key:int,expires_date_key:int,site_key:bigint,hotel_key:bigint,supplier_key:bigint,item_key:bigint,receipt_id:string,purchase_line_id:string,accepted_qty:decimal(18,3),rejected_qty:decimal(18,3),late_accepted_qty:decimal(18,3),source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "83ab8f0b2babcc0d6c1f1c51a12e6b7eabb716a9b143cbe327df707cf833dbd1"
+      },
+      "L01": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.bridge_booking_room",
+        "snapshot_id": 5924824794533293426,
+        "rows": 36711,
+        "columns": [
+          "source_system",
+          "booking_room_id",
+          "booking_id",
+          "room_key",
+          "rate_plan_key",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<source_system:string,booking_room_id:string,booking_id:string,room_key:bigint,rate_plan_key:bigint,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "80e08f062632c2b35ef466d28ca8a03d299a3aed1363b5a36118af42b96228db"
+      },
+      "F03": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_stay_night",
+        "snapshot_id": 984377009274341818,
+        "rows": 73275,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "room_id",
+          "service_date_key",
+          "site_key",
+          "hotel_key",
+          "room_key",
+          "channel_key",
+          "customer_profile_key",
+          "rate_plan_key",
+          "stay_id",
+          "booking_room_id",
+          "booking_id",
+          "occupied_night",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,room_id:string,service_date_key:int,site_key:bigint,hotel_key:bigint,room_key:bigint,channel_key:bigint,customer_profile_key:bigint,rate_plan_key:bigint,stay_id:string,booking_room_id:string,booking_id:string,occupied_night:int,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "7405b41f78994da2bce2109602339af6db4401e8e6b5211c49a4811c8d7f0855"
+      },
+      "F14": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_stock_movement",
+        "snapshot_id": 7387721862833193601,
+        "rows": 88032,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "movement_date_key",
+          "site_key",
+          "hotel_key",
+          "supplier_key",
+          "item_key",
+          "movement_id",
+          "receipt_id",
+          "session_id",
+          "movement_type",
+          "usage_area",
+          "quantity",
+          "signed_qty",
+          "in_qty",
+          "use_qty",
+          "waste_qty",
+          "unit_price_vnd",
+          "movement_value_vnd",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,movement_date_key:int,site_key:bigint,hotel_key:bigint,supplier_key:bigint,item_key:bigint,movement_id:string,receipt_id:string,session_id:string,movement_type:string,usage_area:string,quantity:decimal(18,3),signed_qty:decimal(18,3),in_qty:decimal(18,3),use_qty:decimal(18,3),waste_qty:decimal(18,3),unit_price_vnd:decimal(19,0),movement_value_vnd:decimal(38,3),source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "52aaf664e6902d42551c3bb303f5bf7889fb4c3bba9ade5e81d7708f8386c20e"
+      },
+      "F06": {
+        "table": "ce.gold_b_5531e032ac7d45b6eb0b.fact_breakfast_entitlement",
+        "snapshot_id": 223089372271890639,
+        "rows": 52979,
+        "columns": [
+          "fact_key",
+          "source_system",
+          "service_date_key",
+          "site_key",
+          "hotel_key",
+          "room_key",
+          "customer_profile_key",
+          "rate_plan_key",
+          "outlet_key",
+          "meal_key",
+          "entitlement_id",
+          "booking_room_id",
+          "eligible_covers",
+          "redeemed_covers",
+          "source_batch_id",
+          "transform_version",
+          "row_hash",
+          "created_at_utc",
+          "updated_at_utc"
+        ],
+        "schema": "struct<fact_key:bigint,source_system:string,service_date_key:int,site_key:bigint,hotel_key:bigint,room_key:bigint,customer_profile_key:bigint,rate_plan_key:bigint,outlet_key:bigint,meal_key:bigint,entitlement_id:string,booking_room_id:string,eligible_covers:bigint,redeemed_covers:bigint,source_batch_id:string,transform_version:string,row_hash:string,created_at_utc:timestamp_ntz,updated_at_utc:timestamp_ntz>",
+        "content_sha256": "9b1908577cba9cb5cbacc6fb16b09971650883b574a0d7ab4566c54da10a9614"
+      }
+    },
+    "quality_entities": {
+      "D01": {
+        "status": "COMPLETE",
+        "accepted": 1461,
+        "rejected": 0
+      },
+      "D02": {
+        "status": "COMPLETE",
+        "accepted": 4,
+        "rejected": 0
+      },
+      "D03": {
+        "status": "COMPLETE",
+        "accepted": 8,
+        "rejected": 0
+      },
+      "D04": {
+        "status": "COMPLETE",
+        "accepted": 240,
+        "rejected": 0
+      },
+      "D05": {
+        "status": "COMPLETE",
+        "accepted": 15,
+        "rejected": 0
+      },
+      "D06": {
+        "status": "COMPLETE",
+        "accepted": 40,
+        "rejected": 0
+      },
+      "D07": {
+        "status": "COMPLETE",
+        "accepted": 24120,
+        "rejected": 0
+      },
+      "D08": {
+        "status": "COMPLETE",
+        "accepted": 72,
+        "rejected": 0
+      },
+      "D09": {
+        "status": "COMPLETE",
+        "accepted": 16,
+        "rejected": 0
+      },
+      "D10": {
+        "status": "COMPLETE",
+        "accepted": 4,
+        "rejected": 0
+      },
+      "D11": {
+        "status": "COMPLETE",
+        "accepted": 4,
+        "rejected": 0
+      },
+      "D12": {
+        "status": "COMPLETE",
+        "accepted": 12,
+        "rejected": 0
+      },
+      "D13": {
+        "status": "COMPLETE",
+        "accepted": 120,
+        "rejected": 0
+      },
+      "D14": {
+        "status": "COMPLETE",
+        "accepted": 16,
+        "rejected": 0
+      },
+      "D15": {
+        "status": "COMPLETE",
+        "accepted": 6,
+        "rejected": 0
+      },
+      "D16": {
+        "status": "COMPLETE",
+        "accepted": 256,
+        "rejected": 0
+      },
+      "L04": {
+        "status": "COMPLETE",
+        "accepted": 4,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "L03": {
+        "status": "COMPLETE",
+        "accepted": 21213,
+        "rejected": 0,
+        "business_filtered": 7200
+      },
+      "F01": {
+        "status": "COMPLETE",
+        "accepted": 32000,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F08": {
+        "status": "COMPLETE",
+        "accepted": 11696,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F10": {
+        "status": "COMPLETE",
+        "accepted": 8772,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F11": {
+        "status": "COMPLETE",
+        "accepted": 87720,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F12": {
+        "status": "COMPLETE",
+        "accepted": 23680,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F16": {
+        "status": "COMPLETE",
+        "accepted": 512,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F17": {
+        "status": "COMPLETE",
+        "accepted": 2924,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "L02": {
+        "status": "COMPLETE",
+        "accepted": 962,
+        "rejected": 0,
+        "business_filtered": 64
+      },
+      "F02": {
+        "status": "COMPLETE",
+        "accepted": 175440,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F04": {
+        "status": "COMPLETE",
+        "accepted": 20690,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F05": {
+        "status": "COMPLETE",
+        "accepted": 7723,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F07": {
+        "status": "COMPLETE",
+        "accepted": 31357,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F09": {
+        "status": "COMPLETE",
+        "accepted": 39827,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F13": {
+        "status": "COMPLETE",
+        "accepted": 29621,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "L01": {
+        "status": "COMPLETE",
+        "accepted": 36711,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F03": {
+        "status": "COMPLETE",
+        "accepted": 73275,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F14": {
+        "status": "COMPLETE",
+        "accepted": 88032,
+        "rejected": 0,
+        "business_filtered": 0
+      },
+      "F06": {
+        "status": "COMPLETE",
+        "accepted": 52979,
+        "rejected": 0,
+        "business_filtered": 0
+      }
+    },
+    "quality_metrics": {
+      "B01.01": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F03"
+        ]
+      },
+      "B01.02": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F02"
+        ]
+      },
+      "B01.03": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F03",
+          "F02"
+        ]
+      },
+      "B01.04": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F01"
+        ]
+      },
+      "B01.05": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F01"
+        ]
+      },
+      "B02.01": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F01"
+        ]
+      },
+      "B02.02": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F01"
+        ]
+      },
+      "B02.03": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F01"
+        ]
+      },
+      "B02.04": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F01"
+        ]
+      },
+      "B02.05": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F01"
+        ]
+      },
+      "B02.06": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F01"
+        ]
+      },
+      "B03.01": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F04",
+          "F05",
+          "F01"
+        ]
+      },
+      "B03.02": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F04",
+          "F05",
+          "F01"
+        ]
+      },
+      "B03.03": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F04",
+          "F01"
+        ]
+      },
+      "B03.04": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F05",
+          "F01"
+        ]
+      },
+      "B03.05": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F01",
+          "F04",
+          "F05"
+        ]
+      },
+      "B04.01": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F06"
+        ]
+      },
+      "B04.02": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F06"
+        ]
+      },
+      "B04.03": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F06"
+        ]
+      },
+      "B04.04": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F07"
+        ]
+      },
+      "B04.05": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F06",
+          "F07"
+        ]
+      },
+      "B04.06": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F08"
+        ]
+      },
+      "B04.07": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F08"
+        ]
+      },
+      "B04.08": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F07"
+        ]
+      },
+      "B05.01": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F09"
+        ]
+      },
+      "B05.02": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F10"
+        ]
+      },
+      "B05.03": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F09",
+          "F10"
+        ]
+      },
+      "B05.04": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F11"
+        ]
+      },
+      "B05.05": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F11"
+        ]
+      },
+      "B05.06": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F11"
+        ]
+      },
+      "B06.01": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F12"
+        ]
+      },
+      "B06.02": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F13",
+          "F12"
+        ]
+      },
+      "B06.03": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F13",
+          "F12"
+        ]
+      },
+      "B06.04": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F13",
+          "F12"
+        ]
+      },
+      "B06.05": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F12",
+          "F13"
+        ]
+      },
+      "B06.06": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F13",
+          "F12"
+        ]
+      },
+      "B06.07": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F12",
+          "F13"
+        ]
+      },
+      "B07.01": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F14"
+        ]
+      },
+      "B07.02": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F14"
+        ]
+      },
+      "B07.03": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F14"
+        ]
+      },
+      "B07.04": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F14"
+        ]
+      },
+      "B07.05": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F14"
+        ]
+      },
+      "B07.06": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F14"
+        ]
+      },
+      "B08.01": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F16"
+        ]
+      },
+      "B08.02": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F02"
+        ]
+      },
+      "B08.03": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F02"
+        ]
+      },
+      "B08.04": {
+        "status": "COMPLETE",
+        "dependencies": [
+          "F02"
+        ]
+      }
+    },
+    "quality_scope": [],
+    "external_warnings": [
+      {
+        "receipt_ref": "RECEIPTS-0024695",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0027378",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0024135",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0001934",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0023078",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0025496",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0011604",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0021166",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0013274",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0019011",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0007065",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      },
+      {
+        "receipt_ref": "RECEIPTS-0021248",
+        "revision": 1,
+        "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+      }
+    ],
+    "external_reconciliation": {
+      "mismatches": [],
+      "newest_invalid": [
+        {
+          "receipt_ref": "RECEIPTS-0024695",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0027378",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0024135",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0001934",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0023078",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0025496",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0011604",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0021166",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0013274",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0019011",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0007065",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        },
+        {
+          "receipt_ref": "RECEIPTS-0021248",
+          "revision": 1,
+          "reason": "UNKNOWN_UNIT|INVALID_QUANTITY"
+        }
+      ],
+      "policy": "External documents reconcile DB receipts; never additive facts."
+    },
+    "reconciliation": {
+      "meal_session_mismatches": [],
+      "negative_lot_prefixes": [],
+      "stock_policy": "Balance is unavailable from an invalid/missing movement; retained transaction facts do not certify complete balances."
+    },
+    "status": "PREPARED",
+    "created_at": "2026-10-14T14:40:02.191256+00:00",
+    "optional_disabled": [
+      "F15"
+    ],
+    "storage": "Iceberg tables within the lakehouse volume; no canonical Parquet duplicate."
+  },
+  "checked_at": "2026-10-14T14:44:32.593193+00:00"
+}

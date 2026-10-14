@@ -1,0 +1,21 @@
+{
+  "status": "PASSED",
+  "input_snapshot": 2122033513995463760,
+  "table": "ce.silver_hotel.bookings",
+  "sql": "SELECT status, COUNT(*) AS bookings FROM Silver bookings GROUP BY status",
+  "rows": [
+    {
+      "status": "CANCELLED",
+      "bookings": 4239
+    },
+    {
+      "status": "COMPLETED",
+      "bookings": 26820
+    },
+    {
+      "status": "NO_SHOW",
+      "bookings": 941
+    }
+  ],
+  "gold_tables_used": false
+}

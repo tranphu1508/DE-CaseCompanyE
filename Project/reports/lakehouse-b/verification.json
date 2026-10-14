@@ -1,0 +1,22 @@
+{
+  "status": "PASSED",
+  "checked_at": "2026-10-14T14:46:00.591452+00:00",
+  "publication_id": "b_5531e032ac7d45b6eb0b",
+  "source_batch_id": "v2_20261014T124040450684Z",
+  "baseline_metrics": 47,
+  "slice_metrics": 546,
+  "contexts": 104,
+  "raw_reference_equal": true,
+  "historical_oracle_equal": true,
+  "oracle_hostname_unresolvable": true,
+  "oracle_connections": 0,
+  "external_warnings": 12,
+  "gold_tables": 36,
+  "gold_rows": 771564,
+  "silver_tables": 45,
+  "limitations": [
+    "Oracle comparison uses immutable previously certified results; no new Oracle query was executed.",
+    "Power BI and public web remain on their earlier certified publication until a separate UI migration is accepted.",
+    "No performance benchmark or distributed scale claim."
+  ]
+}

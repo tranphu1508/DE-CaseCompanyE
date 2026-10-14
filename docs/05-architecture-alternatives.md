@@ -1,6 +1,6 @@
 # Hai phương án kiến trúc CompanyE
 
-Ngày quyết định: 14/10/2026. Trạng thái: **thiết kế đích đã điều chỉnh; chưa di chuyển dữ liệu hoặc triển khai runtime mới**.
+Ngày quyết định: 14/10/2026. **B đã có runtime độc lập, raw → Silver Iceberg → Gold Iceberg và publication riêng.** Xem [runbook triển khai](06-independent-lakehouse.md) và [bằng chứng nghiệm thu B](../Project/reports/lakehouse-b/summary.json). Power BI và payload KPI trên web vẫn giữ publication lịch sử; việc thay nguồn BI là mốc nghiệm thu riêng.
 
 CompanyE so sánh hai lựa chọn: A là data lake kết hợp Oracle warehouse; B là lakehouse quản lý dữ liệu chi tiết bằng Apache Iceberg trên nền lưu trữ lake. B không còn được mô tả chỉ như một đích ETL song song với Oracle. B hỗ trợ đọc dữ liệu chi tiết trước khi xây mart BI, còn Gold phục vụ cùng tám nhu cầu B01–B08 và 47 KPI đã chốt.
 
@@ -23,7 +23,8 @@ flowchart TB
         C --> Q[Quarantine và lịch sử revision]
     end
     I --> R
-    P --> E[ETL dimension SCD2 và fact]
+    R --> E[ETL dimension SCD2 và fact]
+    P -->|Chứng từ ngoài để đối soát| E
     E --> O[Oracle DWH: dimension, fact, bridge và helper]
     O --> PUB[Công bố bộ bảng và chất lượng]
     PUB --> SQL[Oracle SQL: 47 KPI]
@@ -68,21 +69,21 @@ flowchart TB
     SQL --> BI[Power BI và web snapshot]
 ```
 
-Tất cả vùng dữ liệu nghiệp vụ của B nằm dưới một storage root của lakehouse. Trong môi trường local, thiết kế đích dùng một volume dữ liệu bền vững, mount tại cùng một đường dẫn ở các container liên quan. Không cần bổ sung object storage chỉ để đáp ứng quyết định này. Khi chuyển môi trường, storage root có thể chuyển sang object storage; đây chưa phải hạng mục triển khai hiện tại.
+Tất cả vùng dữ liệu nghiệp vụ của B nằm dưới một storage root của lakehouse. Runtime local dùng volume `ce-lakehouse-b_lakehouse`, mount tại `/companye-lakehouse` ở các container liên quan. Không cần bổ sung object storage chỉ để đáp ứng quyết định này. Khi chuyển môi trường, storage root có thể chuyển sang object storage; đây chưa phải hạng mục triển khai hiện tại.
 
 ```text
-B — storage root mục tiêu /companye-lakehouse (chưa tạo)
+B — storage root đã triển khai /companye-lakehouse
 ├── raw/<batch>/
 │   ├── hotel_ops/                  Snapshot nguồn khách sạn
 │   ├── entertainment_ops/          Snapshot nguồn giải trí
-│   ├── external/                   File đối tác nguyên bản
-│   └── ingestion_manifest.json
+│   └── external/                   File đối tác nguyên bản
+├── catalog/catalog.json           Manifest raw, schema và checksum
 ├── tables/                         Iceberg quản lý file; không sửa tay
 │   ├── silver_hotel/               Bảng chi tiết theo miền khách sạn
 │   ├── silver_entertainment/       Bảng chi tiết theo miền giải trí
 │   ├── silver_external/            Phiên bản chứng từ, replay và đối soát
-│   └── gold/                       Mart BI được kiểm chứng
-├── quarantine/<batch>/            Bản ghi lỗi và lý do
+│   └── gold_b_<fingerprint>/       Ứng viên mart BI theo phiên bản
+├── quarantine/<run_id>/           Bản ghi lỗi và lý do
 └── manifests/                      Liên kết raw, snapshot, chất lượng, publication
 
 Dịch vụ metadata bên cạnh storage root
@@ -93,7 +94,7 @@ Vùng tạm riêng
 └── scratch/                        Spark spill/cache và dữ liệu tạm có vòng đời rõ
 ```
 
-Các tên namespace dự kiến là `ce.silver_hotel`, `ce.silver_entertainment`, `ce.silver_external`, `ce.gold`. Mỗi bảng Iceberg có file dữ liệu và metadata do Iceberg quản lý; không coi cây thư mục minh họa là layout file bắt buộc của Iceberg. Namespace và location chính xác được chốt trong thiết kế vật lý tiếp theo.
+Các namespace đã dùng là `ce.silver_hotel`, `ce.silver_entertainment`, `ce.silver_external` và `ce.gold_b_<fingerprint>`. Gold dùng namespace theo phiên bản để không overwrite ứng viên đã công bố; publication ghi đầy đủ tên bảng và snapshot. Mỗi bảng Iceberg có file dữ liệu và metadata do Iceberg quản lý; không coi cây thư mục minh họa là layout file bắt buộc của Iceberg. Schema/count/hash/location logic của từng bảng có trong manifest Silver/Gold của lần chạy.
 
 PostgreSQL catalog/control chỉ lưu metadata vận hành, không chứa một bản sao thứ ba của các giao dịch. Raw có manifest/catalog cho file; các bảng Silver/Gold được đăng ký trong JDBC catalog. Catalog không biến file raw tùy ý thành bảng Iceberg và không cấp tính giao dịch cho raw.
 
@@ -141,31 +142,31 @@ Tách ba nhóm đo. Thứ nhất, benchmark truy vấn BI trên cùng grain, d�
 
 Hai phương án có thể dùng chung fixture raw bất biến trong phòng thử nghiệm. Nếu tái sử dụng file thay vì sao chép, phải ghi nhận rõ trong cách đo dung lượng; không tính chi phí lưu hai bản thử nghiệm thành chi phí bắt buộc của một phương án độc lập. Tham chiếu KPI tiếp tục đọc raw độc lập, không dùng Silver/Gold do chính pipeline tạo ra làm đáp án.
 
-## Khoảng cách giữa thiết kế và triển khai hiện có
+## Trạng thái triển khai
 
-| Thành phần | Hiện có | Điều chỉnh cần thực hiện |
+| Thành phần | Runtime lịch sử giữ lại | B độc lập |
 |---|---|---|
-| Storage | `Project/lake/v2` và volume `analytics_data` tách nhau | Chuẩn bị storage root B thống nhất; giữ bản cũ để đối chiếu trong migration |
-| Catalog | JSON/Hive cho lake; JDBC cho Gold Iceberg | Bổ sung contract/namespace/catalog cho Silver; liên kết manifest raw với snapshot |
-| Reader nguồn | `read_sources` và đọc standardized Parquet | Thêm reader Silver ghim snapshot, giữ reader raw độc lập cho kiểm chứng |
-| Dimension/fact launcher | Có đường chạy cùng Oracle và Iceberg | Tách adapter A/B và điều phối để B chạy khi Oracle dừng |
-| Publication | Đối chiếu và công bố hai nhánh trong runtime chung | Publication riêng cho từng phương án; harness đối chiếu ở ngoài |
-| BI | CSV/PBIP và web khóa publication lịch sử | Chuyển phiên bản nguồn và kiểm chứng lại sau nghiệm thu B |
-| Bằng chứng | Báo cáo v1 đã chốt | Lưu báo cáo B mới, không ghi đè hoặc đổi nhãn bằng chứng cũ |
+| Storage | `Project/lake/v2` và volume `analytics_data` tách nhau | Raw, Silver, Gold, quarantine và manifest trong một volume B |
+| Catalog | JSON/Hive cho lake; JDBC cho Gold Iceberg | Catalog file raw; JDBC catalog Silver/Gold và control PostgreSQL riêng |
+| Reader nguồn | `read_sources` đọc raw nghiệp vụ; standardized Parquet cho external | Gold đọc Silver ghim snapshot; raw chỉ là đầu vào Silver và tham chiếu kiểm chứng |
+| Dimension/fact launcher | Có đường chạy cùng Oracle và Iceberg | Launcher B chỉ dùng Spark + metadata; không có Oracle driver, secret hoặc network alias |
+| Publication | Coordinator cũ công bố hai nhánh trong runtime chung | B có coordinator/reader riêng; kiểm A qua bằng chứng Oracle lịch sử |
+| BI | CSV/PBIP và web khóa publication lịch sử | Chưa đổi nguồn; cần xuất và kiểm DAX/UI lại theo publication B |
+| Bằng chứng | Báo cáo v1 đã chốt | Báo cáo mới ở `Project/reports/lakehouse-b`, giữ nguyên báo cáo cũ |
 
 Chỉ đổi mount path hoặc gom thư mục không hoàn tất migration. Không sửa location của bảng Iceberg hoặc chuyển file thủ công trong khi catalog vẫn tham chiếu location cũ. Nếu chọn import file Parquet không ghi lại, phải xác minh schema, partition và quyền sở hữu/vòng đời file; nếu không, dùng nạp lại có kiểm chứng và đo chi phí migration riêng.
 
-## Trình tự triển khai tiếp theo
+## Các mốc triển khai và phần tiếp theo
 
 1. Chốt schema/contract Silver, namespace, storage location và manifest snapshot; cập nhật source-to-target mapping cho B.
 2. Dựng runtime B độc lập cùng catalog/control và vùng lưu trữ mới, không đổi runtime lịch sử.
 3. Nạp raw → Silver; kiểm row count, khóa, giá trị tiền/lượng, NULL, replay/revision, quarantine và lineage với nguồn.
 4. Tách source reader và target adapter; chạy dimension/fact B từ Silver, giữ mô hình Gold và quy tắc nghiệp vụ đã chốt.
 5. Triển khai publication/reader B, kiểm failure giữa các lần commit bảng, retry, reader pinning và PARTIAL.
-6. Chạy đối chứng 47 KPI, slices và fixtures bằng raw độc lập; kiểm thêm B hoạt động khi Oracle dừng và Silver truy vấn được trước Gold.
+6. Chạy đối chứng 47 KPI, slices và fixtures bằng raw độc lập; kiểm thêm B hoạt động trong mạng riêng không có dịch vụ/alias Oracle và Silver truy vấn được trước Gold. Cấu hình B không kết nối Oracle; không cần dừng runtime Oracle lịch sử để chứng minh sự độc lập này.
 7. Cập nhật Power BI/web theo publication mới sau kiểm chứng; mới bắt đầu benchmark kiến trúc.
 
-Tài liệu này chốt hướng kiến trúc, chưa cấp tên bảng/cột Silver cuối cùng và chưa thay thế DDL đang chạy. Mốc hoàn thành migration cần có kiểm chứng mới cho các bước trên.
+Mã B và runbook đã triển khai các mốc 1–6 cho initial batch và retry; bằng chứng mới ghi riêng phạm vi đã kiểm tra. Mốc 7 chưa thay publication trên BI. DDL Gold nghiệp vụ giữ nguyên, còn schema và lineage Silver được triển khai từ catalog nguồn và mapping, lưu trong manifest từng bảng. Chưa có CDC/incremental production hoặc benchmark kết luận phương án nào nhanh hơn.
 
 ## Cơ sở tham khảo
 
