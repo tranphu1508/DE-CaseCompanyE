@@ -1,0 +1,27 @@
+{
+  "checked_on": "2026-10-14",
+  "deployment": {
+    "id": "appgdep_6acf7dc4cbec81919f37f5a7e380c9db",
+    "project_id": "appgprj_6acf6f5148c88191ba9718daf9ce6f83",
+    "title": "CompanyE | Data Observatory",
+    "version_id": "appgprj_6acf6f5148c88191ba9718daf9ce6f83~appgver_415fe5d0aba08191ac02dc8471fd987b",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://companye-data-observatory.giaphuwork1508.chatgpt.site",
+    "has_mcp": false,
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6acf6f5148c88191ba9718daf9ce6f83",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-10-14T13:04:20.395675+00:00"
+  },
+  "source_commit": "845da8134d5d24b05e23ba43233fc044cb6eff4b",
+  "repository_url": "https://github.com/tranphu1508/DE-CaseCompanyE",
+  "browser_check": {
+    "visible_link": "Mã nguồn ↗",
+    "visible": true,
+    "href": "https://github.com/tranphu1508/DE-CaseCompanyE"
+  },
+  "static_checks": 3139,
+  "metric_payload_unchanged": true
+}
