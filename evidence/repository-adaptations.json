@@ -16,7 +16,7 @@
     "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
   },
   "Project/web/companye-demo/README.md": {
-    "sha256": "4a35e9afeb7c3dccb687fa86de5ff496294d5f71d1d755ae00f9898eff4d63df",
-    "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
+    "reason": "2026-10-14: document GitHub Pages hosting, scoped deployment, verification, and indexing limitations; preserve historical Sites evidence.",
+    "sha256": "d22494f7d889434568d35cf3ee644a4085946a1a4fdf14440bac3c4a58a5fe27"
   }
 }

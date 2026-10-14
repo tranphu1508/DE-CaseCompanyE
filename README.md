@@ -6,7 +6,7 @@ Project đi từ hai cơ sở dữ liệu nghiệp vụ và chứng từ nhà cu
 
 **Dữ liệu hoàn toàn tự sinh.** Các tên thương hiệu trong case chỉ phục vụ giả định mô phỏng; không mô tả quan hệ đối tác hay hoạt động kinh doanh thực tế. Đây là prototype chạy local, chưa phải hệ thống vận hành của một tập đoàn thật.
 
-[Xem web demo](https://companye-data-observatory.giaphuwork1508.chatgpt.site/) · [Bản đồ tài liệu](docs/01-document-map.md) · [Tái lập nền tảng](docs/02-reproduce-platform.md) · [ETL và KPI](docs/03-analytics-and-validation.md) · [Bằng chứng và giới hạn](docs/04-evidence-and-limitations.md)
+[Xem web demo](https://tranphu1508.github.io/DE-CaseCompanyE/) · [Bản đồ tài liệu](docs/01-document-map.md) · [Tái lập nền tảng](docs/02-reproduce-platform.md) · [ETL và KPI](docs/03-analytics-and-validation.md) · [Bằng chứng và giới hạn](docs/04-evidence-and-limitations.md)
 
 ![Dashboard Power BI CompanyE](Project/reports/powerbi/dashboard/ui/overview.png)
 

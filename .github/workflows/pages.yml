@@ -1,0 +1,48 @@
+name: Publish CompanyE web demo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Project/web/companye-demo/**'
+      - 'Project/reports/semantic/**'
+      - 'Project/reports/powerbi/dashboard/**'
+      - 'Project/config/kpi_contract_v1.json'
+      - 'Project/config/generation_v2.json'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check JavaScript syntax
+        run: node --check Project/web/companye-demo/dist/app.js
+      - name: Verify all exported KPI components against committed evidence
+        run: python3 -X utf8 Project/web/companye-demo/verify.py
+      - uses: actions/configure-pages@v5
+      - name: Upload only the static website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: Project/web/companye-demo/dist
+  deploy:
+    needs: verify
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
