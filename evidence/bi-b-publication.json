@@ -1,0 +1,13 @@
+{
+  "status": "DEPLOYED_AND_BROWSER_VERIFIED",
+  "date": "2026-10-15",
+  "url": "https://tranphu1508.github.io/DE-CaseCompanyE/",
+  "commit": "aa62930cddf99d4927a8a0f92d1255a1cad09826",
+  "workflow_run": "https://github.com/tranphu1508/DE-CaseCompanyE/actions/runs/38753332317",
+  "workflow_conclusion": "success",
+  "observed_default_engine": "iceberg",
+  "observed_publication": "b_5531e032ac7d45b6eb0b",
+  "screenshot": "evidence/ui/companye-b-web-public.png",
+  "screenshot_sha256": "690b3c0078058f8b54859aeddffb7dd90affdd69f84c8f06d618475150c630dc",
+  "note": "Public HTTP data.json and browser context both matched independent B; Oracle remains historical reference."
+}

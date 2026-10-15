@@ -2,7 +2,7 @@
   "status": "PASSED",
   "copied_file_checksums": 1209,
   "python_files_parsed": 199,
-  "files_scanned": 1534,
+  "files_scanned": 1536,
   "errors": [],
   "scope": "Offline assembly integrity only; historical integration results are retained separately."
 }
