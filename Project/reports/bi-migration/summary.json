@@ -1,0 +1,32 @@
+{
+  "status": "PASSED_B_BI_MIGRATION",
+  "publication_id": "b_5531e032ac7d45b6eb0b",
+  "source_batch_id": "v2_20261014T124040450684Z",
+  "historical_oracle_publication": "pub_3f41f8fafa4c913187af2cc3",
+  "date": "2026-10-15",
+  "model_sha256": "3ec16dad4427297cf8ffc473d9a1d3074f048cb9d81037394e815fdba2c46f14",
+  "script_sha256": {
+    "scripts\\migrate-bi.py": "eb082f5fc85e4cd89a9fbccc2031274560a9ef2bd180803e15f4d3e09048308b",
+    "scripts\\refresh-bi-b.ps1": "fde5b3a4e29d78abb8ac04124e9df4c42993e7c02d5a27713436d01e8b244dc8",
+    "Project\\src\\bi_migration\\export_b.py": "130050b9fc302a4963c47b51d58e70a66ab415476a71f0f0b8ecb25ce09914da"
+  },
+  "reports": {
+    "export.json": "abff69bc2788b2c72df1345dacd86a13b26d6672d0cd3dd903dd9ff7608f2a6d",
+    "build.json": "2eba535b4657c040abd9fa2e03d082dd23a661d168e41255e8947e2a0ba656d3",
+    "desktop-refresh.json": "b66c39b14df2b2b7b2c1e06cea08cc8d26084626db21e63c51da2a4fc7b10a89",
+    "dax-verification.json": "dbec1b050f5109d2c096e12f527b5fe9a63ede8a20505d36644f021d91a3dfe7",
+    "chart-verification.json": "47e9829b2f6bd89935dbffbe2d714394e57efd69c14ba05ea1fa7ae1ead0b61c",
+    "acceptance-verification.json": "aa2f2825de152ec1c217bb19a65e70d3869f4113c7529dacc0b6a705e3f065a6",
+    "model-contract-verification.json": "f7d7143cfda9473824ebbf07b07eb9496aee43cb05468dd0fc3814248e2d64f8",
+    "static-validation.json": "5d11bfc31da870ccc11dde61fe0a965d6791119532b72337f89d7cfccf8a25e2",
+    "ui-verification.json": "1d34816800c73a693c4954caa3a01827fc417b875c46b142f5905802aff21536",
+    "web-ui-verification.json": "4c741113e1f92464fe88e0575a7544a34b61c8d7eb8f2b82f77e561fc16e7634"
+  },
+  "limitations": [
+    "Oracle comparison is historical, not a new Oracle execution.",
+    "Power BI imports CSV; not DirectQuery.",
+    "101 Desktop contexts tested; two weather and one variable-assessment context excluded explicitly.",
+    "Representative Desktop visual checks, not all combinations.",
+    "No controlled performance benchmark completed."
+  ]
+}

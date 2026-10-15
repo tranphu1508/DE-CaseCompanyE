@@ -99,11 +99,14 @@ DE-CaseCompanyE/
     tests/ + testing/      Pytest, Hypothesis, Great Expectations, Spark
     reports/               Bằng chứng các lần chạy trước, code snapshot, SQL
     powerbi/               PBIP/PBIR và semantic model; không kèm cache/import CSV
+    powerbi-b/             Báo cáo Lakehouse B độc lập; dimension/fact dùng khóa B
     web/companye-demo/     Mã web, snapshot đã đối soát và kiểm tra
   .work/                   Môi trường sinh lại trên máy; Git bỏ qua
 ```
 
 ## Trạng thái bàn giao
+
+Power BI B và web đã chuyển sang publication `b_5531e032ac7d45b6eb0b`; Oracle `pub_3f41f8fafa4c913187af2cc3` được giữ làm mốc đối chứng lịch sử. B đạt 574 lượt kiểm KPI DAX và 232 giá trị biểu đồ/thẻ số. Xem [cách dựng lại, kiểm thử và giới hạn BI](docs/07-bi-migration.md); CSV và cache vẫn chỉ lưu local.
 
 Đã có mã nguồn và bằng chứng cho sinh dữ liệu, lake/catalog, hai nhánh phân tích, publication, 47 KPI, Power BI và web demo. V2 có 41 bảng nguồn với 591.242 dòng; kết quả ETL đã lưu có 771.564 dòng logic trên mỗi nhánh.
 

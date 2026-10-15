@@ -20,7 +20,7 @@ function fmt(v,m,compact=false){
  if(compact&&m.unit==='VND')return (n/1e9).toLocaleString('vi-VN',{minimumFractionDigits:2,maximumFractionDigits:2});
  return n.toLocaleString('vi-VN',{maximumFractionDigits:2});
 }
-function quality(v){if(!v)return 'Chưa có kết quả cho phạm vi này';if(v.reasons.includes('SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY'))return 'Chọn một mặt hàng';if(v.reasons.includes('ZERO_DENOMINATOR'))return 'Mẫu số bằng 0';if(v.quality==='NOT_APPLICABLE')return 'Không áp dụng';if(v.quality==='UNAVAILABLE')return 'Không có dữ liệu';return v.quality}
+function quality(v){if(!v)return 'Chưa có kết quả cho phạm vi này';if(v.reasons.includes('SELECT_ONE_ITEM_FOR_COMPATIBLE_QUANTITY'))return 'Chọn một mặt hàng';if(v.quality==='NOT_APPLICABLE')return 'Không áp dụng';if(v.quality==='UNAVAILABLE')return 'Không có dữ liệu';if(v.quality==='PARTIAL')return 'PARTIAL';if(v.reasons.includes('ZERO_DENOMINATOR'))return 'Mẫu số bằng 0';return v.quality}
 function route(){
  const wanted=location.hash.slice(1),id=['overview','dashboard','generation','architecture','quality','reproduce'].includes(wanted)?wanted:'overview';
  document.querySelectorAll('.page').forEach(p=>p.hidden=p.id!==id);
@@ -36,9 +36,11 @@ function setGroup(){
  render();
 }
 function render(){
- current=data.cases.find(c=>c.id===$('scenario').value);
+ const selected=data.cases.find(c=>c.id===$('scenario').value),engine=$('engine').value,source=data.engines[engine];
+ current={...selected,metrics:selected.metrics_by_engine[engine]};
  const group=data.groups.find(g=>g.id===$('group').value);
- $('context').textContent=contextLabel(current)+' · '+($('engine').value==='oracle'?'Oracle':'Iceberg')+' · Kết quả hai nhánh khớp · 12 cảnh báo đối soát nguồn ngoài';
+ $('context').textContent=contextLabel(current)+' · '+source.label+' · '+source.publication+' · '+(current.engines_equal?'Khớp mốc Oracle đối chứng':'Chưa khớp đối chứng')+' · '+source.external_warnings+' cảnh báo đối soát nguồn ngoài';
+ document.querySelectorAll('.publication').forEach(e=>e.textContent=source.label+' | '+source.publication);
  const available=group.metrics.filter(m=>Object.hasOwn(current.metrics,m.id));
  $('scores').innerHTML=available.slice(0,4).map(m=>{const v=current.metrics[m.id];return '<article class="score"><small>'+esc(m.id)+'</small><h3>'+esc(m.name)+'</h3><strong>'+fmt(v.value,m,true)+'</strong><em>'+esc(m.unit==='VND'?'tỷ đồng':m.unit.split(';')[0])+' · '+esc(quality(v))+'</em></article>'}).join('');
  $('metric-table').innerHTML='<table><thead><tr><th>Chỉ tiêu</th><th>Giá trị</th><th>Đơn vị</th><th>Trạng thái</th></tr></thead><tbody>'+group.metrics.map(m=>{const v=current.metrics[m.id];return '<tr><td><strong>'+esc(m.id)+' · '+esc(m.name)+'</strong><details><summary>Công thức</summary><small>'+esc(m.formula)+'</small></details></td><td>'+fmt(v?.value,m)+'</td><td>'+esc(m.unit)+'</td><td><span class="pill '+(!v||v.quality!=='COMPLETE'?'pending':'')+'">'+esc(quality(v))+'</span></td></tr>'}).join('')+'</tbody></table>';
@@ -73,7 +75,7 @@ function renderChart(){
 }
 function download(){
  const g=data.groups.find(g=>g.id===$('group').value);
- const rows=[['publication','engine','context','kpi','name','value','unit','quality'],...g.metrics.map(m=>[data.publication,$('engine').value,contextLabel(current),m.id,m.name,current.metrics[m.id]?.value??'',m.unit,quality(current.metrics[m.id])])];
+ const rows=[['publication','engine','context','kpi','name','value','unit','quality'],...g.metrics.map(m=>[data.engines[$('engine').value].publication,$('engine').value,contextLabel(current),m.id,m.name,current.metrics[m.id]?.value??'',m.unit,quality(current.metrics[m.id])])];
  const csv='\uFEFF'+rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\r\n');
  const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='CompanyE-'+g.id+'-'+current.id+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
@@ -83,15 +85,16 @@ async function start(){
   const [dr,cr]=await Promise.all([fetch('data.json'),fetch('config.json')]);if(!dr.ok||!cr.ok)throw Error('Không tải được dữ liệu');
   data=await dr.json();const config=await cr.json();
   if(config.repositoryUrl&&/^https:\/\//.test(config.repositoryUrl)){$('repo').href=config.repositoryUrl;$('repo').hidden=false}
-  document.querySelectorAll('.publication').forEach(e=>e.textContent=data.publication);
+  $('engine').value=data.default_engine;
   $('group').innerHTML=data.groups.map(g=>'<option value="'+g.id+'">'+esc(g.id+' · '+g.name)+'</option>').join('');
   $('seeds').textContent=JSON.stringify(data.seeds,null,2);
-  $('provenance').textContent=JSON.stringify({publication:data.publication,checked_at:data.checked_at,source_sha256:data.provenance},null,2);
-  $('test-stats').innerHTML=[[47,'KPI nghiệp vụ'],[96,'Phạm vi SQL'],[1148,'Phép đối chiếu DAX'],[457,'Phép đối chiếu biểu đồ']].map(([n,t])=>'<article><strong>'+n.toLocaleString('vi-VN')+'</strong><span>'+t+'</span></article>').join('');
+  $('provenance').textContent=JSON.stringify({engines:data.engines,limitations:data.limitations,source_sha256:data.provenance},null,2);
+  const verifiedB=data.engines.iceberg.verification;
+  $('test-stats').innerHTML=[[47,'KPI nghiệp vụ'],[96,'Phạm vi SQL B'],[verifiedB.dax_checks,'Phép đối chiếu DAX B'],[verifiedB.chart_checks,'Phép đối chiếu biểu đồ B']].map(([n,t])=>'<article><strong>'+n.toLocaleString('vi-VN')+'</strong><span>'+t+'</span></article>').join('');
   for(const [id,label] of Object.entries({group:'Nghiệp vụ',scenario:'Phạm vi đã kiểm chứng',engine:'Nguồn kết quả','trend-metric':'Chỉ tiêu'}))$(id).setAttribute('aria-label',label);
   setGroup();
   $('group').addEventListener('change',setGroup);$('scenario').addEventListener('change',render);$('engine').addEventListener('change',render);$('trend-metric').addEventListener('change',renderChart);
-  $('reset').addEventListener('click',()=>{$('group').value='B01';$('engine').value='oracle';setGroup()});
+  $('reset').addEventListener('click',()=>{$('group').value='B01';$('engine').value=data.default_engine;setGroup()});
   $('download').addEventListener('click',download);
  }catch(e){$('error').textContent='Không tải được bản dữ liệu demo. Vui lòng tải lại trang. '+e.message;$('error').hidden=false}
 }

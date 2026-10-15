@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "id": "identity",
+      "query": "EVALUATE ROW(\"publication\",[Publication],\"engines\",COUNTROWS(Engine),\"rows\",COUNTROWS(F01))",
+      "expected": {
+        "publication": "b_5531e032ac7d45b6eb0b | Import cố định; không phải dữ liệu trực tiếp",
+        "engines": 1,
+        "rows": 32000
+      }
+    },
+    {
+      "id": "mixed_kpi_total",
+      "query": "EVALUATE ROW(\"value\",[Giá trị KPI],\"display\",[Giá trị hiển thị],\"state\",[Trạng thái KPI])",
+      "expected": {
+        "value": null,
+        "display": null,
+        "state": "Không cộng KPI khác đơn vị"
+      }
+    },
+    {
+      "id": "qa/COMPLETE",
+      "query": "EVALUATE CALCULATETABLE(ROW(\"value\",[QA giá trị],\"warning\",[QA cảnh báo]),TREATAS({\"COMPLETE\"},QA[scenario]))",
+      "expected": {
+        "value": 0.4
+      },
+      "warning_prefix": "KIỂM THỬ:"
+    },
+    {
+      "id": "qa/PARTIAL",
+      "query": "EVALUATE CALCULATETABLE(ROW(\"value\",[QA giá trị],\"warning\",[QA cảnh báo]),TREATAS({\"PARTIAL\"},QA[scenario]))",
+      "expected": {
+        "value": 0.375
+      },
+      "warning_prefix": "KIỂM THỬ:"
+    },
+    {
+      "id": "qa/UNAVAILABLE",
+      "query": "EVALUATE CALCULATETABLE(ROW(\"value\",[QA giá trị],\"warning\",[QA cảnh báo]),TREATAS({\"UNAVAILABLE\"},QA[scenario]))",
+      "expected": {
+        "value": null
+      },
+      "warning_prefix": "KIỂM THỬ:"
+    },
+    {
+      "id": "qa/ZERO_DENOMINATOR",
+      "query": "EVALUATE CALCULATETABLE(ROW(\"value\",[QA giá trị],\"warning\",[QA cảnh báo]),TREATAS({\"ZERO_DENOMINATOR\"},QA[scenario]))",
+      "expected": {
+        "value": null
+      },
+      "warning_prefix": "KIỂM THỬ:"
+    }
+  ]
+}

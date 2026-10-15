@@ -1,0 +1,1866 @@
+{
+  "status": "PASSED",
+  "queries": 32,
+  "value_checks": 232,
+  "failures": [],
+  "checks": [
+    {
+      "case": "month/iceberg/2024-01",
+      "metric": "B01.03",
+      "actual": 0.3604838709677419,
+      "expected": "0.3604838709677419354838709677",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-01",
+      "metric": "B02.06",
+      "actual": 3.495785045,
+      "expected": "3.495785045",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-01",
+      "metric": "B03.02",
+      "actual": 0.6620616365568545,
+      "expected": "0.6620616365568544102019128587",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-01",
+      "metric": "B04.04",
+      "actual": 0.760597,
+      "expected": "0.760597",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-01",
+      "metric": "B05.03",
+      "actual": 0.009635701275045537,
+      "expected": "0.009635701275045537340619307832",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-01",
+      "metric": "B05.06",
+      "actual": 0.10026881720430107,
+      "expected": "0.1002688172043010752688172043",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-01",
+      "metric": "B06.07",
+      "actual": 0.6547619047619048,
+      "expected": "0.6547619047619047619047619048",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-01",
+      "metric": "B07.02",
+      "actual": 309,
+      "expected": "309.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-01",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-02",
+      "metric": "B01.03",
+      "actual": 0.36149425287356324,
+      "expected": "0.3614942528735632183908045977",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-02",
+      "metric": "B02.06",
+      "actual": 3.372710308,
+      "expected": "3.372710308",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-02",
+      "metric": "B03.02",
+      "actual": 0.6297093649085038,
+      "expected": "0.6297093649085037674919268030",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-02",
+      "metric": "B04.04",
+      "actual": 0.720052,
+      "expected": "0.720052",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-02",
+      "metric": "B05.03",
+      "actual": 0.008869676593019533,
+      "expected": "0.008869676593019532500800512328",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-02",
+      "metric": "B05.06",
+      "actual": 0.0882183908045977,
+      "expected": "0.08821839080459770114942528736",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-02",
+      "metric": "B06.07",
+      "actual": 0.6440677966101694,
+      "expected": "0.6440677966101694915254237288",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-02",
+      "metric": "B07.02",
+      "actual": 589,
+      "expected": "589.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-02",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-03",
+      "metric": "B01.03",
+      "actual": 0.43738140417457305,
+      "expected": "0.4373814041745730550284629981",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-03",
+      "metric": "B02.06",
+      "actual": 4.323130025,
+      "expected": "4.323130025",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-03",
+      "metric": "B03.02",
+      "actual": 0.6599832915622389,
+      "expected": "0.6599832915622389306599832916",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-03",
+      "metric": "B04.04",
+      "actual": 0.856923,
+      "expected": "0.856923",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-03",
+      "metric": "B05.03",
+      "actual": 0.011136220966729442,
+      "expected": "0.01113622096672944130571249215",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-03",
+      "metric": "B05.06",
+      "actual": 0.11344086021505376,
+      "expected": "0.1134408602150537634408602151",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-03",
+      "metric": "B06.07",
+      "actual": 0.6438492063492064,
+      "expected": "0.6438492063492063492063492063",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-03",
+      "metric": "B07.02",
+      "actual": 906,
+      "expected": "906.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-03",
+      "metric": "B08.04",
+      "actual": 0.008333333333333333,
+      "expected": "0.008333333333333333333333333333",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-04",
+      "metric": "B01.03",
+      "actual": 0.4526685393258427,
+      "expected": "0.4526685393258426966292134831",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-04",
+      "metric": "B02.06",
+      "actual": 4.394935851,
+      "expected": "4.394935851",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-04",
+      "metric": "B03.02",
+      "actual": 0.6418685121107266,
+      "expected": "0.6418685121107266435986159170",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-04",
+      "metric": "B04.04",
+      "actual": 0.888893,
+      "expected": "0.888893",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-04",
+      "metric": "B05.03",
+      "actual": 0.01084493964716806,
+      "expected": "0.01084493964716805942432683380",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-04",
+      "metric": "B05.06",
+      "actual": 0.11166666666666666,
+      "expected": "0.1116666666666666666666666667",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-04",
+      "metric": "B06.07",
+      "actual": 0.6475409836065574,
+      "expected": "0.6475409836065573770491803279",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-04",
+      "metric": "B07.02",
+      "actual": 1216,
+      "expected": "1216.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-04",
+      "metric": "B08.04",
+      "actual": 0.011111111111111112,
+      "expected": "0.01111111111111111111111111111",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-05",
+      "metric": "B01.03",
+      "actual": 0.4411884411884412,
+      "expected": "0.4411884411884411884411884412",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-05",
+      "metric": "B02.06",
+      "actual": 4.501944477,
+      "expected": "4.501944477",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-05",
+      "metric": "B03.02",
+      "actual": 0.6403292181069958,
+      "expected": "0.6403292181069958847736625514",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-05",
+      "metric": "B04.04",
+      "actual": 0.900938,
+      "expected": "0.900938",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-05",
+      "metric": "B05.03",
+      "actual": 0.010263396911898275,
+      "expected": "0.01026339691189827429609445958",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-05",
+      "metric": "B05.06",
+      "actual": 0.1174731182795699,
+      "expected": "0.1174731182795698924731182796",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-05",
+      "metric": "B06.07",
+      "actual": 0.6458333333333334,
+      "expected": "0.6458333333333333333333333333",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-05",
+      "metric": "B07.02",
+      "actual": 1530,
+      "expected": "1530.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-05",
+      "metric": "B08.04",
+      "actual": 0.009274193548387096,
+      "expected": "0.009274193548387096774193548387",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-06",
+      "metric": "B01.03",
+      "actual": 0.4419259467830494,
+      "expected": "0.4419259467830494157398282416",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-06",
+      "metric": "B02.06",
+      "actual": 5.023617805,
+      "expected": "5.023617805",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-06",
+      "metric": "B03.02",
+      "actual": 0.6467013888888888,
+      "expected": "0.6467013888888888888888888889",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-06",
+      "metric": "B04.04",
+      "actual": 0.869345,
+      "expected": "0.869345",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-06",
+      "metric": "B05.03",
+      "actual": 0.011150558842866535,
+      "expected": "0.01115055884286653517422748192",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-06",
+      "metric": "B05.06",
+      "actual": 0.1367283950617284,
+      "expected": "0.1367283950617283950617283951",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-06",
+      "metric": "B06.07",
+      "actual": 0.6485655737704918,
+      "expected": "0.6485655737704918032786885246",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-06",
+      "metric": "B07.02",
+      "actual": 1825,
+      "expected": "1825.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-06",
+      "metric": "B08.04",
+      "actual": 0.013472222222222222,
+      "expected": "0.01347222222222222222222222222",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-07",
+      "metric": "B01.03",
+      "actual": 0.4736484650910079,
+      "expected": "0.4736484650910078782939418636",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-07",
+      "metric": "B02.06",
+      "actual": 5.755637452,
+      "expected": "5.755637452",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-07",
+      "metric": "B03.02",
+      "actual": 0.6575133485888635,
+      "expected": "0.6575133485888634630053394355",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-07",
+      "metric": "B04.04",
+      "actual": 0.921592,
+      "expected": "0.921592",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-07",
+      "metric": "B05.03",
+      "actual": 0.011686562595653505,
+      "expected": "0.01168656259565350474441383532",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-07",
+      "metric": "B05.06",
+      "actual": 0.11854838709677419,
+      "expected": "0.1185483870967741935483870968",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-07",
+      "metric": "B06.07",
+      "actual": 0.6587301587301587,
+      "expected": "0.6587301587301587301587301587",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-07",
+      "metric": "B07.02",
+      "actual": 1810,
+      "expected": "1810.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-07",
+      "metric": "B08.04",
+      "actual": 0.010483870967741936,
+      "expected": "0.01048387096774193548387096774",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-08",
+      "metric": "B01.03",
+      "actual": 0.4532520325203252,
+      "expected": "0.4532520325203252032520325203",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-08",
+      "metric": "B02.06",
+      "actual": 4.59484004,
+      "expected": "4.59484004",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-08",
+      "metric": "B03.02",
+      "actual": 0.6724854530340815,
+      "expected": "0.6724854530340814630091438071",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-08",
+      "metric": "B04.04",
+      "actual": 0.924794,
+      "expected": "0.924794",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-08",
+      "metric": "B05.03",
+      "actual": 0.011428571428571429,
+      "expected": "0.01142857142857142857142857143",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-08",
+      "metric": "B05.06",
+      "actual": 0.12231182795698925,
+      "expected": "0.1223118279569892473118279570",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-08",
+      "metric": "B06.07",
+      "actual": 0.6398809523809523,
+      "expected": "0.6398809523809523809523809524",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-08",
+      "metric": "B07.02",
+      "actual": 1815,
+      "expected": "1815.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-08",
+      "metric": "B08.04",
+      "actual": 0.008064516129032258,
+      "expected": "0.008064516129032258064516129032",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-09",
+      "metric": "B01.03",
+      "actual": 0.3832961517010597,
+      "expected": "0.3832961517010596765197992192",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-09",
+      "metric": "B02.06",
+      "actual": 3.8421851,
+      "expected": "3.8421851",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-09",
+      "metric": "B03.02",
+      "actual": 0.6362735381565907,
+      "expected": "0.6362735381565906838453914767",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-09",
+      "metric": "B04.04",
+      "actual": 0.782689,
+      "expected": "0.782689",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-09",
+      "metric": "B05.03",
+      "actual": 0.009800065552277942,
+      "expected": "0.009800065552277941658472631924",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-09",
+      "metric": "B05.06",
+      "actual": 0.10305555555555555,
+      "expected": "0.1030555555555555555555555556",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-09",
+      "metric": "B06.07",
+      "actual": 0.6659836065573771,
+      "expected": "0.6659836065573770491803278689",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-09",
+      "metric": "B07.02",
+      "actual": 1800,
+      "expected": "1800.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-09",
+      "metric": "B08.04",
+      "actual": 0.0038888888888888888,
+      "expected": "0.003888888888888888888888888889",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-10",
+      "metric": "B01.03",
+      "actual": 0.38467741935483873,
+      "expected": "0.3846774193548387096774193548",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-10",
+      "metric": "B02.06",
+      "actual": 4.0127392,
+      "expected": "4.0127392",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-10",
+      "metric": "B03.02",
+      "actual": 0.6096618357487923,
+      "expected": "0.6096618357487922705314009662",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-10",
+      "metric": "B04.04",
+      "actual": 0.819342,
+      "expected": "0.819342",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-10",
+      "metric": "B05.03",
+      "actual": 0.009703703703703704,
+      "expected": "0.009703703703703703703703703704",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-10",
+      "metric": "B05.06",
+      "actual": 0.09543010752688172,
+      "expected": "0.09543010752688172043010752688",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-10",
+      "metric": "B06.07",
+      "actual": 0.6746031746031746,
+      "expected": "0.6746031746031746031746031746",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-10",
+      "metric": "B07.02",
+      "actual": 1793,
+      "expected": "1793.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-10",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-11",
+      "metric": "B01.03",
+      "actual": 0.43222222222222223,
+      "expected": "0.4322222222222222222222222222",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-11",
+      "metric": "B02.06",
+      "actual": 4.21971545,
+      "expected": "4.21971545",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-11",
+      "metric": "B03.02",
+      "actual": 0.6462093862815884,
+      "expected": "0.6462093862815884476534296029",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-11",
+      "metric": "B04.04",
+      "actual": 0.831703,
+      "expected": "0.831703",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-11",
+      "metric": "B05.03",
+      "actual": 0.010408035153797866,
+      "expected": "0.01040803515379786566227244193",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-11",
+      "metric": "B05.06",
+      "actual": 0.11166666666666666,
+      "expected": "0.1116666666666666666666666667",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-11",
+      "metric": "B06.07",
+      "actual": 0.6413934426229508,
+      "expected": "0.6413934426229508196721311475",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-11",
+      "metric": "B07.02",
+      "actual": 1782,
+      "expected": "1782.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-11",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-12",
+      "metric": "B01.03",
+      "actual": 0.46706989247311825,
+      "expected": "0.4670698924731182795698924731",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-12",
+      "metric": "B02.06",
+      "actual": 5.71766001,
+      "expected": "5.71766001",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-12",
+      "metric": "B03.02",
+      "actual": 0.6419354838709678,
+      "expected": "0.6419354838709677419354838710",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-12",
+      "metric": "B04.04",
+      "actual": 0.914312,
+      "expected": "0.914312",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-12",
+      "metric": "B05.03",
+      "actual": 0.010974930362116992,
+      "expected": "0.01097493036211699164345403900",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-12",
+      "metric": "B05.06",
+      "actual": 0.12123655913978494,
+      "expected": "0.1212365591397849462365591398",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-12",
+      "metric": "B06.07",
+      "actual": 0.62890625,
+      "expected": "0.62890625",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-12",
+      "metric": "B07.02",
+      "actual": 1775,
+      "expected": "1775.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2024-12",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-01",
+      "metric": "B01.03",
+      "actual": 0.37688172043010754,
+      "expected": "0.3768817204301075268817204301",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-01",
+      "metric": "B02.06",
+      "actual": 3.983432432,
+      "expected": "3.983432432",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-01",
+      "metric": "B03.02",
+      "actual": 0.6352261790182868,
+      "expected": "0.6352261790182868142444658325",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-01",
+      "metric": "B04.04",
+      "actual": 0.765665,
+      "expected": "0.765665",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-01",
+      "metric": "B05.03",
+      "actual": 0.009051490514905149,
+      "expected": "0.009051490514905149051490514905",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-01",
+      "metric": "B05.06",
+      "actual": 0.0989247311827957,
+      "expected": "0.09892473118279569892473118280",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-01",
+      "metric": "B06.07",
+      "actual": 0.6636904761904762,
+      "expected": "0.6636904761904761904761904762",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-01",
+      "metric": "B07.02",
+      "actual": 1779,
+      "expected": "1779.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-01",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-02",
+      "metric": "B01.03",
+      "actual": 0.3793154761904762,
+      "expected": "0.3793154761904761904761904762",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-02",
+      "metric": "B02.06",
+      "actual": 3.488942339,
+      "expected": "3.488942339",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-02",
+      "metric": "B03.02",
+      "actual": 0.6397058823529411,
+      "expected": "0.6397058823529411764705882353",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-02",
+      "metric": "B04.04",
+      "actual": 0.682119,
+      "expected": "0.682119",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-02",
+      "metric": "B05.03",
+      "actual": 0.00958922558922559,
+      "expected": "0.009589225589225589225589225589",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-02",
+      "metric": "B05.06",
+      "actual": 0.10208333333333333,
+      "expected": "0.1020833333333333333333333333",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-02",
+      "metric": "B06.07",
+      "actual": 0.6491228070175439,
+      "expected": "0.6491228070175438596491228070",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-02",
+      "metric": "B07.02",
+      "actual": 1800,
+      "expected": "1800.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-02",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-03",
+      "metric": "B01.03",
+      "actual": 0.4375933722667391,
+      "expected": "0.4375933722667391009099551813",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-03",
+      "metric": "B02.06",
+      "actual": 4.24183242,
+      "expected": "4.24183242",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-03",
+      "metric": "B03.02",
+      "actual": 0.6338273757628596,
+      "expected": "0.6338273757628596338273757629",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-03",
+      "metric": "B04.04",
+      "actual": 0.845308,
+      "expected": "0.845308",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-03",
+      "metric": "B05.03",
+      "actual": 0.010766823161189359,
+      "expected": "0.01076682316118935837245696401",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-03",
+      "metric": "B05.06",
+      "actual": 0.1196236559139785,
+      "expected": "0.1196236559139784946236559140",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-03",
+      "metric": "B06.07",
+      "actual": 0.6617063492063492,
+      "expected": "0.6617063492063492063492063492",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-03",
+      "metric": "B07.02",
+      "actual": 1803,
+      "expected": "1803.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-03",
+      "metric": "B08.04",
+      "actual": 0.010349462365591398,
+      "expected": "0.01034946236559139784946236559",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-04",
+      "metric": "B01.03",
+      "actual": 0.41988795518207284,
+      "expected": "0.4198879551820728291316526611",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-04",
+      "metric": "B02.06",
+      "actual": 4.09558613,
+      "expected": "4.09558613",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-04",
+      "metric": "B03.02",
+      "actual": 0.6378854625550661,
+      "expected": "0.6378854625550660792951541850",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-04",
+      "metric": "B04.04",
+      "actual": 0.865924,
+      "expected": "0.865924",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-04",
+      "metric": "B05.03",
+      "actual": 0.010849673202614379,
+      "expected": "0.01084967320261437908496732026",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-04",
+      "metric": "B05.06",
+      "actual": 0.10611111111111111,
+      "expected": "0.1061111111111111111111111111",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-04",
+      "metric": "B06.07",
+      "actual": 0.6659836065573771,
+      "expected": "0.6659836065573770491803278689",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-04",
+      "metric": "B07.02",
+      "actual": 1804,
+      "expected": "1804.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-04",
+      "metric": "B08.04",
+      "actual": 0.008333333333333333,
+      "expected": "0.008333333333333333333333333333",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-05",
+      "metric": "B01.03",
+      "actual": 0.4394843962008141,
+      "expected": "0.4394843962008141112618724559",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-05",
+      "metric": "B02.06",
+      "actual": 4.418682482,
+      "expected": "4.418682482",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-05",
+      "metric": "B03.02",
+      "actual": 0.6337209302325582,
+      "expected": "0.6337209302325581395348837209",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-05",
+      "metric": "B04.04",
+      "actual": 0.927276,
+      "expected": "0.927276",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-05",
+      "metric": "B05.03",
+      "actual": 0.011092643890427824,
+      "expected": "0.01109264389042782394582948600",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-05",
+      "metric": "B05.06",
+      "actual": 0.10725806451612903,
+      "expected": "0.1072580645161290322580645161",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-05",
+      "metric": "B06.07",
+      "actual": 0.6527777777777778,
+      "expected": "0.6527777777777777777777777778",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-05",
+      "metric": "B07.02",
+      "actual": 1805,
+      "expected": "1805.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-05",
+      "metric": "B08.04",
+      "actual": 0.009408602150537635,
+      "expected": "0.009408602150537634408602150538",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-06",
+      "metric": "B01.03",
+      "actual": 0.4625525946704067,
+      "expected": "0.4625525946704067321178120617",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-06",
+      "metric": "B02.06",
+      "actual": 5.203935767,
+      "expected": "5.203935767",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-06",
+      "metric": "B03.02",
+      "actual": 0.6452674897119342,
+      "expected": "0.6452674897119341563786008230",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-06",
+      "metric": "B04.04",
+      "actual": 0.933343,
+      "expected": "0.933343",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-06",
+      "metric": "B05.03",
+      "actual": 0.01198813056379822,
+      "expected": "0.01198813056379821958456973294",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-06",
+      "metric": "B05.06",
+      "actual": 0.13209876543209875,
+      "expected": "0.1320987654320987654320987654",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-06",
+      "metric": "B06.07",
+      "actual": 0.6424180327868853,
+      "expected": "0.6424180327868852459016393443",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-06",
+      "metric": "B07.02",
+      "actual": 1804,
+      "expected": "1804.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-06",
+      "metric": "B08.04",
+      "actual": 0.009722222222222222,
+      "expected": "0.009722222222222222222222222222",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-07",
+      "metric": "B01.03",
+      "actual": 0.43014107433532284,
+      "expected": "0.4301410743353228431904503527",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-07",
+      "metric": "B02.06",
+      "actual": 5.22397593,
+      "expected": "5.22397593",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-07",
+      "metric": "B03.02",
+      "actual": 0.6494057724957555,
+      "expected": "0.6494057724957555178268251273",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-07",
+      "metric": "B04.04",
+      "actual": 0.858442,
+      "expected": "0.858442",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-07",
+      "metric": "B05.03",
+      "actual": 0.010225885225885226,
+      "expected": "0.01022588522588522588522588523",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-07",
+      "metric": "B05.06",
+      "actual": 0.1043010752688172,
+      "expected": "0.1043010752688172043010752688",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-07",
+      "metric": "B06.07",
+      "actual": 0.6329365079365079,
+      "expected": "0.6329365079365079365079365079",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-07",
+      "metric": "B07.02",
+      "actual": 1806,
+      "expected": "1806.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-07",
+      "metric": "B08.04",
+      "actual": 0.00913978494623656,
+      "expected": "0.009139784946236559139784946237",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-08",
+      "metric": "B01.03",
+      "actual": 0.46282679738562094,
+      "expected": "0.4628267973856209150326797386",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-08",
+      "metric": "B02.06",
+      "actual": 4.649849094,
+      "expected": "4.649849094",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-08",
+      "metric": "B03.02",
+      "actual": 0.6580483736447039,
+      "expected": "0.6580483736447039199332777314",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-08",
+      "metric": "B04.04",
+      "actual": 0.907179,
+      "expected": "0.907179",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-08",
+      "metric": "B05.03",
+      "actual": 0.010969135802469136,
+      "expected": "0.01096913580246913580246913580",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-08",
+      "metric": "B05.06",
+      "actual": 0.1217741935483871,
+      "expected": "0.1217741935483870967741935484",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-08",
+      "metric": "B06.07",
+      "actual": 0.6597222222222222,
+      "expected": "0.6597222222222222222222222222",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-08",
+      "metric": "B07.02",
+      "actual": 1800,
+      "expected": "1800.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-08",
+      "metric": "B08.04",
+      "actual": 0.012903225806451613,
+      "expected": "0.01290322580645161290322580645",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-09",
+      "metric": "B01.03",
+      "actual": 0.3973158115476024,
+      "expected": "0.3973158115476024045854886062",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-09",
+      "metric": "B02.06",
+      "actual": 3.90080392,
+      "expected": "3.90080392",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-09",
+      "metric": "B03.02",
+      "actual": 0.6418786692759295,
+      "expected": "0.6418786692759295499021526419",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-09",
+      "metric": "B04.04",
+      "actual": 0.769509,
+      "expected": "0.769509",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-09",
+      "metric": "B05.03",
+      "actual": 0.00968915343915344,
+      "expected": "0.009689153439153439153439153439",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-09",
+      "metric": "B05.06",
+      "actual": 0.09777777777777778,
+      "expected": "0.09777777777777777777777777778",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-09",
+      "metric": "B06.07",
+      "actual": 0.6772540983606558,
+      "expected": "0.6772540983606557377049180328",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-09",
+      "metric": "B07.02",
+      "actual": 1797,
+      "expected": "1797.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-09",
+      "metric": "B08.04",
+      "actual": 0.006527777777777778,
+      "expected": "0.006527777777777777777777777778",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-10",
+      "metric": "B01.03",
+      "actual": 0.3907258064516129,
+      "expected": "0.3907258064516129032258064516",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-10",
+      "metric": "B02.06",
+      "actual": 4.19363239,
+      "expected": "4.19363239",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-10",
+      "metric": "B03.02",
+      "actual": 0.6477064220183486,
+      "expected": "0.6477064220183486238532110092",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-10",
+      "metric": "B04.04",
+      "actual": 0.823077,
+      "expected": "0.823077",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-10",
+      "metric": "B05.03",
+      "actual": 0.010301898537192655,
+      "expected": "0.01030189853719265483971366324",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-10",
+      "metric": "B05.06",
+      "actual": 0.1196236559139785,
+      "expected": "0.1196236559139784946236559140",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-10",
+      "metric": "B06.07",
+      "actual": 0.6656746031746031,
+      "expected": "0.6656746031746031746031746032",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-10",
+      "metric": "B07.02",
+      "actual": 1809,
+      "expected": "1809.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-10",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-11",
+      "metric": "B01.03",
+      "actual": 0.43930555555555556,
+      "expected": "0.4393055555555555555555555556",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-11",
+      "metric": "B02.06",
+      "actual": 4.23526328,
+      "expected": "4.23526328",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-11",
+      "metric": "B03.02",
+      "actual": 0.640107430617726,
+      "expected": "0.6401074306177260519247985676",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-11",
+      "metric": "B04.04",
+      "actual": 0.855312,
+      "expected": "0.855312",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-11",
+      "metric": "B05.03",
+      "actual": 0.010579029733959312,
+      "expected": "0.01057902973395931142410015649",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-11",
+      "metric": "B05.06",
+      "actual": 0.10527777777777778,
+      "expected": "0.1052777777777777777777777778",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-11",
+      "metric": "B06.07",
+      "actual": 0.6557377049180327,
+      "expected": "0.6557377049180327868852459016",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-11",
+      "metric": "B07.02",
+      "actual": 1816,
+      "expected": "1816.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-11",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-12",
+      "metric": "B01.03",
+      "actual": 0.35134408602150535,
+      "expected": "0.3513440860215053763440860215",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-12",
+      "metric": "B02.06",
+      "actual": 4.65503606,
+      "expected": "4.65503606",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-12",
+      "metric": "B03.02",
+      "actual": 0.6471734892787524,
+      "expected": "0.6471734892787524366471734893",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-12",
+      "metric": "B04.04",
+      "actual": 0.679974,
+      "expected": "0.679974",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-12",
+      "metric": "B05.03",
+      "actual": 0.008882646691635456,
+      "expected": "0.008882646691635455680399500624",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-12",
+      "metric": "B05.06",
+      "actual": 0.09112903225806451,
+      "expected": "0.09112903225806451612903225806",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-12",
+      "metric": "B06.07",
+      "actual": 0.6261160714285714,
+      "expected": "0.6261160714285714285714285714",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-12",
+      "metric": "B07.02",
+      "actual": 1790,
+      "expected": "1790.000",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "month/iceberg/2025-12",
+      "metric": "B08.04",
+      "actual": 0,
+      "expected": "0",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "selected_year_inside",
+      "metric": "value",
+      "actual": 0.3604838709677419,
+      "expected": "0.3604838709677419354838709677",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "selected_year_outside",
+      "metric": "value",
+      "actual": null,
+      "expected": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "selected_month_inside",
+      "metric": "value",
+      "actual": 0.3604838709677419,
+      "expected": "0.3604838709677419354838709677",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "selected_month_outside",
+      "metric": "value",
+      "actual": null,
+      "expected": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "partial_month",
+      "metric": "value",
+      "actual": null,
+      "expected": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "multi_period",
+      "metric": "value",
+      "actual": null,
+      "expected": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "stock_without_item",
+      "metric": "value",
+      "actual": null,
+      "expected": null,
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "scaled_cards/iceberg",
+      "metric": "B02.06",
+      "actual": 105.545873007,
+      "expected": "105.545873007",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "scaled_cards/iceberg",
+      "metric": "B02.03",
+      "actual": 1.33472704,
+      "expected": "1.33472704",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "scaled_cards/iceberg",
+      "metric": "B02.04",
+      "actual": 1.12492046,
+      "expected": "1.12492046",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "scaled_cards/iceberg",
+      "metric": "B02.05",
+      "actual": 8.063289953,
+      "expected": "8.063289953",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "scaled_cards/iceberg",
+      "metric": "B03.03",
+      "actual": 6.07805,
+      "expected": "6.07805",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "scaled_cards/iceberg",
+      "metric": "B03.04",
+      "actual": 4.4361,
+      "expected": "4.4361",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "scaled_cards/iceberg",
+      "metric": "B04.04",
+      "actual": 20.104308,
+      "expected": "20.104308",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "scaled_cards/iceberg",
+      "metric": "B07.05",
+      "actual": 2.4619686,
+      "expected": "2.4619686",
+      "passed": true,
+      "error": null
+    },
+    {
+      "case": "scaled_cards/iceberg",
+      "metric": "B08.01",
+      "actual": 0.1672,
+      "expected": "0.1672",
+      "passed": true,
+      "error": null
+    }
+  ],
+  "publication_id": "b_5531e032ac7d45b6eb0b",
+  "engine": "iceberg"
+}

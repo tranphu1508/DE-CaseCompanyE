@@ -10,7 +10,7 @@ From this directory:
 - Preview dist using a local HTTP server.
 - GitHub Pages publishes ONLY `dist/`, not CompanyE raw data, credentials, backups, or the main project repository.
 
-The static demo exposes 104 verified SQL contexts and 48 engine/month result rows. Each context is a complete saved scenario; arbitrary cross-combinations are not supported. The saved semantic report records Oracle values and asserts exact equality for Iceberg and raw reference, so a shared payload represents both engines. Monthly data comes from actual DAX result rows per engine. SQL quantities and money stay decimal strings until display. Chart money is explicitly scaled to billions. Unsupported chart slices show a message instead of unrelated global data.
+The static demo exposes 104 verified SQL contexts and 48 engine/month result rows. Each context is a complete saved scenario; arbitrary cross-combinations are not supported. Payload v2 keeps separate metrics_by_engine and separate publication metadata. Oracle uses the historical certified A results; Iceberg uses the new independent B SQL results. B has its own Power BI project and surrogate keys. A was not re-queried during this migration. Monthly data comes from actual DAX result rows per engine. SQL quantities and money stay decimal strings until display. Chart money is explicitly scaled to billions. Unsupported chart slices show a message instead of unrelated global data.
 
 This is not live Oracle/Spark serving or a benchmark. All raw/ETL remains local. The main project is consolidated in DE-CaseCompanyE.
 
@@ -26,3 +26,5 @@ All browser assets and JSON use relative URLs, so they work below `/DE-CaseCompa
 
 The earlier ChatGPT Sites deployment records are retained as historical evidence, not the canonical hosting configuration.
 
+
+B migration runbook: [docs/07-bi-migration.md](../../../docs/07-bi-migration.md). New B evidence is in `Project/reports/bi-migration`; historical UI evidence remains unchanged.

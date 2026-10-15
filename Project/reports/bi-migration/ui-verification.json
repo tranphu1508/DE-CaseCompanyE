@@ -1,0 +1,36 @@
+{
+  "status": "PASSED_OBSERVED_UI_WITH_DOCUMENTED_LIMITS",
+  "publication_id": "b_5531e032ac7d45b6eb0b",
+  "observed_on": "2026-10-15",
+  "evidence": [
+    {
+      "file": "ui/overview-reopened.png",
+      "sha256": "e471f4ea42eb0316fff8f78c60591cb66f15f61f165449e54dd54811eb72e8ae",
+      "observation": "Reopened saved B: Iceberg, B publication footer, 105.55 billion retained, 42.00% occupancy, 64.43% cross-sell, 65.21% OTIF, four-site table and 24 months."
+    },
+    {
+      "file": "ui/overview-month-filter.png",
+      "sha256": "66e298d2b897ce1a25de5edefa9f72a66012d0c253ded2e2aaa0d36f64fd96e8",
+      "observation": "2024-01: 3.50 billion retained, 36.05% occupancy, table totals 2682/7440, one monthly point; clearing restored full period."
+    },
+    {
+      "file": "ui/qa-partial.png",
+      "sha256": "daa3ba208d39674b34d1f8342414d0145b3622a05db343624af9df0de16d175b",
+      "observation": "Separate simulated QA: PARTIAL shows 37.50% with missing-data explanation (30/80)."
+    },
+    {
+      "file": "ui/qa-unavailable.png",
+      "sha256": "6075accafaaa39de59442c4fb6978aa12d8092183c328c39e99711281c756bbb",
+      "observation": "Separate simulated QA: UNAVAILABLE is blank with explanation; not zero."
+    },
+    {
+      "file": "ui/qa-zero-denominator.png",
+      "sha256": "09221547d9015921f6399a913dabd3f7422abc4be17f7971875f49f731437c16",
+      "observation": "Separate simulated QA: denominator zero is blank with explanation."
+    }
+  ],
+  "limitations": [
+    "Representative overview/filter/QA/reopen checks, not an exhaustive visual audit of all pages and slicer combinations.",
+    "QA scenarios are synthetic UI fixtures; the B production snapshot remains COMPLETE."
+  ]
+}

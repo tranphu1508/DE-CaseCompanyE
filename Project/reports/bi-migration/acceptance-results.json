@@ -1,0 +1,58 @@
+﻿[
+    {
+        "id":  "identity",
+        "rows":  [
+                     {
+                         "[publication]":  "b_5531e032ac7d45b6eb0b | Import cố định; không phải dữ liệu trực tiếp",
+                         "[engines]":  1,
+                         "[rows]":  32000
+                     }
+                 ]
+    },
+    {
+        "id":  "mixed_kpi_total",
+        "rows":  [
+                     {
+                         "[value]":  null,
+                         "[display]":  null,
+                         "[state]":  "Không cộng KPI khác đơn vị"
+                     }
+                 ]
+    },
+    {
+        "id":  "qa/COMPLETE",
+        "rows":  [
+                     {
+                         "[value]":  0.4,
+                         "[warning]":  "KIỂM THỬ: đầy đủ 40/100"
+                     }
+                 ]
+    },
+    {
+        "id":  "qa/PARTIAL",
+        "rows":  [
+                     {
+                         "[value]":  0.375,
+                         "[warning]":  "KIỂM THỬ: THIẾU DỮ LIỆU — vẫn báo cáo 30/80 phần hợp lệ"
+                     }
+                 ]
+    },
+    {
+        "id":  "qa/UNAVAILABLE",
+        "rows":  [
+                     {
+                         "[value]":  null,
+                         "[warning]":  "KIỂM THỬ: KHÔNG KHẢ DỤNG — không hiển thị số 0"
+                     }
+                 ]
+    },
+    {
+        "id":  "qa/ZERO_DENOMINATOR",
+        "rows":  [
+                     {
+                         "[value]":  null,
+                         "[warning]":  "KIỂM THỬ: MẪU SỐ 0 — kết quả trống"
+                     }
+                 ]
+    }
+]

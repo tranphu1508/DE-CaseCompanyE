@@ -23,6 +23,7 @@ Project/databases/
 Project/lake/
 Project/tools/
 Project/powerbi/data/
+Project/powerbi-b/data/
 Project/reports/powerbi/imports/
 *.zip
 *.tar.gz

@@ -1,0 +1,70 @@
+{
+  "status": "PASSED_BROWSER_INTERACTIONS",
+  "url": "http://127.0.0.1:8766/#dashboard",
+  "observed_on": "2026-10-15",
+  "groups": [
+    {
+      "group": "B01",
+      "context": "Toàn chuỗi · 2024–2025 · Lakehouse B · độc lập · b_5531e032ac7d45b6eb0b · Khớp mốc Oracle đối chứng · 12 cảnh báo đối soát nguồn ngoài",
+      "rows": 5,
+      "points": 24
+    },
+    {
+      "group": "B02",
+      "context": "Toàn chuỗi · 2024–2025 · Lakehouse B · độc lập · b_5531e032ac7d45b6eb0b · Khớp mốc Oracle đối chứng · 12 cảnh báo đối soát nguồn ngoài",
+      "rows": 6,
+      "points": 24
+    },
+    {
+      "group": "B03",
+      "context": "Toàn chuỗi · 2024–2025 · Lakehouse B · độc lập · b_5531e032ac7d45b6eb0b · Khớp mốc Oracle đối chứng · 12 cảnh báo đối soát nguồn ngoài",
+      "rows": 5,
+      "points": 24
+    },
+    {
+      "group": "B04",
+      "context": "Toàn chuỗi · 2024–2025 · Lakehouse B · độc lập · b_5531e032ac7d45b6eb0b · Khớp mốc Oracle đối chứng · 12 cảnh báo đối soát nguồn ngoài",
+      "rows": 8,
+      "points": 24
+    },
+    {
+      "group": "B05",
+      "context": "Toàn chuỗi · 2024–2025 · Lakehouse B · độc lập · b_5531e032ac7d45b6eb0b · Khớp mốc Oracle đối chứng · 12 cảnh báo đối soát nguồn ngoài",
+      "rows": 6,
+      "points": 24
+    },
+    {
+      "group": "B06",
+      "context": "Mặt hàng: RICE · Lakehouse B · độc lập · b_5531e032ac7d45b6eb0b · Khớp mốc Oracle đối chứng · 12 cảnh báo đối soát nguồn ngoài",
+      "rows": 7,
+      "points": 0
+    },
+    {
+      "group": "B07",
+      "context": "Mặt hàng: RICE · Lakehouse B · độc lập · b_5531e032ac7d45b6eb0b · Khớp mốc Oracle đối chứng · 12 cảnh báo đối soát nguồn ngoài",
+      "rows": 6,
+      "points": 24
+    },
+    {
+      "group": "B08",
+      "context": "Toàn chuỗi · 2024–2025 · Lakehouse B · độc lập · b_5531e032ac7d45b6eb0b · Khớp mốc Oracle đối chứng · 12 cảnh báo đối soát nguồn ngoài",
+      "rows": 4,
+      "points": 24
+    }
+  ],
+  "checks": [
+    "Default engine B and its publication displayed",
+    "Switch to Oracle displays historical A publication; switch back restores B",
+    "January 2024: 2682 occupied / 7440 available, 36.05%, exactly one month",
+    "All-item B07 quantities are blank and request one item; RICE is available",
+    "B04 LUNCH breakfast and buffet-only KPI are NOT_APPLICABLE, including ratios",
+    "Unsupported chart slices show a scope message, not global data",
+    "Reset restores B01 and Iceberg",
+    "CSV downloaded with B publication and Iceberg source; inspected locally",
+    "No warning/error browser console entries"
+  ],
+  "limitations": [
+    "Representative interaction tests; exhaustive payload comparison is performed by verify.py.",
+    "Desktop weather/variable-assessment exclusions do not apply to web SQL KPI tables."
+  ]
+}

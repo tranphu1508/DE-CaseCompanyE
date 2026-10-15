@@ -1,18 +1,21 @@
 {
   "status": "PASSED_STATIC_EXPORT",
-  "checks": 3139,
-  "metric_component_comparisons": 2965,
+  "checks": 7625,
+  "metric_component_comparisons": 5930,
   "monthly_rows": 48,
-  "publication": "pub_3f41f8fafa4c913187af2cc3",
+  "publications": {
+    "oracle": "pub_3f41f8fafa4c913187af2cc3",
+    "iceberg": "b_5531e032ac7d45b6eb0b"
+  },
   "limitations": [
     "Does not run UI; browser interaction checks are recorded separately.",
     "noindex is a crawler directive, not access control."
   ],
   "files": {
-    "app.js": "40157a784594f89d8bfe45bfbb3843ac25780141d393390cf3ad1141dc19d3f4",
+    "app.js": "b6df5838356bb76a2557e905f282d962f0bee1ee408e36363a2776989bf2ae96",
     "config.json": "92c3dd4d03ad223bd7256723d91a590e84e0ae34acf6b643c8e7b11c512a79c1",
-    "data.json": "4f9d8ca11a0b75596516821a580193e9b1d1f916861a6d657a646bdd72ec7a6a",
-    "index.html": "02beeef3b5587251a6e9b7fea38cc53ca6a01be70fc4aab1f63a8cdbadcc71e8",
+    "data.json": "ebc9ddd3b48ebc0aa69101c40a5548266aa6d7928b1349413f255e46ba67b488",
+    "index.html": "6321189416928cbb0bf01802fd70664ddc4d048b6d286fca53310dd5bd917b48",
     "robots.txt": "bdc5989f447bc2eb1170267b7da0066af89b626be50e427a67ea49a710b0fdce",
     "style.css": "d59c1a6c2ff2a12d965c1620805d77b459122ab7faf1fdb42549cc70eb514403",
     "_headers": "a087a6dc39d0e60453845643821456b3aa67a54a532d609a7e82eef40c8b4eab"

@@ -1,0 +1,26 @@
+[
+  {
+    "script": "prepare-powerbi-dax-tests.py",
+    "source_sha256": "55ec0135b4a569a976eedbbce7e8ddaf0e4889a0b3ba959604b50c05e0e0b8e2",
+    "adapted_sha256": "4259795badc1b6ac5476db1556052d39d97e0f7437ac3c1e6f3548412da4e605",
+    "changes": "Use B evidence, B publication and one Iceberg engine; comparison logic/tolerances unchanged."
+  },
+  {
+    "script": "verify-powerbi-dax.py",
+    "source_sha256": "38fdb95bda4884747549b9c8dc2b5f381bbf18edc421887da088835adadedb12",
+    "adapted_sha256": "25f1ed21aa88be597d05213bfd220c060fabf2cd025df6631bdd544ba0a6a9e4",
+    "changes": "Unchanged validator."
+  },
+  {
+    "script": "verify-powerbi-dashboard.py",
+    "source_sha256": "dd64b1cdba4c30a3033fee766aa377c4bbf984057a09d8165d8378a09172b1d8",
+    "adapted_sha256": "9d8e88fb4cc40d85bf2f2aacf585c27e994f19b114ab9760be859853d4accfe8",
+    "changes": "Use B evidence, B publication and one Iceberg engine; comparison logic/tolerances unchanged."
+  },
+  {
+    "script": "validate-powerbi.py",
+    "source_sha256": "f317fd285ad2f27468a017b5c05e99836d77a832d1a57eb3c64ba703b54fb839",
+    "adapted_sha256": "5de446027b08e163f42efbb19e5bad169bec658a97cde3f3dde4804c7a948384",
+    "changes": "Unchanged validator."
+  }
+]

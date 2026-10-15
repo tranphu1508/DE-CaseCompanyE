@@ -1,0 +1,9 @@
+{
+  "status": "PASSED",
+  "unchanged_measures_except_engine_default": 222,
+  "publication_measure_updated": true,
+  "no_historical_publication_in_B_report": true,
+  "model_sha256": "3ec16dad4427297cf8ffc473d9a1d3074f048cb9d81037394e815fdba2c46f14",
+  "tables": 37,
+  "relationships": 69
+}

@@ -1,0 +1,4634 @@
+{
+  "status": "PINNED_EXPORT_READY",
+  "publication_id": "b_5531e032ac7d45b6eb0b",
+  "publication_manifest_sha256": "c5dfd3c04bef3480c1213c92ced3a6d62806c4438175abd1c8a81b47195970c6",
+  "source_batch_id": "v2_20261014T124040450684Z",
+  "source_catalog_sha256": "f15b691e79eecc144231c6ae3285d0d79756aa28f206dc50fdc4c29d0b53b411",
+  "engines": [
+    "iceberg"
+  ],
+  "default_engine": "iceberg",
+  "tables": [
+    {
+      "entity": "D01",
+      "columns": [
+        {
+          "name": "date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "calendar_date",
+          "logical_type": "DATE",
+          "oracle_type": "DATE",
+          "iceberg_type": "date",
+          "spark_sql_type": "DATE",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "day",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "day_of_week",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "month",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "quarter",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "year",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 1463,
+      "import_rows": 1463,
+      "filename": "D01.csv",
+      "sha256": "43adb3136a94686e697a610dcfe09efee64f651f2988897f894217eeadb42891",
+      "snapshot_id": 1332242676274021041
+    },
+    {
+      "entity": "D02",
+      "columns": [
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_name",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "climate_region",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 6,
+      "import_rows": 6,
+      "filename": "D02.csv",
+      "sha256": "fd8bd76bf98ca21eaf1a9c1df61d2a359039cd9452142f0df0efcf9d511346de",
+      "snapshot_id": 2532942739381623653
+    },
+    {
+      "entity": "D03",
+      "columns": [
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_name",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "stars",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "website_channel",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 10,
+      "import_rows": 10,
+      "filename": "D03.csv",
+      "sha256": "7256f182e584c0ffc2c48190ac8011d960d5048addf619f1cca99e8646514378",
+      "snapshot_id": 8568934897359344862
+    },
+    {
+      "entity": "D04",
+      "columns": [
+        {
+          "name": "room_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_type",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "capacity",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "base_rate_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 242,
+      "import_rows": 242,
+      "filename": "D04.csv",
+      "sha256": "fc888b80059fbb362588cf1e610f4db313e6e447378f1c24f7f21c51a4d73edd",
+      "snapshot_id": 4596532767033412202
+    },
+    {
+      "entity": "D05",
+      "columns": [
+        {
+          "name": "channel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "channel_code",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "channel_name",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "channel_type",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "commission_bps",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 17,
+      "import_rows": 17,
+      "filename": "D05.csv",
+      "sha256": "cf43196ddfb859b28ece7a2ed70c6a62e35fb19f634d515dc26b4d39c8c5de28",
+      "snapshot_id": 3315380877980159166
+    },
+    {
+      "entity": "D06",
+      "columns": [
+        {
+          "name": "promotion_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "promotion_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "promotion_name",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "channel_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "sale_from",
+          "logical_type": "DATE",
+          "oracle_type": "DATE",
+          "iceberg_type": "date",
+          "spark_sql_type": "DATE",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "sale_to",
+          "logical_type": "DATE",
+          "oracle_type": "DATE",
+          "iceberg_type": "date",
+          "spark_sql_type": "DATE",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "stay_from",
+          "logical_type": "DATE",
+          "oracle_type": "DATE",
+          "iceberg_type": "date",
+          "spark_sql_type": "DATE",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "stay_to",
+          "logical_type": "DATE",
+          "oracle_type": "DATE",
+          "iceberg_type": "date",
+          "spark_sql_type": "DATE",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "discount_bps",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "partner_share_bps",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "cap_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 42,
+      "import_rows": 42,
+      "filename": "D06.csv",
+      "sha256": "b6c709d6a4d055d7265cde2f63df7639774bf780b5725282432131d99bb8545a",
+      "snapshot_id": 6267611730185720150
+    },
+    {
+      "entity": "D09",
+      "columns": [
+        {
+          "name": "outlet_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "outlet_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "outlet_type",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "capacity",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "quality_profile",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 18,
+      "import_rows": 18,
+      "filename": "D09.csv",
+      "sha256": "f506cd96c35836388697843ed08abb3b3d76e699b0a71bbe734fb9e67c4f95d8",
+      "snapshot_id": 2021421356024235727
+    },
+    {
+      "entity": "D10",
+      "columns": [
+        {
+          "name": "meal_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "meal_code",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "meal_name",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 6,
+      "import_rows": 6,
+      "filename": "D10.csv",
+      "sha256": "7f039abe78e82c1a82c3e4dc6f0deeea2bc30d02b90267f07c1741d1ba8af931",
+      "snapshot_id": 7546115136232630283
+    },
+    {
+      "entity": "D11",
+      "columns": [
+        {
+          "name": "centre_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "centre_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "centre_name",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_code",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 6,
+      "import_rows": 6,
+      "filename": "D11.csv",
+      "sha256": "9956e717688ae039ade6b2781100cddf928735498fd5ffdb575d217d1b46537e",
+      "snapshot_id": 7971026931742394842
+    },
+    {
+      "entity": "D12",
+      "columns": [
+        {
+          "name": "activity_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "activity_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "centre_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "activity_name",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "outdoor",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "capacity_per_day",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 14,
+      "import_rows": 14,
+      "filename": "D12.csv",
+      "sha256": "7d49eaf4d4ef81728e163689554557ce0caedc4e2ac62212705c64783975478d",
+      "snapshot_id": 1998018124688411506
+    },
+    {
+      "entity": "D13",
+      "columns": [
+        {
+          "name": "vehicle_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "vehicle_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "centre_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "vehicle_type",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "daily_rate_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 122,
+      "import_rows": 122,
+      "filename": "D13.csv",
+      "sha256": "cc1170961b91f1d19eb5c829ab8acd7132cc4a8ed7fe439877e11f0bd0e3530e",
+      "snapshot_id": 4272118821581199307
+    },
+    {
+      "entity": "D14",
+      "columns": [
+        {
+          "name": "supplier_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "supplier_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "supplier_name",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "category",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "delivery_format",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 18,
+      "import_rows": 18,
+      "filename": "D14.csv",
+      "sha256": "7438f0938738b1bb726f2fa38ff53685a068069bd743b43aed8dc5513eefce8a",
+      "snapshot_id": 6940126124051899615
+    },
+    {
+      "entity": "D15",
+      "columns": [
+        {
+          "name": "item_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "item_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "item_name",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "specification",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "base_unit",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "shelf_life_days",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 8,
+      "import_rows": 8,
+      "filename": "D15.csv",
+      "sha256": "63b08ec1761f6933719b205cfcdfa81e494409e5e812c70566f238d687993981",
+      "snapshot_id": 2922194723941470834
+    },
+    {
+      "entity": "D16",
+      "columns": [
+        {
+          "name": "asset_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "member_kind",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "asset_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "asset_type",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "supplier_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": true,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 258,
+      "import_rows": 258,
+      "filename": "D16.csv",
+      "sha256": "f632aba3a7bd1a434157c29bbe452f14261e436a49bfdcad5e34901b836a8e98",
+      "snapshot_id": 3896035582387312089
+    },
+    {
+      "entity": "F01",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booked_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "arrival_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "departure_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "channel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D05.channel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "promotion_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D06.promotion_key",
+          "missing_policy": "-1: booking không dùng promotion.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "customer_profile_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D07.customer_profile_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "status",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "gross_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "discount_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "customer_due_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "company_share_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "partner_share_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "commission_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "booking_count",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 32000,
+      "import_rows": 32000,
+      "filename": "F01.csv",
+      "sha256": "c53d5c4b4ea1ee8786e59483f8499f732fc70edc65e3e2e343172ab1975c5d1e",
+      "snapshot_id": 2740872739830814230
+    },
+    {
+      "entity": "F02",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D04.room_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "inventory_day",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "blocked_day",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "available_day",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 175440,
+      "import_rows": 175440,
+      "filename": "F02.csv",
+      "sha256": "0d95d347a72745edf4b4d7fc551409c8a61c2edd40fd447534c191261c6d6a7a",
+      "snapshot_id": 3243657172422560373
+    },
+    {
+      "entity": "F03",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "service_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D04.room_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "channel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D05.channel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "customer_profile_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D07.customer_profile_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "rate_plan_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D08.rate_plan_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "stay_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_room_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "occupied_night",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 73275,
+      "import_rows": 73275,
+      "filename": "F03.csv",
+      "sha256": "d5c992bd0befa423a34f839bb40dbcdce2c6912a5ed5d1f2aa30b9c8b69ca631",
+      "snapshot_id": 984377009274341818
+    },
+    {
+      "entity": "F04",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "ordered_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "cohort_departure_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "-1: dịch vụ độc lập không có booking_ref.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "service_site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "-1: dịch vụ độc lập không có booking_ref.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "referral_hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "-1: dịch vụ độc lập không có booking_ref.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "ticket_channel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D05.channel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_channel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D05.channel_key",
+          "missing_policy": "-1: dịch vụ độc lập không có booking_ref.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "customer_profile_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D07.customer_profile_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "centre_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D11.centre_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "ticket_order_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_booking_ref",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "gross_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "refunded_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "net_ticket_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 20690,
+      "import_rows": 20690,
+      "filename": "F04.csv",
+      "sha256": "157fe73f825acb863830826e91f6e3841a5d799d040be847b3678ba728c6df9b",
+      "snapshot_id": 8011558112060304122
+    },
+    {
+      "entity": "F05",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "pickup_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "return_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "cohort_departure_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "-1: dịch vụ độc lập không có booking_ref.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "service_site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "-1: dịch vụ độc lập không có booking_ref.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "referral_hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "-1: dịch vụ độc lập không có booking_ref.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_channel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D05.channel_key",
+          "missing_policy": "-1: dịch vụ độc lập không có booking_ref.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "customer_profile_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D07.customer_profile_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "centre_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D11.centre_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "vehicle_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D13.vehicle_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "rental_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_booking_ref",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "status",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "agreed_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 7723,
+      "import_rows": 7723,
+      "filename": "F05.csv",
+      "sha256": "7fe7830db6205c9320fd4f1e250253bb8002992bc1e919f19a198487d75c9c61",
+      "snapshot_id": 6202133664467466637
+    },
+    {
+      "entity": "F06",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "service_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D04.room_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "customer_profile_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D07.customer_profile_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "rate_plan_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D08.rate_plan_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "outlet_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D09.outlet_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "meal_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D10.meal_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "entitlement_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_room_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "eligible_covers",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "redeemed_covers",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 52979,
+      "import_rows": 52979,
+      "filename": "F06.csv",
+      "sha256": "69bacb50159f25bffcd375c64f4d269a43357bb35d8763646b5372e902cc719c",
+      "snapshot_id": 223089372271890639
+    },
+    {
+      "entity": "F07",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "service_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "service_hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "-1: hóa đơn không gắn booking.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "customer_profile_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D07.customer_profile_key",
+          "missing_policy": "0: hóa đơn không xác định khách; không tự điền guest từ booking.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "outlet_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D09.outlet_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "meal_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D10.meal_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "dining_order_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "net_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "covers",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "rating_sum",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "rating_count",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 31357,
+      "import_rows": 31357,
+      "filename": "F07.csv",
+      "sha256": "09286e9e7e68f654aa798629f307e4fa67038ffe18ed7d49999c1bc7e7f49aa0",
+      "snapshot_id": 3121854914923258841
+    },
+    {
+      "entity": "F08",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "outlet_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "service_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "outlet_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D09.outlet_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "meal_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D10.meal_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "session_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "actual_covers",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "ingredient_cost_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 11696,
+      "import_rows": 11696,
+      "filename": "F08.csv",
+      "sha256": "91c22e19287a5e73663af7b2719c23605850428195a2a564b94bc371b9d558be",
+      "snapshot_id": 9130201777026660452
+    },
+    {
+      "entity": "F09",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "admission_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "customer_profile_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D07.customer_profile_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "centre_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D11.centre_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "activity_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D12.activity_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "admission_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "ticket_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "admission_count",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 39827,
+      "import_rows": 39827,
+      "filename": "F09.csv",
+      "sha256": "38f5f2ca15605ca8d725769aa06f406cac7dab5d19a920524c474b4faa7c0771",
+      "snapshot_id": 853211936778213349
+    },
+    {
+      "entity": "F10",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "activity_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "centre_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D11.centre_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "activity_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D12.activity_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "nominal_capacity",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "is_closed",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "available_capacity",
+          "logical_type": "COUNT",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 8772,
+      "import_rows": 8772,
+      "filename": "F10.csv",
+      "sha256": "4074c0337ffefbfaa32edd207575e57c437d39d6d92517144299dd91432fbe5d",
+      "snapshot_id": 5656236255569083309
+    },
+    {
+      "entity": "F11",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "vehicle_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "centre_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D11.centre_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "vehicle_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D13.vehicle_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "inventory_day",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "maintenance_day",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "available_day",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        },
+        {
+          "name": "rented_day",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 87720,
+      "import_rows": 87720,
+      "filename": "F11.csv",
+      "sha256": "f3cd971796a8a4069aeff2e80726e5ecaa3b30751ccc0e9e8389c3276f5632c2",
+      "snapshot_id": 856269432417247253
+    },
+    {
+      "entity": "F12",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "ordered_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "expected_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "supplier_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D14.supplier_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "item_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D15.item_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "purchase_line_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "purchase_order_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "ordered_qty",
+          "logical_type": "QTY",
+          "oracle_type": "NUMBER(18,3)",
+          "iceberg_type": "decimal(18,3)",
+          "spark_sql_type": "DECIMAL(18,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_SAME_UNIT"
+        },
+        {
+          "name": "unit_price_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 23680,
+      "import_rows": 23680,
+      "filename": "F12.csv",
+      "sha256": "151235d034c3c8442bd3f86f81680173302c0b8b166f74df058cc55175b24b80",
+      "snapshot_id": 273037874484894239
+    },
+    {
+      "entity": "F13",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "received_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "expected_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "expires_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "0: nguồn chưa cung cấp hạn dùng; không suy ra không hết hạn.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "supplier_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D14.supplier_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "item_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D15.item_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "receipt_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "purchase_line_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "accepted_qty",
+          "logical_type": "QTY",
+          "oracle_type": "NUMBER(18,3)",
+          "iceberg_type": "decimal(18,3)",
+          "spark_sql_type": "DECIMAL(18,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_SAME_UNIT"
+        },
+        {
+          "name": "rejected_qty",
+          "logical_type": "QTY",
+          "oracle_type": "NUMBER(18,3)",
+          "iceberg_type": "decimal(18,3)",
+          "spark_sql_type": "DECIMAL(18,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_SAME_UNIT"
+        },
+        {
+          "name": "late_accepted_qty",
+          "logical_type": "QTY",
+          "oracle_type": "NUMBER(18,3)",
+          "iceberg_type": "decimal(18,3)",
+          "spark_sql_type": "DECIMAL(18,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_SAME_UNIT"
+        }
+      ],
+      "rows_per_engine": 29621,
+      "import_rows": 29621,
+      "filename": "F13.csv",
+      "sha256": "ab630766f476c9606555f8839ef555ddafaf687a3674d98efeb5dade3fb2cea6",
+      "snapshot_id": 8796722961845783147
+    },
+    {
+      "entity": "F14",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "movement_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "supplier_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D14.supplier_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "item_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D15.item_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "movement_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "receipt_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "session_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": true,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "movement_type",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "usage_area",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "quantity",
+          "logical_type": "QTY",
+          "oracle_type": "NUMBER(18,3)",
+          "iceberg_type": "decimal(18,3)",
+          "spark_sql_type": "DECIMAL(18,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_SAME_UNIT"
+        },
+        {
+          "name": "signed_qty",
+          "logical_type": "QTY",
+          "oracle_type": "NUMBER(18,3)",
+          "iceberg_type": "decimal(18,3)",
+          "spark_sql_type": "DECIMAL(18,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_SAME_UNIT"
+        },
+        {
+          "name": "in_qty",
+          "logical_type": "QTY",
+          "oracle_type": "NUMBER(18,3)",
+          "iceberg_type": "decimal(18,3)",
+          "spark_sql_type": "DECIMAL(18,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_SAME_UNIT"
+        },
+        {
+          "name": "use_qty",
+          "logical_type": "QTY",
+          "oracle_type": "NUMBER(18,3)",
+          "iceberg_type": "decimal(18,3)",
+          "spark_sql_type": "DECIMAL(18,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_SAME_UNIT"
+        },
+        {
+          "name": "waste_qty",
+          "logical_type": "QTY",
+          "oracle_type": "NUMBER(18,3)",
+          "iceberg_type": "decimal(18,3)",
+          "spark_sql_type": "DECIMAL(18,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_SAME_UNIT"
+        },
+        {
+          "name": "unit_price_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "movement_value_vnd",
+          "logical_type": "VALUE",
+          "oracle_type": "NUMBER(38,3)",
+          "iceberg_type": "decimal(38,3)",
+          "spark_sql_type": "DECIMAL(38,3)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 88032,
+      "import_rows": 88032,
+      "filename": "F14.csv",
+      "sha256": "d7cc5760fb66e004336b72ce63f31be358922692ed0da508cbe248a2d14f5a0f",
+      "snapshot_id": 7387721862833193601
+    },
+    {
+      "entity": "F16",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "start_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "end_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "hotel_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D03.hotel_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D04.room_key",
+          "missing_policy": "-1: asset ở khu chung, không gắn phòng.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "asset_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D16.asset_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "maintenance_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "work_type",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "status",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "cost_vnd",
+          "logical_type": "MONEY",
+          "oracle_type": "NUMBER(19,0)",
+          "iceberg_type": "decimal(19,0)",
+          "spark_sql_type": "DECIMAL(19,0)",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM"
+        }
+      ],
+      "rows_per_engine": 512,
+      "import_rows": 512,
+      "filename": "F16.csv",
+      "sha256": "5f15db94ded33b0735ff722e244e25d0380a5af86abf1b1250792bbbf23e0726",
+      "snapshot_id": 7357921529437195309
+    },
+    {
+      "entity": "F17",
+      "columns": [
+        {
+          "name": "fact_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "weather_date_key",
+          "logical_type": "DATEKEY",
+          "oracle_type": "NUMBER(8,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D01.date_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "site_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D02.site_key",
+          "missing_policy": "Không cho khóa đặc biệt trên dữ liệu công bố.",
+          "aggregation": "NONE"
+        },
+        {
+          "name": "weather_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "provenance",
+          "logical_type": "TEXT",
+          "oracle_type": "VARCHAR2(512 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "temperature_c",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "AVG_SITE_DAY"
+        },
+        {
+          "name": "rain_mm",
+          "logical_type": "INT",
+          "oracle_type": "NUMBER(10,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "SUM_DATE_WITHIN_SITE"
+        },
+        {
+          "name": "severe_weather",
+          "logical_type": "FLAG",
+          "oracle_type": "NUMBER(1,0)",
+          "iceberg_type": "int",
+          "spark_sql_type": "INT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 2924,
+      "import_rows": 2924,
+      "filename": "F17.csv",
+      "sha256": "4f7c6b33b6c4fe0f68c2e36521630197d29a8d85be7ef2d6413a1de1fc073d41",
+      "snapshot_id": 3128060306605415965
+    },
+    {
+      "entity": "L01",
+      "columns": [
+        {
+          "name": "source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_room_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "room_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D04.room_key",
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "rate_plan_key",
+          "logical_type": "KEY",
+          "oracle_type": "NUMBER(18,0)",
+          "iceberg_type": "long",
+          "spark_sql_type": "BIGINT",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": "D08.rate_plan_key",
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 36711,
+      "import_rows": 36711,
+      "filename": "L01.csv",
+      "sha256": "5d80c3d3dc8075249ea58abc4c2f432beb7030c0e2f647f86d5f748bbaed583a",
+      "snapshot_id": 5924824794533293426
+    },
+    {
+      "entity": "L03",
+      "columns": [
+        {
+          "name": "service_source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "service_type",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "service_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_source_system",
+          "logical_type": "CODE",
+          "oracle_type": "VARCHAR2(64 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        },
+        {
+          "name": "booking_id",
+          "logical_type": "ID",
+          "oracle_type": "VARCHAR2(128 CHAR)",
+          "iceberg_type": "string",
+          "spark_sql_type": "STRING",
+          "nullable": false,
+          "required_for_normal_member": false,
+          "references": null,
+          "missing_policy": null,
+          "aggregation": "NONE"
+        }
+      ],
+      "rows_per_engine": 21213,
+      "import_rows": 21213,
+      "filename": "L03.csv",
+      "sha256": "e4e21df9a7a3b86ff0d67f831d404f6d36bdf307517a7dc13d0cf036d8df8042",
+      "snapshot_id": 2602957489807753226
+    }
+  ],
+  "quality_metrics": {
+    "B01.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F03"
+      ]
+    },
+    "B01.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F02"
+      ]
+    },
+    "B01.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F03",
+        "F02"
+      ]
+    },
+    "B01.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ]
+    },
+    "B01.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ]
+    },
+    "B02.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ]
+    },
+    "B02.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ]
+    },
+    "B02.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ]
+    },
+    "B02.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ]
+    },
+    "B02.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ]
+    },
+    "B02.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01"
+      ]
+    },
+    "B03.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F04",
+        "F05",
+        "F01"
+      ]
+    },
+    "B03.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F04",
+        "F05",
+        "F01"
+      ]
+    },
+    "B03.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F04",
+        "F01"
+      ]
+    },
+    "B03.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F05",
+        "F01"
+      ]
+    },
+    "B03.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F01",
+        "F04",
+        "F05"
+      ]
+    },
+    "B04.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F06"
+      ]
+    },
+    "B04.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F06"
+      ]
+    },
+    "B04.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F06"
+      ]
+    },
+    "B04.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F07"
+      ]
+    },
+    "B04.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F06",
+        "F07"
+      ]
+    },
+    "B04.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F08"
+      ]
+    },
+    "B04.07": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F08"
+      ]
+    },
+    "B04.08": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F07"
+      ]
+    },
+    "B05.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F09"
+      ]
+    },
+    "B05.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F10"
+      ]
+    },
+    "B05.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F09",
+        "F10"
+      ]
+    },
+    "B05.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F11"
+      ]
+    },
+    "B05.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F11"
+      ]
+    },
+    "B05.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F11"
+      ]
+    },
+    "B06.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F12"
+      ]
+    },
+    "B06.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F13",
+        "F12"
+      ]
+    },
+    "B06.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F13",
+        "F12"
+      ]
+    },
+    "B06.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F13",
+        "F12"
+      ]
+    },
+    "B06.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F12",
+        "F13"
+      ]
+    },
+    "B06.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F13",
+        "F12"
+      ]
+    },
+    "B06.07": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F12",
+        "F13"
+      ]
+    },
+    "B07.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ]
+    },
+    "B07.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ]
+    },
+    "B07.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ]
+    },
+    "B07.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ]
+    },
+    "B07.05": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ]
+    },
+    "B07.06": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F14"
+      ]
+    },
+    "B08.01": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F16"
+      ]
+    },
+    "B08.02": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F02"
+      ]
+    },
+    "B08.03": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F02"
+      ]
+    },
+    "B08.04": {
+      "status": "COMPLETE",
+      "dependencies": [
+        "F02"
+      ]
+    }
+  },
+  "quality_scope": [],
+  "external_warning_count": 12,
+  "exported_at": "2026-10-14T14:55:36.695689+00:00",
+  "privacy": "No customer profile dimensions; row-level exports remain local and are not committed."
+}

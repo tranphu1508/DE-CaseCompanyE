@@ -7,6 +7,8 @@ on:
       - 'Project/web/companye-demo/**'
       - 'Project/reports/semantic/**'
       - 'Project/reports/powerbi/dashboard/**'
+      - 'Project/reports/lakehouse-b/**'
+      - 'Project/reports/bi-migration/**'
       - 'Project/config/kpi_contract_v1.json'
       - 'Project/config/generation_v2.json'
       - '.github/workflows/pages.yml'

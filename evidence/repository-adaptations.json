@@ -8,15 +8,31 @@
     "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
   },
   "Project/web/companye-demo/verify.py": {
-    "sha256": "79997dbf6749491e0f8af2a97deff364520dc0a33103a3efa911dec24d52552b",
-    "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
+    "sha256": "d9514db382bfacc363343caca3b1def4189897b9897e3a80e6cd64323dff3bc9",
+    "reason": "2026-10-15: migrate web to independently certified B; keep Oracle historical payload/publication separate; validate both sources and preserve indexing controls."
   },
   "Project/web/companye-demo/verification.json": {
-    "sha256": "ba0a32ca06cd41980c3ef88811553329cf6541553a4e4f8f10c01406c5ebef92",
-    "reason": "2026-10-14: connect the published web demo source button to the public DE-CaseCompanyE repository; preserve KPI payload."
+    "sha256": "a6e5aa19cdb8219ce30b02da48c80ab8c51bb84179c34722cbeffbc6fbeb8f41",
+    "reason": "2026-10-15: migrate web to independently certified B; keep Oracle historical payload/publication separate; validate both sources and preserve indexing controls."
   },
   "Project/web/companye-demo/README.md": {
-    "reason": "2026-10-14: document GitHub Pages hosting, scoped deployment, verification, and indexing limitations; preserve historical Sites evidence.",
-    "sha256": "d22494f7d889434568d35cf3ee644a4085946a1a4fdf14440bac3c4a58a5fe27"
+    "sha256": "f9bfb85b589eb3edcf5b020bbb0c808b98968cca821458f5a276d2cb39e502a6",
+    "reason": "2026-10-15: migrate web to independently certified B; keep Oracle historical payload/publication separate; validate both sources and preserve indexing controls."
+  },
+  "Project/web/companye-demo/dist/app.js": {
+    "sha256": "b6df5838356bb76a2557e905f282d962f0bee1ee408e36363a2776989bf2ae96",
+    "reason": "2026-10-15: migrate web to independently certified B; keep Oracle historical payload/publication separate; validate both sources and preserve indexing controls."
+  },
+  "Project/web/companye-demo/dist/data.json": {
+    "sha256": "ebc9ddd3b48ebc0aa69101c40a5548266aa6d7928b1349413f255e46ba67b488",
+    "reason": "2026-10-15: migrate web to independently certified B; keep Oracle historical payload/publication separate; validate both sources and preserve indexing controls."
+  },
+  "Project/web/companye-demo/dist/index.html": {
+    "sha256": "6321189416928cbb0bf01802fd70664ddc4d048b6d286fca53310dd5bd917b48",
+    "reason": "2026-10-15: migrate web to independently certified B; keep Oracle historical payload/publication separate; validate both sources and preserve indexing controls."
+  },
+  "Project/web/companye-demo/export.py": {
+    "sha256": "870d3c8761901a57553197798c71db5a7110c13a8533ace2c2c2d98d23c15440",
+    "reason": "2026-10-15: migrate web to independently certified B; keep Oracle historical payload/publication separate; validate both sources and preserve indexing controls."
   }
 }
